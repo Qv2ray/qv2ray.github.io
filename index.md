@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+***注意：Qv2ray 仅能用于 Qt/C++/Linux/CI/自动化 等相关技术的学习和在法律允许范围内的使用，任何个人或集体不得使用 Qv2ray 进行任何违反相关法律法规的活动。***
 
-You can use the [editor on GitHub](https://github.com/Qv2ray/qv2ray.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+> Note: Qv2ray can **ONLY** be used for learning related technologies such as Qt/C++/Linux/CI/automation and use within the scope permitted by law. Any individual or group **MAY NOT** use Qv2ray for any violation of relevant laws and regulations.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+*任何尝试下载或下载 Qv2ray 任意分支或发行版即代表您同意本项目开发组不承担任何由于您违反以上准则所带来的任何法律责任。*
 
-### Markdown
+> Any attempt to download of any branch or distribution of Qv2ray constitutes your agreement that the development groupQv2ray/qv2ray.github.io of the project **will not be** liable for any legal liability arising from your breach of the above guidelines.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Qv2ray - Make v2ray real cross-platform
 
-```markdown
-Syntax highlighted code block
+使用 Qt 框架的跨平台 v2ray 客户端. 支持 Windows, Linux, macOS
 
-# Header 1
-## Header 2
-### Header 3
+[![HitCount](http://hits.dwyl.io/Qv2ray/Qv2ray.svg)](http://hits.dwyl.io/Qv2ray/Qv2ray) ![GitHub Releases](https://img.shields.io/github/downloads/Qv2ray/Qv2ray/latest/total?style=flat-square)
 
-- Bulleted
-- List
+## Related Links
+ - [Wiki](https://github.com/Qv2ray/Qv2ray/wiki) and [First Time Usage](https://github.com/Qv2ray/Qv2ray/wiki/Getting-Started)
+ - Latest **[Release Version](https://github.com/Qv2ray/Qv2ray/releases/latest)**
 
-1. Numbered
-2. List
+## Special Thanks
+- **Quality Assurance & User Experience:** DuckSoft [@DuckSoft](https://github.com/DuckSoft/)
+- **Debian-based distro Packager:** ymshenyu [@ymshenyu](https://github.com/ymshenyu)
 
-**Bold** and _Italic_ and `Code` text
+-------------------------------
 
-[Link](url) and ![Image](src)
+## Copyright
+### This is free software, and you are welcome to redistribute it under certain conditions
+- Copyright (c) 2019 2020 Qv2ray User group.
+
+### Libraries that have been used in Qv2ray are listed below (Sorted by date added)
+- Copyright (c) 2019 dridk (@dridk): **X2Struct** (Apache)
+- Copyright (c) 2011 SCHUTZ Sacha (@dridk): **QJsonModel** (MIT)
+- Copyright (c) 2019 Nikolaos Ftylitakis (@ftylitak): **QZXing** (Apache2)
+- Copyright (c) 2016 Singein (@Singein): **ScreenShot** (MIT)
+- Copyright (c) 2016 Nikhil Marathe (@nikhilm): **QHttpServer** (MIT)
+- Copyright (c) 2019 Itay Grudev (@itay-grudev): **SingleApplication** (MIT)
+- Copyright (c) 2019 paceholder (@paceholder): **nodeeditor** (BSD-3-Clause)
+
+## Licences
+
+Qv2ray is licenced under [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
+
 ```
+    Qv2ray, A Qt frontend for v2ray. Written in c++
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-### Jekyll Themes
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Qv2ray/qv2ray.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```
