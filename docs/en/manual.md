@@ -1,0 +1,7 @@
+---
+title: Manual
+---
+
+# Manual
+
+WIP
