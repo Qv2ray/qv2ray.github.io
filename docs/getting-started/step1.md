@@ -92,4 +92,4 @@ OK，安装结束。
 
 ## 源码编译
 
-- 请参考 [手动构建 Qv2ray](https://github.com/Qv2ray/Qv2ray/wiki/Manually-Build-Qv2ray_zh) 页面。
+- 请参考 [手动构建 Qv2ray](/hacking/manuallybuild/) 页面。
