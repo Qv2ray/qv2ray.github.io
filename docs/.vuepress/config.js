@@ -19,6 +19,9 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    '@vuepress/back-to-top'
+  ],
   locales: {
     "/en/": {
       lang: "en-US",
@@ -38,6 +41,7 @@ module.exports = {
     sidebar: "auto",
     nextLinks: true,
     prevLinks: true,
+    lastUpdated: "Last Updated: ",
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/hacking/": ["", "manuallybuild"],
