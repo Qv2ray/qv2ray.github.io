@@ -53,3 +53,9 @@ geoip.dat geosite.dat v2ctl v2ray
 - **V2ray 资源目录**：将其设置为 `geoip.dat` 和 `geosite.dat` 所在的位置。
 
 配置完成后，你可以点击 Check V2Ray Core Settings 按钮来验证你的 V2Ray Core Settings。 重复尝试，直到你通过了检查。
+
+::: tip 给 Arch Linux 用户的提示
+若您使用 `v2ray` 软件包组，推荐的路径配置如下：
+* **核心可执行文件路径**: `/usr/bin/v2ray`
+* **V2ray 资源目录**: `/usr/lib/v2ray`
+:::
