@@ -19,6 +19,7 @@ Do as the follows:
    - For Windows 64/32bit Users: `Qv2ray.VERSION.win-x64/x86.zip`
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
    - For macOS Users: `Qv2ray.VERSION.macOS-x64.tar.gz`
+   - For Ubuntu 19.04 / Debian 10 (or greater): `qv2ray_VERSION_amd64.deb`
 
 Where `VERSION` is the version of that release.
 
@@ -126,12 +127,23 @@ Similar to AUR, there are two versions of Qv2ray available. You can choose accor
 ### Snapcraft
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
+```shell
+# To install the package:
+$ snap install qv2ray
+# snap install qv2ray --edge (dev branch)
+# To update the package:
+$ snap refresh qv2ray
+```
+
 ### Flathub
 1. Set up Flatpak environment according to the [official documentation](https://flatpak.org/setup/).
 2. Install Qv2ray:
 
 ```shell
+# To install the package:
 $ flatpak install com.github.Qv2ray
+# To update the package:
+$ flatpak update
 ```
 
 ## Building From Source
