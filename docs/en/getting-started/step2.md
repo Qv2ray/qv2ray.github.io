@@ -44,3 +44,9 @@ Open Qv2ray and go to Preference Window. In **General Settings** -> **V2Ray Sett
  - **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located. 
 
 After configuring, you can click on **Check V2Ray Core Settings** button to validate your V2Ray core settings. Repeat trying until you get the check passed.
+
+::: tip Hint for Arch Linux Users
+If you use `v2ray` package group, the suggested configuration is as follows:
+* **Core Executable Path**: `/usr/bin/v2ray`
+* **V2Ray Assets Directory**: `/usr/lib/v2ray`
+:::
