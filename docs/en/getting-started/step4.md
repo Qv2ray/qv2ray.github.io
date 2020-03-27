@@ -1,16 +1,64 @@
 ---
-title: Configuring Browsers / Software to Use Qv2ray
+title: Configuring Softwares to Use Qv2ray
+sidebarDepth: 3
 ---
 
-# Step 4: Configuring Browsers / Software to Use Qv2ray
+# Step 4: Configuring Softwares to Use Qv2ray
 
-Configurations differs from platform to platform.
+Congratulations! There's only one step left in order to access the unlocked Internet! 
 
-## Linux
+## General Methods
 
-### Configure through Environment Variables
+### Using System Proxy
+For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings. 
 
-Many a program in Linux, for example, `curl` and `wget`, will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
+Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
+ - **Qv2ray Tray Menu**. 
+   1. Right click on the tray icon.
+   2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
+ - **Qv2ray Preference Window**. 
+   1. Click **Preferences** button in the main window.
+   2. In **Preference Window**, choose the tab **Inbound Settings**.
+   3. Check the option **Set System Proxy**.
+   4. Click **OK** to apply the settings. 
+
+:::tip Linux Users: KDE/GNOME Proxy Settings
+If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged. 
+
+However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications. 
+:::
+
+### Configure Manually in Applications
+
+#### Web Browsers
+Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
+
+:::tip Using Proxy Plugins 
+To avoid switching back and forth among proxy configurations, you may want to use a third-party plugin (eg: SwitchyOmega) to enhance your browser. These plugins can help to implement a more sophisticated configuration, including multiple profiles and further traffic diversion.
+:::
+
+#### Java Applications
+For Java applications, you may use configure proxies through JVM arguments. 
+
+Here are some examples:
+ - Using SOCKS5: 
+   ```shell
+   java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
+   ```
+ - Using HTTP(S): 
+   ```shell
+   java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
+   ```
+
+:::danger Buggy Minecraft
+Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is not Qv2ray's problem. If you really want to play Minecraft through proxy, consider setting up a Dokodemo-door inbound for that server and connect directly to `localhost`.
+:::
+
+## Platform-dependent Methods
+
+### Using Environment Variables
+
+Many a program in Linux/macOS, for example, `curl` and `wget`, will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
 
 Here is a configuration example:
 
@@ -48,35 +96,10 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 
 It is strongly recommended to read the manual of programs that you want to configure proxy with.
 
-### Configure Manually in Applications
 
-Some applications support manually configuration of proxies. Taking Firefox as example, you may fill HTTP/SOCKS5 Inbound from Qv2ray into Preferences -> General -> Network -> Manual Proxy Configuration.
+### Using `proxychains`
 
-Besides, you may use a third-party plugin (for example, SwitchyOmega) to implement a more sophisticated configuration, which may includes further traffic diversion or direct pass.
-
-For Java applications, you may use configure proxies through `java`. Here's an example:
-
-```shell
-# For HTTP Proxies
-java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 <your java command>
-
-# For SOCKS5 Proxies
-java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 <your java command>
-```
-
-For `ssh` or `scp`, you may configure proxies through `socat`:
-
-```shell
-ssh -o "ProxyCommand=socat - PROXY:localhost:%h:%p,proxyport=8000" user@remotehost
-```
-
-### Configure through GNOME Settings
-
-Currently, automated configuration of proxies for GNOME applications is already supported by Qv2ray. For some applications such as Firefox and Chromium, they will read and obey the proxy configurations in GNOME Settings. Simply restart these applications for the settings to take effect.
-
-### Configure through `proxychains`
-
-For those applications that does not work with the methods above, you may have a try with `proxychains`, which hijacks functions in `glibc` to redirect network connections into your proxies.
+For those applications that does not work with the methods above, Linux/macOS users may have a try with `proxychains`, which hijacks functions in `glibc` to redirect network connections into your proxies.
 
 First, you should install `proxychains-ng`. Installation methods varies with each operating system, but the [official repository](https://github.com/rofl0r/proxychains-ng) shall give you an instruction.
 
