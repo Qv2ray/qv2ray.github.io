@@ -45,7 +45,7 @@ sidebarDepth: 2
 
 :::
 
-## 方法三：在 Linux 发行版的软件包管理系统中安装
+## 3 方法三：在 Linux 发行版的软件包管理系统中安装
 
 ### 3.1 Arch Linux（或基于 Arch 的发行版）
 
@@ -147,7 +147,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 - 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray)
 - 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray-preview)
 
-##  方法四：在 Linux 通用的应用商店中安装
+## 4 方法四：在 Linux 通用的应用商店中安装
 
 ### 4.1 Snapcraft
 
