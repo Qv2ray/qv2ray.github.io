@@ -1,4 +1,6 @@
-const { resolve } = require("path");
+const {
+  resolve
+} = require("path");
 const r = path => resolve(__dirname, path);
 module.exports = {
   title: "Qv2ray",
@@ -31,8 +33,7 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Qv2ray",
-      description:
-        "🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17 / Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟"
+      description: "🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17 / Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟"
     }
   },
   themeConfig: {
@@ -60,8 +61,7 @@ module.exports = {
             buttonText: "Refresh"
           }
         },
-        nav: [
-          {
+        nav: [{
             text: "Getting Started",
             link: "/en/getting-started/"
           },
@@ -89,8 +89,7 @@ module.exports = {
             buttonText: "刷新"
           }
         },
-        nav: [
-          {
+        nav: [{
             text: "起步",
             link: "/getting-started/"
           },
@@ -113,7 +112,8 @@ module.exports = {
     repo: "Qv2ray/Qv2ray",
     repoLabel: "GitHub",
     docsRepo: "Qv2ray/qv2ray.github.io",
-    docsBranch: "master",
+    docsBranch: "source",
+    docsDir: 'docs',
     editLinks: true,
     editLinkText: "帮助我们改善此页面！"
   }
