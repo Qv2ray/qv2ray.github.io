@@ -6,19 +6,63 @@ title: 配置 V2Ray 核心
 
 在成功安装 Qv2ray 后，在真正使用 Qv2ray 之前，还需要基于 v2ray 核心完成一些必要的配置。
 
-## 下载 V2Ray 核心文件
+## 1 下载 V2Ray 核心文件
 
-由于一些原因，Qv2ray 本身并**不包含** V2ray 的核心可执行文件，这些核心文件来自一个叫做 V2Ray core 的项目，需要用户手动下载安装到指定位置。
+由于一些原因，Qv2ray 本身并**不包含** V2ray 的核心可执行文件，这些核心文件来自一个叫做 V2Ray Core 的项目，需要用户手动下载安装到指定位置。
 
-如果你正在使用的 Linux 发行版拥有一个可以自动安装 V2Ray 核心文件的包管理系统，那通过包管理安装 Qv2ray 是最好的选择，因为系统可以自动处理 v2ray 核心的更新。对于 Arch Linux 用户而言，你需要安装 `v2ray`、`v2ray-geoip` 和 `v2ray-domain-list-community` 这三个软件就足够了。对于其他的发行版，请接着阅读下面的说明。
+### 1.1 Linux 发行版
 
-请前往 [v2ray/v2ray-core 官方 Release 页面](https://github.com/v2ray/v2ray-core/releases)，并下载最新的符合当前系统版本的稳定版软件包。比如，64 位 Windows 用户可以下载 `v2ray-windows-64.zip` ；MacOS 用户可以下载 `v2ray-macos.zip` ；大多数 Linux 用户可以下载 `v2ray-linux-64.zip`。
+#### 1.1.1 从 Linux 发行版的软件包管理器安装
+
+如果你正在使用的 Linux 发行版拥有一个可以自动安装 V2Ray 核心文件的包管理系统，那通过包管理安装 Qv2ray 是最好的选择，因为系统可以自动处理 v2ray 核心的更新。
+
+**Arch Linux 及其衍生版**
+
+```sh
+sudo pacman -S v2ray
+```
+
+#### 1.1.2 V2Ray 官方安装脚本
+
+V2Ray 官方提供了一个安装脚本，可以方便地在 Linux 操作系统上安装 V2Ray Core。使用脚本之前请确认你的系统安装了`curl`。
+
+```sh
+curl https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh |bash
+```
+
+由于官方安装脚本会把 V2Ray 设置为服务端且自动开启后台服务，我们需要关闭这个服务。
+
+```sh
+sudo systemctl stop v2ray && sudo systemctl disable v2ray
+```
+
+该脚本会安装一下文件：
+
+```conf
+installed: /usr/local/bin/v2ray -> ../lib/v2ray/v2ray
+installed: /usr/local/bin/v2ctl -> ../lib/v2ray/v2ctl
+installed: /usr/local/lib/v2ray/v2ray
+installed: /usr/local/lib/v2ray/v2ctl
+installed: /usr/local/lib/v2ray/geoip.dat
+installed: /usr/local/lib/v2ray/geosite.dat
+installed: /usr/local/etc/v2ray/config.json
+installed: /var/log/v2ray/
+installed: /etc/systemd/system/v2ray.service
+installed: /etc/systemd/system/v2ray@.service
+```
+#### 1.1.3 手动从 GitHub 下载
+
+请前往 [v2ray/v2ray-core 官方 Release 页面](https://github.com/v2ray/v2ray-core/releases)，并下载最新的符合当前系统版本的稳定版软件包。大多数 Linux 用户可以下载 `v2ray-linux-64.zip`。
 
 ::: danger 警告
 
 如果你在 `x86_64`（`amd64`）平台上运行 Qv2ray，请不要下载 `v2ray-linux-arm64.zip`。明确地说，`arm64` 和 `amd64` 完全不同。请确保你不会这样做。
 
 :::
+
+### 1.2 Microsoft Windows
+
+
 
 ## 放置你的 V2Ray 核心
 
