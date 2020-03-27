@@ -117,9 +117,17 @@ The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depend
 ### openSUSE
 > Qv2ray is made available for openSUSE users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb). 
 
+::: tip
+Because of the limit of Qt version, in this way we **only support Tumbleweeds, Leap 15.2 and later Leap version**.
+:::
+
 Similar to AUR, there are two versions of Qv2ray available. You can choose according to your own flavor:
  - Stable: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb/Qv2ray)
  - Preview: [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)
+
+Or you can get more detailed installation guide directly from the links below:
+ - Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray)
+ - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray-preview)
 
 
 ## Getting from App Stores
