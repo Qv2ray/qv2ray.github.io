@@ -52,7 +52,7 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 
 #### 1.1.3 ProxyChains
 
-对于前三种方式无法生效的应用，可尝试使用 proxychains 进行代理，它通过劫持动态链接库 `libc` 中的 `connect` 等函数实现重定向网络链接到代理中。
+对于前两种方式无法生效的应用，可尝试使用 proxychains 进行代理，它通过劫持动态链接库 `libc` 中的 `connect` 等函数实现重定向网络链接到代理中。
 
 首先安装 `proxychains-ng`：https://github.com/rofl0r/proxychains-ng
 
