@@ -147,6 +147,28 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 ## 从应用商店中获取
 
+### Scoop (针对 Windows 用户)
+> [Scoop](https://scoop.sh) 是 **Windows** 专用的一个基于命令行的包管理器。
+
+请在 Powershell 中执行以下命令：
+1. 安装 scoop 包管理器：
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+2. 添加 `extras` bucket：
+   ```powershell
+   scoop bucket add extras
+   ```
+3. 安装 Qv2ray：
+   ```powershell
+   scoop install v2ray qv2ray vcredist2019
+   ```
+
+::: tip
+安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
+:::
+
+
 ### Snapcraft
 
 请参照我们的 [Snapcraft](https://snapcraft.io/qv2ray) 页面上的说明。

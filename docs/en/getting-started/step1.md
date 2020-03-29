@@ -132,6 +132,27 @@ Or you can get more detailed installation guide directly from the links below:
 
 ## Getting from App Stores
 
+### Scoop (for Windows Users)
+> [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
+
+Run the following commands in Powershell:
+1. Install scoop:
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+2. Add `extras` bucket:
+   ```powershell
+   scoop bucket add extras
+   ```
+3. Install Qv2ray:
+   ```powershell
+   scoop install v2ray qv2ray vcredist2019
+   ```
+
+::: tip
+In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
+:::
+
 ### Snapcraft
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
