@@ -25,7 +25,7 @@ To make it clear, `arm64` is completely different from `amd64`. Make sure you do
 Extract the v2ray core files into a fixed position. As a default, it is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
 
 The directory `vcore` could be in one of these locations:
- - `./` (aside Qv2ray executable, which is recommended for Windows Users)
+ - `./config/` (`config` subdirectory aside Qv2ray executable, which is recommended for Windows Users)
  - `~/.qv2ray/` (in a dedicated directory of your home folder)
  - `~/.config/qv2ray/` (standard XDG configuration path)
 
