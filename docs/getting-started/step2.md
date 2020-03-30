@@ -24,9 +24,9 @@ title: 配置 V2Ray 核心
 将下载到的核心文件解压缩到一个固定的位置。默认情况下，我们建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore` 中，其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储其数据的目录。
 
 目录 `vcore` 可以在下面的任一位置：
-- `./` （在 Qv2ray 可执行文件旁边，建议 Windows 用户使用）
+- `./config/` （在 Qv2ray 可执行文件旁边的 `config` 子文件夹内，建议 Windows 用户使用）
 - `~/.qv2ray/`（在 home 文件夹的独立目录中）
-- `~/.config/qv2ray` （标准 XDG 配置路径）
+- `~/.config/qv2ray/` （标准 XDG 配置路径）
 
 
 之后，请确保这些文件直接存在于 `vcore` 目录中:
