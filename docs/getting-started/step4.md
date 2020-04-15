@@ -16,19 +16,12 @@ sidebarDepth: 3
 目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **System Proxy「系统代理」** 选项：
 
 - Qv2ray 托盘菜单
-  
   1. 右键点击托盘图标
-  
   2. 在弹出的菜单中选择 **System Proxy「系统代理」 -> Enable/Disble System Proxy「开启/关闭 系统代理」**。
-
 - Qv2ray **Preference「首选项」** 窗口
-  
   1. 单击主窗口中的 **Preferences「首选项」** 按钮
-  
   2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**
-  
   3. 选择 **Set System Proxy「设置系统代理」** 选项
-  
   4. 点击 **OK** 应用设置
 
 :::tip Linux 用户：KDE/GNOME 代理设置
@@ -58,20 +51,17 @@ sidebarDepth: 3
 以下是一些例子：
 
 - 使用 SOCKS5:
-  
   ```bash
   java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
   ```
-
 - 使用 HTTP(S)：
-  
   ```bash
   java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
   ```
 
 :::danger 神奇的 Minecraft
 
-新版本的 **Minecraft 我的世界**(1.5.2) 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
+新版本的 **Minecraft 我的世界**（>=1.5.2） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
 
 :::
 
