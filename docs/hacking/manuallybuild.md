@@ -53,7 +53,7 @@ title: 手动构建 Qv2ray 项目
   - 从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库release中下载 [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z)  然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`.
   - 其他方式: 使用`vcpkg install grpc`在Windows上通过MSVC手动构建 `gRPC` , 这通常会花点时间,所以不鼓励这样.
 
-:::警告 
+:::warning
 确保你安装了 `grpc_cpp_plugin` and `protoc`, 它们在下一步骤由cmake使用.
 :::
 
