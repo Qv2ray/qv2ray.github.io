@@ -40,7 +40,7 @@ title: 手动构建 Qv2ray 项目
 
 ## 2. 构建步骤
 
-假设你安装了Qt并且当前配置了`$PATH`环境变量,从而在Terminal/Shell/Command Prompt中至少能成功执行`qmake --version`,而且你也使用SCM(软件配置管理?)下载了源码,使其位于某个目录下的一个叫做`Qv2ray`的目录:
+假设你安装了Qt并且当前配置了`$PATH`环境变量,从而在Terminal/Shell/Command Prompt中至少能成功执行`qmake --version`,而且你也正确获取了源码和子模块 (submodule),使其位于某个目录下的一个叫做`Qv2ray`的目录:
 
 ### 2.0 构建之前
 
