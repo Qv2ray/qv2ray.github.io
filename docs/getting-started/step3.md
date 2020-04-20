@@ -38,25 +38,15 @@ Qv2ray 支持多种导入配置的方式。 为了让您开始，我们选择了
 > 订阅链接通常是这样的：`https://some-airport.com/links/yjyyodk?sub=3`
 
 1. 点击 **Subscriptions「订阅」** 进入 **SubscribeEditor「订阅编辑器」**
-
 2. 在 **SubscribeEditor「订阅编辑器」** 对话框中，单击左下角的 **Add subscription 「添加订阅」** 图标按钮
-
 3. 单击此处可在 **Subscription List「订阅列表」** 中选择新生成的项
-
 4. 在右侧输入您的订阅信息
-   
    - **Subscrption Name「订阅名称」**：随意填写
-   
    - **Subscription Address「订阅地址」** ：使用上面提到的订阅链接
-   
    - **Update Interval「更新间隔」**：根据自己的需求更改
-
 5. 点击 **Update Subscription Data「更新订阅」** 更新订阅，然后等待进程结束
-
 6. 更新完成后退出订阅管理界面。
 
 :::tip 提醒
-
 通过系统代理更新的时候，如果你的订阅上游遇到连接问题（例如: DNS 记录污染，IP 封锁 / 服务器等），你可以尝试运行 **Update Subscription with System Proxy「使用系统代理设置更新订阅」** 选项。 然而，最好尽快通知上游，以永久解决这个问题。
-
 :::
