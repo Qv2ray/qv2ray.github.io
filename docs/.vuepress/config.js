@@ -1,10 +1,12 @@
-const {
-  resolve
-} = require("path");
+const { resolve } = require("path");
 const r = path => resolve(__dirname, path);
 module.exports = {
   title: "Qv2ray",
-  description: "Make V2Ray real cross-platform",
+  description: "Qv2ray Website & Documentation",
+  theme: 'vuepress-theme-succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
   head: [
     [
       "link",
@@ -21,9 +23,7 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    '@vuepress/back-to-top'
-  ],
+  plugins: ["@vuepress/back-to-top"],
   locales: {
     "/en/": {
       lang: "en-US",
@@ -33,7 +33,8 @@ module.exports = {
     "/": {
       lang: "zh-CN",
       title: "Qv2ray",
-      description: "🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17 / Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟"
+      description:
+        "🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17 / Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟"
     }
   },
   themeConfig: {
@@ -42,7 +43,7 @@ module.exports = {
     sidebar: "auto",
     nextLinks: true,
     prevLinks: true,
-    lastUpdated: "Last Updated: ",
+    lastUpdated: "Last Updated",
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/hacking/": ["", "manuallybuild"],
@@ -61,7 +62,8 @@ module.exports = {
             buttonText: "Refresh"
           }
         },
-        nav: [{
+        nav: [
+          {
             text: "Getting Started",
             link: "/en/getting-started/"
           },
@@ -89,7 +91,8 @@ module.exports = {
             buttonText: "刷新"
           }
         },
-        nav: [{
+        nav: [
+          {
             text: "起步",
             link: "/getting-started/"
           },
@@ -113,7 +116,7 @@ module.exports = {
     repoLabel: "GitHub",
     docsRepo: "Qv2ray/qv2ray.github.io",
     docsBranch: "source",
-    docsDir: 'docs',
+    docsDir: "docs",
     editLinks: true,
     editLinkText: "帮助我们改善此页面！"
   }
