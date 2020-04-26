@@ -80,6 +80,10 @@ module.exports = {
           {
             text: "Hacking",
             link: "/en/hacking/"
+          },
+          {
+            text: "Plugin System",
+            link: "/en/plugins/"
           }
         ]
       },
@@ -109,6 +113,10 @@ module.exports = {
           {
             text: "折腾",
             link: "/hacking/"
+          },
+          {
+            text: "插件系统",
+            link: "/plugins/"
           }
         ]
       }
