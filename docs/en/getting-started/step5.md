@@ -50,4 +50,4 @@ However, this is **not as safe**, since your proxy can be easily abused and atta
 You may encounter connectivity problems when sharing proxy. Here are some troubleshooting tips:
 
 - allow V2Ray core to listen on `0.0.0.0` in Windows Firewall
-- disable Intranet Isolation / AP Isolation on your router
+  - disable Intranet Isolation / AP Isolation on your router

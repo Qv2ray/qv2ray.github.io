@@ -47,8 +47,10 @@ module.exports = {
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/hacking/": ["", "manuallybuild"],
+      "/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/en/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
-      "/en/hacking/": ["", "manuallybuild"]
+      "/en/hacking/": ["", "manuallybuild"],
+      "/en/plugins/": ["", "usage", "v2ray-integration", "development"]
     },
     locales: {
       "/en/": {
