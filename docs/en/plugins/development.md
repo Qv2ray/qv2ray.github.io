@@ -10,27 +10,27 @@ title: Writing Plugins
 
 A plugin is, technically, a shared library that implements a specific interface, `Qv2rayPlugin::QvPluginInterface` in this case. So that can be loaded by Qv2ray.
 
-### Prerequisites when writing a plugin
+## Prerequisites when writing a plugin
 
-#### Compiler Version / Options
+### Compiler Version / Options
 
 - For Linux and macOS, there’s no compiler limitations.
 - MSVC is required when compiling a plugin.
 - `-fno-sized-deallocation` Should be used when compiling the plugin, especially when “**Building plugins using Github Action**”
 
-#### Qt Version Limitations
+### Qt Version Limitations
 
 - It’s a Qt limit that the version which a plugin was built against should not be greater than that of the loader application (Qv2ray in this case)
 - We suggest building plugins using `Qt 5.11.3` since it’s the oldest version Qv2ray supports.
 
-#### Third-party link-time and/or run-time dependencies
+### Third-party link-time and/or run-time dependencies
 
 - These dependencies **should** be statically linked into the plugin library, otherwise:
   - Tell the users to download/install all dependencies’ library from wherever they can.
 - **Exception: OpenSSL *SHOULD NOT* be statically linked.**
   - Qv2ray has its own OpenSSL dependency check and will make sure a compatible OpenSSL has been installed.
 
-### Creating a plugin
+## Creating a plugin
 
 *You have 2 choices when initiating a plugin.*
 
@@ -40,7 +40,7 @@ A plugin is, technically, a shared library that implements a specific interface,
 
 2. Creating plugin from from scratch.
 
-#### 1. Using the template project
+### 1. Using the template project
 
 1. Click the “Use This Plugin” in the Github Repository page and follow the instructions.
 
@@ -64,7 +64,7 @@ A plugin is, technically, a shared library that implements a specific interface,
 
 7. Test build locally, then push to the Github to see if the Github Action can pass.
 
-#### 2. Creating a plugin from scratch
+### 2. Creating a plugin from scratch
 
 1. Create a git repoaitory
 
