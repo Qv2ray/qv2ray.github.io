@@ -118,21 +118,21 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 包文件名（`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`）取决于 Qv2ray 的实际版本，在你的机器上可能有所不同。
 :::
 
-### openSUSE
+### openSUSE / Fedora
 
-> openSUSE 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
+> openSUSE / Fedora 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
 
 ::: warning 适用版本
-由于 Qt 版本的限制，此方法**只支持 Tumbleweeds，Leap 15.2 和之后的 Leap 版本**。
+由于 Qt 版本的限制，我们可能不能支持所有尚在支持期的上述发行版，具体支持情况请参见下面 OBS 项目链接。
 :::
 
 与 AUR 类似，Qv2ray 也有两个版本，你可以根据自己的口味来选择：
-- 稳定版： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb/Qv2ray)
-- 预览版： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)
+- 稳定版 OBS： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
+- 预览版 OBS： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
 或者你可以直接从下面的链接获取更详细的安装指导:
-- 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray)
-- 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray-preview)
+- 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
 ## 从应用商店中获取
 
