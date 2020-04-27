@@ -20,6 +20,7 @@ Do as the follows:
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
    - For macOS Users: `Qv2ray.VERSION.macOS-x64.tar.gz`
    - For Ubuntu 19.04 / Debian 10 (or greater): `qv2ray_VERSION_amd64.deb`
+   - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
 Where `VERSION` is the version of that release.
 
@@ -54,7 +55,7 @@ sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
 And that shall be done. 
 
 ::: tip
-You may also want to install `v2ray` package group to use system V2Ray core.
+You may also want to install `v2ray` package to use system V2Ray core.
 :::
 
 #### Getting from AUR, using an AUR Helper
@@ -84,7 +85,7 @@ Then, choose the adequate version of Qv2ray to install. There are two versions a
 
 Choose according to your actual situation. Here, we choose to install `qv2ray-dev-git`:
 
-```shell
+```bash
 $ yay -S qv2ray-dev-git
 ```
 
@@ -93,7 +94,7 @@ Qv2ray will be ready to use after finishing the command.
 #### Getting from AUR, the hard way
 You may not want to use an AUR helper to install Qv2ray from AUR. Then take a look at the following example.
 
-```shell
+```bash
 # 1. Clone the AUR repository (`qv2ray-dev-git` as an example):
 $ git clone https://aur.archlinux.org/qv2ray-dev-git.git
 
@@ -117,7 +118,7 @@ The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depend
 ### openSUSE
 > Qv2ray is made available for openSUSE users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb). 
 
-::: tip
+::: warning Applicable Versions
 Because of the limit of Qt version, in this way we **only support Tumbleweeds, Leap 15.2 and later Leap version**.
 :::
 
@@ -131,6 +132,27 @@ Or you can get more detailed installation guide directly from the links below:
 
 
 ## Getting from App Stores
+
+### Scoop (for Windows Users)
+> [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
+
+Run the following commands in Powershell:
+1. Install scoop:
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+2. Add `extras` bucket:
+   ```powershell
+   scoop bucket add extras
+   ```
+3. Install Qv2ray:
+   ```powershell
+   scoop install v2ray qv2ray vcredist2019
+   ```
+
+::: tip
+In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
+:::
 
 ### Snapcraft
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
@@ -146,13 +168,12 @@ $ snap refresh qv2ray
 ### Flathub
 1. Set up Flatpak environment according to the [official documentation](https://flatpak.org/setup/).
 2. Install Qv2ray:
-
-```shell
-# To install the package:
-$ flatpak install com.github.Qv2ray
-# To update the package:
-$ flatpak update
-```
+   ```shell
+   # To install the package:
+   $ flatpak install com.github.Qv2ray
+   # To update the package:
+   $ flatpak update
+   ```
 
 ## Building From Source
 Please refer to [Manually Build Qv2ray](/en/hacking/manuallybuild) Page.

@@ -2,7 +2,11 @@ const { resolve } = require("path");
 const r = path => resolve(__dirname, path);
 module.exports = {
   title: "Qv2ray",
-  description: "Make V2Ray real cross-platform",
+  description: "Qv2ray Website & Documentation",
+  theme: 'vuepress-theme-succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
   head: [
     [
       "link",
@@ -19,9 +23,7 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    '@vuepress/back-to-top'
-  ],
+  plugins: ["@vuepress/back-to-top"],
   locales: {
     "/en/": {
       lang: "en-US",
@@ -41,12 +43,14 @@ module.exports = {
     sidebar: "auto",
     nextLinks: true,
     prevLinks: true,
-    lastUpdated: "Last Updated: ",
+    lastUpdated: "Last Updated",
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/hacking/": ["", "manuallybuild"],
+      "/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/en/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
-      "/en/hacking/": ["", "manuallybuild"]
+      "/en/hacking/": ["", "manuallybuild"],
+      "/en/plugins/": ["", "usage", "v2ray-integration", "development"]
     },
     locales: {
       "/en/": {
@@ -76,6 +80,10 @@ module.exports = {
           {
             text: "Hacking",
             link: "/en/hacking/"
+          },
+          {
+            text: "Plugin System",
+            link: "/en/plugins/"
           }
         ]
       },
@@ -105,6 +113,10 @@ module.exports = {
           {
             text: "折腾",
             link: "/hacking/"
+          },
+          {
+            text: "插件系统",
+            link: "/plugins/"
           }
         ]
       }
@@ -113,7 +125,8 @@ module.exports = {
     repo: "Qv2ray/Qv2ray",
     repoLabel: "GitHub",
     docsRepo: "Qv2ray/qv2ray.github.io",
-    docsBranch: "master",
+    docsBranch: "source",
+    docsDir: "docs",
     editLinks: true,
     editLinkText: "帮助我们改善此页面！"
   }

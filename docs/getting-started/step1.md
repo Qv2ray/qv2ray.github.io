@@ -20,13 +20,12 @@ sidebarDepth: 2
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`
    - 对于 macOS 用户： `Qv2ray.VERSION.macOS-x64.tar.gz`
    - 对于 Ubuntu 19.04 / Debian 10 (或更高)： `qv2ray_VERSION_amd64.deb`
+   - 对于 Arch Linux 系用户：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
 其中 `VERSION` 是当前 Release 的版本。
 
 :::tip Linux AppImage 用户注意事项
-
-虽然我们已经将 `glibc` 和一些基本的 C++ 库绑定到 **AppImage** 包中，以支持一些旧的但是受支持的发行版，但是强烈建议您使用发行版 / 操作系统的新版本。
-
+虽然我们已将 `glibc` 和 C++ 基本库捆绑到 **AppImage** 中以支持一些旧的、受支持的发行版，但是我们强烈建议您使用更新版本的发行版或操作系统。
 :::
 
 ## GitHub Actions 编译版
@@ -38,9 +37,9 @@ sidebarDepth: 2
 3. 点击 **Artifacts** 展开下拉菜单, 然后根据你的平台选择一个二进制包并下载。
 
 :::tip 提示
-
 你必须先登录 GitHub 账号才能访问 GitHub Actions 进行白嫖~
 
+> 译者注：白嫖这两个字是我加上去的。
 :::
 
 ## 在包管理系统中安装此软件
@@ -58,9 +57,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git, 见下
 然后就 OK 啦！
 
 :::tip 提示
-
-你可能还需要安装 `v2ray` 包组来使用系统 V2Ray 核心。
-
+你可能还需要安装 `v2ray` 包来使用系统 V2Ray 核心。
 :::
 
 #### 使用 AUR Helper 从 AUR 获取
@@ -70,9 +67,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git, 见下
 您可以使用 AUR Helper（如 `yay`、`yaourt`、`pikaur` 等）来自动处理 AUR 包的构建过程。
 
 :::tip 提醒
-
-下面的例子将会使用 `yay`。对于其他 AUR Helper，检查各自文档中的用法。
-
+下面的例子将会使用 `yay`。对于其他 AUR Helper，请参阅各自的文档。
 :::
 
 首先在 AUR 中搜索 `qv2ray`：
@@ -120,32 +115,48 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 这样就可以了。
 
 :::tip 提示
-
 包文件名（`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`）取决于 Qv2ray 的实际版本，在你的机器上可能有所不同。
-
 :::
 
 ### openSUSE
 
 > openSUSE 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
 
-::: tip
-
-由于 Qt 版本的限制，包管理器安装方式我们**只支持 Tumbleweeds，Leap 15.2 和之后的 Leap 版本**。
-
+::: warning 适用版本
+由于 Qt 版本的限制，此方法**只支持 Tumbleweeds，Leap 15.2 和之后的 Leap 版本**。
 :::
 
 与 AUR 类似，Qv2ray 也有两个版本，你可以根据自己的口味来选择：
-
 - 稳定版： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb/Qv2ray)
 - 预览版： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)
 
 或者你可以直接从下面的链接获取更详细的安装指导:
-
 - 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray)
 - 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb&package=Qv2ray-preview)
 
 ## 从应用商店中获取
+
+### Scoop (针对 Windows 用户)
+> [Scoop](https://scoop.sh) 是 **Windows** 专用的一个基于命令行的包管理器。
+
+请在 Powershell 中执行以下命令：
+1. 安装 scoop 包管理器：
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+2. 添加 `extras` bucket：
+   ```powershell
+   scoop bucket add extras
+   ```
+3. 安装 Qv2ray：
+   ```powershell
+   scoop install v2ray qv2ray vcredist2019
+   ```
+
+::: tip
+安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
+:::
+
 
 ### Snapcraft
 
@@ -163,17 +174,15 @@ $ snap refresh qv2ray
 ### Flathub
 
 1. 设置 Flatpak 环境：[官方文档](https://flatpak.org/setup/)。
-
 2. 安装 Qv2ray：
+   ```bash
+   # 安装 Qv2ray：
+   $ flatpak install com.github.Qv2ray
 
-```bash
-# 安装 Qv2ray：
-$ flatpak install com.github.Qv2ray
-
-# 升级 Qv2ray：
-$ flatpak update
-```
+   # 升级 Qv2ray：
+   $ flatpak update
+   ```
 
 ## 从源码编译
 
-- 请参考 [手动构建 Qv2ray](/hacking/manuallybuild/) 页面。
+- 请参考 [手动构建 Qv2ray](/hacking/manuallybuild/) 一节。

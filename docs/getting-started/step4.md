@@ -1,137 +1,125 @@
 ---
-title: 让你的软件或浏览器走 Qv2ray 提供的代理
+title: 配置软件使用 Qv2ray
+sidebarDepth: 3
 ---
 
-# 让你的软件或浏览器走 Qv2ray 提供的代理
+# 配置软件使用 Qv2ray
 
-不同平台的代理配置方式不同。
+祝贺你! 只剩下一个步骤就可以访问解锁的互联网了！
 
-## 1. Linux
+## 一般方法
 
-### 让本机应用使用代理
+### 使用系统代理
 
-#### 方法一：环境变量
+对于 **Windows** 和 **macOS** 用户，几乎所有的应用程序都将遵循系统代理设置。 对于 **Linux** 用户，一些应用程序，如 Firefox 和 Chromium，但不是全部，将在 GNOME/KDE 设置中读取和遵守代理配置。
 
-在 Linux 下，有（相当一部分）应用程序（如 curl, wget 等）会遵循形如“协议_proxy”的环境变量所设置的代理。例如：
+目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **System Proxy「系统代理」** 选项：
 
-```shell
-export http_proxy="http://127.0.0.1:8000" #将地址和端口换成Qv2ray中配置的http入站对应的地址和端口
-export https_proxy="http://127.0.0.1:8000"
+- Qv2ray 托盘菜单
+  1. 右键点击托盘图标
+  2. 在弹出的菜单中选择 **System Proxy「系统代理」 -> Enable/Disble System Proxy「开启/关闭 系统代理」**。
+- Qv2ray **Preference「首选项」** 窗口
+  1. 单击主窗口中的 **Preferences「首选项」** 按钮
+  2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**
+  3. 选择 **Set System Proxy「设置系统代理」** 选项
+  4. 点击 **OK** 应用设置
+
+:::tip Linux 用户：KDE/GNOME 代理设置
+
+如果您使用 GNOME 作为您的主要桌面环境，您可能会发现设置系统代理非常有用。 这是因为 GNOME 代理设置几乎是全世界公认的。
+
+但是，KDE 用户可能会遇到一些困难，因为 KDE 代理设置更像是一个玩具。 即使是 KDE 应用程序本身也不会读取和遵守这种配置。 在这种情况下，您可以寻找其他解决方案来配置您的应用程序。
+
+:::
+
+### 在应用程序中手动设置
+
+#### 网页浏览器
+
+几乎所有的 web 浏览器都支持代理的手动配置。 以 Firefox 为例，你可以在 **Preferences「首选项」 -> General 「常规」 -> Network「网络」 -> Manual Proxy Configuration「手动代理设置」** 中找到这个设置。 用 Qv2ray **Inbound Settings「入站设置」** 中的信息填充这些字段以使用 Qv2ray。
+
+:::tip 使用代理插件
+
+为了避免在代理服务器配置之间来回切换，您可能需要使用第三方插件（例如：SwitchyOmega）来增强您的浏览器。 这些插件可以帮助实现更复杂的配置，包括多个配置文件和进一步的流量转移。
+
+:::
+
+#### Java 应用程序
+
+对于 Java 应用程序，您可以通过 JVM 参数使用代理配置。
+
+以下是一些例子：
+
+- 使用 SOCKS5:
+  ```bash
+  java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
+  ```
+- 使用 HTTP(S)：
+  ```bash
+  java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
+  ```
+
+:::danger 神奇的 Minecraft
+
+新版本的 **Minecraft 我的世界**（>=1.5.2） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
+
+:::
+
+## 依赖平台的方法
+
+### 使用环境变量
+
+Linux / macOS 中的许多程序，例如 `curl` 和 `wget`，都会使用 `<PROTOCOL>_PROXY` 环境变量提供的代理。
+
+这是一个配置示例：
+
+```bash
+# Change the host and port according to Qv2ray inbound configuration
+export HTTP_PROXY="http://127.0.0.1:8000"
+export HTTPS_PROXY="http://127.0.0.1:8000"
 ```
 
-即可让这些程序使用 Qv2ray 的 http 入站代理。
+如果 Qv2ray 中启用了身份验证，请使用以下设置：
 
-如果 Qv2ray 的 http 入站代理启用了身份验证，则相应的环境变量应设为：
-
-```shell
-export http_proxy="http://user:pass@127.0.0.1:8000"
-export https_proxy="http://user:pass@127.0.0.1:8000"
+```bash
+# Change user/pass according to your configuration
+export HTTP_PROXY="http://user:pass@127.0.0.1:8000"
+export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
 ```
 
-如果身份验证的用户和密码中有特殊字符，则需要对其进行转义，可参考下表：
+请注意，如果您的用户名或密码中有一个特殊字符，则需要对其进行编码。 这里有一个简短的参考：
 
 | `!`   | `#`   | `$`   | `&`   | `'`   | `(`   | `)`   | `*`   | `+`   | `,`   | `/`   | `:`   | `;`   | `=`   | `?`   | `@`   | `[`   | `]`   |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
-注：如果需要通过 `sudo` 执行的程序也使用这些环境变量，需要让 `sudo` 保留这些环境变量，在`sudoers`配置文件中加上这一行即可：
+对于在 `sudo` 中运行的程序，如果不在 shell 中运行 `sudo`，则需要配置 `sudo` 来保留这些变量。 使用 root 调用 `visudo` 并添加以下行：
 
-```
-Defaults env_keep += "http_proxy https_proxy ftp_proxy"
+```bash
+Defaults env_keep += "HTTP_PROXY HTTPS_PROXY"
 ```
 
-有些程序使用的是自己定义的环境变量，如 `rsync` 需通过 `RSYNC_PROXY` 环境变量来使用 http 代理：
+尽管如此，仍然有一些程序使用自己的变量，例如，`rsync` 对 HTTP 代理使用 `RSYNC_PROXY`：
 
-```
+```bash
 export RSYNC_PROXY=user:pass@127.0.0.1:8000
 ```
 
-#### 方法二：手动设置
+强烈建议您阅读要用来配置代理的程序手册。
 
-有些应用支持手动设置代理。以 Firefox 为例：
+### 使用 `proxychains`
 
-首选项-常规-网络设置（在最底下）-手动代理配置-把 Qv2ray 的 http 入站代理填到 HTTP/HTTPS/FTP 代理栏里，或把 Qv2ray 的 socks 入站代理填到 SOCKS 代理栏里。
+对于那些不能使用上述方法的应用程序，Linux/ macOS 用户可以尝试使用 `proxychains`，它劫持 `glibc` 中的函数，将网络连接重定向到代理。
 
-对于浏览器而言，还可以通过插件（如 SwitchyOmega）实现更复杂的代理配置，如进一步分流，临时直连等。
+首先，应该安装 `proxychains-ng`。 安装方法因操作系统的不同而不同，但是[官方项目](https://github.com/rofl0r/proxychains-ng)应该给你一个说明。
 
-凡是选项里有提供 http 代理设置的应用，如无意外都可以类似配置以使用 Qv2ray 的 http 入站代理。
-
-对 `java` 应用，可以通过 java 配置项设置代理，如：
-
-```
-java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 javacommand
-#or
-java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 javacommand
-```
-
-对 `ssh` 或 `scp`，可通过 `socat` 设置代理，如：
-
-```
-ssh -o "ProxyCommand=socat - PROXY:localhost:%h:%p,proxyport=8000" user@remotehost
-```
-
-对 `electron` 系应用(如 Chrome, Simplenote, Notion 等)，可通过`--args` 设置代理，如：
-
-```
-simplenote --args --proxy-server=127.0.0.1:1081
-```
-
-对 `git`，可通过 `config http.proxy` 设置代理，如：
-
-```
-git config --global http.proxy http://127.0.0.1:1081
-git config --global https.proxy http://127.0.0.1:1081
-```
-
-对 `snap`，可通过 `set system proxy.http` 设置代理，如：
-
-```
-sudo snap set system proxy.http="http://127.0.0.1:1081" 
-sudo snap set system proxy.https="http://127.0.0.1:1081" 
-```
-
-#### 方法三：GNOME系统设置
-
-目前 Qv2ray 已经支持自动设置 GNOME 系统设置里的系统代理。有些应用（如 Firefox 和 Chromium）会读取并遵循 GNOME 系统设置里的代理配置，对这些应用而言，只需要在 Qv2ray 里启用系统代理即可。
-
-#### 方法四：proxychains
-
-对于前三种方式无法生效的应用，可尝试使用 proxychains 进行代理，它通过劫持动态链接库 `libc` 中的 `connect` 等函数实现重定向网络链接到代理中。
-
-首先安装 `proxychains-ng`：https://github.com/rofl0r/proxychains-ng
-
-随后，编辑 `/etc/proxychains.conf`（全局）或`$HOME/.proxychains/proxychains.conf`（用户），将 `[ProxyList]` 里的代理改成 Qv2ray 的 socks 或 http 入站代理，如：
+编辑 `/etc/proxychains.conf`（用于全局 proxychains）或 `$HOME/.proxychains/proxychains.conf`（对于用户），编辑 `[ProxyList]` 选项并更改为 Qv2ray 中的 SOCKS5 代理：
 
 ```
 [ProxyList]
-socks5  127.0.0.1 1088
-#or
-#http  127.0.0.1 8000
+socks5  127.0.0.1  1088
 ```
 
-在终端里使用 `proxychains <program>` 即可让 `proxychains` 劫持该应用，以试图让该应用使用代理。
+在配置 `proxychains` 之后，您可以在终端使用 `proxychains` 程序使 `proxychains` 劫持程序使用给定的代理。 如果您厌倦了嘈杂的输出，您可能会在 `proxychains` 之后附加 `-q` 选项。
 
-由于 proxychains 的原理是劫持动态链接库 `libc`，因此它对静态链接的应用（如 `golang` 编译的应用）是无效的。
-
-### 让网络上的其他设备使用代理
-
-默认情况下，Qv2ray 的代理配置是只监听 `127.0.0.1` 的地址，即其代理只有本机能够使用，如需让网络上的其他设备使用代理，需要修改这一配置：
-
-- 若希望局域网（内网 ip 环境）或互联网（公网ip环境）中的所有设备都能够使用本机的Qv2ray提供的代理，则在“首选项-入站设置-监听地址”里，把默认的 `127.0.0.1` 改成 `0.0.0.0` 即可。
-- 若希望几个具有特定 ip 的设备能够使用本机的 Qv2ray 提供的代理，由于 v2ray 的限制，同一个入站不支持监听多个指定的 ip，可以有两种方式解决这个问题：
-  - 通过复杂配置，建立多个不同的入站来实现，每个入站分别监听其中的一个 ip。
-  - Qv2ray 的入站监听所有 ip（`0.0.0.0`），在本机设置防火墙，只允许特定 ip 访问Qv2ray 的代理的端口。
-
-例子：若 ip 为 `192.168.0.100` 的设备希望使用代理，本机的 ip 为 `192.168.0.50`。若本机的 Qv2ray 配置了一个端口为 `12345` 的 http 入站，监听 ip`0.0.0.0` 或 `192.168.0.100`，则在 `192.168.0.100` 的设备上，可通过
-
-```
-export http_proxy="http://192.168.0.50:12345"
-export https_proxy="http://192.168.0.50:12345"
-```
-
-使用此 http 代理（其他使用方式也类似）。
-
-注意事项：
-
-- 为让其他设备使用本机的 Qv2ray 提供的代理，除了本机的 Qv2ray 的代理需要监听目标设备的ip之外，还需要让目标设备能通过本机ip及代理端口访问到本机。因此，若本机设置了防火墙，则需要让防火墙放行对应端口；局域网环境里，可能需要关闭“内网隔离”“AP 隔离”之类的设置，否则内网 ip 之间也无法互相访问。
-- 如果本机没有设置防火墙，将 Qv2ray 的代理监听的 ip 设为 `0.0.0.0`，且局域网没有设置“内网隔离”，则意味着局域网里所有的设备都能通过本机的ip及代理端口使用本机的 Qv2ray 提供的代理；如果本机是处于公网ip环境里，则意味着整个互联网中所有设备都能通过本机的 ip 及代理端口使用本机的 Qv2ray 提供的代理。因此，如确需在非可信任的局域网环境或公网 ip 环境中开启此种配置，最好配合防火墙，或配合代理身份验证，以防止本机的代理被滥用。
+需要注意的一点是，`proxychains` 不能用于静态链接的程序，例如 Golang 程序。
