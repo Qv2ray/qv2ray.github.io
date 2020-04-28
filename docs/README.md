@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: Qv2ray
-tagline: 🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17/Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟
+tagline: 纵使千山多万壑，犹有青鸾踏云间
 actionText: 快速上手 →
 actionLink: /getting-started/
 features:
