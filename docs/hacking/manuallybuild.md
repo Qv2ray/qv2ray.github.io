@@ -60,7 +60,8 @@ title: 手动构建 Qv2ray 项目
 ### 2.1构建脚本
 
 ```shell
-cd Qv2raygit submodule update --init # 拉取然后检出所有子模块到对应的目录,可能是git仓库目录下的3rdparty/
+cd Qv2ray
+git submodule update --init # 拉取然后检出所有子模块到对应的目录,可能是git仓库目录下的3rdparty/
 mkdir build && cd build
 
 # 调用cmake
