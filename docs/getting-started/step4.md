@@ -34,14 +34,19 @@ sidebarDepth: 3
 
 ### 在应用程序中手动设置
 
+#### Telegram
+你可以在应用中配置 Telegram 使用代理。进入到 **Settings「设置」** -> **Advanced「高级」** -> **Network and proxy「网络和代理」**，点击 **Connection type「连接类型」** ，打开 **Proxy Settings「代理设置」** 对话框。
+
+在 **代理设置** 中，点击底部的 **Add Proxy「添加代理」** 按钮，根据自己的喜好选择 SOCKS5/HTTP，并在空白处填写 Qv2ray 入站设置中的信息。
+
+最后，点击刚刚配置好的代理条目，就大功告成了。
+
 #### 网页浏览器
 
-几乎所有的 web 浏览器都支持代理的手动配置。 以 Firefox 为例，你可以在 **Preferences「首选项」 -> General 「常规」 -> Network「网络」 -> Manual Proxy Configuration「手动代理设置」** 中找到这个设置。 用 Qv2ray **Inbound Settings「入站设置」** 中的信息填充这些字段以使用 Qv2ray。
+几乎所有的 Web 浏览器都支持代理的手动配置。 以 Firefox 为例，你可以在 **Preferences「首选项」 -> General 「常规」 -> Network「网络」 -> Manual Proxy Configuration「手动代理设置」** 中找到这个设置。 用 Qv2ray **Inbound Settings「入站设置」** 中的信息填充这些字段以使用 Qv2ray。
 
 :::tip 使用代理插件
-
 为了避免在代理服务器配置之间来回切换，您可能需要使用第三方插件（例如：SwitchyOmega）来增强您的浏览器。 这些插件可以帮助实现更复杂的配置，包括多个配置文件和进一步的流量转移。
-
 :::
 
 #### Java 应用程序

@@ -30,6 +30,13 @@ However, KDE users may have a difficult time, since KDE Proxy Settings is more l
 
 ### Configure Manually in Applications
 
+#### Telegram
+You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened. 
+
+In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings. 
+
+Finally, click on the proxy entry that you've just configured. You are done.
+
 #### Web Browsers
 Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
 
