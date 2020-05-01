@@ -35,11 +35,7 @@ title: 更多
 
 然而，有时候，这些规则并不总是适用。例如，您有一个特殊的 [bilibili](https://bilibili.com) 代理用于解锁港澳台流媒体。由于哔哩哔哩是一个中国大陆的网站，在默认情况下，流量不会通过代理，这就给想看港澳台区的你带来了麻烦。解决方案是在 **Preference「首选项」** 窗口中使用我们的 **Advanced Route Settings「高级路由设置」**。
 
-一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。规则的语法可以在 [V2Ray 官方网站的 RuleObject 文档](https://v2ray.com/chapter_02/03_routing.html#ruleobject)中找到。在这里，如果我们想强制 bilibili 通过代理，我们只需在 `(域名, 代理)` 位置编写一个规则：
-
-```text
-domain:bilibili.com
-```
+一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。规则的语法可以在 [V2Ray 官方网站的 RuleObject 文档](https://v2ray.com/chapter_02/03_routing.html#ruleobject)中找到。在这里，如果我们想强制 bilibili 通过代理，我们只需在 `(域名, 代理)` 位置编写一个 `geosite:bilibili` 规则。
 
 应用设定并重新连接后，规则即可生效。
 
