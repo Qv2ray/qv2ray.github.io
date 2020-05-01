@@ -6,10 +6,7 @@ title: Importing Hosts into Qv2ray
 Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
 
 ## VMess Link
-> VMess links generally looks like this:
-> ```
-> vmess://eyJ2IjoiMiIsxxxxqcC5xbm9kZS5uZXQiLCJwb3J0Ijo4MDgwLCJpZCI6ImUxYjMwYTJmLTE3NWYtNGYzYi05MTQzLWM2Nzc4MssssiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6ImEuanAuYXdzLnF1aWMuZW5saXYuY24iLCJwYXRoIjoiXC8iLCJ0bHMiOiIifQ==
-> ```
+> VMess links generally looks like this: `vmess://eyJ2IjoiMiIsxxxxqcC5x`...
 
 Follow these steps to import them:
 1. Click **Add** button in the main window.

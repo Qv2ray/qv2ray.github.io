@@ -8,11 +8,7 @@ Qv2ray 支持多种导入配置的方式。 为了让您开始，我们选择了
 
 ## 通过 Vmess 链接导入
 
-> Vmess 链接通常是这样的：
-> 
-> ```
-> vmess://eyJ2IjoiMiIsxxxxqcC5xbm9kZS5uZXQiLCJwb3J0Ijo4MDgwLCJpZCI6ImUxYjMwYTJmLTE3NWYtNGYzYi05MTQzLWM2Nzc4MssssiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6ImEuanAuYXdzLnF1aWMuZW5saXYuY24iLCJwYXRoIjoiXC8iLCJ0bHMiOiIifQ==
-> ```
+> Vmess 链接通常是这样的：`vmess://eyJ2IjoiMiIsxxxxqcC5x`...
 
 按照以下步骤导入它们：
 
