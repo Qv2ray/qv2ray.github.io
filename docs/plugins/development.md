@@ -44,12 +44,14 @@ title: 编写插件
 1. 在 GitHub 仓库页面点击 “使用这个模板” 按钮，然后遵循说明操作。
 2. 克隆你刚刚创建的仓库。
 3. 执行下列命令，因为 GitHub 不会保留模板仓库的子模块（submodule）信息。
+
    ```bash
    git submodule add --force https://github.com/Qv2ray/QvPlugin-Interface/ ./interface
    ```
+
 4. 配置你的构建生成器（`Build Generator`）:
-   * 删掉不需要的文件：例如 `QvSimplePlugin.pro` 或者 `CMakeLists.txt`；
-   * 删掉不需要的持续集成配置文件，在 `./.github/workflows/`。
+   - 删掉不需要的文件：例如 `QvSimplePlugin.pro` 或者 `CMakeLists.txt`；
+   - 删掉不需要的持续集成配置文件，在 `./.github/workflows/`。
 5. 在 Qt Creator 里打开你选择留下的 `.pro` 或者 `CMakeLists.txt` 文件。
 6. 修改 `QvSimplePlugin.hpp`，尤其是修改其中的 **插件元信息**（plugin metadata）。
 7. 本地编写并测试，同时可以推送到远程以测试能否通过编译。
@@ -58,12 +60,14 @@ title: 编写插件
 
 1. 建立一个 Git 仓库。
 2. 将 `https://github.com/Qv2ray/QvPlugin-Interface/` 添加为子模块。
-3. 将 `QvPluginInterface.cmake ` 或 `QvPluginInterface.pri` 文件加入你的工程。
+3. 将 `QvPluginInterface.cmake` 或 `QvPluginInterface.pri` 文件加入你的工程。
 4. 编写一个继承 `Qv2rayPlugin::Qv2rayInterface` 的类，并实现所有的虚方法。
 5. 添加下列函数的 slot 实现：
-   ```c++
+
+   ```cpp
    void PluginLog(const QString &) const;
    void PluginErrorMessageBox(const QString &);
    ```
+
 6. 若插件在其元数据中没有 `SPECIAL_TYPE_KERNEL`，你可在 `GetPluginKernel` 函数中返回 `nullptr`。
    对于 `GetSerializer` 函数也是一样, 但千万不要对 `GetEventHandler()` 也这么做。
