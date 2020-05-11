@@ -22,7 +22,7 @@ title: 手动构建 Qv2ray 项目
 - Linux 下的 `gcc7` 即可支持。
 - Windows 下的 MSVC 需要 `>=14.2`。
 
-:::warning 别用 gRPC 1.26.0
+:::danger 别用 gRPC 1.26.0
 注意: 这个版本的 gRPC 有一个已知问题，会导致 Qv2ray 运行后无法退出，并使得 CPU 空转，严重增加系统负担。
 切勿使用 gRPC 1.26.0。
 :::
@@ -32,7 +32,7 @@ title: 手动构建 Qv2ray 项目
 有多种方式获取 Qv2ray 的源码。你可以通过下面的任意方式获取:
 
 - Git 客户端: `git clone https://github.com/Qv2ray/Qv2ray`
-- 通过 GitHub 直接下载仓库上某个分支的源码（不建议这样做，因为它缺少 Git Submodule 的元数据）
+- 通过 GitHub 直接下载仓库上某个分支的源码（不建议这样做，因为它缺少 Git submodule 的元数据）
 
 ## 构建步骤
 
@@ -46,10 +46,10 @@ title: 手动构建 Qv2ray 项目
 - Arch Linux：使用 pacman 安装这两个包: `pacman -S grpc protobuf`
 - macOS：通过 Homebrew 安装两个包: `brew install grpc protobuf`
 - Windows:
-  - 你可以从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库release中下载 [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z)  然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`；或者：
-  - 你可以使用 `vcpkg install grpc` 在Windows上通过MSVC手动构建 `gRPC`, 不过这通常会花点时间，且需要稳定的网络环境。
+  - 你可以从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库 Release 中下载 [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z)，然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`；或者：
+  - 你可以使用 `vcpkg install grpc` 在 Windows 上通过 MSVC 手动构建 `gRPC`, 不过这通常会花点时间，且需要稳定的网络环境（没梯子就算了）。
 
-:::warning Qv2ray-deps => MSVC2019+
+:::danger Windows: Qv2ray-deps -> MSVC2019+
 若你选择直接使用 Qv2ray-deps 项目中的预编译包，你至少需要使用 MSVC2019 来进行 Linking，否则可能会遇到各种谜之问题。
 这是因为 GitHub Actions 上用于编译 Qv2ray-deps 项目的编译器是 MSVC2019。
 若你不想安装 MSVC2019+，你可以选择使用 vcpkg 手动编译安装，祝君好运。
@@ -75,7 +75,7 @@ cmake ..
 cmake --build . # 可以再附加 `--parallel N` 选项加速构建.
 ```
 
-:::info 莫急！
+:::hint 莫急！
 在 Windows 和 macOS 上经过这些步骤后，你可能还不能直接运行 `qv2ray.exe` 或者打开 `qv2ray.app` 包。
 你还需要参考下面的部署步骤以为 Qv2ray 补全所需的运行时依赖。
 :::
