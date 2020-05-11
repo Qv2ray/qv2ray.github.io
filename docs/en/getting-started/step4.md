@@ -10,42 +10,49 @@ Congratulations! There's only one step left in order to access the unlocked Inte
 ## General Methods
 
 ### Using System Proxy
-For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings. 
+For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings.
 
 Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
- - **Qv2ray Tray Menu**. 
+
+- **Qv2ray Tray Menu**.
    1. Right click on the tray icon.
    2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
- - **Qv2ray Preference Window**. 
+- **Qv2ray Preference Window**.
    1. Click **Preferences** button in the main window.
    2. In **Preference Window**, choose the tab **Inbound Settings**.
    3. Check the option **Set System Proxy**.
-   4. Click **OK** to apply the settings. 
+   4. Click **OK** to apply the settings.
 
 :::tip Linux Users: KDE/GNOME Proxy Settings
-If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged. 
+If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
 
-However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications. 
+However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications.
+:::
+
+:::warning Windows Users: UWP Loopback Problem
+By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
+
+You can use some third-party tool to **enable UWP loopback** for your program to be proxied, for example, [UWPLoopback @ GitHub](https://github.com/Dispnt/UWPLoopback).
 :::
 
 ### Configure Manually in Applications
 
 #### Telegram
-You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened. 
+You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
 
-In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings. 
+In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings.
 
 Finally, click on the proxy entry that you've just configured. You are done.
 
 #### Web Browsers
 Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
 
-:::tip Using Proxy Plugins 
+:::tip Using Proxy Plugins
 To avoid switching back and forth among proxy configurations, you may want to use a third-party plugin (eg: SwitchyOmega) to enhance your browser. These plugins can help to implement a more sophisticated configuration, including multiple profiles and further traffic diversion.
 :::
 
 #### Java Applications
-For Java applications, you may use configure proxies through JVM arguments. 
+For Java applications, you may use configure proxies through JVM arguments.
 
 Here are some examples:
  - Using SOCKS5: 
@@ -91,7 +98,7 @@ Note that if there is a special character in your username or password, you need
 
 For programs running in `sudo`, it is required to configure `sudo` to preserve these variables if you do not run `sudo` in a shell. Call `visudo` with root and add the following line:
 
-```
+```shell
 Defaults env_keep += "HTTP_PROXY HTTPS_PROXY"
 ```
 
@@ -102,7 +109,6 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 ```
 
 It is strongly recommended to read the manual of programs that you want to configure proxy with.
-
 
 ### Using `proxychains`
 
@@ -117,6 +123,6 @@ Edit `/etc/proxychains.conf` (for global proxychains) or `$HOME/.proxychains/
 socks5  127.0.0.1  1088
 ```
 
-After configuring `proxychains`, you may use `proxychains <program>` in terminal to make `proxychains` hijack the program to use the given proxy. If you are fed up with the noisy output, you may append `-q` option after `proxychains `.
+After configuring `proxychains`, you may use `proxychains <program>` in terminal to make `proxychains` hijack the program to use the given proxy. If you are fed up with the noisy output, you may append `-q` option after `proxychains`.
 
 One thing to note is that `proxychains` does not work with statically-linked programs, for example, Golang programs.
