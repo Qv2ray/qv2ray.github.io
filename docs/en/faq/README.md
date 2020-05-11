@@ -1,5 +1,6 @@
 ---
 title: FAQ
+sidebarDepth: 3
 ---
 
 # FAQ
