@@ -75,7 +75,7 @@ cmake ..
 cmake --build . # 可以再附加 `--parallel N` 选项加速构建.
 ```
 
-:::info 莫急！
+:::tip 莫急！
 在 Windows 和 macOS 上经过这些步骤后，你可能还不能直接运行 `qv2ray.exe` 或者打开 `qv2ray.app` 包。
 你还需要参考下面的部署步骤以为 Qv2ray 补全所需的运行时依赖。
 :::
