@@ -36,7 +36,6 @@ title: 编写插件
 
 1. 使用提供的模板工程以开始：
    Qv2ray 有个叫 [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template) 的项目仓库，你可以基于这个来开始你的插件编写。
-
 2. 从头来。
 
 ### 1. 使用模板工程
@@ -44,11 +43,9 @@ title: 编写插件
 1. 在 GitHub 仓库页面点击 “使用这个模板” 按钮，然后遵循说明操作。
 2. 克隆你刚刚创建的仓库。
 3. 执行下列命令，因为 GitHub 不会保留模板仓库的子模块（submodule）信息。
-
    ```bash
    git submodule add --force https://github.com/Qv2ray/QvPlugin-Interface/ ./interface
    ```
-
 4. 配置你的构建生成器（`Build Generator`）:
    - 删掉不需要的文件：例如 `QvSimplePlugin.pro` 或者 `CMakeLists.txt`；
    - 删掉不需要的持续集成配置文件，在 `./.github/workflows/`。
@@ -63,11 +60,9 @@ title: 编写插件
 3. 将 `QvPluginInterface.cmake` 或 `QvPluginInterface.pri` 文件加入你的工程。
 4. 编写一个继承 `Qv2rayPlugin::Qv2rayInterface` 的类，并实现所有的虚方法。
 5. 添加下列函数的 slot 实现：
-
    ```cpp
    void PluginLog(const QString &) const;
    void PluginErrorMessageBox(const QString &);
    ```
-
 6. 若插件在其元数据中没有 `SPECIAL_TYPE_KERNEL`，你可在 `GetPluginKernel` 函数中返回 `nullptr`。
    对于 `GetSerializer` 函数也是一样, 但千万不要对 `GetEventHandler()` 也这么做。
