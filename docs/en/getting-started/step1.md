@@ -28,6 +28,10 @@ Where `VERSION` is the version of that release.
 Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
 :::
 
+::: warning Notes for Windows ARM64 users
+Windows 10 on ARM users can use `Qv2ray.VERSION.win-x86.zip` directly, since the operating system has a built-in compatibility layer for x86 architecture. 
+:::
+
 ## GitHub Actions Artifact
 
 If you are fed up with the functionalities of stable versions and willing to try out new features in development, you may download artifacts from GitHub Actions:
