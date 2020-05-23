@@ -28,6 +28,10 @@ sidebarDepth: 2
 虽然我们已将 `glibc` 和 C++ 基本库捆绑到 **AppImage** 中以支持一些旧的、受支持的发行版，但是我们强烈建议您使用更新版本的发行版或操作系统。
 :::
 
+::: warning Windows ARM64 用户注意
+因为操作系统内置 x86 的兼容层，Windows 10 on ARM 用户可以直接使用 `Qv2ray.VERSION.win-x86.zip`。
+:::
+
 ## GitHub Actions 编译版
 
 不喜欢稳定版的功能，想要尝试不断开发中的新功能？你可以下载 GitHub Actions 中的编译版本：
@@ -38,8 +42,6 @@ sidebarDepth: 2
 
 :::tip 提示
 你必须先登录 GitHub 账号才能访问 GitHub Actions 进行白嫖~
-
-> 译者注：白嫖这两个字是我加上去的。
 :::
 
 ## 在包管理系统中安装此软件
