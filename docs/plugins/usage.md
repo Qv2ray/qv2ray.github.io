@@ -52,7 +52,7 @@ title: 使用插件
 
 - 通常是插件作者懒得支持你的操作系统，或者：
 - 这个插件不适用于你的操作系统：
-  - 例如：一个针对 Linux 系统的 `iptabes` 设置插件可能就不适合 macOS 和 Windows。
+  - 例如：一个针对 Linux 系统的 `iptables` 设置插件可能就不适合 macOS 和 Windows。
 
 ### 明明把插件放进了插件文件夹，Qv2ray 就是没有认出来插件
 
