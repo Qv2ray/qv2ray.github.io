@@ -15,7 +15,6 @@ Actually, a Qv2ray Plugin is an extension of Qv2ray, which allows you use more f
 
 Qv2ray workgroup has published 4 officially maintained plugins:
 
-- **QvPACPlugin** - Allows you to use advanced PAC feature.
 - **QvSSRPlugin** - Allows you to use ShadowSocksR in Qv2ray.
 - **QvTrojanPlugin** - Allows you to use Trojan in Qv2ray
 - **QvCommandPlugin** - Run any command when a specific event has been triggered.

@@ -13,7 +13,6 @@ title: 使用插件
 
 当前，Qv2ray 项目组共发布如下 4 个我们维护的插件：
 
-- **QvPACPlugin** - 让你能使用 PAC 分流策略
 - **QvSSRPlugin** - 让你能在 Qv2ray 中使用 ShadowsocksR
 - **QvTrojanPlugin** - 让你能在 Qv2ray 中使用 Trojan
 - **QvCommandPlugin** - 当特殊事件发生时，运行任意指定的命令
