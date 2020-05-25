@@ -12,7 +12,7 @@ sidebarDepth: 3
 - You should grant permission before executing it.
 - Solution: `chmod +x Qv2ray.AppImage`
 
-### 2. V2ray Core Failed to start after enabling tProxy
+### 2. V2Ray Core Failed to start after enabling tProxy
 
 Detail: `Segmentation Fault` occurd after enabling tProxy
 
