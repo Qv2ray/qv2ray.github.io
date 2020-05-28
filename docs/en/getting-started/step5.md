@@ -26,12 +26,12 @@ Similarly, Qv2ray will do its best to detect the display language of your system
 Choose according to ISO-639/ISO-3166 codes. For example, `zh_CN` for **Chinese Simplified**, `ja_JP` for **Japanese**, `en_US` for **American English**, etc. Most of the user interface can be retranslated immediately after a change, but a complete restart of Qv2ray is recommended to make the changes take effect.
 
 :::tip Restart After Change
-If changes doesn't seems to apply, you could try restarting Qv2ray.
+If changes don't seems to apply, you could try restarting Qv2ray.
 :::
 
 ## Tweaking Routing Schemes
 
-By default, Qv2ray will be set to **bypass the traffic of China mainland**, according to `geosite.dat` and `geoip.dat` from V2Ray core, thus it it not necessary to configure some awkward PAC rules. You can override this default setting in the **Preference Window**, by simply turing off this function in tab **Connection Settings**.
+By default, Qv2ray will be set to **bypass the traffic of China mainland**, according to `geosite.dat` and `geoip.dat` from V2Ray core, thus it it not necessary to configure some awkward PAC rules. You can override this default setting in the **Preference Window**, by simply turning off this function in tab **Connection Settings**.
 
 However, sometimes, these rules won't always apply. For example, you have a special proxy for [bilibili](https://bilibili.com/) that unlocks the Hong Kong/Macau/Taiwan episodes. Since bilibili is a China mainland website, by default, the traffic won't go through the proxy, and that causes you problem. The solution is using our **Advanced Route Settings** in the **Preference Window**.
 
@@ -50,4 +50,4 @@ However, this is **not as safe**, since your proxy can be easily abused and atta
 You may encounter connectivity problems when sharing proxy. Here are some troubleshooting tips:
 
 - allow V2Ray core to listen on `0.0.0.0` in Windows Firewall
-  - disable Intranet Isolation / AP Isolation on your router
+- disable Intranet Isolation / AP Isolation on your router
