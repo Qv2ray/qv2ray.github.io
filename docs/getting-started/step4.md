@@ -34,7 +34,7 @@ sidebarDepth: 3
 
 ::: warning Windows 用户：UWP Loopback 问题
 
-默认情况下，UWP 程序禁止使用带有环回地址（如 127.0.0.1）的代理，所以系统的代理设置很可能会导致你的 UWP 程序停止正常工作。
+默认情况下，UWP 程序禁止使用带有环回地址（如 127.0.0.1）的代理，所以系统的代理设置很可能会导致你的 UWP 程序无法正常工作。
 
 你可以使用一些第三方工具来 **启用UWP Loopback**，让你的程序被代理，例如：[UWPLoopback @ GitHub](https://github.com/Dispnt/UWPLoopback)。
 
