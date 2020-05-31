@@ -56,7 +56,5 @@ title: 常规设置
 :::
 
 :::danger 有关 V2ray-Core 4.23.1 以下版本
-**2020-05-30 更新**
-由于实现缺陷，V2ray-Core 在不开启 `AllowInsecureCiphers` 选项时会使用硬编码伪装的 TLS 加密套件，这将会导致 V2ray-Core 的 TLS 流量出现明显特征
-启用 `AllowInsecureCiphers` 会暂时缓解此问题，开启此选项后需要**重新导入所有受影响的连接**
+**2020-05-30 更新：** 由于实现缺陷，V2ray-Core 在不开启 `AllowInsecureCiphers` 选项时，会使用硬编码的 TLS 加密套件列表，这将导致 V2ray-Core 的 TLS 流量出现明显特征，在 Qv2ray 中启用 `AllowInsecureCiphers` 会暂时缓解此问题，开启此选项后需要**重新导入所有受影响的连接**
 :::
