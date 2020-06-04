@@ -11,7 +11,7 @@ title: 使用插件
 
 实际上，Qv2ray 插件是 Qv2ray 的扩展，能让你使用更多特性。
 
-当前，Qv2ray 项目组共发布如下 4 个我们维护的插件：
+当前，Qv2ray 项目组共发布如下 3 个我们维护的插件：
 
 - **QvSSRPlugin** - 让你能在 Qv2ray 中使用 ShadowsocksR
 - **QvTrojanPlugin** - 让你能在 Qv2ray 中使用 Trojan
