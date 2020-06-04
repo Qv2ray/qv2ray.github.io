@@ -32,7 +32,7 @@ However, KDE users may have a difficult time, since KDE Proxy Settings is more l
 :::warning Windows Users: UWP Loopback Problem
 By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
 
-You can use some third-party tool to **enable UWP loopback** for your program to be proxied, for example, [UWPLoopback @ GitHub](https://github.com/Dispnt/UWPLoopback).
+You can use some third-party tool to **enable UWP loopback** for your program to be proxied. We here present you [this program](/EnableLoopback.zip) from Fiddler project.
 :::
 
 ### Configure Manually in Applications
