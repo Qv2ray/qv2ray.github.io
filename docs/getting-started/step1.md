@@ -206,4 +206,4 @@ $ snap refresh qv2ray
 
 ## 从源码编译
 
-- 请参考 [手动构建 Qv2ray](/hacking/manuallybuild/) 一节。
+- 请参考 [手动构建 Qv2ray](../hacking/manuallybuild.md) 一节。

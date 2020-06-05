@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroText: Qv2ray
 tagline: 纵使千山多万壑，犹有青鸾踏云间
 actionText: 快速上手 →
-actionLink: /getting-started/
+actionLink: ./getting-started/
 features:
 - title: 跨平台 GUI
   details: 支持 Linux / Windows / macOS
@@ -34,7 +34,7 @@ footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
 欢迎参与该项目的贡献中来！就算你不懂如何写代码，也还是有许多种方法可以帮助完善 Qv2ray 的。 这里有一些例子：
 
 - 🌐 **翻译** 帮助 Qv2ray 翻译成更多语言的版本，或者提高目前已有的翻译的质量。 你可以在 [transifex](https://www.transifex.com/qv2ray/qv2ray/) 上找到我们。
-- 🐛 **报告 Bug** 报告 Qv2ray 的 bug 或其他使用时产生的问题, 请给我们提交 [GitHub issue](https://github.com/lhy0403/Qv2ray/issues)。
+- 🐛 **报告 Bug** 报告 Qv2ray 的 bug 或其他使用时产生的问题, 请给我们提交 [GitHub issue](https://github.com/Qv2ray/Qv2ray/issues)。
 - 💡 **新功能建议**
 - ⚙️ **帮助开发 Qv2ray**！ 克隆仓库，签出代码，提交高质量的 Pull request！
 - 📆  **社区维护** 帮助我们创建、维护 Qv2ray 的社区！

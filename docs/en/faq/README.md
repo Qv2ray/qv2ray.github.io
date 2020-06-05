@@ -17,7 +17,7 @@ sidebarDepth: 3
 
   - **Approach 1**: Open Task Manager and go to `Detail` Tab, find `v2ray.exe` or `wv2ray.exe` process, right click on the process name, then `End Process`, `End Process`. ~~Explain in detail XD~~
 
-  - **Approach 2**: Run `cmd` or `powershell` and execute the following commands: 
+  - **Approach 2**: Run `cmd` or `powershell` and execute the following commands:
 
 ```powershell
 taskkill /f /im v2ray.exe
@@ -58,7 +58,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 ### 1. The response speed of opening web pages / switching connections while using Qv2ray seems to be much slower than using other proxy softwares
 
-- **Cause**: Qv2ray enables `V2Ray Integration` by default, which forces all traffics from plugin-introduced protocols (such as SSR, Trojan) to be routed through [V2Ray Route](/plugins/v2ray-integration) in order to implement advanced routing function, but might cause significant latency ~~on low end devices~~.
+- **Cause**: Qv2ray enables `V2Ray Integration` by default, which forces all traffics from plugin-introduced protocols (such as SSR, Trojan) to be routed through [V2Ray Route](../plugins/v2ray-integration.md) in order to implement advanced routing function, but might cause significant latency ~~on low end devices~~.
 
 - **Solution**: Go to `Core Settings` and turn off `V2Ray Integration` could improve latency for plugin-introduced protocols while lose support of `Advanced Routing`, `Bypass China Mainland`, `Bypass Local Address` and `Custom DNS` functions as a side effect, which means routing / bypass function of the relevant protocols will be completely invalid, that is, global proxy only. Note that this option does not affect protocols supported by V2Ray kernel (such as VMess). That is, if you only use protocols supported by the V2Ray kernel, switching on and off this function will cause no effect at all.
 - Besides, whitelist V2Ray core in antivirus software ~~especially in Microsoft Defender~~ may also improve the response speed. ~~Unverified metaphysics~~
