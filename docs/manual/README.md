@@ -8,5 +8,5 @@ title: 用户手册
 
 已经编纂完成的用户手册草案：
 
-- [常规设置](/manual/general)
-- [高级路由设置](/manual/route)
+- [常规设置](general.md)
+- [高级路由设置](route.md)

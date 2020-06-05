@@ -200,4 +200,4 @@ $ snap refresh qv2ray
    ```
 
 ## Building From Source
-Please refer to [Manually Build Qv2ray](/en/hacking/manuallybuild) Page.
+Please refer to [Manually Build Qv2ray](../hacking/manuallybuild.md) Page.

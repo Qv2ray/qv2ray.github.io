@@ -9,7 +9,7 @@ features:
 - title: Cross-platform, multi-distribution support
   details: Linux / Windows / macOS
 - title: Versatile Host Importing
-  details: JSON / Vmess / QR Code 
+  details: JSON / Vmess / QR Code
 - title: Subscriptions
   details: Manual Updating / Automated Updating
 footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
@@ -21,17 +21,17 @@ The supported version currently is `v2.5.0`.
 
 ## 🚀 Getting Started
 
-For most of the users, [Getting-Started](/en/getting-started/) will help them set up Qv2ray quickly.
+For most of the users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray quickly.
 
-For detailed documentation of all functionalities, please view the [User Manual](/en/manual).
+For detailed documentation of all functionalities, please view the [User Manual](manual.md).
 
 ## 📃 Features
 
-Please view [Features](/en/features).
+Please view [Features](features.md).
 
 ## ❓ FAQ
 
-Please view [FAQ](/en/faq).
+Please view [FAQ](faq/README.md).
 
 ## 👷 Contributing
 
