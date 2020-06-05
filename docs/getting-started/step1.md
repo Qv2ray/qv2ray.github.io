@@ -5,7 +5,7 @@ sidebarDepth: 2
 
 # 下载 Qv2ray
 
-你需要先下载 Qv2ray 的某个版本的 Release 文件才能开始使用 Qv2ray。
+你需要先下载 Qv2ray 的某个版本的 Release 文件才能开始使用 Qv2ray。我们提供多种分发方式，您可以根据喜好自由选择。
 
 ## GitHub Release 二进制文件
 
@@ -48,7 +48,7 @@ sidebarDepth: 2
 
 ### Arch Linux（或基于 Arch 的发行版）
 
-#### 直接从 archlinuxcn 安装（推荐）
+#### 直接从 `archlinuxcn` 安装（推荐）
 
 我们已登陆 `archlinuxcn` 仓库。若您已在使用，只需在你的终端输入：
 
@@ -139,11 +139,13 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 ## 从应用商店中获取
 
 ### Scoop (针对 Windows 用户)
-> [Scoop](https://scoop.sh) 是 **Windows** 专用的一个基于命令行的包管理器。
 
-请在 Powershell 中执行以下命令：
-1. 安装 scoop 包管理器：
+> [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
+
+请在 **Powershell** 中执行以下命令：
+1. [安装 Scoop 包管理器](https://scoop.sh/#installs-in-seconds)：
    ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
    iwr -useb get.scoop.sh | iex
    ```
 2. 添加 `extras` bucket：
@@ -152,13 +154,30 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
    ```
 3. 安装 Qv2ray：
    ```powershell
-   scoop install v2ray qv2ray vcredist2019
+   scoop install qv2ray vcredist2019
+   ```
+4. **(可选)** 添加 `v2ray` bucket，提供 Qv2ray 测试版及插件等。
+   ```powershell
+   scoop bucket add v2ray https://github.com/kidonng/scoop-v2ray
    ```
 
 ::: tip
 安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
 :::
 
+### Chocolatey (针对 Windows 用户)
+
+> [Chocolatey](https://chocolatey.org/) 是 **Windows** 的另一个包管理器。
+
+**请使用管理员权限运行 Powershell** 并执行以下命令：
+1. [安装 Chocolatey 包管理器](https://chocolatey.org/install)：
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   ```
+2. 安装 Qv2ray：
+   ```powershell
+   choco install qv2ray
+   ```
 
 ### Snapcraft
 

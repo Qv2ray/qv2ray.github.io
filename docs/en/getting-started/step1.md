@@ -5,7 +5,7 @@ sidebarDepth: 3
 
 # Step 1: Getting Qv2ray Distribution
 
-To get started with Qv2ray, you should first obtain a release of Qv2ray.
+To get started with Qv2ray, you should first obtain a release of Qv2ray. We offer many distribution methods, you can choose according to your preference.
 
 ## GitHub Release Binary File
 
@@ -29,7 +29,7 @@ Although we have bundled `glibc` and some basic C++ libraries into the **AppImag
 :::
 
 ::: warning Notes for Windows ARM64 users
-Windows 10 on ARM users can use `Qv2ray.VERSION.win-x86.zip` directly, since the operating system has a built-in compatibility layer for x86 architecture. 
+Windows 10 on ARM users can use `Qv2ray.VERSION.win-x86.zip` directly, since the operating system has a built-in compatibility layer for x86 architecture.
 :::
 
 ## GitHub Actions Artifact
@@ -48,7 +48,7 @@ You must login GitHub first to access GitHub Actions.
 
 ### Arch Linux (or Arch-based distros)
 
-#### Install directly from archlinuxcn (recommended)
+#### Install directly from `archlinuxcn` (recommended)
 
 We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
 
@@ -56,7 +56,7 @@ We have made ourselves into `archlinuxcn` repository. If you are already using i
 sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
 ```
 
-And that shall be done. 
+And that shall be done.
 
 ::: tip
 You may also want to install `v2ray` package to use system V2Ray core.
@@ -120,7 +120,7 @@ The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depend
 
 
 ### openSUSE / Fedora
-> Qv2ray is made available for openSUSE / Fedora users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb). 
+> Qv2ray is made available for openSUSE / Fedora users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
 
 ::: warning Applicable Versions
 Because of the limit of Qt version, we may not be able to support all on-lifetime distro above, the detail of supported distro please check the OBS link below.
@@ -138,11 +138,13 @@ Or you can get more detailed installation guide directly from the links below:
 ## Getting from App Stores
 
 ### Scoop (for Windows Users)
+
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
 
-Run the following commands in Powershell:
-1. Install scoop:
+Run the following commands in **Powershell**:
+1. [Install Scoop](https://scoop.sh/#installs-in-seconds):
    ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # Allow script execution
    iwr -useb get.scoop.sh | iex
    ```
 2. Add `extras` bucket:
@@ -151,12 +153,30 @@ Run the following commands in Powershell:
    ```
 3. Install Qv2ray:
    ```powershell
-   scoop install v2ray qv2ray vcredist2019
+   scoop install qv2ray vcredist2019
+   ```
+4. **(Optional)** Add `v2ray` bucket, which provides Qv2ray beta, plugins, etc.
+   ```powershell
+   scoop bucket add v2ray https://github.com/kidonng/scoop-v2ray
    ```
 
 ::: tip
 In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
 :::
+
+### Chocolatey (for Windows Users)
+
+> [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
+
+**Please open Powershell with administrator permission** and run the following commands:
+1. [Install Chocolatey](https://chocolatey.org/install)：
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   ```
+2. Install Qv2ray：
+   ```powershell
+   choco install qv2ray
+   ```
 
 ### Snapcraft
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).

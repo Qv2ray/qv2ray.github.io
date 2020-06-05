@@ -2,6 +2,8 @@
 title: 使用插件
 ---
 
+# 使用插件
+
 - 本页主要说明 Qv2ray 插件系统的使用方法
 - 要使用插件，Qv2ray 的版本至少应为 **`Qv2ray v2.5.0-pre1 BuildVersion: 5264`**
 
@@ -13,20 +15,20 @@ title: 使用插件
 
 当前，Qv2ray 项目组共发布如下 3 个我们维护的插件：
 
-- **QvSSRPlugin** - 让你能在 Qv2ray 中使用 ShadowsocksR
-- **QvTrojanPlugin** - 让你能在 Qv2ray 中使用 Trojan
-- **QvCommandPlugin** - 当特殊事件发生时，运行任意指定的命令
+- [**QvSSRPlugin**](https://github.com/Qv2ray/QvPlugin-SSR) - 让你能在 Qv2ray 中使用 ShadowsocksR
+- [**QvTrojanPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan) - 让你能在 Qv2ray 中使用 Trojan
+- [**QvCommandPlugin**](https://github.com/Qv2ray/QvPlugin-Command) - 当特殊事件发生时，运行任意指定的命令
 
 ## 插件的获取与使用
 
-你可以下载并启用任意多的插件。
+你可以下载并启用任意数量的插件。
 
 要安装一个插件，你需要进行下面的操作：
 
 ### 1. 获取插件
 
-- 部分插件可能会通过包管理系统分发，若合意可直接使用。
-    - *若你已通过此方法安装了插件，接下来请转至 **第三步**。*
+- 部分插件可能会通过包管理系统（如 [Scoop](../getting-started/step1.md#scoop-针对-windows-用户)）分发，若合意可直接使用。
+  - *若你已通过此方法安装了插件，接下来请转至 **第三步**。*
 - 根据实际的操作系统，从插件的 Release 页面下载。
 
 ### 2. 放置插件
@@ -41,7 +43,7 @@ title: 使用插件
 - 在插件列表中勾选所希望使用的插件即可。
 - 某些插件，尤其是核心插件（如 Trojan、ShadowsocksR 等），需要重新启动 Qv2ray 后才会生效。
 
-### 4. 受益！
+### 4. 享受！
 
 - 插件已经可以用了！
 
