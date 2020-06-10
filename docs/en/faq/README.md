@@ -7,13 +7,17 @@ sidebarDepth: 3
 
 ## V2Ray core failed to start
 
+:::tip
+Some message can only be seen when the **Log Level** in **Kernel Settings** is set to **info** or **debug**.
+:::
+
 ### 1. Prompt `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
 - **Root Cause**: Port conflict occurred.
 
 - **Cause 1**: Previous V2Ray process did not exit normally and occupied the relevant port.
 
-- **Solution (on Windows)**: Kill `v2ray.exe` or `wv2ray.exe` process.
+- **Solution (on Windows)**: Kill `v2ray.exe` or `wv2ray.exe` process via Task Manager or `taskkill /f /im <process name>`.
 
   - **Approach 1**: Open Task Manager and go to `Detail` Tab, find `v2ray.exe` or `wv2ray.exe` process, right click on the process name, then `End Process`, `End Process`. ~~Explain in detail XD~~
 
@@ -24,7 +28,7 @@ taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
 ```
 
-- **Solution (on Linux)**: You are using Linux...~~Dont you know how to kill a process?~~
+- **Solution (on Linux)**: ~~You can even use Linux...Dont you know how to kill a process?~~ Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
 
 - **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
 
@@ -34,7 +38,7 @@ taskkill /f /im wv2ray.exe
 
 - **Cause**: If you are using Windows, a patch might set ports between `1000-2000` as privileged / reserved ports.
 
-- **Solution**: Use ports `>2000`.
+- **Solution**: Use a port above than `2000`.
 
 ### 3. V2Ray Core Failed to start after enabling tProxy
 
@@ -45,6 +49,11 @@ taskkill /f /im wv2ray.exe
 - **Solution**: `sudo sysctl fs.suid_dumpable=1`<br/>
 The solution will be lost on reboot, please refer to [this blog](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html) if you want to keep it.
 
+### 4. Core error `255`
+
+- **Cause**: V2Ray core doesn't have permission to **execute**, which happens on POSIX system (Linux、macOS).
+
+- **Solution**：Run `chmod +x v2ray && chmod +x v2ctl` in V2Ray core directory, or give them execute permission via file manager,You can double click the programs on macOS, the system will ask you whether to run UNIX program, choose "run" will give them permission.
 
 ## Fatal Error
 
@@ -53,6 +62,22 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 - **Cause**: You should grant permission before executing it.
 - **Solution**: `chmod +x Qv2ray.AppImage`
 
+## Connection problems
+
+### 1. Config is confirmed but cannot connect to the remote
+
+- **Possible cause**: System time is out of sync. V2Ray requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
+- **Solution (Windows)**:
+  - **Approach 1**: Open Settings, select “Time & Language”, enable “Automatically set date and time”. If the option is already enabled, please click the "Sync now" button.
+  - **Approach 2**：Open control panel, switch to “Categories” view，choose “Time and Zone”，then click “Date and Time”, select "Internet time" in the open dialog, then click "change settings" button and check “Sync with Internet time server”.
+- **Solution (Linux)**:
+  - **Approach 1**: Use `systemd-timesyncd`, run `sudo systemctl enable systemd-timesyncd --now`。
+  - **Approach 2**: Use [Chrony](https://www.chrony.tuxfamily.org) to sync time.
+- **Solution (macOS)**: Open system preference, click “Date & Time”, and enable “Automatically set date and time”.
+
+### 2. I want to proxy traffic to China Mainland
+
+- [**Solution**](../getting-started/step5.md#tweaking-routing-schemes)
 
 ## Performance Issue
 

@@ -7,13 +7,17 @@ sidebarDepth: 3
 
 ## V2Ray 核心无法启动
 
+:::tip
+有些提示信息需要在**内核设置**中将**日志等级**设为**信息**或**调试**才能看到。
+:::
+
 ### 1. 提示 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
 - **本质**：发生了端口冲突。
 
 - **原因 1**：先前的 V2Ray 进程未正常退出，占用了相关端口。
 
-- **解决方案（Windows 系统）**：结束 `v2ray.exe` 或 `wv2ray.exe` 进程。
+- **解决方案（Windows 系统）**：通过任务管理器或 `taskkill /f /im <进程名>` 结束 `v2ray.exe` 或 `wv2ray.exe` 进程。
 
   - **方法 1**：在任务管理器的 `详细信息` 选项卡中，找到 `v2ray.exe` 或 `wv2ray.exe` 进程，右键点击进程名称，`结束任务`、`结束任务` 即可。~~科学严谨 XD~~
 
@@ -24,7 +28,7 @@ taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
 ```
 
-- **解决方案（Linux 系统）**：你都用Linux了……~~杀进程还不会吗？~~
+- **解决方案（Linux 系统）**：~~你都用Linux了……杀进程还不会吗？~~ 通过 `ps aux | grep v2ray` 找到进程号，再用 `kill -9 <进程号>` 结束进程。
 
 - **原因 2**：Qv2ray 中设定的相关端口已被其他软件占用。
 
@@ -34,7 +38,7 @@ taskkill /f /im wv2ray.exe
 
 - **原因**：如果你使用的是 Windows 系统，那么应该是某个 Windows 补丁将端口号在 `1000-2000` 之间的某段端口设了为特权/保留端口。
 
-- **解决方案**：更换端口号，使其 `>2000` 即可。
+- **解决方案**：更换为大于 `2000` 的端口号即可。
 
 ### 3. 开启 tProxy 之后，V2ray Core 会启动失败
 
@@ -45,6 +49,11 @@ taskkill /f /im wv2ray.exe
 - **解决方案**：`sudo sysctl fs.suid_dumpable=1`<br/>
 这个解决方案会在重启后失效。如果你希望保持这个选项，请参阅 [这里](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)。
 
+### 4. 内核报错 `255`
+
+- **原因**：V2Ray 核心没有**运行**权限，这一问题发生在 POSIX 系统（Linux、macOS）上。
+
+- **解决方案**：在 V2Ray 核心目录中 执行 `chmod +x v2ray && chmod +x v2ctl`，或通过文件管理器给予运行权限。在 macOS 下可以直接双击这两个程序，系统会自动提示是否运行 UNIX 程序，选择“运行”即可给予其运行权限。
 
 ## 严重故障
 
@@ -54,6 +63,28 @@ taskkill /f /im wv2ray.exe
 
 - **解决方案**：`chmod +x Qv2ray.AppImage`
 
+## 连接问题
+
+### 1. 已确认设置正确但无法连接
+
+- **可能原因**：系统时间不同步。V2Ray 要求通信双方的系统时间相差在 90 秒以内，否则会拒绝连接。
+- **解决方案（Windows）**：
+  - **方法一**：打开设置，选择“时间和语言”，然后启用“自动设置时间”选项即可。如果选项已启用，请点击”立即同步“按钮。
+  - **方法二**：打开控制面板，切换查看方式为“类别”，选择“时钟和区域”，点击  “日期和时间”，在弹出的对话框中选择“Internet 时间”，点击“更改设置”按钮，再勾选“与 Internet 时间服务器同步”，最后点击“确认”。
+- **解决方案（Linux）**：
+  - **方法一**：使用 `systemd-timesyncd`，执行 `sudo systemctl enable systemd-timesyncd --now`。
+  - **方法二**：使用 [Chrony](https://www.chrony.tuxfamily.org) 同步时间。
+- **解决方案（macOS）**：打开系统偏好设置，点击“日期与时间”，在“日期与时间”标签页下启用“自动设置日期与时间”。
+
+
+### 2. 为什么我在百度查询到的 IP 仍然在国内？
+
+- **原因** Qv2ray 默认设置为不代理国内流量。
+- **解决方案**：使用国外网站查询 IP（如在 Google 搜索 `What is my IP` 或访问 [ip.sb](https://ip.sb/)。
+
+### 3. 我想要代理国内流量（全局代理）
+
+- [**解决方案**](../getting-started/step5.md#调整路由方案)
 
 ## 性能问题
 
