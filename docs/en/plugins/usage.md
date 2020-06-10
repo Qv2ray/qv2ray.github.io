@@ -48,19 +48,20 @@ To install a plugin, you need to do these:
 
 ## Plugin FAQ
 
+### Qv2ray doesn't recogonize the plugin:
+
+- Please confirm the plugin in placed into Qv2ray's plugin directory (`config\plugins`).
+- Please confirm the plugin version matches Qv2ray version. Currently, only Qv2ray `v2.6.0-rc2` and later supports plugin version `2.0.0` and later.
+- If the problem persists, you are welcome to report this issue directly to the plugin provider, please include:
+  - The exact information of Qv2ray, with **where you have downloaded it**, **the version**, and the **build version**.
+  - The exact version of the Plugin, with the **sha256** or **md5** of the plugin file.
+  - Qv2ray log, can be collected by executing `qv2ray(.exe) --debug > log.txt`
+
 ### I cannot find a plugin file for my OS:
 
 - This can happen if the plugin writer is lazy to support your OS, or
 - The plugin is not suitable for your OS:
   - e.g. A Linux-specific `iptables` setting plugin is not suitable on macOS and Windows
-
-### I placed the plugin with correct OS/architecture into the `plugins` folder, but Qv2ray didn’t  show it up.
-
-- This is even more difficult to debug.
-- It’s suggested to report this issue directly to the plugin provider, please include:
-  - The exact information of Qv2ray, with **where you have downloaded it**, **the version**, and the **build version**.
-  - The exact version of the Plugin, with the **sha256** or **md5** of the plugin file.
-  - Qv2ray log, can be collected by executing `qv2ray(.exe) --debug > log.txt`
 
 ### Qv2ray crashed after loading a plugin:
 
