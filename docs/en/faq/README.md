@@ -105,3 +105,13 @@ nohup gnome-shell --replace &
 ### 2. Ubuntu gives a super ugly UI
 
 - **Solution**: Append `--style fusion` to the command line arg may solve this problem.
+
+## Miscellaneous
+
+### 1. Why doesn't Qv2ray pack plugins and V2Ray core, or provide download function?
+
+We hope our users can get to know how the program works, and willing to solve potential problems and needs by themselves. If Qv2ray doesn't suit you, you are free to choose other software.
+
+### 2. Will Qv2ray support mobile platform (Android、iOS)?
+
+There is no plan at the moment. Depending on developers will, there **may** be mobile platform support when the program migrate to QML.
