@@ -13,10 +13,11 @@ A Qv2ray Plugin is, technically, a shared library that implements `QvPlugin` int
 
 Actually, a Qv2ray Plugin is an extension of Qv2ray, which allows you use more features.
 
-Qv2ray workgroup has published 3 officially maintained plugins:
+Qv2ray workgroup has published 4 officially maintained plugins:
 
 - [**QvSSRPlugin**](https://github.com/Qv2ray/QvPlugin-SSR) - Allows you to use ShadowSocksR in Qv2ray.
-- [**QvTrojanPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan) - Allows you to use Trojan in Qv2ray
+- [**QvNaiveProxyPlugin**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - Allows you to use NaiveProxy in Qv2ray.
+- [**QvTrojanPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan) - Allows you to use Trojan in Qv2ray.
 - [**QvCommandPlugin**](https://github.com/Qv2ray/QvPlugin-Command) - Run any command when a specific event has been triggered.
 
 ## How to download and use a plugin
