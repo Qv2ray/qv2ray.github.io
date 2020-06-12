@@ -80,7 +80,7 @@ taskkill /f /im wv2ray.exe
 ### 2. 为什么我在百度查询到的 IP 仍然在国内？
 
 - **原因** Qv2ray 默认设置为不代理国内流量。
-- **解决方案**：使用国外网站查询 IP（如在 Google 搜索 `What is my IP` 或访问 [ip.sb](https://ip.sb/)。）或带有多个测试点的网站查询 IP（如访问 [ip111.cn](https://www.ip111.cn/) 或 [ip.skk.moe](https://ip.skk.moe/)。）
+- **解决方案**：使用国外网站查询 IP（如在 Google 搜索 `What is my IP` 或访问 [ip.sb](https://ip.sb/)），或带有多个测试点的网站查询 IP（如访问 [ip111.cn](https://www.ip111.cn/) 或 [ip.skk.moe](https://ip.skk.moe/)。）
 
 ### 3. 我想要代理国内流量（全局代理）
 
