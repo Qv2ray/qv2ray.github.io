@@ -100,7 +100,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 nohup gnome-shell --replace &
 ```
 
-- Finally, KDE is awesome.
+- ~~By the way, KDE is awesome.~~
 
 ### 2. Ubuntu gives a super ugly UI
 

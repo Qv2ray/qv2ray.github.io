@@ -4,4 +4,6 @@ title: Manual
 
 # Manual
 
-TODO…. Sorry
+:::tip
+This part is not translated. Contribution welcome!
+:::

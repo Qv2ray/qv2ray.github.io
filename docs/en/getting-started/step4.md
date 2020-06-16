@@ -5,7 +5,7 @@ sidebarDepth: 3
 
 # Step 4: Configuring Softwares to Use Qv2ray
 
-Congratulations! There's only one step left in order to access the unlocked Internet! 
+Congratulations! There's only one step left in order to access the unlocked Internet!
 
 ## General Methods
 
@@ -19,7 +19,7 @@ Currently, automatic setting of system proxy is supported by Qv2ray, including *
    2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
 - **Qv2ray Preference Window**.
    1. Click **Preferences** button in the main window.
-   2. In **Preference Window**, choose the tab **Inbound Settings**.
+   2. In **Preference Window**, choose the tab **[Inbound Setting](qv2ray://open/preference/inbound)s**.
    3. Check the option **Set System Proxy**.
    4. Click **OK** to apply the settings.
 
@@ -32,7 +32,7 @@ However, KDE users may have a difficult time, since KDE Proxy Settings is more l
 :::warning Windows Users: UWP Loopback Problem
 By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
 
-You can use some third-party tool to **enable UWP loopback** for your program to be proxied. We here present you [this program](/EnableLoopback.zip) from Fiddler project.
+You can use some third-party tool to **enable UWP loopback** for your program to be proxied. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
 :::
 
 ### Configure Manually in Applications
@@ -55,11 +55,11 @@ To avoid switching back and forth among proxy configurations, you may want to us
 For Java applications, you may use configure proxies through JVM arguments.
 
 Here are some examples:
- - Using SOCKS5: 
+ - Using SOCKS5:
    ```shell
    java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
    ```
- - Using HTTP(S): 
+ - Using HTTP(S):
    ```shell
    java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
    ```

@@ -9,9 +9,9 @@ Qv2ray supports many ways of importing your configuration. To get you started, w
 > VMess links generally looks like this: `vmess://eyJ2IjoiMiIsxxxxqcC5x`...
 
 Follow these steps to import them:
-1. Click **Add** button in the main window.
-2. In the **Import File** dialog, choose import source **VMess / QRCode**, 
-3. Paste your `vmess://` links into **Share Link** text box. 
+1. Click **Add** button in the main window, or import via [link](qv2ray://open/import/link) or [QR Code](qv2ray://open/import/qr).
+2. In the **Import File** dialog, choose import source **VMess / QRCode**,
+3. Paste your `vmess://` links into **Share Link** text box.
 4. Click on **Import** button to finish.
 
 :::tip Batched Import
@@ -29,7 +29,7 @@ Some broken `vmess://` links may fail to import, but it doesn't matter. The deta
 
 To import a subscription, follow these steps:
 1. Click **Subscriptions** button in the main window.
-2. In the **SubscribeEditor** dialog, click the **Add subscription** icon button at the left-bottom corner.
+2. In the **[SubscribeEditor](qv2ray://open/group/connection)** dialog, click the **Add subscription** icon button at the left-bottom corner.
 3. Click to select the newly generated item in **Subscription List**.
 4. Input your subscription information on the right side.
    - **Subscription Name**: Fill this as you wish.
