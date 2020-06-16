@@ -19,7 +19,7 @@ Currently, automatic setting of system proxy is supported by Qv2ray, including *
    2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
 - **Qv2ray Preference Window**.
    1. Click **Preferences** button in the main window.
-   2. In **Preference Window**, choose the tab **[Inbound Setting](qv2ray://open/preference/inbound)s**.
+   2. In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
    3. Check the option **Set System Proxy**.
    4. Click **OK** to apply the settings.
 

@@ -33,7 +33,7 @@ title: 更多
 
 默认情况下，Qv2ray 会根据 V2Ray 核心的 `geosite.dat` 与 `geoip.dat`，自动启用 **绕过中国大陆** 功能，因此没有必要配置尴尬的 PAC 规则。 您可以在 **首选项** 窗口中覆盖此默认设置，只需在 **[连接设置](qv2ray://open/preference/connection)** 中关闭此功能即可。
 
-然而，有时候，这些规则并不总是适用。例如，您有一个特殊的 [bilibili](https://bilibili.com) 代理用于解锁港澳台流媒体。由于哔哩哔哩是一个中国大陆的网站，在默认情况下，流量不会通过代理，这就给想看港澳台区的你带来了麻烦。解决方案是在 **首选项** 窗口中使用我们的 **[高级路由设置](qv2ray://open/preference/route)**。
+但这些规则并不总是适用。例如，您有一个特殊的代理用于解锁[哔哩哔哩](https://bilibili.com)的港澳台流媒体。由于它是中国大陆的网站，在默认情况下，流量不会通过代理，这就给想看港澳台区视频的你带来了麻烦。解决方案是在 **首选项** 窗口中使用我们的 **[高级路由设置](qv2ray://open/preference/route)**。
 
 一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。规则的语法可以在 [V2Ray 官方网站的 RuleObject 文档](https://v2ray.com/chapter_02/03_routing.html#ruleobject)中找到。在这里，如果我们想强制 bilibili 通过代理，我们只需在 `(域名, 代理)` 位置编写一个 `geosite:bilibili` 规则。
 
