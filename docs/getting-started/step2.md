@@ -41,7 +41,9 @@ title: 配置 V2Ray 核心
 
 ## 配置 Qv2ray 去使用核心
 
-打开 Qv2ray 并进入**首选项**窗口。在 **一般设置 - V2Ray 设置** 中，配置如下：
+打开 Qv2ray 并进入**首选项**窗口。在 **内核设置** 中 (一键打开内核设置: [qv2ray://open/preference/kernel](qv2ray://open/preference/kernel) )
+
+配置如下：
 
 - **核心可执行文件路径**：将此设置为您的 V2Ray 可执行文件所在的位置。 这可以是 Windows 上的 `v2ray.exe` 的完整路径，也可以是 Linux / macOS 上的 `v2ray` 可执行文件的完整路径。
 

@@ -12,7 +12,7 @@ Qv2ray 支持多种导入配置的方式。 为了让您开始，我们选择了
 
 按照以下步骤导入它们：
 
-1. 单击主窗口中的 **Add「添加」** 按钮
+1. 单击主窗口中的 **Add「添加」** 按钮，或者 [一键打开链接导入](qv2ray://open/import/link) [一键打开 QR 扫描](qv2ray://open/import/qr)
 2. 在 **Import File「导入文件」** 对话框中，选择导入 **VMess / QRCode**
 3. 粘贴你的 `vmess://` 链接到 **Share Link「分享链接」** 文本框
 4. 点击 **Import「导入」** 按钮完成
@@ -33,7 +33,7 @@ Qv2ray 支持多种导入配置的方式。 为了让您开始，我们选择了
 
 > 订阅链接通常是这样的：`https://some-airport.com/links/yjyyodk?sub=3`
 
-1. 点击 **Subscriptions「订阅」** 进入 **SubscribeEditor「订阅编辑器」**
+1. 点击 **Subscriptions「订阅」** 进入 **SubscribeEditor「订阅编辑器」**，或者 [一键打开组编辑器](qv2ray://open/group/connection)
 2. 在 **SubscribeEditor「订阅编辑器」** 对话框中，单击左下角的 **Add subscription 「添加订阅」** 图标按钮
 3. 单击此处可在 **Subscription List「订阅列表」** 中选择新生成的项
 4. 在右侧输入您的订阅信息

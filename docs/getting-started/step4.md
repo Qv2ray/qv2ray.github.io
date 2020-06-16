@@ -20,7 +20,7 @@ sidebarDepth: 3
   2. 在弹出的菜单中选择 **System Proxy「系统代理」 -> Enable/Disble System Proxy「开启/关闭 系统代理」**。
 - Qv2ray **Preference「首选项」** 窗口
   1. 单击主窗口中的 **Preferences「首选项」** 按钮
-  2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**
+  2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**，或者 [一键打开入站设置](qv2ray://open/preference/inbound)
   3. 选择 **Set System Proxy「设置系统代理」** 选项
   4. 点击 **OK** 应用设置
 
