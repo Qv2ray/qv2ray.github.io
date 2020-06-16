@@ -13,16 +13,16 @@ sidebarDepth: 3
 
 对于 **Windows** 和 **macOS** 用户，几乎所有的应用程序都将遵循系统代理设置。 对于 **Linux** 用户，一些应用程序，如 Firefox 和 Chromium，但不是全部，将在 GNOME/KDE 设置中读取和遵守代理配置。
 
-目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **System Proxy「系统代理」** 选项：
+目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **系统代理** 选项：
 
 - Qv2ray 托盘菜单
   1. 右键点击托盘图标
-  2. 在弹出的菜单中选择 **System Proxy「系统代理」 -> Enable/Disble System Proxy「开启/关闭 系统代理」**。
-- Qv2ray **Preference「首选项」** 窗口
-  1. 单击主窗口中的 **Preferences「首选项」** 按钮
-  2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**，或者 [一键打开入站设置](qv2ray://open/preference/inbound)
-  3. 选择 **Set System Proxy「设置系统代理」** 选项
-  4. 点击 **OK** 应用设置
+  2. 在弹出的菜单中选择 **系统代理 -> 开启/关闭 系统代理**。
+- Qv2ray **首选项** 窗口
+  1. 单击主窗口中的 **首选项** 按钮
+  2. 在 **首选项** 窗口里选择 **[入站设置](qv2ray://open/preference/inbound)**
+  3. 选择 **设置系统代理** 选项
+  4. 点击 **OK** 按钮应用设置
 
 :::tip Linux 用户：KDE/GNOME 代理设置
 
@@ -32,12 +32,12 @@ sidebarDepth: 3
 
 :::
 
-:::tip Windows 用户：UWP Loopback 问题
+:::tip Windows 用户：UWP 应用回环问题
 
-默认情况下，UWP 程序禁止使用带有环回地址（如 127.0.0.1）的代理，所以系统的代理设置很可能会导致你的 UWP 程序无法正常工作。
+默认情况下，UWP 程序禁止使用带有回环地址（如 127.0.0.1）的代理，所以设置系统代理可能会导致你的 UWP 程序无法连接网络。
 
-你可以使用一些第三方工具来 **启用UWP Loopback**，让你的程序被代理。
-这里提供一个来自 Fiddler 项目的 [EnableLoopback @ Fiddler](/EnableLoopback.zip)。
+你可以使用一些第三方工具来 **启用 UWP 回环**，使 UWP 程序可被正常代理。
+这里提供一个来自 [Fiddler](https://www.telerik.com/fiddler) 项目的 [EnableLoopback @ Fiddler](/EnableLoopback.zip)。
 
 :::
 

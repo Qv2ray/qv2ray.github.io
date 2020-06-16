@@ -108,7 +108,7 @@ taskkill /f /im wv2ray.exe
 nohup gnome-shell --replace &
 ```
 
-- 最后插一嘴，KDE真香。（译者：请自行斟酌）
+- ~~最后插一嘴，KDE真香。~~
 
 ### 2. Ubuntu 启动 Qv2ray 后会显示一个非常难看的界面
 

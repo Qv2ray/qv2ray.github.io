@@ -34,7 +34,7 @@ title: 使用插件
 
 ### 2. 放置插件
 
-- 点击 [**插件管理器**](qv2ray://open/plugin/metadata) 窗口中的 [**打开本地插件文件夹**](qv2ray://open/plugin/plugindir) 按钮，此时应自动打开一个名为 `plugins` 的文件夹。
+- 点击 **[插件管理器](qv2ray://open/plugin/metadata)** 窗口中的 **[打开本地插件文件夹](qv2ray://open/plugin/plugindir)** 按钮，此时应自动打开一个名为 `plugins` 的文件夹。
 - 将您所下载的插件文件（`.dll` / `.dylib` / `.so`）放入此目录。
 - 关闭 Qv2ray 并重新打开。这将让 Qv2ray 重新扫描插件目录。
 

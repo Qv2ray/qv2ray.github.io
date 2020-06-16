@@ -34,7 +34,7 @@ To install a plugin, you need to do these:
 
 ### 2. Put your plugin inside `plugins` directory
 
-- Click “*Open Local Plugin Folder*” in the “*Plugin Manager*” window, which a folder named `plugins` will be opened.
+- Click **[Open Local Plugin Folder](qv2ray://open/plugin/metadata)** in the **[Plugin Manager](qv2ray://open/plugin/plugindir)** window, which a folder named `plugins` will be opened.
 - Place your downloaded plugin `dll`/`dylib`/`so` file into this directory.
 
 ### 3. Restart Qv2ray & Enable Plugins
@@ -54,7 +54,7 @@ To install a plugin, you need to do these:
 - Please confirm the plugin in placed into Qv2ray's plugin directory (`config\plugins`).
 - Please confirm the plugin version matches Qv2ray version. Currently, only Qv2ray `v2.6.0-rc2` and later supports plugin version `2.0.0` and later.
 - If the problem persists, you are welcome to report this issue directly to the plugin provider, please include:
-  - The exact information of Qv2ray, with **where you have downloaded it**, **the version**, and the **build version**.
+  - The exact information of Qv2ray, with **the source of the program**, **[Qv2ray version](qv2ray://open/preference/about)**, and the **build version**.
   - The exact version of the Plugin, with the **sha256** or **md5** of the plugin file.
   - Qv2ray log, can be collected by executing `qv2ray(.exe) --debug > log.txt`
 

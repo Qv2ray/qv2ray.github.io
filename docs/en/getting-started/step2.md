@@ -42,15 +42,15 @@ This is usually done by executing `chmod +x` on these files.
 
 ## Configure Qv2ray to Use the Core
 
-Open Qv2ray and go to Preference Window. In **General Settings** -> **V2Ray Settings**, configure as follows:
+Open Qv2ray and go to Preference Window. In **[Core Settings](qv2ray://open/preference/kernel)**, configure the following options:
  - **Core Executable Path**: Set this to where your V2Ray executable exists. This can be the full path of your `v2ray.exe` on Windows, or that `v2ray` executable file on Linux / macOS.
- - **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located. 
+ - **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located.
 
 After configuring, you can click on **Check V2Ray Core Settings** button to validate your V2Ray core settings. Repeat trying until you get the check passed.
 
 ::: warning No Matryoshka!
-Never ever point **Core Executable Path** to **Qv2ray Executable**! 
-This will not cause a fork bomb since Qv2ray is single-instanced. 
+Never ever point **Core Executable Path** to **Qv2ray Executable**!
+This will not cause a fork bomb since Qv2ray is single-instanced.
 Do note that V2Ray Core Executable is like `v2ray` or `v2ray.exe`, instead of `qv2ray` or `qv2ray.exe`!
 :::
 
