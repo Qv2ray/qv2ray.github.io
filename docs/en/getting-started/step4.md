@@ -96,6 +96,12 @@ Note that if there is a special character in your username or password, you need
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
+Or enter the text you want to encode: <input v-model="input">
+
+<template v-if="input">
+  Encoded text: <code>{{ escaped }}</code>
+</template>
+
 For programs running in `sudo`, it is required to configure `sudo` to preserve these variables if you do not run `sudo` in a shell. Call `visudo` with root and add the following line:
 
 ```shell
@@ -126,3 +132,16 @@ socks5  127.0.0.1  1088
 After configuring `proxychains`, you may use `proxychains <program>` in terminal to make `proxychains` hijack the program to use the given proxy. If you are fed up with the noisy output, you may append `-q` option after `proxychains`.
 
 One thing to note is that `proxychains` does not work with statically-linked programs, for example, Golang programs.
+
+<script>
+export default {
+  data: () => ({
+    input: ''
+  }),
+  computed: {
+    escaped() {
+      return encodeURIComponent(this.input)
+    }
+  }
+}
+</script>

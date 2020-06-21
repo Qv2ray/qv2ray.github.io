@@ -108,6 +108,12 @@ export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
+或输入要编码的文字：<input v-model="input">
+
+<template v-if="input">
+  编码后的文字：<code>{{ escaped }}</code>
+</template>
+
 对于在 `sudo` 中运行的程序，如果不在 shell 中运行 `sudo`，则需要配置 `sudo` 来保留这些变量。 使用 root 调用 `visudo` 并添加以下行：
 
 ```bash
@@ -138,3 +144,16 @@ socks5  127.0.0.1  1088
 在配置 `proxychains` 之后，您可以在终端使用 `proxychains` 程序使 `proxychains` 劫持程序使用给定的代理。 如果您厌倦了嘈杂的输出，您可能会在 `proxychains` 之后附加 `-q` 选项。
 
 需要注意的一点是，`proxychains` 不能用于静态链接的程序，例如 Golang 程序。
+
+<script>
+export default {
+  data: () => ({
+    input: ''
+  }),
+  computed: {
+    escaped() {
+      return encodeURIComponent(this.input)
+    }
+  }
+}
+</script>
