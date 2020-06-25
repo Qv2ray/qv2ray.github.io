@@ -1,0 +1,11 @@
+name: Qv2ray Documentations Release
+
+on:
+  push:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: echo "Hi!"
