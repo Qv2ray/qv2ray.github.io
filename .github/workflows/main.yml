@@ -23,7 +23,7 @@ jobs:
         BRANCH: master
         FOLDER: docs/.vuepress/dist
 
-    - name: Win-${{ matrix.arch }} - ${{ matrix.qt_version }} - Create 7z Release
+    - name: Create 7z Release
       uses: DuckSoft/create-7z-action@v1.0
       with:
         pathSource: ./docs/.vuepress/dist
@@ -39,5 +39,5 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.7z
         asset_name: Qv2ray-Documentations.7z
-        tag: release
+        tag: doc_release
         overwrite: true
