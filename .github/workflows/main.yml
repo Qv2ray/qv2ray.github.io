@@ -22,3 +22,22 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: docs/.vuepress/dist
+
+    - name: Win-${{ matrix.arch }} - ${{ matrix.qt_version }} - Create 7z Release
+      uses: DuckSoft/create-7z-action@v1.0
+      with:
+        pathSource: ./docs/.vuepress/dist
+        pathTarget: ./release.7z
+    - name: Upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: Qv2ray-Documentations.7z
+        path: release.7z
+    - name: Upload to release
+      uses: svenstaro/upload-release-action@v1-release
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: release.7z
+        asset_name: Qv2ray-Documentations.7z
+        tag: release
+        overwrite: true
