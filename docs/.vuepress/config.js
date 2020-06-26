@@ -131,6 +131,10 @@ module.exports = {
     docsBranch: "source",
     docsDir: "docs",
     editLinks: true,
+    algolia: {
+      apiKey: 'f0da09ddb339a1b1fabe6ac3fbd78f42',
+      indexName: 'qv2ray'
+    },
     editLinkText: "帮助我们改善此页面！"
   }
 };
