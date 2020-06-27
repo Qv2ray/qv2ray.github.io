@@ -40,7 +40,6 @@ module.exports = {
   themeConfig: {
     logo: "/logo.png",
     displayAllHeaders: true,
-    sidebar: "auto",
     nextLinks: true,
     prevLinks: true,
     lastUpdated: "Last Updated",
@@ -49,11 +48,11 @@ module.exports = {
       "/manual/": ["","general","route"],
       "/hacking/": ["", "manuallybuild"],
       "/plugins/": ["", "usage", "v2ray-integration", "development"],
-      "/faq": [""],
+      "/faq/": ["", "v2ray-core"],
       "/en/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/en/hacking/": ["", "manuallybuild"],
       "/en/plugins/": ["", "usage", "v2ray-integration", "development"],
-      "/en/faq": [""],
+      "/en/faq/": ["", "v2ray-core"],
     },
     locales: {
       "/en/": {
