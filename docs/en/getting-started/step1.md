@@ -155,9 +155,11 @@ Run the following commands in **Powershell**:
    ```powershell
    scoop install qv2ray vcredist2019
    ```
-4. **(Optional)** Add `v2ray` bucket, which provides Qv2ray beta, plugins, etc.
+4. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
    ```powershell
-   scoop bucket add v2ray https://github.com/kidonng/scoop-v2ray
+   scoop bucket add sushi https://github.com/kidonng/sushi
+   # For all apps see https://github.com/kidonng/sushi#qv2ray
+   scoop install qv2ray-beta
    ```
 
 ::: tip

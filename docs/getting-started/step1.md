@@ -156,9 +156,11 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
    ```powershell
    scoop install qv2ray vcredist2019
    ```
-4. **(可选)** 添加 `v2ray` bucket，提供 Qv2ray 测试版及插件等。
+4. **(可选)** 如需安装插件及 Qv2ray 测试版，可添加 `sushi` bucket：
    ```powershell
-   scoop bucket add v2ray https://github.com/kidonng/scoop-v2ray
+   scoop bucket add sushi https://github.com/kidonng/sushi
+   # 全部应用请见 https://github.com/kidonng/sushi#qv2ray
+   scoop install qv2ray-beta
    ```
 
 ::: tip
