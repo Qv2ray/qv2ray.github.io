@@ -39,9 +39,9 @@ A valid route setting scheme is basically a 2x3 routing rule matrix. Syntax for 
 
 There are other advanced usages of routing schemes. If you are interested, try explore more into it.
 
-## Sharing Proxy over Local Network
+## Sharing Proxy over Local Network (LAN)
 
-For the sake of safety, by default, Qv2ray will only listen on `127.0.0.1`, that is to say, only your own machine is allowed to use the proxy. If you want to share your proxy over your local network, there are changes to be made.
+For the sake of safety, by default, Qv2ray will only listen on `127.0.0.1`, that is to say, only the device which Qv2ray is running on can use the proxy. If you want to share your proxy over your local network (LAN), there are changes to be made.
 
 The most simple and overkill method is to change the listen address from `127.0.0.1` to `0.0.0.0`, which will allow all incoming connections to your little proxy.
 
