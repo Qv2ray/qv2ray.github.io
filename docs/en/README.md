@@ -9,9 +9,9 @@ features:
 - title: Cross-platform, multi-distribution support
   details: Linux / Windows / macOS
 - title: Versatile Host Importing
-  details: JSON / Vmess / QR Code
+  details: JSON / VMess / QR Code / Manual
 - title: Subscriptions
-  details: Manual Updating / Automated Updating
+  details: Automatic / Manual Updates
 footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
 ---
 

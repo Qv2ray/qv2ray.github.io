@@ -9,10 +9,10 @@ features:
 - title: 跨平台 GUI
   details: 支持 Linux / Windows / macOS
 - title: 多样化节点导入方法
-  details: JSON / vmess 链接 / 二维码 / 手动配置
+  details: JSON / VMess / 二维码 / 手动配置
 - title: 订阅
-  details: 手动 / 自动更新
-footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
+  details: 自动 / 手动更新
+footer: 采用 CC-BY-SA | © 2020 Qv2ray 版权所有
 ---
 
 ## 🚀 起步
