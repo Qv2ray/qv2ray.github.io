@@ -9,7 +9,7 @@ Qv2ray supports many ways of importing your configuration. To get you started, w
 
 1. Click **New** in the lower left corner of the main window
 2. Fill in the **Name/Prefix** or leave it blank, or you can rename it after complete the configuration.
-3. Click **Input Manually** -> **Open Connection Editor**
+3. Click **Input Manually** -> **Open Connection Editor**.
 4. Fill in the **Tag**. This tag will appear in the log. You can also leave it blank.
 5. Fill in **Host** and choose your proxy type.
 6. Config **Misc Settings** Optionally.
