@@ -22,7 +22,6 @@ You can import multiple `vmess://` links at a time. Make sure each VMess link ta
 Some broken `vmess://` links may fail to import, but it doesn't matter. The detailed error will be shown on the right side. Also, it won't stop other entries in a batched import.
 :::
 
-
 ## Subscription
 
 > A subscription link usually looks like this: `https://some-airport.com/links/YjYyODk?sub=3`
@@ -41,3 +40,18 @@ To import a subscription, follow these steps:
 ::: tip Update through System Proxy
 If you encounter connectivity problem with your subscription upstream (eg: DNS Record Pollution, IP Address Blocking, etc.), you may try to run with **Update Subscription with System Proxy** option on. However, it's better to inform the upstream as soon as possible, to fix the issue permanently.
 :::
+
+## Manual Configuration
+
+1. Click **New** in the lower left corner of the main window
+2. Fill in the **Name/Prefix** or leave it blank, or you can rename it after complete the configuration.
+3. Click **Input Manually** -> **Open Connection Editor**.
+4. Fill in the **Tag**. This tag will appear in the log. You can also leave it blank.
+5. Fill in **Host** and choose your proxy type.
+6. Config **Misc Settings** Optionally.
+7. Fill in **Outbound settings** and **Stream Settings**.
+8. Click **OK** to save your config.
+
+## Import an existing configuration
+
+If you are using v2ray-core, you can import an existing configuration file. **Advanced** -> **Select**, or **Open JSON Editor** and paste it.
