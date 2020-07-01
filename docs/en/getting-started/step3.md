@@ -5,6 +5,21 @@ title: Importing Hosts into Qv2ray
 # Step 3: Importing Hosts into Qv2ray
 Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
 
+## Manual Configuration
+
+1. Click **New** in the lower left corner of the main window
+2. Fill in the **Name/Prefix** or leave it blank, or you can rename it after complete the configuration.
+3. Click **Input Manually** -> **Open Connection Editor**
+4. Fill in the **Tag**. This tag will appear in the log. You can also leave it blank.
+5. Fill in **Host** and choose your proxy type.
+6. Config **Misc Settings** Optionally.
+7. Fill in **Outbound settings** and **Stream Settings**.
+8. Click **OK** to save your config.
+
+## Import an existing configuration
+
+If you are using v2ray-core, you can import an existing configuration file. **Advanced** -> **Select**, or **Open JSON Editor** and paste it.
+
 ## VMess Link
 > VMess links generally looks like this: `vmess://eyJ2IjoiMiIsxxxxqcC5x`...
 
