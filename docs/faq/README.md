@@ -7,7 +7,7 @@ title: FAQ
 ## V2Ray 核心无法启动
 
 :::tip
-有些提示信息需要在**内核设置**中将 `loglevel` 设为 `info` 或 `debug` 才能看到。
+有些提示信息需要在**内核设置**中将**日志等级**设为**信息**或**调试**才能看到。
 :::
 
 ### 1. 提示 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
