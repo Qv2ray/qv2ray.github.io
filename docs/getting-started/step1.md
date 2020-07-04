@@ -136,6 +136,26 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 - 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
 - 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
+### macOS / Linux
+
+~~Linux 应该不会有人用 Homebrew 吧？不会吧不会吧？~~
+
+macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。安装完成后就可以使用以下命令安装 Qv2ray 了。
+
+```bash
+$ brew cask install qv2ray
+```
+
+升级也是很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
+
+```bash
+$ brew cask upgrade qv2ray
+```
+
+:::tip 提示
+使用 brew 安装的 Qv2ray 为稳定版。如果需要安装测试版，请参考上文的方式。
+:::
+
 ## 从应用商店中获取
 
 ### Scoop (针对 Windows 用户)
