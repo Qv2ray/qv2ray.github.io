@@ -134,6 +134,23 @@ Or you can get more detailed installation guide directly from the links below:
  - Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
  - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
+### macOS / Linux
+
+You can use Homebrew to install Qv2ray on macOS and Linux. If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following commands.
+
+```bash
+$ brew cask install qv2ray
+```
+
+Upgrading is also easy, just replace `install` with `upgrade` in the command.
+
+```bash
+$ brew cask upgrade qv2ray
+```
+
+:::tip Tip
+Qv2ray installed with Homebrew for the stable version. If you need to install the beta version, please refer to the way above.
+:::
 
 ## Getting from App Stores
 
