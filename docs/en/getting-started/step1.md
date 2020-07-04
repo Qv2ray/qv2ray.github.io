@@ -16,9 +16,9 @@ Do as the follows:
 1. Open [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a web browser.
 2. Choose a version from the releases. Or, optionally, you may use the [Latest Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
 3. Choose in Assets according to your platform and download it! For example:
-   - For Windows 64/32bit Users: `Qv2ray.VERSION.win-x64/x86.zip`
+   - For Windows 64/32bit Users: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer)
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
-   - For macOS Users: `Qv2ray.VERSION.macOS-x64.tar.gz`
+   - For macOS Users: `Qv2ray.VERSION.macOS-x64.dmg`
    - For Ubuntu 19.04 / Debian 10 (or greater): `qv2ray_VERSION_amd64.deb`
    - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
