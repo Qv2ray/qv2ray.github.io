@@ -44,7 +44,7 @@ If you are fed up with the functionalities of stable versions and willing to try
 You must login GitHub first to access GitHub Actions.
 :::
 
-## Getting From Package Control
+## Download From a package manager
 
 ### Arch Linux (or Arch-based distros)
 
@@ -62,7 +62,7 @@ And that shall be done.
 You may also want to install `v2ray` package to use system V2Ray core.
 :::
 
-#### Getting from AUR, using an AUR Helper
+#### Download from AUR, using an AUR Helper
 
 You may acquire officially maintained `PKGBUILD` file from AUR (Arch User Repository, [AUR (en) - Home](https://aur.archlinux.org/)), which will instruct the build process of Qv2ray.
 
@@ -95,7 +95,7 @@ $ yay -S qv2ray-dev-git
 
 Qv2ray will be ready to use after finishing the command.
 
-#### Getting from AUR, the hard way
+#### Download from AUR, the hard way
 You may not want to use an AUR helper to install Qv2ray from AUR. Then take a look at the following example.
 
 ```bash
@@ -152,8 +152,6 @@ $ brew cask upgrade qv2ray
 Qv2ray installed with Homebrew for the stable version. If you need to install the beta version, please refer to the way above.
 :::
 
-## Getting from App Stores
-
 ### Scoop (for Windows Users)
 
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
@@ -196,6 +194,8 @@ In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\cu
    ```powershell
    choco install qv2ray
    ```
+
+## Download from an app store
 
 ### Snapcraft
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).

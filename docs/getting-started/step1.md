@@ -156,8 +156,6 @@ $ brew cask upgrade qv2ray
 使用 brew 安装的 Qv2ray 为稳定版。如果需要安装测试版，请参考上文的方式。
 :::
 
-## 从应用商店中获取
-
 ### Scoop (针对 Windows 用户)
 
 > [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
@@ -200,6 +198,8 @@ $ brew cask upgrade qv2ray
    ```powershell
    choco install qv2ray
    ```
+
+## 从应用商店中获取
 
 ### Snapcraft
 
