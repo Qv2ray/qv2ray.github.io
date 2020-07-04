@@ -7,7 +7,7 @@ title: FAQ
 ## V2Ray core failed to start
 
 :::tip
-Some message can only be seen when the **Log Level** in **Kernel Settings** is set to **info** or **debug**.
+Some message can only be seen when the `loglevel` in **Kernel Settings** is set to `info` or `debug`.
 :::
 
 ### 1. Prompt `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
@@ -65,7 +65,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 ### 1. Config is confirmed but cannot connect to the remote
 
-- **Possible cause**: System time is out of sync. V2Ray requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
+- **Possible cause**: System time is out of sync. If VMess is your proxy protocol, it requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
 - **Solution (Windows)**:
   - **Approach 1**: Open Settings, select “Time & Language”, enable “Automatically set date and time”. If the option is already enabled, please click the "Sync now" button.
   - **Approach 2**：Open control panel, switch to “Categories” view，choose “Time and Zone”，then click “Date and Time”, select "Internet time" in the open dialog, then click "change settings" button and check “Sync with Internet time server”.
