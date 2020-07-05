@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.svg
 heroText: Qv2ray
 tagline: 纵使千山多万壑，犹有青鸾踏云间
 actionText: 快速上手 →
