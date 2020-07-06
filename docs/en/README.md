@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.svg
 heroText: Qv2ray
 tagline: Qv2ray is a cross-platform v2ray graphical frontend written in Qt.
 actionText: Getting Started →

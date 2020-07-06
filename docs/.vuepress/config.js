@@ -38,7 +38,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    logo: "/logo.png",
+    logo: "/logo.svg",
     displayAllHeaders: true,
     nextLinks: true,
     prevLinks: true,
