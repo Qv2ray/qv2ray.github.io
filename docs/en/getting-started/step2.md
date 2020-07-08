@@ -14,7 +14,7 @@ Due to political reasons, Qv2ray itself **does not** include a distribution of
 If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
 :::
 
-Go to [the official GitHub Release page of v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases) and check the recent stable builds. Choose according to your platform in the asset files. For example, Windows 64-bit users may download `v2ray-windows-64.zip`, Mac OS users may download `v2ray-macos.zip`, and for most of the Linux users, `v2ray-linux-64.zip`.
+Go to [the official GitHub Release page of v2fly/v2ray-core](https://github.com/v2fly/v2ray-core/releases) and check the recent stable builds. Choose according to your platform in the asset files. For example, Windows 64-bit users may download `v2ray-windows-64.zip`, Mac OS users may download `v2ray-macos.zip`, and for most of the Linux users, `v2ray-linux-64.zip`.
 
 ::: danger Sharpen Your Eyes
 Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`amd64`) platform.
