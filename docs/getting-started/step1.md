@@ -29,7 +29,7 @@ sidebarDepth: 2
 :::
 
 ::: warning Windows ARM64 用户注意
-因为操作系统内置 x86 的兼容层，Windows 10 on ARM 用户可以直接使用  `Qv2ray.VERSION.Windows-x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32.exe` (安装包)。
+因为操作系统内置 x86 的兼容层，Windows 10 on ARM 用户可以直接使用 `Qv2ray.VERSION.Windows-x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32.exe` (安装包)。
 :::
 
 ## GitHub Actions 编译版
