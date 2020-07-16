@@ -76,7 +76,7 @@ sidebarDepth: 3
 
 :::danger 神奇的 Minecraft
 
- **Minecraft 我的世界**（版本号 >=1.5.2 ） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
+ **Minecraft 我的世界**（版本号 >= 1.5.2 ） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
 
 :::
 
