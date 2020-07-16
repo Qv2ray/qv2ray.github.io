@@ -199,6 +199,25 @@ $ brew cask upgrade qv2ray
    choco install qv2ray
    ```
 
+### Debian / Ubuntu
+
+```bash
+# 导入 GPG 密钥：
+$ curl -sS https://qv2ray.github.io/debian/pubkey.gpg | sudo apt-key add -
+
+# 添加 APT 仓库：
+$ echo "deb https://qv2ray.github.io/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+
+# 对于 Debian testing/unstable 或 Ubuntu 20.10+ 用户，请添加 unstable 版本仓库：
+$ echo "deb https://qv2ray.github.io/debian/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+
+# 更新 APT 索引：
+$ sudo apt-get update
+
+# 安装 Qv2ray：
+$ sudo apt-get install qv2ray
+```
+
 ## 从应用商店中获取
 
 ### Snapcraft
