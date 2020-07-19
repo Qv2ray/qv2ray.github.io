@@ -19,7 +19,7 @@ Do as the follows:
    - For Windows 64/32bit Users: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer)
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
    - For macOS Users: `Qv2ray.VERSION.macOS-x64.dmg`
-   - For Ubuntu 19.04 / Debian 10 (or greater): `qv2ray_VERSION_amd64.deb`
+   - For Ubuntu 19.04 / Debian 10 (or greater): ~~`qv2ray_VERSION_amd64.deb`~~ (Moved to [Qv2ray Debian Repository](https://qv2ray.github.io/debian/) since v2.6.1)
    - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
 Where `VERSION` is the version of that release.
@@ -29,7 +29,7 @@ Although we have bundled `glibc` and some basic C++ libraries into the **AppImag
 :::
 
 ::: warning Notes for Windows ARM64 users
-Windows 10 on ARM users can use `Qv2ray.VERSION.win-x86.zip` directly, since the operating system has a built-in compatibility layer for x86 architecture.
+Windows 10 on ARM users can use `Qv2ray.VERSION.Windows-x86.7z` (archive) or `Qv2ray.VERSION.win32.exe` (Installer) directly, since the operating system has a built-in compatibility layer for x86 architecture.
 :::
 
 ## GitHub Actions Artifact
