@@ -17,11 +17,12 @@ jobs:
           yarn docs:build
 
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@3.5.7
       with:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: docs/.vuepress/dist
+        CLEAN: true
 
     - name: Create 7z Release
       uses: DuckSoft/create-7z-action@v1.0
@@ -29,12 +30,12 @@ jobs:
         pathSource: ./docs/.vuepress/dist
         pathTarget: ./release.7z
     - name: Upload artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v2
       with:
         name: Qv2ray-Documentations.7z
         path: release.7z
     - name: Upload to release
-      uses: svenstaro/upload-release-action@v1-release
+      uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: release.7z
