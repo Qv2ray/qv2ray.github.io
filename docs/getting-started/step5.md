@@ -10,7 +10,7 @@ title: 更多
 
 我们建议您加入我们在 [Telegram](https://telegram.org/) 的 [Qv2ray 用户组](https://t.me/qv2ray)。 在这里你可以直接与 Qv2ray 开发者聊天，也可以与伟大的 Qv2ray 用户聊天。 对于使用问题，在小组中讨论总是比在 GitHub 上打开一个 issue 更有效率。
 
-另外，你可以选择订阅 Telegram 的 [Qv2ray 前哨频道](https://t.me/qv2ray_outpost)，如果你不喜欢说太多，甚至不喜欢现身。 我们将推动 Qv2ray 的新闻更新，甚至发送可能决定 Qv2ray 命运的投票！ 确保你不会错过。
+另外，你可以选择订阅 Telegram 的 [Qv2ray 前哨频道](https://t.me/qv2ray_outpost)，如果你不喜欢说太多，甚至不喜欢现身。 我们将推送 Qv2ray 的新闻更新，乃至决定 Qv2ray 命运的投票！ 确保你不会错过。
 
 ## 调整界面与显示语言
 
