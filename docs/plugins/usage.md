@@ -15,6 +15,7 @@ title: 使用插件
 
 当前，Qv2ray 项目组共发布如下 5 个我们维护的插件：
 
+- [**QvSSPlugin**](https://github.com/Qv2ray/QvPlugin-SS) - 让你能在 Qv2ray 中启用 Shadowsocks SIP003 完整支持
 - [**QvSSRPlugin**](https://github.com/Qv2ray/QvPlugin-SSR) - 让你能在 Qv2ray 中使用 ShadowsocksR
 - [**QvTrojanPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan) - 让你能在 Qv2ray 中使用 Trojan
 - [**QvNaiveProxyPlugin**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - 让你能在 Qv2ray 中使用 NaiveProxy
