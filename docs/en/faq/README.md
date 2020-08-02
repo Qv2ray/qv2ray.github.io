@@ -80,7 +80,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 ### 3. Transparent proxy function not working when using Linux system (Log may suggest an error `failed to set IP_TRANSPARENT > operation not permitted`)
 - **Cause:** V2Ray does not have permissions to set socket options
-- **Solution:** Arch User, Please use the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray`. For users of who are using the other Linux systems, just find out the V2Ray's real absolute address and replace `/usr/lib/v2ray/v2ray` with it in previous command.
+- **Solution:** Arch User, Please use the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray`. For users of who are using the other Linux systems, just replace `/usr/lib/v2ray/v2ray` with the absolute path of V2Ray core in the previous command.
 
 ## Performance Issue
 
