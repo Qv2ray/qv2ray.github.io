@@ -45,7 +45,7 @@ module.exports = {
     lastUpdated: "Last Updated",
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
-      "/manual/": ["","general","route"],
+      "/manual/": ["","general","route","TipsForCNUsers"],
       "/hacking/": ["", "manuallybuild"],
       "/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/faq/": ["", "v2ray-core"],
