@@ -24,3 +24,15 @@ sidebarDepth: 3
 ```batch
 taskkill /f /im v2ray.exe
 ```
+
+#### Linux / macOS
+
+对于 Linux / macOS 用户，您可以使用以下命令查找到 V2Ray 核心的 PID ：
+```bash
+ps aux | grep v2ray
+```
+
+然后使用以下命令杀死进程（用查找到的 PID 替换下面的 `<PID>` 部分）：
+```bash
+sudo kill -9 <PID>
+```
