@@ -17,7 +17,7 @@ If you are using a distribution with V2Ray core and assets packages, it’ll be 
 Go to [the official GitHub Release page of v2fly/v2ray-core](https://github.com/v2fly/v2ray-core/releases) and check the recent stable builds. Choose according to your platform in the asset files. For example, Windows 64-bit users may download `v2ray-windows-64.zip`, Mac OS users may download `v2ray-macos.zip`, and for most of the Linux users, `v2ray-linux-64.zip`.
 
 ::: tip For Windows 10 ARM64 users
-If you have an ARM64-based Windows 10 device such as Surface Pro X, Matebook E 2019, you should use `v2ray-windows-arm.zip` for better performance. You can download it and unzip the `.dat` files, `v2ray_armv7.exe` and `v2ctl_armv7.exe` from the zip. And then you should rename `v2ctl_armv7.exe` to `v2ctl.exe`, rename `v2ray_armv7.exe` to `v2ray.exe`, and it will work well with Qv2ray. If your Windows has hidden filename extensions, you should not add `.exe` to the filename once again.
+From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. It is recommended that Windows 10 ARM64 users use this version of the kernel to obtain better performance.
 :::
 
 ::: danger Sharpen Your Eyes
