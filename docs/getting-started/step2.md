@@ -16,7 +16,7 @@ title: 配置 V2Ray 核心
 请前往 [v2fly/v2ray-core 官方 Release 页面](https://github.com/v2fly/v2ray-core/releases)，并下载最新的符合当前系统版本的稳定版软件包。比如，64 位 Windows 用户可以下载 `v2ray-windows-64.zip` ；MacOS 用户可以下载 `v2ray-macos.zip` ；大多数 Linux 用户可以下载 `v2ray-linux-64.zip`。
 
 :::tip 给 Windows 10 ARM64 用户的建议
-如果你有基于 ARM64 的 Windows 10设备，例如 Surface Pro X、Matebook E 2019，那么你应使用 `v2ray-windows-arm.zip'`以获得更好的性能。 你可以在下载它之后从 zip 文件中解压缩出两个 `.dat` 文件，以及 `v2ray_armv7.exe`和 `v2ctl_armv7.exe` 这两个可执行文件。 然后你应该将 `v2ctl_armv7.exe` 重命名为 `v2ctl.exe` ，将 `v2ray_armv7.exe` 重命名为 `v2ray.exe` ，这将使 V2Ray 内核能够在 Qv2ray 的控制下正常工作。 如果你的 Windows 隐藏了文件扩展名，那么你不应再次将 `.exe`添加到文件名中。
+从 V2Ray Core 4.27 起，V2Ray 项目组提供了基于 ARM32（ armv7 ）的内核，建议 Windows 10 ARM64 用户使用该版本的内核以获取更好的性能表现。
 :::
 
 ::: danger 擦亮眼睛
