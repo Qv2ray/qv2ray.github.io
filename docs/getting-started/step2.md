@@ -16,7 +16,7 @@ title: 配置 V2Ray 核心
 请前往 [v2fly/v2ray-core 官方 Release 页面](https://github.com/v2fly/v2ray-core/releases)，并下载最新的符合当前系统版本的稳定版软件包。比如，64 位 Windows 用户可以下载 `v2ray-windows-64.zip` ；MacOS 用户可以下载 `v2ray-macos.zip` ；大多数 Linux 用户可以下载 `v2ray-linux-64.zip`。
 
 :::tip 给 Windows 10 ARM64 用户的建议
-从 V2Ray Core 4.27 起，V2Ray 项目组提供了基于 ARM32（ armv7 ）的内核，建议 Windows 10 ARM64 用户使用该版本的内核以获取更好的性能表现。
+从 V2Ray Core 4.27 起，V2Ray 项目组为 Windows 10 提供了基于 ARM32（ armv7 ）的内核，建议 Windows 10 ARM64 用户使用该版本的内核以获取更好的性能表现。
 :::
 
 ::: danger 擦亮眼睛
