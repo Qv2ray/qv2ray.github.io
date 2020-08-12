@@ -15,12 +15,12 @@ title: 使用插件
 
 当前，Qv2ray 项目组共发布如下 6 个我们维护的插件：
 
-- [**QvSSPlugin**](https://github.com/Qv2ray/QvPlugin-SS) - 让你能在 Qv2ray 中启用 Shadowsocks SIP003 完整支持
-- [**QvSSRPlugin**](https://github.com/Qv2ray/QvPlugin-SSR) - 让你能在 Qv2ray 中使用 ShadowsocksR
-- [**QvTrojanPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan) - 让你能在 Qv2ray 中使用 Trojan
-- [**QvNaiveProxyPlugin**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - 让你能在 Qv2ray 中使用 NaiveProxy
-- [**QvCommandPlugin**](https://github.com/Qv2ray/QvPlugin-Command) - 当特殊事件发生时，运行任意指定的命令
-- [**QvTrojan-GoPlugin**](https://github.com/Qv2ray/QvPlugin-Trojan-Go) - 让你能在 Qv2ray 中使用 Trojan-Go
+- [**QvPlugin-SS**](https://github.com/Qv2ray/QvPlugin-SS) - 让你能在 Qv2ray 中启用 Shadowsocks SIP003 完整支持
+- [**QvPlugin-SSR**](https://github.com/Qv2ray/QvPlugin-SSR) - 让你能在 Qv2ray 中使用 ShadowsocksR
+- [**QvPlugin-Trojan**](https://github.com/Qv2ray/QvPlugin-Trojan) - 让你能在 Qv2ray 中使用 Trojan
+- [**QvPlugin-NaiveProxy**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - 让你能在 Qv2ray 中使用 NaiveProxy
+- [**QvPlugin-Command**](https://github.com/Qv2ray/QvPlugin-Command) - 当特殊事件发生时，运行任意指定的命令
+- [**QvPlugin-Trojan-Go**](https://github.com/Qv2ray/QvPlugin-Trojan-Go) - 让你能在 Qv2ray 中使用 Trojan-Go
 
 ## 插件的获取与使用
 
