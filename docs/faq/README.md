@@ -102,15 +102,18 @@ taskkill /f /im wv2ray.exe
 
 ##  软件行为 / 外观问题
 
-### 1. Qv2ray 在 GNOME 上的托盘图标会偶尔消失
+### 1. Qv2ray 在 GNOME 上没有托盘图标或者托盘图标会偶尔消失
 
 - **原因**：这一点已经确认了是上游的 bug。
 
-- **解决方案**：作为权宜之计，你可以运行这条命令：
+- **解决方案**：Gnome 官方不支持托盘图标，所有的托盘图标现实都来自下游发行版或者第三方开发者的扩展。作为权宜之计，你可以运行这条命令：
 
 ```shell
 nohup gnome-shell --replace &
 ```
+::: tip 给 Gnome 用户的建议
+原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
+:::
 
 - ~~最后插一嘴，KDE 真香。~~
 
