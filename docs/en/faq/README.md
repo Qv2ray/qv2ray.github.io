@@ -22,12 +22,25 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** is set 
 
   - **Approach 2**: Run `cmd` or `powershell` and execute the following commands:
 
-```powershell
+```cmd
 taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
 ```
+Or
 
-- **Solution (on Linux)**: ~~You can even use Linux...Dont you know how to kill a process?~~ Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
+```pwsh
+Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
+```
+
+- **Solution (on Linux)**: ~~You can even use Linux...Don't you know how to kill a process?~~ 
+  - **Approach 1**: Terminate the `v2ray` process through the System Monitor application. Since there are serveral desktop environments under Linux, the system monitor that comes with each desktop environment may not be the same software, so the operations of killing process should explore by yourself.
+  - **Approach 2**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
+
+-**Solution (on macOS)**:
+
+   -**Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
+  
+   -**Approach 2**: Refer to the **Approach 2** solution of the Linux.
 
 - **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
 
@@ -93,17 +106,23 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 ## Behavior & Appearance Issue
 
-### 1. Qv2ray tray icon occasionally disappears in GNOME
+### 1. There is no Qv2ray tray icon & Qv2ray tray icon occasionally disappears in GNOME
 
 - **Cause**: This is confirmed as an upstream bug.
 
-- **Solution**: You may use the following makeshift command:
+- **Solution**: Gnome does not officially support tray icons. The reason tray icons would show on Gnome is that there are some extensions for Gnome from third-party developers or Linux distributions to display it. You may use the following makeshift command as a temporary solution:
 
 ```shell
 nohup gnome-shell --replace &
 ```
 
-- ~~By the way, KDE is awesome.~~
+Or you can also restart Qv2ray and try again.
+
+::: tip A tip for Gnome users
+The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons.
+:::
+
+- ~~By the way, KDE Plamsa is awesome.~~
 
 ### 2. Ubuntu gives a super ugly UI
 
