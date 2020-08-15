@@ -181,7 +181,7 @@ $ brew cask upgrade qv2ray
    scoop install qv2ray-beta
    ```
 
-::: tip
+::: tip 提示
 安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
 :::
 
