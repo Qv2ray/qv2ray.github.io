@@ -18,18 +18,23 @@ title: FAQ
 
 - **解决方案（Windows 系统）**：通过任务管理器或 `taskkill /f /im <进程名>` 结束 `v2ray.exe` 或 `wv2ray.exe` 进程。
 
-  - **方法 1**：在任务管理器的 `详细信息` 选项卡中，找到 `v2ray.exe` 或 `wv2ray.exe` 进程，右键点击进程名称，`结束任务`、`结束任务` 即可。~~科学严谨 XD~~
+  - **方法 1**：在任务管理器的 `详细信息` 选项卡中，找到 `v2ray.exe` 或 `wv2ray.exe` 进程，右键点击进程名称，`结束任务`、`结束进程` 即可。~~科学严谨 XD~~
 
   - **方法 2**：打开 `cmd` 或 `powershell`，执行如下命令：
 
-```powershell
+```cmd
 taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
+```
+或
+
+```pwsh
+Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```
 
 - **解决方案（Linux 系统）**：~~你都用Linux了……杀进程还不会吗？~~ 
 
-  - **方法 1**：通过系统监视器应用来终止 `v2ray` 进程，由于 Linux 下有多种桌面环境，每一个桌面环境自带的系统监视器有可能不是同一个软件，因此具体操作需要你自己探索。、
+  - **方法 1**：通过系统监视器应用来终止 `v2ray` 进程，由于 Linux 下有多种桌面环境，每一个桌面环境自带的系统监视器有可能不是同一个软件，因此具体操作需要你自己探索。
   - **方法 2**：通过 `ps aux | grep v2ray` 找到进程号，再用 `kill -9 <进程号>` 结束进程。
   
 - **解决方案 (macOS 系统)**：
@@ -120,11 +125,13 @@ taskkill /f /im wv2ray.exe
 ```shell
 nohup gnome-shell --replace &
 ```
+或者，你可以试着重启 Qv2ray。
+
 ::: tip 给 Gnome 用户的建议
 原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
 :::
 
-- ~~最后插一嘴，KDE 真香。~~
+- ~~最后插一嘴，KDE Plasma 真香。~~
 
 ### 2. Ubuntu 启动 Qv2ray 后会显示一个非常难看的界面
 
