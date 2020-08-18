@@ -19,6 +19,10 @@ title: 配置 V2Ray 核心
 从 V2Ray Core 4.27 起，V2Ray 项目组为 Windows 10 提供了基于 ARM32（ armv7 ）的内核，建议 Windows 10 ARM64 用户使用该版本的内核以获取更好的性能表现。
 :::
 
+:::tip 给 Linux 用户的建议
+如果您使用linux，您可参考v2ray文档使用[软件源](https://www.v2fly.org/guide/install.html#linux-%E5%8F%91%E8%A1%8C%E7%89%88%E4%BB%93%E5%BA%93)或[新安装脚本](https://www.v2fly.org/guide/install.html#linux-%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC)安装
+:::
+
 ::: danger 擦亮眼睛
 如果你在 `x86_64`（`amd64`）平台上运行 Qv2ray，请不要下载 `v2ray-linux-arm64.zip`。明确地说，`arm64` 和 `amd64` 完全不同。请确保你不会这样做。
 :::
