@@ -20,7 +20,7 @@ title: 配置 V2Ray 核心
 :::
 
 :::tip 给 Linux 用户的建议
-如果您使用linux，您可参考v2ray文档使用[软件源](https://www.v2fly.org/guide/install.html#linux-%E5%8F%91%E8%A1%8C%E7%89%88%E4%BB%93%E5%BA%93)或[新安装脚本](https://www.v2fly.org/guide/install.html#linux-%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC)安装
+如果您使用 Linux，您可参考 V2ray 文档使用[软件源](https://www.v2fly.org/guide/install.html#linux-%E5%8F%91%E8%A1%8C%E7%89%88%E4%BB%93%E5%BA%93)或[新安装脚本](https://www.v2fly.org/guide/install.html#linux-%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC)安装
 :::
 
 ::: danger 擦亮眼睛
