@@ -8,7 +8,8 @@ After a correct and successful installation of Qv2ray onto your system, it is ne
 
 ## Download V2Ray Core Files
 
-Due to political reasons, Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the V2Ray core, and most of the time it it required for user themselves to download them.
+Due to political reasons, Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the V2Ray core, and most of the time it it required for users themselves to download them.
+You may check [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for the official instructions.
 
 ::: tip Core Management: Manual vs Automatic
 If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
