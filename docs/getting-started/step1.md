@@ -41,7 +41,7 @@ sidebarDepth: 2
 3. 点击 **Artifacts** 展开下拉菜单, 然后根据你的平台选择一个二进制包并下载。
 
 :::tip 提示
-你必须先登录 GitHub 账号才能访问 GitHub Actions 进行白嫖~
+你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts~
 :::
 
 ## 在包管理系统中安装此软件
