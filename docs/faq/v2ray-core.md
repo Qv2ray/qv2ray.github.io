@@ -84,7 +84,7 @@ tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
 该情况仅会出现在 Windows 平台上，其错误日志通常如下：
 * `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`
 
-Microsoft 于2018年2月13日发布了 [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) 补丁，它将修改 Windows 操作系统上的*保留端口范围*，因此您可能会受到影响。
+Microsoft 于 2018 年 2 月 13 日发布了 [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) 补丁，它将修改 Windows 操作系统上的*保留端口范围*，因此您可能会受到影响。
 
 如前所述，您可以使用 `netsh interface ipv4 show excludedportrange protocol=tcp` 命令显示所有保留端口。您不应该使用这些端口，而是将侦听端口更改为其他端口号。
 
