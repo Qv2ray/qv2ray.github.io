@@ -32,14 +32,14 @@ Or
 Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```
 
-- **Solution (on Linux)**: ~~You can even use Linux...Don't you know how to kill a process?~~ 
+- **Solution (on Linux)**: ~~You can even use Linux...Don't you know how to kill a process?~~
   - **Approach 1**: Terminate the `v2ray` process through the System Monitor application. Since there are serveral desktop environments under Linux, the system monitor that comes with each desktop environment may not be the same software, so the operations of killing process should explore by yourself.
   - **Approach 2**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
 
 -**Solution (on macOS)**:
 
    -**Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
-  
+
    -**Approach 2**: Refer to the **Approach 2** solution of the Linux.
 
 - **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
@@ -94,6 +94,10 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 ### 3. Transparent proxy not working when using Linux (Log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`)
 - **Cause:** V2Ray does not have the permission to set socket options.
 - **Solution:** For Arch users, install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray`. For other Linux distros, just replace `/usr/lib/v2ray/v2ray` with the absolute path of V2Ray core in the previous command.
+
+### 4. How to configure proxy for dial-up connections?
+
+- [**Solution**](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)
 
 ## Performance Issue
 

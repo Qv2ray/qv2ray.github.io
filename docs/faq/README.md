@@ -32,15 +32,15 @@ taskkill /f /im wv2ray.exe
 Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```
 
-- **解决方案（Linux 系统）**：~~你都用 Linux 了……还不会杀进程吗？~~ 
+- **解决方案（Linux 系统）**：~~你都用 Linux 了……还不会杀进程吗？~~
 
   - **方法 1**：通过系统监视器应用来终止 `v2ray` 进程，由于 Linux 下有多种桌面环境，每一个桌面环境自带的系统监视器有可能不是同一个软件，因此具体操作需要你自己探索。
   - **方法 2**：通过 `ps aux | grep v2ray` 找到进程号，再用 `kill -9 <进程号>` 结束进程。
-  
+
 - **解决方案 (macOS 系统)**：
 
   - **方法 1**：打开活动监视器，找到 `v2ray` 进程，然后终止。
-  
+
   - **方法 2**：参照 Linux 系统的**方法 2** 解决方案。
 
 - **原因 2**：Qv2ray 中设定的相关端口已被其他软件占用。
@@ -103,6 +103,10 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **原因：** 由 V2Ray 脚本安装的服务会在启动时添加 `cap_net_admin` 权限，但 Qv2ray 默认调用的 V2Ray 程序本身并未设定包含该权限。
 - **解决方案：** Arch 用户，请以管理员 (root / sudo) 权限执行 `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray` 或 使用 `@DuckSoft` 构建的 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) ; 其他 Linux 用户请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/lib/v2ray/v2ray`。
+
+### 5. 如何设置拨号连接的代理?
+
+- [**解决方案**](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)
 
 ## 性能问题
 
