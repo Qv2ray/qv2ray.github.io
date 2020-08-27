@@ -72,7 +72,7 @@ Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is
 
 ### Using Environment Variables
 
-Many a program in Linux/macOS, for example, `curl` and `wget`, will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
+Many CLI programs (for example `curl` and `wget`) will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
 
 Here is a configuration example:
 
@@ -118,9 +118,12 @@ It is strongly recommended to read the manual of programs that you want to confi
 
 ### Using `proxychains`
 
-For those applications that does not work with the methods above, Linux/macOS users may have a try with `proxychains`, which hijacks functions in `glibc` to redirect network connections into your proxies.
+If none of the above methods works, you can try using `proxychains`, which hijacks program's function/library to redirect network connections into your proxies.
 
-First, you should install `proxychains-ng`. Installation methods varies with each operating system, but the [official repository](https://github.com/rofl0r/proxychains-ng) shall give you an instruction.
+First, you should install `proxychains-ng`. Installation methods varies with each operating system.
+
+- [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
+- [Windows](https://github.com/shunf4/proxychains-windows)
 
 Edit `/etc/proxychains.conf` (for global proxychains) or `$HOME/.proxychains/proxychains.conf` (for user), edit `[ProxyList]` section and change the proxy to SOCKS5 Proxy in Qv2ray:
 

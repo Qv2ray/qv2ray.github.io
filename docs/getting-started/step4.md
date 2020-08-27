@@ -84,7 +84,7 @@ sidebarDepth: 3
 
 ### 使用环境变量
 
-Linux / macOS 中的许多程序，例如 `curl` 和 `wget`，都会使用 `<PROTOCOL>_PROXY` 环境变量提供的代理。
+许多命令行程序（如 `curl` 和 `wget`）会使用 `<PROTOCOL>_PROXY` 环境变量提供的代理。
 
 这是一个配置示例：
 
@@ -130,9 +130,12 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 
 ### 使用 `proxychains`
 
-对于那些不能使用上述方法的应用程序，Linux/ macOS 用户可以尝试使用 `proxychains`，它劫持 `glibc` 中的函数，将网络连接重定向到代理。
+若上述方法均无法生效，您可以尝试通过 `proxychains` 劫持程序的连接函数或库，将网络连接重定向到代理。
 
-首先，应该安装 `proxychains-ng`。 安装方法因操作系统的不同而不同，但是[官方项目](https://github.com/rofl0r/proxychains-ng)应该给你一个说明。
+首先，应该安装 `proxychains-ng`。 安装方法因操作系统的不同而不同。
+
+- [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
+- [Windows](https://github.com/shunf4/proxychains-windows)
 
 编辑 `/etc/proxychains.conf`（用于全局 proxychains）或 `$HOME/.proxychains/proxychains.conf`（对于用户），编辑 `[ProxyList]` 选项并更改为 Qv2ray 中的 SOCKS5 代理：
 
