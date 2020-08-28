@@ -88,4 +88,4 @@ cmake --build . # 可以再附加 `--parallel N` 选项加速构建.
 cmake --install . # 注意 "--install" 选项后面的点
 ```
 
-在 Windows/macOS 上，这会自动复制所有依赖到一个目录。这个目录是你之前使用 `CMAKE_INSTALL_PREFIX` 命令行参数或CMake GUI 工具指定的。如果要想改变那个目录，你需要重新生产 CMake 缓存文件。
+在 Windows/macOS 上，这会自动复制所有依赖到一个目录。这个目录是你之前使用 `CMAKE_INSTALL_PREFIX` 命令行参数或 CMake GUI 工具指定的。如果要想改变那个目录，你需要重新生产 CMake 缓存文件。

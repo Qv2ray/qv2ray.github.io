@@ -13,16 +13,16 @@ sidebarDepth: 3
 
 对于 **Windows** 和 **macOS** 用户，几乎所有的应用程序都将遵循系统代理设置。 对于 **Linux** 用户，一些应用程序，如 Firefox 和 Chromium，但不是全部，将在 GNOME/KDE 设置中读取和遵守代理配置。
 
-目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **System Proxy「系统代理」** 选项：
+目前 Qv2ray 支持自动设置系统代理，包括 **Windows**、**macOS** 和 **Linux**（GNOME/KDE）。 你可以在以下位置找到 Qv2ray 的 **系统代理** 选项：
 
 - Qv2ray 托盘菜单
   1. 右键点击托盘图标
-  2. 在弹出的菜单中选择 **System Proxy「系统代理」 -> Enable/Disble System Proxy「开启/关闭 系统代理」**。
-- Qv2ray **Preference「首选项」** 窗口
-  1. 单击主窗口中的 **Preferences「首选项」** 按钮
-  2. 在 **Preferences「首选项」** 窗口里选择 **Inbound Settings「入站设置」**
-  3. 选择 **Set System Proxy「设置系统代理」** 选项
-  4. 点击 **OK** 应用设置
+  2. 在弹出的菜单中选择 **系统代理 -> 开启/关闭 系统代理**。
+- Qv2ray **首选项** 窗口
+  1. 单击主窗口中的 **首选项** 按钮
+  2. 在 **首选项** 窗口里选择 **[入站设置](qv2ray://open/preference/inbound)**
+  3. 选择 **设置系统代理** 选项
+  4. 点击 **OK** 按钮应用设置
 
 :::tip Linux 用户：KDE/GNOME 代理设置
 
@@ -36,14 +36,14 @@ sidebarDepth: 3
 
 Qv2ray 目前并未处理 Windows 的拨号连接代理设置，如果你的上网方式是拨号上网（比如校园网宽带直连），那么你可能需要手动更改拨号连接的代理设置。或者可以参考[这个脚本解决方案](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)。
 
-
 :::
 
-::: warning Windows 用户：UWP Loopback 问题
+:::tip Windows 用户：UWP 应用回环问题
 
-默认情况下，UWP 程序禁止使用带有环回地址（如 127.0.0.1）的代理，所以系统的代理设置很可能会导致你的 UWP 程序停止正常工作。
+默认情况下，UWP 程序禁止使用带有回环地址（如 127.0.0.1）的代理，所以设置系统代理可能会导致你的 UWP 程序无法连接网络。
 
-你可以使用一些第三方工具来 **启用UWP Loopback**，让你的程序被代理，例如：[UWPLoopback @ GitHub](https://github.com/Dispnt/UWPLoopback)。
+你可以使用一些第三方工具来 **启用 UWP 回环**，使 UWP 程序可被正常代理。
+这里提供一个来自 [Fiddler](https://www.telerik.com/fiddler) 项目的 [EnableLoopback @ Fiddler](/EnableLoopback.zip)。
 
 :::
 
@@ -82,7 +82,7 @@ Qv2ray 目前并未处理 Windows 的拨号连接代理设置，如果你的上�
 
 :::danger 神奇的 Minecraft
 
-新版本的 **Minecraft 我的世界**（>=1.5.2） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
+ **Minecraft 我的世界**（版本号 >= 1.5.2 ） 不会遵循 JVM 代理设置。这不是 Qv2ray 的问题。 如果你真的想通过代理来玩 Minecraft，可以考虑为那个服务器设置一个 Dokodemo-door 任意门入站，并直接连接到 `localhost`。
 
 :::
 
@@ -90,7 +90,7 @@ Qv2ray 目前并未处理 Windows 的拨号连接代理设置，如果你的上�
 
 ### 使用环境变量
 
-Linux / macOS 中的许多程序，例如 `curl` 和 `wget`，都会使用 `<PROTOCOL>_PROXY` 环境变量提供的代理。
+许多命令行程序（如 `curl` 和 `wget`）会使用 `<PROTOCOL>_PROXY` 环境变量提供的代理。
 
 这是一个配置示例：
 
@@ -114,6 +114,12 @@ export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
+或输入要编码的文字：<input v-model="input">
+
+<template v-if="input">
+  编码后的文字：<code>{{ escaped }}</code>
+</template>
+
 对于在 `sudo` 中运行的程序，如果不在 shell 中运行 `sudo`，则需要配置 `sudo` 来保留这些变量。 使用 root 调用 `visudo` 并添加以下行：
 
 ```bash
@@ -130,9 +136,12 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 
 ### 使用 `proxychains`
 
-对于那些不能使用上述方法的应用程序，Linux/ macOS 用户可以尝试使用 `proxychains`，它劫持 `glibc` 中的函数，将网络连接重定向到代理。
+若上述方法均无法生效，您可以尝试通过 `proxychains` 劫持程序的连接函数或库，将网络连接重定向到代理。
 
-首先，应该安装 `proxychains-ng`。 安装方法因操作系统的不同而不同，但是[官方项目](https://github.com/rofl0r/proxychains-ng)应该给你一个说明。
+首先，应该安装 `proxychains-ng`。 安装方法因操作系统的不同而不同。
+
+- [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
+- [Windows](https://github.com/shunf4/proxychains-windows)
 
 编辑 `/etc/proxychains.conf`（用于全局 proxychains）或 `$HOME/.proxychains/proxychains.conf`（对于用户），编辑 `[ProxyList]` 选项并更改为 Qv2ray 中的 SOCKS5 代理：
 
@@ -144,3 +153,16 @@ socks5  127.0.0.1  1088
 在配置 `proxychains` 之后，您可以在终端使用 `proxychains` 程序使 `proxychains` 劫持程序使用给定的代理。 如果您厌倦了嘈杂的输出，您可能会在 `proxychains` 之后附加 `-q` 选项。
 
 需要注意的一点是，`proxychains` 不能用于静态链接的程序，例如 Golang 程序。
+
+<script>
+export default {
+  data: () => ({
+    input: ''
+  }),
+  computed: {
+    escaped() {
+      return encodeURIComponent(this.input)
+    }
+  }
+}
+</script>

@@ -5,7 +5,7 @@ sidebarDepth: 3
 
 # Step 4: Configuring Softwares to Use Qv2ray
 
-Congratulations! There's only one step left in order to access the unlocked Internet! 
+Congratulations! There's only one step left in order to access the unlocked Internet!
 
 ## General Methods
 
@@ -19,7 +19,7 @@ Currently, automatic setting of system proxy is supported by Qv2ray, including *
    2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
 - **Qv2ray Preference Window**.
    1. Click **Preferences** button in the main window.
-   2. In **Preference Window**, choose the tab **Inbound Settings**.
+   2. In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
    3. Check the option **Set System Proxy**.
    4. Click **OK** to apply the settings.
 
@@ -32,7 +32,7 @@ However, KDE users may have a difficult time, since KDE Proxy Settings is more l
 :::warning Windows Users: UWP Loopback Problem
 By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
 
-You can use some third-party tool to **enable UWP loopback** for your program to be proxied, for example, [UWPLoopback @ GitHub](https://github.com/Dispnt/UWPLoopback).
+You can use some third-party tool to **enable UWP loopback** for your program to be proxied. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
 :::
 
 ### Configure Manually in Applications
@@ -55,11 +55,11 @@ To avoid switching back and forth among proxy configurations, you may want to us
 For Java applications, you may use configure proxies through JVM arguments.
 
 Here are some examples:
- - Using SOCKS5: 
+ - Using SOCKS5:
    ```shell
    java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
    ```
- - Using HTTP(S): 
+ - Using HTTP(S):
    ```shell
    java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
    ```
@@ -72,7 +72,7 @@ Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is
 
 ### Using Environment Variables
 
-Many a program in Linux/macOS, for example, `curl` and `wget`, will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
+Many CLI programs (for example `curl` and `wget`) will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
 
 Here is a configuration example:
 
@@ -96,6 +96,12 @@ Note that if there is a special character in your username or password, you need
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
+Or enter the text you want to encode: <input v-model="input">
+
+<template v-if="input">
+  Encoded text: <code>{{ escaped }}</code>
+</template>
+
 For programs running in `sudo`, it is required to configure `sudo` to preserve these variables if you do not run `sudo` in a shell. Call `visudo` with root and add the following line:
 
 ```shell
@@ -112,9 +118,12 @@ It is strongly recommended to read the manual of programs that you want to confi
 
 ### Using `proxychains`
 
-For those applications that does not work with the methods above, Linux/macOS users may have a try with `proxychains`, which hijacks functions in `glibc` to redirect network connections into your proxies.
+If none of the above methods works, you can try using `proxychains`, which hijacks program's function/library to redirect network connections into your proxies.
 
-First, you should install `proxychains-ng`. Installation methods varies with each operating system, but the [official repository](https://github.com/rofl0r/proxychains-ng) shall give you an instruction.
+First, you should install `proxychains-ng`. Installation methods varies with each operating system.
+
+- [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
+- [Windows](https://github.com/shunf4/proxychains-windows)
 
 Edit `/etc/proxychains.conf` (for global proxychains) or `$HOME/.proxychains/proxychains.conf` (for user), edit `[ProxyList]` section and change the proxy to SOCKS5 Proxy in Qv2ray:
 
@@ -126,3 +135,16 @@ socks5  127.0.0.1  1088
 After configuring `proxychains`, you may use `proxychains <program>` in terminal to make `proxychains` hijack the program to use the given proxy. If you are fed up with the noisy output, you may append `-q` option after `proxychains`.
 
 One thing to note is that `proxychains` does not work with statically-linked programs, for example, Golang programs.
+
+<script>
+export default {
+  data: () => ({
+    input: ''
+  }),
+  computed: {
+    escaped() {
+      return encodeURIComponent(this.input)
+    }
+  }
+}
+</script>
