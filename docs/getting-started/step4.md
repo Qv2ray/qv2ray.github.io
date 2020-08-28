@@ -32,6 +32,13 @@ sidebarDepth: 3
 
 :::
 
+::: tip Windows 用户：拨号连接的代理设置问题
+
+Qv2ray 目前并未处理 Windows 的拨号连接代理设置，如果你的上网方式是拨号上网（比如校园网宽带直连），那么你可能需要手动更改拨号连接的代理设置。或者可以参考[这个脚本解决方案](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)。
+
+
+:::
+
 ::: warning Windows 用户：UWP Loopback 问题
 
 默认情况下，UWP 程序禁止使用带有环回地址（如 127.0.0.1）的代理，所以系统的代理设置很可能会导致你的 UWP 程序停止正常工作。
