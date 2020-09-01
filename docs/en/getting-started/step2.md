@@ -8,7 +8,7 @@ After a correct and successful installation of Qv2ray onto your system, it is ne
 
 ## Download V2Ray Core Files
 
-Due to political reasons, Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the V2Ray core, and most of the time it it required for users themselves to download them.
+Due to political reasons, Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the `v2ray-core`, and most of the time required for users is to download them.
 You may check [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for the official instructions.
 
 ::: tip Core Management: Manual vs Automatic
