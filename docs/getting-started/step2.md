@@ -63,5 +63,5 @@ title: 配置 V2Ray 核心
 ::: tip 给 Arch Linux 用户的提示
 若您使用 `v2ray` 软件包，推荐的路径配置如下：
 * **核心可执行文件路径**: `/usr/bin/v2ray`
-* **V2ray 资源目录**: `/usr/lib/v2ray`
+* **V2ray 资源目录**: `/usr/share/v2ray`
 :::
