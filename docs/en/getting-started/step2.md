@@ -62,5 +62,5 @@ Do note that V2Ray Core Executable is like `v2ray` or `v2ray.exe`, instead of `q
 ::: tip Hint for Arch Linux Users
 If you use `v2ray` package, the suggested configuration is as follows:
 * **Core Executable Path**: `/usr/bin/v2ray`
-* **V2Ray Assets Directory**: `/usr/lib/v2ray`
+* **V2Ray Assets Directory**: `/usr/share/v2ray`
 :::
