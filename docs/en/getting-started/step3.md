@@ -5,21 +5,24 @@ title: Importing Hosts into Qv2ray
 # Step 3: Importing Hosts into Qv2ray
 Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
 
-## VMess Link
-> VMess links generally looks like this: `vmess://eyJ2IjoiMiIsxxxxqcC5x`...
+## Share Links
+
+> Share links generally looks like these: 
+> * `vmess://eyJ2Ijoi`...
+> * `ss://NjNlMDAx`...
 
 Follow these steps to import them:
-1. Click **Add** button in the main window, or import via [link](qv2ray://open/import/link) or [QR Code](qv2ray://open/import/qr).
-2. In the **Import File** dialog, choose import source **VMess / QRCode**,
-3. Paste your `vmess://` links into **Share Link** text box.
+1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link) or [QR Code](qv2ray://open/import/qr).
+2. In the **Import File** dialog, choose import source **Share Link**,
+3. Paste your share links into **Share Link** text box.
 4. Click on **Import** button to finish.
 
 :::tip Batched Import
-You can import multiple `vmess://` links at a time. Make sure each VMess link takes its single line.
+You can import multiple share links at a time. Make sure each link takes its single line.
 :::
 
 :::warning Broken Links
-Some broken `vmess://` links may fail to import, but it doesn't matter. The detailed error will be shown on the right side. Also, it won't stop other entries in a batched import.
+Some broken share links may fail to import, but it doesn't matter. The detailed error will be shown on the right side. Also, it won't stop other entries in a batched import.
 :::
 
 ## Subscription
