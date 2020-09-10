@@ -7,6 +7,7 @@ title: 配置 V2Ray 核心
 在成功安装 Qv2ray 后，在真正使用 Qv2ray 之前，还需要基于 V2Ray 核心完成一些必要的配置。
 
 ## 下载 V2Ray 核心文件
+
 由于某些众所周知的政策原因，Qv2ray 本身并 **不包含** V2Ray 核心可执行文件。这些核心文件来自一个叫做 `v2ray-core` 的项目，需要用户手动下载安装到指定位置。
 你可参照 [V2Fly 官方指南](https://www.v2fly.org/guide/install.html) 处的指示进行操作。
 
@@ -29,12 +30,13 @@ title: 配置 V2Ray 核心
 将下载到的核心文件解压缩到一个固定的位置。默认情况下，我们建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore` 中，其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储其数据的目录。
 
 目录 `vcore` 可以在下面的任一位置：
+
 - `./config/` （在 Qv2ray 可执行文件旁边的 `config` 子文件夹内，建议 Windows 用户使用）
 - `~/.qv2ray/`（在 home 文件夹的独立目录中）
 - `~/.config/qv2ray/` （标准 XDG 配置路径）
 
+之后，请确保这些文件直接存在于 `vcore` 目录中：
 
-之后，请确保这些文件直接存在于 `vcore` 目录中:
 1. `v2ray` 或 `v2ray.exe`：核心可执行文件
 2. `v2ctl` 或 `v2ctl.exe`：核心控制程序
 3. `geoip.dat`：IP 规则数据库
@@ -62,6 +64,7 @@ title: 配置 V2Ray 核心
 
 ::: tip 给 Arch Linux 用户的提示
 若您使用 `v2ray` 软件包，推荐的路径配置如下：
+
 * **核心可执行文件路径**: `/usr/bin/v2ray`
 * **V2ray 资源目录**: `/usr/share/v2ray`
 :::

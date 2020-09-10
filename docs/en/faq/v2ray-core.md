@@ -20,6 +20,7 @@ You should always first check if there's an existing V2Ray process. A remaining 
 For Windows users, you can open your **Task Manager** to check if there's `v2ray.exe` (or `wv2ray.exe`, if you chose to run `wv2ray.exe` as core, the same applies below) running.
 
 If you find one, you may want to terminate that process manually. Windows users can hit <kbd>Win</kbd> + <kbd>R</kbd> to invoke the **Run** window, then type the following command and run:
+
 ```batch
 taskkill /f /im v2ray.exe
 ```
@@ -27,33 +28,38 @@ taskkill /f /im v2ray.exe
 #### Linux / macOS
 
 For Linux / macOS users, you may first use this command to find PID of V2Ray core:
+
 ```bash
 ps aux | grep v2ray
 ```
 
 and then kill the process with:
+
 ```bash
 sudo kill -9 <PID>
 ```
 
-### Taken by Other Programs 
+### Taken by Other Programs
 
-If you don't see a running V2Ray instance, you may want to dive deeper to investigate that who is using your ports. 
+If you don't see a running V2Ray instance, you may want to dive deeper to investigate that who is using your ports.
 
 #### Windows
 
 For Windows users, you may open **Command Prompt** and run the following command:
+
 ```batch
 netstat -aon | findstr "8888"
 ```
 
 Change the port (`8888` in the above) according to your real situation. You will get an output if there is some program using your port, which may usually look like this:
+
 ```
   TCP    127.0.0.1:8888            0.0.0.0            LISTENING       114514
   TCP    [::1]:8888                [::]:0             LISTENING       114514
 ```
 
 Notice the last column of the output (in this case, `114514`). That is the very PID of the process that is using your port. Run the following command to terminate the program:
+
 ```batch
 taskkill /f /pid 114514
 ```
@@ -63,11 +69,13 @@ After the program is terminated, the port should be released and usable.
 #### Linux / macOS
 
 For Linux / macOS users, you can use the folowing command to do the similar thing:
+
 ```bash
 sudo netstat -nlp | grep 8888
 ```
 
 If there's a process that is using the port, the output will be like:
+
 ```
 tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
 ```
@@ -85,7 +93,6 @@ As is stated, you can use `netsh interface ipv4 show excludedportrange protocol=
 ### If No Way Out
 
 Just change the listening port and avoid the clash. That's a pretty straightforward way.
-
 
 ## Failed to Execute
 
@@ -111,5 +118,5 @@ You may have downloaded a binary that is not executable on your platform. For ex
 To have a quick check, you can run the `v2ray` (or `v2ray.exe` if you are using Windows) directly by clicking on it. If there's an error, just delete and redownload the correct file.
 
 :::tip QvKernelABIChecker
-Since Qv2ray 2.4.0, [@DuckSoft](https://github.com/DuckSoft) introduced a novel checking mechanism called "ABI Checker", that will prevent you from using incorrect binaries. Therefore, this case have become rather rare afterwards. 
+Since Qv2ray 2.4.0, [@DuckSoft](https://github.com/DuckSoft) introduced a novel checking mechanism called "ABI Checker", that will prevent you from using incorrect binaries. Therefore, this case have become rather rare afterwards.
 :::

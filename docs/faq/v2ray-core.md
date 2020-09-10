@@ -23,6 +23,7 @@ sidebarDepth: 3
 对于 Windows 用户，您可以打开您的 **任务管理器** 来检查是否有  `v2ray.exe` （或是 `wv2ray.exe`，如果您选择选择了将 `wv2ray.exe` 作为核心运行，以下同理）正在运行。
 
 如果您找到了冲突的 V2Ray 核心进程，您可能需要手动终止其运行。可以按 <kbd>Win</kbd> + <kbd>R</kbd> 来打开 **运行** 窗口，然后输入以下命令并点击确定：
+
 ```batch
 taskkill /f /im v2ray.exe
 ```
@@ -30,28 +31,33 @@ taskkill /f /im v2ray.exe
 #### Linux / macOS
 
 对于 Linux / macOS 用户，您可以使用以下命令查找到 V2Ray 核心的 PID ：
+
 ```bash
 ps aux | grep v2ray
 ```
 
 然后使用以下命令杀死进程（用查找到的 PID 替换下面的 `<PID>` 部分）：
+
 ```bash
 sudo kill -9 <PID>
 ```
 
-### 被其他程序占用 
+### 被其他程序占用
 
 如果您没有找到运行中的 V2Ray 实例，您可能还需要再进一步排查是什么/谁占用了这个端口。
 
 #### Windows
 
 对于 Windows 用户，打开 **命令提示符（cmd）** 运行以下命令：
+
 ```batch
 netstat -aon | findstr "8888"
 ```
+
 > 根据实际情况更改端口（以上为 `8888` ）。
 
 如果有某些程序占用了端口，将获得可能像这样的输出：
+
 ```
   TCP    127.0.0.1:8888            0.0.0.0            LISTENING       114514
   TCP    [::1]:8888                [::]:0             LISTENING       114514
@@ -68,11 +74,13 @@ taskkill /f /pid 114514
 #### Linux / macOS
 
 对于 Linux / macOS 用户，您可以使用以下命令执行类似的操作：
+
 ```bash
 sudo netstat -nlp | grep 8888
 ```
 
 如果有正在使用该端口的进程，则输出将类似于：
+
 ```
 tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
 ```
@@ -82,6 +90,7 @@ tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
 ### Windows: 系统保留端口
 
 该情况仅会出现在 Windows 平台上，其错误日志通常如下：
+
 * `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`
 
 Microsoft 于 2018 年 2 月 13 日发布了 [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) 补丁，它将修改 Windows 操作系统上的*保留端口范围*，因此您可能会受到影响。

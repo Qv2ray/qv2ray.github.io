@@ -27,14 +27,17 @@ To make it clear, `arm64` is completely different from `amd64`. Make sure you do
 :::
 
 ## Place Your V2Ray Core
+
 Extract the v2ray core files into a fixed position. As a default, it is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
 
 The directory `vcore` could be in one of these locations:
+
  - `./config/` (`config` subdirectory aside Qv2ray executable, which is recommended for Windows Users)
  - `~/.qv2ray/` (in a dedicated directory of your home folder)
  - `~/.config/qv2ray/` (standard XDG configuration path)
 
 Afterwards, please make sure that these files exists directly in your `vcore` directory:
+
 1. `v2ray` / `v2ray.exe`: core executable file
 2. `v2ctl` / `v2ctl.exe`: core controlling program
 3. `geoip.dat`: IP rules database
@@ -48,6 +51,7 @@ This is usually done by executing `chmod +x` on these files.
 ## Configure Qv2ray to Use the Core
 
 Open Qv2ray and go to Preference Window. In **[Core Settings](qv2ray://open/preference/kernel)**, configure the following options:
+
  - **Core Executable Path**: Set this to where your V2Ray executable exists. This can be the full path of your `v2ray.exe` on Windows, or that `v2ray` executable file on Linux / macOS.
  - **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located.
 
@@ -61,6 +65,7 @@ Do note that V2Ray Core Executable is like `v2ray` or `v2ray.exe`, instead of `q
 
 ::: tip Hint for Arch Linux Users
 If you use `v2ray` package, the suggested configuration is as follows:
+
 * **Core Executable Path**: `/usr/bin/v2ray`
 * **V2Ray Assets Directory**: `/usr/share/v2ray`
 :::

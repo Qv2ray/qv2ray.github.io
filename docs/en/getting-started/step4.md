@@ -10,6 +10,7 @@ Congratulations! There's only one step left in order to access the unlocked Inte
 ## General Methods
 
 ### Using System Proxy
+
 For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings.
 
 Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
@@ -38,6 +39,7 @@ You can use some third-party tool to **enable UWP loopback** for your program to
 ### Configure Manually in Applications
 
 #### Telegram
+
 You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
 
 In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings.
@@ -45,6 +47,7 @@ In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/H
 Finally, click on the proxy entry that you've just configured. You are done.
 
 #### Web Browsers
+
 Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
 
 :::tip Using Proxy Plugins
@@ -52,6 +55,7 @@ To avoid switching back and forth among proxy configurations, you may want to us
 :::
 
 #### Java Applications
+
 For Java applications, you may use configure proxies through JVM arguments.
 
 Here are some examples:
