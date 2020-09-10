@@ -38,4 +38,3 @@ There are several steps:
 - Bypass Local Area Network Addresses.
 - Qv2ray’s advanced routing matrix settings.
 - Custom DNS settings.
-

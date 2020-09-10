@@ -28,7 +28,7 @@ sidebarDepth: 2
 虽然我们已将 `glibc` 和 C++ 基本库捆绑到 **AppImage** 中以支持一些旧的、受支持的发行版，但是我们强烈建议您使用更新版本的发行版或操作系统。
 :::
 
-::: warning Windows ARM64 用户注意
+:::warning Windows ARM64 用户注意
 因为操作系统内置 x86 的兼容层，Windows 10 on ARM 用户可以直接使用 `Qv2ray.VERSION.Windows-x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32.exe` (安装包)。
 :::
 
@@ -124,15 +124,17 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 > openSUSE / Fedora 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
 
-::: warning 适用版本
+:::warning 适用版本
 由于 Qt 版本的限制，我们可能不能支持所有尚在支持期的上述发行版，具体支持情况请参见下面 OBS 项目链接。
 :::
 
 与 AUR 类似，Qv2ray 也有两个版本，你可以根据自己的口味来选择：
+
 - 稳定版 OBS： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
 - 预览版 OBS： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
-或者你可以直接从下面的链接获取更详细的安装指导:
+或者你可以直接从下面的链接获取更详细的安装指导：
+
 - 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
 - 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
@@ -161,6 +163,7 @@ $ brew cask upgrade qv2ray
 > [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
 
 请在 **Powershell** 中执行以下命令：
+
 1. [安装 Scoop 包管理器](https://scoop.sh/#installs-in-seconds)：
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
@@ -181,7 +184,7 @@ $ brew cask upgrade qv2ray
    scoop install qv2ray-beta
    ```
 
-::: tip 提示
+:::tip 提示
 安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
 :::
 
@@ -190,6 +193,7 @@ $ brew cask upgrade qv2ray
 > [Chocolatey](https://chocolatey.org/) 是 **Windows** 的另一个包管理器。
 
 **请使用管理员权限运行 Powershell** 并执行以下命令：
+
 1. [安装 Chocolatey 包管理器](https://chocolatey.org/install)：
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -218,6 +222,7 @@ $ snap refresh qv2ray
 
 1. 设置 Flatpak 环境：[官方文档](https://flatpak.org/setup/)。
 2. 安装 Qv2ray：
+
    ```bash
    # 安装 Qv2ray：
    $ flatpak install com.github.Qv2ray

@@ -26,6 +26,7 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** is set 
 taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
 ```
+
 Or
 
 ```pwsh
@@ -58,7 +59,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **Cause**: It's caused by a limit in the `SUID` feature on some Linux OSes. Detailed error analysis please see: [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
 
-- **Solution**: `sudo sysctl fs.suid_dumpable=1`<br/>
+- **Solution**: `sudo sysctl fs.suid_dumpable=1`  
 The solution will be lost on reboot, please refer to [this blog](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html) if you want to keep it.
 
 ### 4. Core error `255`
@@ -92,6 +93,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 - [**Solution**](../getting-started/step5.md#tweaking-routing-schemes)
 
 ### 3. Transparent proxy not working when using Linux (Log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`)
+
 - **Cause:** V2Ray does not have the permission to set socket options.
 - **Solution:** For Arch users, install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray`. For other Linux distros, just replace `/usr/lib/v2ray/v2ray` with the absolute path of V2Ray core in the previous command.
 
@@ -122,7 +124,7 @@ nohup gnome-shell --replace &
 
 Or you can also restart Qv2ray and try again.
 
-::: tip A tip for Gnome users
+:::tip A tip for Gnome users
 The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons.
 :::
 

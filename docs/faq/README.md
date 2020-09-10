@@ -26,6 +26,7 @@ title: FAQ
 taskkill /f /im v2ray.exe
 taskkill /f /im wv2ray.exe
 ```
+
 或
 
 ```pwsh
@@ -59,7 +60,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **原因**：这个问题是一些 Linux 系统的 `SUID` 特性受限制所导致的。详细的错误分析请参阅 [#59](https://github.com/lhy0403/Qv2ray/issues/59)。
 
-- **解决方案**：`sudo sysctl fs.suid_dumpable=1`<br/>
+- **解决方案**：`sudo sysctl fs.suid_dumpable=1`  
 这个解决方案会在重启后失效。如果你希望保持这个选项，请参阅 [这里](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)。
 
 ### 4. 内核报错 `255`
@@ -89,7 +90,6 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
   - **方法二**：使用 [Chrony](https://www.chrony.tuxfamily.org) 同步时间。
 - **解决方案（macOS）**：打开系统偏好设置，点击“日期与时间”，在“日期与时间”标签页下启用“自动设置日期与时间”。
 
-
 ### 2. 为什么我在百度查询到的 IP 仍然在国内？
 
 - **原因** Qv2ray 默认设置为不代理国内流量。
@@ -104,7 +104,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **原因：** 由 V2Ray 脚本安装的服务会在启动时添加 `cap_net_admin` 权限，但 Qv2ray 默认调用的 V2Ray 程序本身并未设定包含该权限。
 - **解决方案：** Arch 用户，请以管理员 (root / sudo) 权限执行 `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray` 或 使用 `@DuckSoft` 构建的 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) ; 其他 Linux 用户请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/lib/v2ray/v2ray`。
 
-### 5. 如何设置拨号连接的代理?
+### 5. 如何设置拨号连接的代理？
 
 - [**解决方案**](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)
 
@@ -117,8 +117,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **解决方案**：在 `首选项` 的 `内核设置` 选项卡中关闭 `V2Ray 集成` 可以提升由插件提供支持的协议的响应速度，但相关协议将会失去 `高级路由`、`绕过中国大陆`、`本地地址直连` 和 `自定义DNS` 功能，这意味着相关协议的路由/分流功能将完全失效，即只能全局代理，无法分流。请注意，该选项不影响由 V2Ray 内核提供支持的协议（如VMess）。也就是说，如果你仅使用由 V2Ray 内核提供支持的协议，开关该功能不会有任何影响。
 - 此外，在杀毒软件~~尤其是 Microsoft Defender~~中将 V2Ray 核心设置为白名单程序，也可能会提升响应速度。~~未经科学验证的玄学~~
 
-
-##  软件行为 / 外观问题
+## 软件行为 / 外观问题
 
 ### 1. Qv2ray 在 GNOME 上没有托盘图标或者托盘图标会偶尔消失
 
@@ -129,9 +128,10 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```shell
 nohup gnome-shell --replace &
 ```
+
 或者，你可以试着重启 Qv2ray。
 
-::: tip 给 Gnome 用户的建议
+:::tip 给 Gnome 用户的建议
 原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
 :::
 
@@ -143,7 +143,7 @@ nohup gnome-shell --replace &
 
 ## 其他问题
 
-### 1. 为什么 Qv2ray 不打包插件和 V2Ray 核心或是内置下载功能?
+### 1. 为什么 Qv2ray 不打包插件和 V2Ray 核心或是内置下载功能？
 
 我们希望我们的用户能够了解软件的工作原理，同时拥有优秀的动手能力来解决可能存在的问题和需求。如果 Qv2ray 不适合您，您可以使用其他软件。
 

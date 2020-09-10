@@ -24,11 +24,11 @@ Do as the follows:
 
 Where `VERSION` is the version of that release.
 
-::: tip Notes for Linux AppImage users
+:::tip Notes for Linux AppImage users
 Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
 :::
 
-::: warning Notes for Windows ARM64 users
+:::warning Notes for Windows ARM64 users
 Windows 10 on ARM users can use `Qv2ray.VERSION.Windows-x86.7z` (archive) or `Qv2ray.VERSION.win32.exe` (Installer) directly, since the operating system has a built-in compatibility layer for x86 architecture.
 :::
 
@@ -40,7 +40,7 @@ If you are fed up with the functionalities of stable versions and willing to try
 2. Choose a recent and successful (displayed as ✔️) build and click on it. You should be taken to the detail page of that GitHub Build. Here's [an example](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
 3. Click on **Artifacts** drop-down menu to expand it, and then choose binaries according to your platform.
 
-::: tip
+:::tip
 You must login GitHub first to access GitHub Actions.
 :::
 
@@ -58,7 +58,7 @@ sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
 
 And that shall be done.
 
-::: tip
+:::tip
 You may also want to install `v2ray` package to use system V2Ray core.
 :::
 
@@ -96,6 +96,7 @@ $ yay -S qv2ray-dev-git
 Qv2ray will be ready to use after finishing the command.
 
 #### Download from AUR, the hard way
+
 You may not want to use an AUR helper to install Qv2ray from AUR. Then take a look at the following example.
 
 ```bash
@@ -114,23 +115,25 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 You are done.
 
-::: tip
+:::tip
 The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depends on the actual version of Qv2ray. It may differ on your machine, but that's not a problem.
 :::
 
-
 ### openSUSE / Fedora
+
 > Qv2ray is made available for openSUSE / Fedora users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
 
-::: warning Applicable Versions
+:::warning Applicable Versions
 Because of the limit of Qt version, we may not be able to support all on-lifetime distro above, the detail of supported distro please check the OBS link below.
 :::
 
 Similar to AUR, there are two versions of Qv2ray available. You can choose according to your own flavor:
+
  - Stable OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
  - Preview OBS: [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
 Or you can get more detailed installation guide directly from the links below:
+
  - Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
  - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
@@ -157,6 +160,7 @@ Qv2ray installed with Homebrew for the stable version. If you need to install th
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
 
 Run the following commands in **Powershell**:
+
 1. [Install Scoop](https://scoop.sh/#installs-in-seconds):
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # Allow script execution
@@ -177,7 +181,7 @@ Run the following commands in **Powershell**:
    scoop install qv2ray-beta
    ```
 
-::: tip
+:::tip
 In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
 :::
 
@@ -186,6 +190,7 @@ In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\cu
 > [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
 
 **Please open Powershell with administrator permission** and run the following commands:
+
 1. [Install Chocolatey](https://chocolatey.org/install)：
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -198,6 +203,7 @@ In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\cu
 ## Download from an app store
 
 ### Snapcraft
+
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
 ```shell
@@ -209,6 +215,7 @@ $ snap refresh qv2ray
 ```
 
 ### Flathub
+
 1. Set up Flatpak environment according to the [official documentation](https://flatpak.org/setup/).
 2. Install Qv2ray:
    ```shell
@@ -219,4 +226,5 @@ $ snap refresh qv2ray
    ```
 
 ## Building From Source
+
 Please refer to [Manually Build Qv2ray](../hacking/manuallybuild.md) Page.
