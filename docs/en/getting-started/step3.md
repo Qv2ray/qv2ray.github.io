@@ -40,7 +40,7 @@ To import a subscription, follow these steps:
 5. Click **Update Subscription Data** button to update the subscriptions and wait until the process finishes.
 6. Click **OK** to apply the settings and close the dialog.
 
-::: tip Update through System Proxy
+:::tip Update through System Proxy
 If you encounter connectivity problem with your subscription upstream (eg: DNS Record Pollution, IP Address Blocking, etc.), you may try to run with **Update Subscription with System Proxy** option on. However, it's better to inform the upstream as soon as possible, to fix the issue permanently.
 :::
 

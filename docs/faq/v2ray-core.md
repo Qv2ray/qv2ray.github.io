@@ -125,6 +125,6 @@ sudo chmod +x v2ctl
 
 可以通过双击直接运行 `v2ray`（如果您使用的是 Windows ，则为`v2ray.exe`）快速检查。如果有错误，请删除并重新下载正确的 V2Ray 核心。
 
-::: tip QvKernelABIChecker
+:::tip QvKernelABIChecker
 自 Qv2ray 2.4.0 起， [@DuckSoft](https://github.com/DuckSoft) 引入了一种全新的检查机制，称为 **ABI Checker** ，它将防止您使用不正确的二进制文件。因此，这种情况以后将会变得非常少见。
 :::

@@ -23,7 +23,7 @@ title: 更多
 * **暗色模式 UI 图标**：启用后，按钮上的图标会变成浅色，如果你使用的是浅色的窗口主题，请关闭此功能。
 * **暗色模式托盘图标**：启用后，托盘图标会变成浅色，以适应暗主题，如果你的托盘区域是浅色的，建议禁用。
 
-::: tip 给 Gnome 用户的建议
+:::tip 给 Gnome 用户的建议
 原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
 :::
 

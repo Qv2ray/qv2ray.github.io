@@ -131,7 +131,7 @@ nohup gnome-shell --replace &
 
 或者，你可以试着重启 Qv2ray。
 
-::: tip 给 Gnome 用户的建议
+:::tip 给 Gnome 用户的建议
 原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
 :::
 

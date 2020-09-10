@@ -28,7 +28,7 @@ sidebarDepth: 2
 虽然我们已将 `glibc` 和 C++ 基本库捆绑到 **AppImage** 中以支持一些旧的、受支持的发行版，但是我们强烈建议您使用更新版本的发行版或操作系统。
 :::
 
-::: warning Windows ARM64 用户注意
+:::warning Windows ARM64 用户注意
 因为操作系统内置 x86 的兼容层，Windows 10 on ARM 用户可以直接使用 `Qv2ray.VERSION.Windows-x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32.exe` (安装包)。
 :::
 
@@ -124,7 +124,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 > openSUSE / Fedora 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
 
-::: warning 适用版本
+:::warning 适用版本
 由于 Qt 版本的限制，我们可能不能支持所有尚在支持期的上述发行版，具体支持情况请参见下面 OBS 项目链接。
 :::
 
@@ -184,7 +184,7 @@ $ brew cask upgrade qv2ray
    scoop install qv2ray-beta
    ```
 
-::: tip 提示
+:::tip 提示
 安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
 :::
 
