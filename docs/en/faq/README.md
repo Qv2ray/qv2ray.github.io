@@ -132,7 +132,12 @@ The native Gnome desktop will not display the tray icons, and the Qv2ray icon wi
 
 ### 2. Ubuntu gives a super ugly UI
 
-- **Solution**: Append `--style fusion` to the command line arg may solve this problem.
+- **Solution**: Append `--style fusion` to the command line argument may solve this problem.
+
+### 3. Qv2ray UI looks super big on some Windows devices
+
+- **Cause**: Non-integer scaling is enabled on low-resolution devices, resulting in interface distortion after Qt's secondary scaling.
+- **Solution**: Append `--noScaleFactor` to the command line argument.
 
 ## Miscellaneous
 

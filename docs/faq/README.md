@@ -141,6 +141,11 @@ nohup gnome-shell --replace &
 
 - **解决方案**：启动 Qv2ray 时添加 `--style fusion` 参数可能会解决这个问题。
 
+### 3. 小屏 Windows 设备上 Qv2ray 的界面显得特别大
+
+- **原因**：低分屏设备上开启了非整比例缩放，导致 Qt 二次缩放后产生界面失真。
+- **解决方案**：启动 Qv2ray 时添加 `--noScaleFactor` 参数即可解决。
+
 ## 其他问题
 
 ### 1. 为什么 Qv2ray 不打包插件和 V2Ray 核心或是内置下载功能？
