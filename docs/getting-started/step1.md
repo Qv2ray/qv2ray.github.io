@@ -120,9 +120,9 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 包文件名（`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`）取决于 Qv2ray 的实际版本，在你的机器上可能有所不同。
 :::
 
-### openSUSE / Fedora
+### openSUSE / Fedora / CentOS
 
-> openSUSE / Fedora 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
+> openSUSE / Fedora / CentOS 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE Build Service](https://build.opensuse.org/) 提供。
 
 :::warning 适用版本
 由于 Qt 版本的限制，我们可能不能支持所有尚在支持期的上述发行版，具体支持情况请参见下面 OBS 项目链接。
@@ -137,6 +137,14 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 - 获取稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
 - 获取预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+
+:::warning 对于 CentOS 用户
+在开始从 OBS 安装之前，你需要添加由 Fedora 提供的 **EPEL** 源，以获取所需额外依赖，具体请参见 [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL)。
+:::
+
+:::tip 插件
+在上述 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray)中同样有提供 Qv2ray 相关插件，通过添加软件源方式完成了 Qv2ray 的安装之后，你可直接通过包管理器完成插件（包名同插件项目名，也同时提供带 `-preview` 后缀的预览版）的安装。
+:::
 
 ### macOS / Linux
 

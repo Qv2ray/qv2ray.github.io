@@ -119,9 +119,9 @@ You are done.
 The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depends on the actual version of Qv2ray. It may differ on your machine, but that's not a problem.
 :::
 
-### openSUSE / Fedora
+### openSUSE / Fedora / CentOS
 
-> Qv2ray is made available for openSUSE / Fedora users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
+> Qv2ray is made available for openSUSE / Fedora / CentOS users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
 
 :::warning Applicable Versions
 Because of the limit of Qt version, we may not be able to support all on-lifetime distro above, the detail of supported distro please check the OBS link below.
@@ -136,6 +136,14 @@ Or you can get more detailed installation guide directly from the links below:
 
  - Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
  - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+
+:::warning For CentOS user
+Before you install Qv2ray from above OBS project, you need to add the **EPEL** repository which provided by Fedora for extra needed dependencies. For more info please check the [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL).
+:::
+
+:::tip Plugins
+The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
+:::
 
 ### macOS / Linux
 
