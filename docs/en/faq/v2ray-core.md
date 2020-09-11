@@ -71,16 +71,24 @@ After the program is terminated, the port should be released and usable.
 For Linux / macOS users, you can use the folowing command to do the similar thing:
 
 ```bash
+# Linux
 sudo netstat -nlp | grep 8888
+
+# Linux / macOS
+sudo lsof -i:8888
 ```
 
 If there's a process that is using the port, the output will be like:
 
 ```
+# netstat
 tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
+
+# lsof
+evil   42742 username   11u  IPv6  29087      0t0  TCP *:8888 (LISTEN)
 ```
 
-Notice the last column, which shows the PID and program name of the very process. Feel free to terminate and regain the port.
+Notice the fields `42742` and `evil`, which shows the PID and program name of the very process. Feel free to terminate and regain the port.
 
 ### Windows: Reserved by System
 

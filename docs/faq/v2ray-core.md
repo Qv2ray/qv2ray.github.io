@@ -76,16 +76,24 @@ taskkill /f /pid 114514
 对于 Linux / macOS 用户，您可以使用以下命令执行类似的操作：
 
 ```bash
+# Linux
 sudo netstat -nlp | grep 8888
+
+# Linux / macOS
+sudo lsof -i:8888
 ```
 
 如果有正在使用该端口的进程，则输出将类似于：
 
 ```
+# netstat
 tcp6       0      0 :::8888        :::*          LISTEN      42742/evil
+
+# lsof
+evil   42742 username   11u  IPv6  29087      0t0  TCP *:8888 (LISTEN)
 ```
 
-请注意最后一列，它显示了该进程的 PID 和程序名称。可以终止它以重新获得端口。
+请注意输出示例中的 `42742` 及 `evil` 对应的位置，它显示了该进程的 PID 和程序名称。可以终止它以重新获得端口。
 
 ### Windows: 系统保留端口
 
