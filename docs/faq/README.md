@@ -153,6 +153,9 @@ nohup gnome-shell --replace &
    - 本体：`sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app`
    - 插件：同上，将目录换为插件目录即可。
 
+### 5. 我怎么找不到 Qv2ray 的“伪装域名”在哪儿？
+- **原因**：v2rayN 自造概念，V2Ray 核心 / Qv2ray 均无此概念，找不到很正常。
+- **解决方案**：本质是 HTTP 请求头，在 Qv2ray 的 **流设置**——**请求头** 中按 `Host|example.com` 格式正确填写一行即可，仅此而已。
 
 ## 其他问题
 
