@@ -146,6 +146,14 @@ nohup gnome-shell --replace &
 - **原因**：低分屏设备上开启了非整比例缩放，导致 Qt 二次缩放后产生界面失真。
 - **解决方案**：启动 Qv2ray 时添加 `--noScaleFactor` 参数即可解决。
 
+### 4. macOS 频繁要求将 Qv2ray / Qv2ray 插件“移到废纸篓”
+
+- **原因**：开发组在没有 macOS 设备的前提下，恕难自掏腰包[实名登记](https://zhuanlan.zhihu.com/p/104912328)后对 Qv2ray 及 Qv2ray 所有插件进行签名，并交给苹果公司逐一[检证](https://krita.org/zh/item/first-notarized-macos-build-of-krita-zh/)后发布。
+- **解决方案**：（仅适用于高级用户）
+   - 本体：`sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app`
+   - 插件：同上，将目录换为插件目录即可。
+
+
 ## 其他问题
 
 ### 1. 为什么 Qv2ray 不打包插件和 V2Ray 核心或是内置下载功能？

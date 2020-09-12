@@ -139,6 +139,11 @@ The native Gnome desktop will not display the tray icons, and the Qv2ray icon wi
 - **Cause**: Non-integer scaling is enabled on low-resolution devices, resulting in interface distortion after Qt's secondary scaling.
 - **Solution**: Append `--noScaleFactor` to the command line argument.
 
+### 4. macOS wants Qv2ray / Qv2ray Plugins to be "moved to trash"
+
+- **Cause**: To protect developers' privacy, we don't sign the app with their Apple Developer Account. Also, we haven't had our applications "notarized" by Apple. It's unfair to ask Qv2ray developers, who never use macOS, to pay the money for an Apple Developer Account and risk being caught signing the app, plus wasting their time to wait for the so-called Apple ["notarization"](https://krita.org/en/item/first-notarized-macos-build-of-krita/).
+- **Solution**: Use `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` like command to bypass.
+
 ## Miscellaneous
 
 ### 1. Why doesn't Qv2ray pack plugins and V2Ray core, or provide download function?
