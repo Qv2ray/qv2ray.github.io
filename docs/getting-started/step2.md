@@ -44,6 +44,8 @@ title: 配置 V2Ray 核心
 
 :::warning 对于 Linux / macOS 用户的温馨提示
 您应该始终为 `v2ray` 和 `v2ctl` 授予**可执行权限**。这通常通过对这些文件执行 `chmod +x ` 来完成。
+
+macOS 用户如果使用的是 Homebrew 进行安装可以忽略此提示。
 :::
 
 ## 配置 Qv2ray 去使用核心
@@ -52,7 +54,7 @@ title: 配置 V2Ray 核心
 
 - **核心可执行文件路径**：将此设置为您的 V2Ray 可执行文件所在的位置。 这可以是 Windows 上的 `v2ray.exe` 的完整路径，也可以是 Linux / macOS 上的 `v2ray` 可执行文件的完整路径。
 
-- **V2ray 资源目录**：将其设置为 `geoip.dat` 和 `geosite.dat` 所在的位置。
+- **V2Ray 资源目录**：将其设置为 `geoip.dat` 和 `geosite.dat` 所在的位置。
 
 配置完成后，你可以点击 **检查 V2Ray 核心设置** 按钮来验证你的 V2Ray 核心设置。 重复尝试，直到你通过了检查。
 
@@ -66,5 +68,12 @@ title: 配置 V2Ray 核心
 若您使用 `v2ray` 软件包，推荐的路径配置如下：
 
 * **核心可执行文件路径**: `/usr/bin/v2ray`
-* **V2ray 资源目录**: `/usr/share/v2ray`
+* **V2Ray 资源目录**: `/usr/share/v2ray`
+:::
+
+:::tip 给 macOS 用户的提示
+如果你使用 Homebrew 来安装 v2ray-core，那么你可以直接照抄下面的路径和目录：
+
+* **核心可执行文件路径**: `/usr/local/bin/v2ray`
+* **V2Ray 资源目录**: `/usr/local/bin/`
 :::
