@@ -46,6 +46,8 @@ Afterwards, please make sure that these files exists directly in your `vcore` di
 :::warning Special Hint for Linux / macOS Users
 You should always grant **executable permission** to `v2ray` and `v2ctl`.
 This is usually done by executing `chmod +x` on these files.
+
+On macOS, if you use Homebrew to install v2ray-core, you can ignore this tip.
 :::
 
 ## Configure Qv2ray to Use the Core
@@ -68,4 +70,11 @@ If you use `v2ray` package, the suggested configuration is as follows:
 
 * **Core Executable Path**: `/usr/bin/v2ray`
 * **V2Ray Assets Directory**: `/usr/share/v2ray`
+:::
+
+:::tip Hint for macOS Users
+If you are using Homebrew to install v2ray-core then you can simply copy the path and directory below:
+
+* **Core Executable Path**: `/usr/local/bin/v2ray`
+* **V2Ray Assets Directory**: `/usr/local/bin/`
 :::
