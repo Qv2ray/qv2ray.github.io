@@ -226,7 +226,11 @@ $ snap install qv2ray
 $ snap refresh qv2ray
 ```
 
-### Flathub
+### Flathub (不推荐)
+
+:::warning Deprecated (2020/09/18)
+Installation of Qv2ray from Flathub is officially **deprecated**, since the maintainer is no longer actively maintaining the package. If you are interested in adopting this, please open an issue and let us know.
+:::
 
 1. 设置 Flatpak 环境：[官方文档](https://flatpak.org/setup/)。
 2. 安装 Qv2ray：
