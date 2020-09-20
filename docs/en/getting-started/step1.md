@@ -145,9 +145,9 @@ Before you install Qv2ray from above OBS project, you need to add the **EPEL** r
 The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
 :::
 
-### macOS / Linux
+### Homebrew for Linux/macOS
 
-You can use Homebrew to install Qv2ray on macOS and Linux. If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following commands.
+You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command.
 
 ```bash
 $ brew cask install qv2ray

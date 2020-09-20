@@ -146,7 +146,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 在上述 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray)中同样有提供 Qv2ray 相关插件，通过添加软件源方式完成了 Qv2ray 的安装之后，你可直接通过包管理器完成插件（包名同插件项目名，也同时提供带 `-preview` 后缀的预览版）的安装。
 :::
 
-### macOS / Linux
+### Homebrew for Linux/macOS
 
 ~~Linux 应该不会有人用 Homebrew 吧？不会吧不会吧？~~
 
