@@ -115,7 +115,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **原因**：Qv2ray 默认开启的 `V2Ray 集成` 会让由插件提供支持的协议（如 SSR、Trojan）的流量完整地通过一遍 [V2Ray 路由](../plugins/v2ray-integration.md)，以实现高级路由功能，但~~在低配设备上~~会导致延迟明显增大。
 
 - **解决方案**：在 `首选项` 的 `内核设置` 选项卡中关闭 `V2Ray 集成` 可以提升由插件提供支持的协议的响应速度，但相关协议将会失去 `高级路由`、`绕过中国大陆`、`本地地址直连` 和 `自定义DNS` 功能，这意味着相关协议的路由/分流功能将完全失效，即只能全局代理，无法分流。请注意，该选项不影响由 V2Ray 内核提供支持的协议（如VMess）。也就是说，如果你仅使用由 V2Ray 内核提供支持的协议，开关该功能不会有任何影响。
-- 此外，在杀毒软件~~尤其是 Microsoft Defender~~中将 V2Ray 核心设置为白名单程序，也可能会提升响应速度。~~未经科学验证的玄学~~
+- 此外，在杀毒软件~~尤其是 Microsoft Defender~~ 中将 V2Ray 核心设置为白名单程序，也可能会提升响应速度。~~未经科学验证的玄学~~
 
 ## 软件行为 / 外观问题
 
@@ -132,7 +132,7 @@ nohup gnome-shell --replace &
 或者，你可以试着重启 Qv2ray。
 
 :::tip 给 Gnome 用户的建议
-原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做`ubuntu-appindicator` ）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
+原生的 Gnome 桌面不会显示通知区托盘图标，Qv2ray 的图标也会无法显示。如果要显示通知区图标，您可以安装 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator)（ 也叫做 `ubuntu-appindicator`）这个 Gnome 扩展，然后注销、重新登录，接着在 `优化` 应用（即 `gnome-tweaks` ）启用它，之后就可以看到通知区托盘图标了。
 :::
 
 - ~~最后插一嘴，KDE Plasma 真香。~~
