@@ -20,7 +20,7 @@ title: 高级路由设置
 
 包含 `AsIs`、`IPIfNonMatch`、`IPOnDemand` 三种。
 
-根据 [V2Ray 的官方文档](https://v2ray.com/chapter_02/03_routing.html#routingobject)，三种域名策略的含义如下：
+根据 [V2Ray 的官方文档](https://www.v2fly.org/config/routing.html#routingobject)，三种域名策略的含义如下：
 
 - **`AsIs`**：只使用域名进行路由选择。默认值。
 - **`IPIfNonMatch`**：当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）再次进行匹配：
@@ -48,7 +48,7 @@ title: 高级路由设置
 很简单，只需这些规则清空，再转到 `首选项` 的 `连接` 选项卡，取消 `绕过中国大陆` 复选框的选中状态即可。🙄
 :::
 
-根据 [V2Ray 的官方文档](https://v2ray.com/chapter_02/03_routing.html#ruleobject)：
+根据 [V2Ray 的官方文档](https://www.v2fly.org/config/routing.html#routingobject)：
 
 IP 规则的写法如下（按常用程度排序）：
 
@@ -60,7 +60,7 @@ IP 规则的写法如下（按常用程度排序）：
 
 域名规则的写法如下（按常用程度排序）：
 
-- **预定义域名列表**：由 `geosite:` 开头，余下部分是一个名称，如 `geosite:google` 或者 `geosite:cn`。名称及域名列表可参考[预定义域名列表](https://v2ray.com/chapter_02/03_routing.html#dlc)。
+- **预定义域名列表**：由 `geosite:` 开头，余下部分是一个名称，如 `geosite:google` 或者 `geosite:cn`。名称及域名列表可参考[预定义域名列表](https://www.v2fly.org/config/routing.html#%E9%A2%84%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%88%97%E8%A1%A8)。
 - **子域名**：由 `domain:` 开始，余下部分是一个域名。当此域名是目标域名或其子域名时，该规则生效。例如 `domain:v2ray.com` 匹配 `www.v2ray.com` 、`v2ray.com`，但不匹配 `xv2ray.com`。
 - **完整匹配**：由 `full:` 开始，余下部分是一个域名。当此域名完整匹配目标域名时，该规则生效。例如 `full:v2ray.com` 匹配 `v2ray.com` 但不匹配 `www.v2ray.com`。
 - **纯字符串**：当此字符串匹配目标域名中任意部分，该规则生效。比如 `sina.com` 可以匹配 `sina.com`、`sina.com.cn` 和 `www.sina.com`，但不匹配 `sina.cn`。
@@ -88,10 +88,10 @@ IP 规则的写法如下（按常用程度排序）：
 
 需要提醒的是，每项路由规则中的匹配条件为 `与` / `and` / `&&` 关系，即若一项路由规则中包含多种匹配条件，则最终得到的实际匹配条件是这些条件的交集。举个例子，若某项路由规则中，既包含端口条件 `443`，又包含目标域名条件 `qv2ray.github.io`，那么只有同时满足这两个条件的目标 `qv2ray.github.io:443` 才会匹配该项规则。
 
-如果你对 V2Ray 的路由规则机制不太了解，请参考 [V2Ray 的官方文档](https://v2ray.com/chapter_02/03_routing.html)。
+如果你对 V2Ray 的路由规则机制不太了解，请参考 [V2Ray 的官方文档](https://www.v2fly.org/config/routing.html)。
 
 ## 相关链接
 
-[V2Ray 官方文档：路由规则](https://v2ray.com/chapter_02/03_routing.html)
+[V2Ray 官方文档：路由规则](https://www.v2fly.org/config/routing.html)
 
 [V2Ray 规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
