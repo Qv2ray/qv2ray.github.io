@@ -43,7 +43,7 @@ Qv2ray 会尽力检测您的系统的显示语言，并在第一次启动时将�
 
 但这些规则并不总是适用。例如，您有一个特殊的代理用于解锁[哔哩哔哩](https://bilibili.com)的港澳台流媒体。由于它是中国大陆的网站，在默认情况下，流量不会通过代理，这就给想看港澳台区视频的你带来了麻烦。解决方案是在 **首选项** 窗口中使用我们的 **[高级路由设置](qv2ray://open/preference/route)**。
 
-一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。规则的语法可以在 [V2Ray 官方网站的 RuleObject 文档](https://v2ray.com/chapter_02/03_routing.html#ruleobject)中找到。在这里，如果我们想强制 bilibili 通过代理，我们只需在 `(域名, 代理)` 位置编写一个 `geosite:bilibili` 规则。
+一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。规则的语法可以在 [V2Ray 官方网站的 RuleObject 文档](https://www.v2fly.org/config/routing.html#routingobject)中找到。在这里，如果我们想强制 bilibili 通过代理，我们只需在 `(域名, 代理)` 位置编写一个 `geosite:bilibili` 规则。
 
 应用设定并重新连接后，规则即可生效。
 
