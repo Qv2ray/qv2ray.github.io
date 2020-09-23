@@ -108,7 +108,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
     You can also install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft` to automate this step.
 
   - For Fedora 32+ / RHEL 8+ users:  
-    If you are installed V2Ray by dnf / yum, and the V2Ray binary path is /usr/bin/v2ray, you can also install RPM package `[v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)` packaged by `@sixg0000d` to automate this step.
+    If you are installed V2Ray by dnf / yum, and the V2Ray binary path is `/usr/bin/v2ray` , you can also install RPM package `[v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)` packaged by `@sixg0000d` to automate this step.
 
 ### 4. How to configure proxy for dial-up connections?
 
