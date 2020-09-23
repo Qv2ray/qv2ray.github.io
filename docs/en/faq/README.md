@@ -95,7 +95,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 ### 3. Transparent proxy not working when using Linux (Log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`)
 
 - **Cause:** V2Ray does not have the permission to set socket options.
-- **Solution:** For Arch users, install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/lib/v2ray/v2ray`. For other Linux distros, just replace `/usr/lib/v2ray/v2ray` with the absolute path of V2Ray core in the previous command.
+- **Solution:** For Arch users, install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray`. For other Linux distros, just replace `/usr/bin/v2ray` with the absolute path of V2Ray core in the previous command.
 
 ### 4. How to configure proxy for dial-up connections?
 
