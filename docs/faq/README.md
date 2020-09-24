@@ -102,7 +102,22 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ### 4. Linux 设置了透明代理 (Redirect, tProxy)，为什么不能使用 (提示 failed to set IP_TRANSPARENT > operation not permitted)？
 
 - **原因：** 由 V2Ray 脚本安装的服务会在启动时添加 `cap_net_admin` 权限，但 Qv2ray 默认调用的 V2Ray 程序本身并未设定包含该权限。
-- **解决方案：** Arch 用户，请以管理员 (root / sudo) 权限执行 `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray` 或 使用 `@DuckSoft` 构建的 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) ; 其他 Linux 用户请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/bin/v2ray`。
+- **解决方案：** Arch 用户，请以管理员 (root / sudo) 权限执行 `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray` 或 使用 `@DuckSoft` 构建的 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) ; Fedora 32+ / RHEL 8+ 用户，可以使用 `@sixg0000d` 构建的 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/) ; 其他 Linux 用户请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/bin/v2ray`。
+
+- **解决方案：**
+  - 对于所有 Linux 发行版，请以管理员 (root / sudo) 权限执行以下命令：  
+
+    ```shell
+    /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
+    ```
+
+    这是大多数包管理 V2Ray 的安装位置，如若不是（比如通过脚本安装 V2Ray ），请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/bin/v2ray`。
+
+  - 对于 Arch 用户：  
+    您也可以使用 `@DuckSoft` 构建的 `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` 来自动化该操作。
+
+  - 对于 Fedora 32+ / RHEL 8+ 用户：  
+    如果您是通过 dnf / yum 将 V2Ray 二进制文件安装到 `/usr/bin/v2ray`，您也可以使用 `@sixg0000d` 打包的 `[v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)` 来自动化该操作。
 
 ### 5. 如何设置拨号连接的代理？
 

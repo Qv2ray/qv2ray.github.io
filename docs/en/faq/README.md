@@ -95,7 +95,20 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 ### 3. Transparent proxy not working when using Linux (Log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`)
 
 - **Cause:** V2Ray does not have the permission to set socket options.
-- **Solution:** For Arch users, install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft`, or use the command below in terminal (with root/sudo access): `/usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray`. For other Linux distros, just replace `/usr/bin/v2ray` with the absolute path of V2Ray core in the previous command.
+- **Solution:**
+  - For all Linux distros, Use the command below in terminal (with root/sudo access):  
+
+    ```shell
+    /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
+    ```
+
+    This is most of V2Ray package installed path, but if is not (e.g. install V2Ray by script), you should replace `/usr/bin/v2ray` with the absolute path of V2Ray core in the previous command.
+
+  - For Arch users:  
+    You can also install the AUR package `[aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)` created by `@DuckSoft` to automate this step.
+
+  - For Fedora 32+ / RHEL 8+ users:  
+    If you are installed V2Ray by dnf / yum, and the V2Ray binary path is `/usr/bin/v2ray` , you can also install RPM package `[v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)` packaged by `@sixg0000d` to automate this step.
 
 ### 4. How to configure proxy for dial-up connections?
 
