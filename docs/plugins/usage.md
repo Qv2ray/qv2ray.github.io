@@ -22,6 +22,12 @@ title: 使用插件
 - [**QvPlugin-Command**](https://github.com/Qv2ray/QvPlugin-Command) - 当特殊事件发生时，运行任意指定的命令
 - [**QvPlugin-Trojan-Go**](https://github.com/Qv2ray/QvPlugin-Trojan-Go) - 让你能在 Qv2ray 中使用 Trojan-Go
 
+:::tip 内置Shadowsocks支持 vs QvPlugin-SS
+一个常见的误解是 Qv2ray 不装 QvPlugin-SS 就用不了 Shadowsocks 节点，这是不对的。Qv2ray 已有来自 V2Ray 内核的 [内置 Shadowsocks 支持](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，已足以满足一般使用需要。因此，你不必非要安装 QvPlugin-SS。
+
+然而，尽管强烈不推荐，若你仍然头铁坚持要用某些过时的/弃用的加密方式（如性能和安全性都被 `aes-128-gcm` 和 `chacha20-ietf-poly1305` 等吊打的臭名昭著的 `rc4-md5` 加密），你的确需要 QvPlugin-SS 才能使用这些节点。此外，带有 SIP003 插件的服务器（例如 [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) 和 [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)）也需要 QvPlugin-SS 才能运作。
+:::
+
 ## 插件的获取与使用
 
 你可以下载并启用任意数量的插件。
