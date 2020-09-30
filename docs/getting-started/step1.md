@@ -41,7 +41,7 @@ sidebarDepth: 2
 3. 点击 **Artifacts** 展开下拉菜单, 然后根据你的平台选择一个二进制包并下载。
 
 :::tip 提示
-你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts~
+你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts~，或者去[店小二](https://t.me/Qvreleasebot)那边下载 ~~（虽然这个也需要登录 Telegram 账号）~~
 :::
 
 ## 在包管理系统中安装此软件
