@@ -60,7 +60,7 @@ Update 2020-05-30: Due to implementation flaws, V2ray-Core will use a hard-coded
 Part Two:
 
 #Advanced routing settings
-Advanced routing settings and the routing editor are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as on-demand proxy, domestic and foreign distribution, etc., and even dolls 🤣~
+Advanced routing settings and the routing editor are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as on-demand proxy, domestic and foreign distribution, etc., and even do Matryoshkas 🤣~
 
 Let’s discuss routing. This concerns the PAC and GFWList.
 
@@ -146,4 +146,3 @@ What needs reiterating is that the matching conditions in each routing rule are 
 If you don't know much about V2Ray's routing rules mechanism, please refer to V2Ray's official documentation.
 
 END
-
