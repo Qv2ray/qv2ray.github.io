@@ -7,37 +7,42 @@ title: Manual
 :::tip
 This part is translated by a non-native speaker of Chinese. Corrections welcome!
 :::
-General settings
-General settings are for Qv2ray itself, including appearance, behavior and network settings.
 
-Emphasize
+## General Settings
+General Settings are for Qv2ray itself, including appearance, behavior and network settings.
 
-The general settings are for Qv2ray itself, which means that these settings will only change the behavior of Qv2ray itself, but will not affect the behavior of the V2Ray core agent.
+::: tip Tips
+The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
+:::
 
-#Exterior
-Set the appearance attributes of Qv2ray.
+### Appearance
+Set how Qv2ray looks and feels.
+  
+- **Recent Jumplist**: Set the number of recently used connections displayed in the notification icon right-click menu-recent connections list.
+- **Maximum log lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
+- **Others**: Set up as you like~🤐
 
-Recent list: Set the number of recently used connections displayed in the notification icon right-click menu-recent connections list.
-Maximum number of log lines: set the upper limit of the number of log records in the Log pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be deleted automatically.
-Others: Set up as you like~🤐
-#behavior
+### Behavior
 Set the behavior of Qv2ray.
 
-Quiet mode: When enabled, Qv2ray will not actively pop up any notifications.
-Others: It's already very simple, why should I talk about it? 😶
-#Network Settings
+- **Quiet Mode**: When enabled, Qv2ray will not actively pop up any notifications.
+- **Others**: It's already very simple, why should I talk about it? 😶
+
+### Network Settings
 Set the way Qv2ray accesses the network.
 
-Delay test plan: Set the test method for node delay.
-TCPing: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested.
-ICMPing: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of ping command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
-User Agent: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
-Qv2ray proxy: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray core export traffic.
-What is the meaning of Qv2ray proxy?
+- **Latency Testing Method**: Set the test method for node delay.
+   - **TCPing**: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
+   - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of ping command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
+ - **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
+ - **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
 
+:::tip What is Qv2ray proxy?
 If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
 
-If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the front proxy function and do not configure this option.
+If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
+:::
+
 
 #Advanced Behavior
 Set the advanced behavior of Qv2ray. Please note that abuse of these settings may have negative effects!
