@@ -3,10 +3,7 @@ title: Manual
 ---
 
 # Manual
-
-:::tip
-This part is translated by a non-native speaker of Chinese. Corrections welcome!
-:::
+> This part is translated by a non-native speaker of Chinese. Corrections welcome!
 
 ## General Settings
 General Settings are for Qv2ray itself, including appearance, behavior and network settings.
@@ -19,7 +16,7 @@ The general settings will only change the behavior of Qv2ray itself, but will no
 Set how Qv2ray looks and feels.
   
 - **Recent Jumplist**: Set the number of recently used connections displayed in the notification icon right-click menu-recent connections list.
-- **Maximum log lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
+- **Maximum Log Lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
 - **Others**: Set up as you like~🤐
 
 ### Behavior
@@ -43,26 +40,19 @@ If you want Qv2ray to update subscriptions or detect version updates through a p
 If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
 :::
 
+### Advanced Behavior
+Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
 
-#Advanced Behavior
-Set the advanced behavior of Qv2ray. Please note that abuse of these settings may have negative effects!
+- **Set AllowInsecure by Default**: All new connections imported via subscription / QR code / VMess protocol link will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- **Set AllowInsecureCiphers by Default**: All new connections imported through subscription / QR code / VMess protocol link will be enabled by default to allow insecure TLS algorithm option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- **Enable SessionResumption by Default**: New in Qv2ray v2.6.0. When enabled, new connections imported with TLS will enable Session Resumption to reduce RTT during handshake. However, this will largely increase the risk of being recognised by GFW.
+- **Test Latency Periodically**: After enabling this option, Qv2ray will periodically test the delay of the currently connected node. Enabling this option may make it easier for GFW to recognize your connection.
 
-Default setting AllowInsecure: All new connections imported via subscription / QR code / VMess protocol link will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
-
-The default setting AllowInsecureCiphers: All new connections imported through subscription / QR code / VMess protocol link will be enabled by default to allow insecure TLS algorithm option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
-
-Timed test delay: After enabling this option, Qv2ray will periodically test the delay of the currently connected node. Enabling this option may make it easier for GFW to recognize your connection.
-
-Another Re-emphasis:
-
+:::warning Another Re-emphasis:
 Misuse of the above settings may cause negative effects and even lead to security issues! If you do not understand the actual use of these options, please do not open them!
+:::
 
-For versions below V2ray-Core 4.23.1
-
-Update 2020-05-30: Due to implementation flaws, V2ray-Core will use a hard-coded TLS cipher suite list when the AllowInsecureCiphers option is not turned on. This will cause V2ray-Core's TLS traffic to have obvious characteristics. Enabling AllowInsecureCiphers in Qv2ray will Temporarily alleviate this problem, you need to re-import all affected connections after turning on this option
-
-===
-Part Two:
+---
 
 #Advanced routing settings
 Advanced routing settings and the routing editor are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as on-demand proxy, domestic and foreign distribution, etc., and even do Matryoshkas 🤣~
