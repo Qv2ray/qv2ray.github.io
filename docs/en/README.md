@@ -17,7 +17,7 @@ footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
 
 **Qv2ray** is a cross-platform v2ray graphical frontend written in Qt.
 
-The supported version currently is `v2.5.0`.
+The supported version currently is `v2.7.0-alpha1`.
 
 ## 🚀 Getting Started
 
