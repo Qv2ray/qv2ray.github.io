@@ -51,6 +51,7 @@ module.exports = {
       "/faq/": ["", "v2ray-core"],
       "/en/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/en/hacking/": ["", "manuallybuild"],
+      "/en/manual/": ["","general","route"],
       "/en/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/en/faq/": ["", "v2ray-core"],
     },
@@ -90,7 +91,7 @@ module.exports = {
         ]
       },
       "/": {
-        selectText: "选择语言",
+        selectText: "Languages",
         label: "简体中文",
         editLinkText: "在 GitHub 上编辑此页",
         serviceWorker: {
