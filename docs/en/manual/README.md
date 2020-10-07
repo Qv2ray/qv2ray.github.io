@@ -1,10 +1,10 @@
 ---
 title: Manual
 ---
- 
+
 # Manual
-> This part is translated by a non-native speaker of Chinese. Corrections welcome!
 
-- [General Settings](general)
-- [Advanced Route Settings](route)
+> This section is translated by a non-native speaker of Chinese. Improvements welcome!
 
+- [General Settings](./general.md)
+- [Advanced Route Settings](./route.md)
