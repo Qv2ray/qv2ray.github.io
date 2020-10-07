@@ -13,14 +13,15 @@ title: 使用插件
 
 实际上，Qv2ray 插件是 Qv2ray 的扩展，能让你使用更多特性。
 
-当前，Qv2ray 项目组共发布如下 6 个我们维护的插件：
+当前，Qv2ray 项目组共发布如下 {{ plugins.length }} 个我们维护的插件：
 
-- [**QvPlugin-SS**](https://github.com/Qv2ray/QvPlugin-SS) - 让你能在 Qv2ray 中启用 Shadowsocks SIP003 完整支持
-- [**QvPlugin-SSR**](https://github.com/Qv2ray/QvPlugin-SSR) - 让你能在 Qv2ray 中使用 ShadowsocksR
-- [**QvPlugin-Trojan**](https://github.com/Qv2ray/QvPlugin-Trojan) - 让你能在 Qv2ray 中使用 Trojan
-- [**QvPlugin-NaiveProxy**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - 让你能在 Qv2ray 中使用 NaiveProxy
-- [**QvPlugin-Command**](https://github.com/Qv2ray/QvPlugin-Command) - 当特殊事件发生时，运行任意指定的命令
-- [**QvPlugin-Trojan-Go**](https://github.com/Qv2ray/QvPlugin-Trojan-Go) - 让你能在 Qv2ray 中使用 Trojan-Go
+<ul>
+  <li v-for="[name, desc] in plugins" :key="name">
+    <a :href="`https://github.com/Qv2ray/${name}`" target="_blank" rel="noopener noreferrer">
+      <strong>{{ name }}</strong><OutboundLink/>
+    </a> - {{ desc }}
+  </li>
+</ul>
 
 :::tip 内置Shadowsocks支持 vs QvPlugin-SS
 一个常见的误解是 Qv2ray 不装 QvPlugin-SS 就用不了 Shadowsocks 节点，这是不对的。Qv2ray 已有来自 V2Ray 内核的 [内置 Shadowsocks 支持](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，已足以满足一般使用需要。因此，你不必非要安装 QvPlugin-SS。
@@ -77,3 +78,13 @@ title: 使用插件
 
 - 可以试试用 `qv2ray(.exe) --noPlugin` 禁用所有插件的加载.
 - 如果 Qv2ray 成功启动了（证明的确是插件的问题），请同上述方法报告问题。
+
+<script>
+import plugins from './plugins'
+
+export default {
+  data: () => ({
+    plugins
+  })
+}
+</script>

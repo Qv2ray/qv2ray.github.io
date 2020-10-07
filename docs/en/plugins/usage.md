@@ -13,14 +13,15 @@ A Qv2ray Plugin is, technically, a shared library that implements `QvPlugin` int
 
 Actually, a Qv2ray Plugin is an extension of Qv2ray, which allows you use more features.
 
-Qv2ray workgroup has published 6 officially maintained plugins:
+Qv2ray workgroup has published {{ plugins.length }} officially maintained plugins:
 
-- [**QvPlugin-SS**](https://github.com/Qv2ray/QvPlugin-SS) - Allows you to enable complete support of Shadowsocks SIP003 in Qv2ray.
-- [**QvPlugin-SSR**](https://github.com/Qv2ray/QvPlugin-SSR) - Allows you to use ShadowSocksR in Qv2ray.
-- [**QvPlugin-NaiveProxy**](https://github.com/Qv2ray/QvPlugin-NaiveProxy) - Allows you to use NaiveProxy in Qv2ray.
-- [**QvPlugin-Trojan**](https://github.com/Qv2ray/QvPlugin-Trojan) - Allows you to use Trojan in Qv2ray.
-- [**QvPlugin-Command**](https://github.com/Qv2ray/QvPlugin-Command) - Run any command when a specific event has been triggered.
-- [**QvPlugin-Trojan-Go**](https://github.com/Qv2ray/QvPlugin-Trojan-Go) - Allows you to use Trojan-Go in Qv2ray.
+<ul>
+  <li v-for="[name, , desc] in plugins" :key="name">
+    <a :href="`https://github.com/Qv2ray/${name}`" target="_blank" rel="noopener noreferrer">
+      <strong>{{ name }}</strong><OutboundLink/>
+    </a> - {{ desc }}
+  </li>
+</ul>
 
 :::tip Builtin Shadowsocks Support vs QvPlugin-SS
 It is a common gotcha that people think Qv2ray needs QvPlugin-SS to support Shadowsocks. Qv2ray already has [built-in Shadowsocks support](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject) from V2Ray Core, which will suffice general use cases. Therefore, you don't necessarily need to use QvPlugin-SS.
@@ -76,3 +77,13 @@ To install a plugin, you need to do these:
 
 - Please try `qv2ray(.exe) --noPlugin` to skip loading all plugins.
 - If the Qv2ray started successfully, please report the error using methods mentioned above.
+
+<script>
+import plugins from '../../plugins/plugins'
+
+export default {
+  data: () => ({
+    plugins
+  })
+}
+</script>
