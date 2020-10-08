@@ -30,14 +30,19 @@ Some broken share links may fail to import, but it doesn't matter. The detailed 
 > A subscription link usually looks like this: `https://some-airport.com/links/YjYyODk?sub=3`
 
 To import a subscription, follow these steps:
-1. Click **Subscriptions** button in the main window.
-2. In the **[SubscribeEditor](qv2ray://open/group/connection)** dialog, click the **Add subscription** icon button at the left-bottom corner.
-3. Click to select the newly generated item in **Subscription List**.
-4. Input your subscription information on the right side.
-   - **Subscription Name**: Fill this as you wish.
-   - **Subscription Address**: Use your subscription link mentioned above.
-   - **Update Interval**: Change this according to your own demands.
-5. Click **Update Subscription Data** button to update the subscriptions and wait until the process finishes.
+1. Open **GroupEditor** by clicking **Group** button in main window.
+2. Click the **Add Group** icon button at the left-bottom corner in **[GroupEditor](qv2ray://open/group/connection)** window.
+3. Select the created item in **Group List**, whose details will be shown on the right side.
+4. Switch to **Subscription Settings** panel and finalize the configuration:
+   1. Name the group by editing **Group Name**.
+   2. Check **This group is a subscription**.
+   3. Specify these fields:
+      - **Subscription Address**: Use your **subscription link** mentioned above.
+      - **Subscription Type**: If the default value won't work, change this to another.
+   4. Change these fields optionally:
+      - **Update Interval**: Qv2ray will notify you when the subscription needs to be updated upon launching. Change this according to your own demands.
+      - **Importing Filters**: Qv2ray can filter the nodes imported from your subscription when configured. You can figure this out by yourself.
+5. Click **Update Subscription** button and wait for completion.
 6. Click **OK** to apply the settings and close the dialog.
 
 :::tip Update through System Proxy
