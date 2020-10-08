@@ -1,14 +1,17 @@
 {
   "name": "qv2ray-doc",
   "description": "Qv2ray's document",
-  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
+  "dependencies": {
+    "@kidonng/vuepress-plugin-contributors": "^0.1.0",
+    "@vuepress/plugin-back-to-top": "^1.4.0"
+  },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.4.0",
     "vuepress": "^1.4.0",
-    "vuepress-theme-succinct": "^1.4.0"
+    "vuepress-theme-succinct": "kidonng/vuepress-theme-succinct"
   }
 }

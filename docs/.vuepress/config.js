@@ -3,10 +3,6 @@ const r = path => resolve(__dirname, path);
 module.exports = {
   title: "Qv2ray",
   description: "Qv2ray Website & Documentation",
-  theme: 'vuepress-theme-succinct',
-  globalUIComponents: [
-    'ThemeManager'
-  ],
   head: [
     [
       "link",
@@ -23,7 +19,10 @@ module.exports = {
       }
     }
   },
-  plugins: ["@vuepress/back-to-top"],
+  plugins: [
+    "@vuepress/back-to-top",
+    ['@kidonng/vuepress-plugin-contributors', { label: '贡献者' }]
+  ],
   locales: {
     "/en/": {
       lang: "en-US",
