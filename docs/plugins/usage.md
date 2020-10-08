@@ -23,7 +23,7 @@ title: 使用插件
   </li>
 </ul>
 
-:::tip 内置Shadowsocks支持 vs QvPlugin-SS
+:::tip 内置 Shadowsocks 支持 vs QvPlugin-SS
 一个常见的误解是 Qv2ray 不装 QvPlugin-SS 就用不了 Shadowsocks 节点，这是不对的。Qv2ray 已有来自 V2Ray 内核的 [内置 Shadowsocks 支持](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，已足以满足一般使用需要。因此，你不必非要安装 QvPlugin-SS。
 
 然而，尽管强烈不推荐，若你仍然头铁坚持要用某些过时的/弃用的加密方式（如性能和安全性都被 `aes-128-gcm` 和 `chacha20-ietf-poly1305` 等吊打的臭名昭著的 `rc4-md5` 加密），你的确需要 QvPlugin-SS 才能使用这些节点。此外，带有 SIP003 插件的服务器（例如 [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) 和 [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)）也需要 QvPlugin-SS 才能运作。
@@ -37,25 +37,25 @@ title: 使用插件
 
 ### 1. 获取插件
 
-- 部分插件可能会通过包管理系统（如 [Scoop](../getting-started/step1.md#scoop-针对-windows-用户)）分发，若合意可直接使用。
+1. 部分插件可能会通过包管理系统（如 [Scoop](../getting-started/step1.md#scoop-针对-windows-用户)）分发，若合意可直接使用。
   - *若你已通过此方法安装了插件，接下来请转至 **第三步**。*
-- 根据实际的操作系统，从插件的 Release 页面下载。
+2. 根据实际的操作系统，从插件的 Release 页面下载。
 
 ### 2. 放置插件
 
-- 点击 **[插件管理器](qv2ray://open/plugin/metadata)** 窗口中的 **[打开本地插件文件夹](qv2ray://open/plugin/plugindir)** 按钮，此时应自动打开一个名为 `plugins` 的文件夹。
-- 将您所下载的插件文件（`.dll` / `.dylib` / `.so`）放入此目录。
-- 关闭 Qv2ray 并重新打开。这将让 Qv2ray 重新扫描插件目录。
+1. 点击 **[插件管理器](qv2ray://open/plugin/metadata)** 窗口中的 **[打开本地插件文件夹](qv2ray://open/plugin/plugindir)** 按钮，此时应自动打开一个名为 `plugins` 的文件夹。
+2. 将您所下载的插件文件（`.dll` / `.dylib` / `.so`）放入此目录。
+3. 关闭 Qv2ray 并重新打开。这将让 Qv2ray 重新扫描插件目录。
 
 ### 3. 启用插件
 
-- 打开[插件管理器](qv2ray://open/plugin/metadata)，你将看到所找到的插件。
-- 在插件列表中勾选所希望使用的插件即可。
-- 某些插件，尤其是核心插件（如 Trojan、ShadowsocksR 等），**需要重新启动 Qv2ray 后才会生效**。
+1. 打开[插件管理器](qv2ray://open/plugin/metadata)，你将看到所找到的插件。
+2. 在插件列表中勾选所希望使用的插件即可。
+3. 某些插件，尤其是核心插件（如 Trojan、ShadowsocksR 等），**需要重新启动 Qv2ray 后才会生效**。
 
 ### 4. 享受！
 
-- 插件已经可以用了！
+插件已经可以用了！
 
 ## 常见问题
 
