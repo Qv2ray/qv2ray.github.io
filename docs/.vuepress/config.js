@@ -3,6 +3,10 @@ const r = path => resolve(__dirname, path);
 module.exports = {
   title: "Qv2ray",
   description: "Qv2ray Website & Documentation",
+  theme: 'succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
   head: [
     [
       "link",

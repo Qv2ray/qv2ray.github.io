@@ -7,7 +7,6 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@kidonng/vuepress-plugin-contributors": "^0.1.0",
     "@vuepress/plugin-back-to-top": "^1.4.0"
   },
   "devDependencies": {
