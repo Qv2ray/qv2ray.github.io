@@ -1,8 +1,6 @@
 const { resolve } = require("path");
 const r = path => resolve(__dirname, path);
 module.exports = {
-  title: "Qv2ray",
-  description: "Qv2ray Website & Documentation",
   theme: 'succinct',
   globalUIComponents: [
     'ThemeManager'
@@ -25,7 +23,7 @@ module.exports = {
   },
   plugins: [
     "@vuepress/back-to-top",
-    ['@kidonng/vuepress-plugin-contributors', { label: '贡献者' }]
+    '@kidonng/vuepress-plugin-contributors'
   ],
   locales: {
     "/en/": {
@@ -43,9 +41,6 @@ module.exports = {
   themeConfig: {
     logo: "/logo.svg",
     displayAllHeaders: true,
-    nextLinks: true,
-    prevLinks: true,
-    lastUpdated: "Last Updated",
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/manual/": ["","general","route"],
@@ -62,14 +57,8 @@ module.exports = {
       "/en/": {
         selectText: "Languages",
         label: "English",
-        ariaLabel: "Languages",
-        editLinkText: "Edit this page on GitHub",
-        serviceWorker: {
-          updatePopup: {
-            message: "New content is available.",
-            buttonText: "Refresh"
-          }
-        },
+        editLinkText: "Edit this page",
+        lastUpdated: "Last Updated",
         nav: [
           {
             text: "Getting Started",
@@ -88,32 +77,29 @@ module.exports = {
             link: "/en/hacking/"
           },
           {
-            text: "Plugin System",
+            text: "Plugins",
             link: "/en/plugins/"
           }
         ]
       },
       "/": {
-        selectText: "Languages",
+        selectText: "选择语言",
+        ariaLabel: '选择语言',
         label: "简体中文",
-        editLinkText: "在 GitHub 上编辑此页",
-        serviceWorker: {
-          updatePopup: {
-            message: "发现新内容可用.",
-            buttonText: "刷新"
-          }
-        },
+        editLinkText: "编辑此页",
+        lastUpdated: "上次更新",
+        contributorsLabel: '贡献者',
         nav: [
           {
             text: "起步",
             link: "/getting-started/"
           },
           {
-            text: "用户手册",
+            text: "使用手册",
             link: "/manual/"
           },
           {
-            text: "FAQ",
+            text: "常见问题",
             link: "/faq/"
           },
           {
@@ -121,13 +107,12 @@ module.exports = {
             link: "/hacking/"
           },
           {
-            text: "插件系统",
+            text: "插件",
             link: "/plugins/"
           }
         ]
       }
     },
-
     repo: "Qv2ray/Qv2ray",
     repoLabel: "GitHub",
     docsRepo: "Qv2ray/qv2ray.github.io",
@@ -137,7 +122,6 @@ module.exports = {
     algolia: {
       apiKey: 'f0da09ddb339a1b1fabe6ac3fbd78f42',
       indexName: 'qv2ray'
-    },
-    editLinkText: "帮助我们改善此页面！"
+    }
   }
 };
