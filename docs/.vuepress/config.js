@@ -55,7 +55,8 @@ module.exports = {
     },
     locales: {
       "/en/": {
-        selectText: "Languages",
+        selectText: "选择语言",
+        ariaLabel: "选择语言",
         label: "English",
         editLinkText: "Edit this page",
         lastUpdated: "Last Updated",
@@ -83,8 +84,8 @@ module.exports = {
         ]
       },
       "/": {
-        selectText: "选择语言",
-        ariaLabel: '选择语言',
+        selectText: "Languages",
+        ariaLabel: 'Select language',
         label: "简体中文",
         editLinkText: "编辑此页",
         lastUpdated: "上次更新",
