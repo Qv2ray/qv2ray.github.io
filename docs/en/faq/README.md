@@ -34,8 +34,12 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```
 
 - **Solution (on Linux)**: ~~You can even use Linux...Don't you know how to kill a process?~~
+  
   - **Approach 1**: Terminate the `v2ray` process through the System Monitor application. Since there are serveral desktop environments under Linux, the system monitor that comes with each desktop environment may not be the same software, so the operations of killing process should explore by yourself.
-  - **Approach 2**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
+  
+  - **Approach 2**: Install the terminal command software `htop` and use it to kill the `v2ray` process.
+  
+  - **Approach 3**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
 
 -**Solution (on macOS)**:
 
