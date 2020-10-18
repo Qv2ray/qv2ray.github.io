@@ -41,6 +41,7 @@ module.exports = {
   themeConfig: {
     logo: "/logo.svg",
     displayAllHeaders: true,
+    smoothScroll: true,
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/manual/": ["","general","route"],

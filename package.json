@@ -12,5 +12,8 @@
   "devDependencies": {
     "vuepress": "^1.4.0",
     "vuepress-theme-succinct": "kidonng/vuepress-theme-succinct"
+  },
+  "resolutions": {
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
   }
 }
