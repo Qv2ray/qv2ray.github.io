@@ -172,28 +172,24 @@ $ brew cask upgrade qv2ray
 
 请在 **Powershell** 中执行以下命令：
 
-1. [安装 Scoop 包管理器](https://scoop.sh/#installs-in-seconds)：
+1. 安装 Scoop 包管理器：
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
-   iwr -useb get.scoop.sh | iex
+   iwr -useb 'https://raw.fastgit.org/kidonng/Install/raw/fastgit/install.ps1' | iex
    ```
-2. 添加 `extras` bucket：
+2. 添加 `mochi` bucket：
    ```powershell
-   scoop bucket add extras
+   scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray：
+3. 安装 Qv2ray (全部应用和插件请见 https://github.com/Qv2ray/mochi)：
    ```powershell
-   scoop install qv2ray vcredist2019
-   ```
-4. **(可选)** 如需安装插件及 Qv2ray 测试版，可添加 `sushi` bucket：
-   ```powershell
-   scoop bucket add sushi https://github.com/kidonng/sushi
-   # 全部应用请见 https://github.com/kidonng/sushi#qv2ray
-   scoop install qv2ray-beta
+   scoop install qv2ray
    ```
 
 :::tip 提示
-安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
+安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`。
+
+你可能也需要安装[最新的 Visual C++ 可再发行软件包](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
 ### Chocolatey (针对 Windows 用户)

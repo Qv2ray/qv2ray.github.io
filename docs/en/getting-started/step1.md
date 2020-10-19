@@ -180,7 +180,7 @@ Run the following commands in **Powershell**:
    ```
 3. Install Qv2ray:
    ```powershell
-   scoop install qv2ray vcredist2019
+   scoop install qv2ray
    ```
 4. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
    ```powershell
@@ -191,6 +191,8 @@ Run the following commands in **Powershell**:
 
 :::tip
 In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
+
+You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
 ### Chocolatey (for Windows Users)
