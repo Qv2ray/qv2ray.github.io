@@ -188,9 +188,9 @@ $ brew cask upgrade qv2ray
    ```powershell
    scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray (全部应用和插件请见 https://github.com/Qv2ray/mochi)：
+3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/main/bucket)：
    ```powershell
-   scoop install qv2ray
+   scoop install mochi/qv2ray
    ```
 
 :::tip 提示
