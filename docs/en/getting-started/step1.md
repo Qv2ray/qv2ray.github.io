@@ -48,7 +48,7 @@ You must login GitHub first to access GitHub Actions.
 
 ### Arch Linux (or Arch-based distros)
 
-#### Install directly from `archlinuxcn` (recommended)
+#### Install directly from `archlinuxcn`
 
 We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
 
@@ -60,6 +60,13 @@ And that shall be done.
 
 :::tip
 You may also want to install `v2ray` package to use system V2Ray core.
+:::
+
+:::warning Attention to Manjaro Hitchhikers on Arch Linux CN
+
+**Manjaro will delay Arch Linux's package changes**. Whenever there is a breaking ABI change in upstream, ***Arch Linux* CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
+
+This nag will be removed whenever something like "Manjaro CN" is founded and officially **take the workload of packaging Qv2ray** for its users.
 :::
 
 #### Download from AUR, using an AUR Helper

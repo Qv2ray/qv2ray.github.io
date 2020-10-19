@@ -48,7 +48,7 @@ sidebarDepth: 2
 
 ### Arch Linux（或基于 Arch 的发行版）
 
-#### 直接从 `archlinuxcn` 安装（推荐）
+#### 直接从 `archlinuxcn` 安装
 
 我们已登陆 `archlinuxcn` 仓库。若您已在使用，只需在你的终端输入：
 
@@ -60,6 +60,13 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git, 见下
 
 :::tip 提示
 你可能还需要安装 `v2ray` 包来使用系统 V2Ray 核心。
+:::
+
+:::warning 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
+
+Manjaro 的官方源更新 **滞后** 于 Arch Linux 的官方源，当上游出现 ABI 破坏性更新时，Arch Linux CN 会 **优先保证 Arch Linux 用户的体验**，Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。如您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。不想遇到类似问题的用户，请从 AUR 获取并自行构建，或取用 Qv2ray 的 AppImage / snap 版本。
+
+本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式接管、处理 Qv2ray 等打包业务之后移除。
 :::
 
 #### 使用 AUR Helper 从 AUR 获取
