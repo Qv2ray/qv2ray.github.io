@@ -177,6 +177,12 @@ $ brew cask upgrade qv2ray
 
 > [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
 
+:::tip 非中国大陆网络用户注意
+本节使用了 [FastGit](https://doc.fastgit.org/zh-cn/) 加速 GitHub 访问，以为中国大陆用户提供更好的访问体验。
+
+若您并非中国大陆网络用户，或不需要对 GitHub 加速访问，请参考英文版的此部分操作。
+:::
+
 请在 **Powershell** 中执行以下命令：
 
 1. 安装 Scoop 包管理器：
@@ -188,7 +194,7 @@ $ brew cask upgrade qv2ray
    ```powershell
    scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/main/bucket)：
+3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
    ```powershell
    scoop install mochi/qv2ray
    ```
