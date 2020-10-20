@@ -64,7 +64,7 @@ You may also want to install `v2ray` package to use system V2Ray core.
 
 :::warning Attention to Manjaro Hitchhikers on Arch Linux CN
 
-**Manjaro will delay Arch Linux's package changes**. Whenever there is a breaking ABI change in upstream, ***Arch Linux* CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
+Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, ***Arch Linux* CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
 
 This nag will be removed whenever something like "Manjaro CN" is founded and officially **take the workload of packaging Qv2ray** for its users.
 :::
