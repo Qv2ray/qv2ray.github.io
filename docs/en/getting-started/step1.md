@@ -225,10 +225,10 @@ Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
 ```shell
 # To install the package:
-$ snap install qv2ray
-# snap install qv2ray --edge (dev branch)
+$ sudo snap install qv2ray
+# sudo snap install qv2ray --edge (dev branch)
 # To update the package:
-$ snap refresh qv2ray
+$ sudo snap refresh qv2ray
 ```
 
 ### Flathub (Deprecated)
