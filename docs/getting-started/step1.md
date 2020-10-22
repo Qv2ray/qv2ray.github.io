@@ -228,11 +228,11 @@ $ brew cask upgrade qv2ray
 
 ```bash
 # 安装 Qv2ray:
-$ snap install qv2ray
-# （或者用 snap install qv2ray --edge 来使用开发版）
+$ sudo snap install qv2ray
+# （或者用 sudo snap install qv2ray --edge 来使用开发版）
 
 # 升级 Qv2ray：
-$ snap refresh qv2ray
+$ sudo snap refresh qv2ray
 ```
 
 ### Flathub (不推荐)
