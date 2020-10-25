@@ -188,7 +188,7 @@ $ brew cask upgrade qv2ray
 1. 安装 Scoop 包管理器：
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
-   iwr -useb 'https://raw.fastgit.org/kidonng/Install/raw/fastgit/install.ps1' | iex
+   iwr -useb 'https://raw.fastgit.org/kidonng/Install/fastgit/install.ps1' | iex
    ```
 2. 添加 `mochi` bucket：
    ```powershell
