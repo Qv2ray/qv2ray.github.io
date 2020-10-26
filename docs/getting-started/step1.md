@@ -18,7 +18,10 @@ sidebarDepth: 3
 3. 选择一个能在你的系统平台上运行的软件版本，然后下载。 例如:
    - 对于 Windows 64/32bit 用户： `Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`
-   - 对于 macOS 用户： `Qv2ray.VERSION.macOS-x64.dmg`
+   - 对于 macOS 用户：
+      - macOS 10.14 及以后：`Qv2ray.VERSION.macOS-x64.dmg`；
+      - macOS 10.13：`qv2ray-legacy.dmg`（如果有）；
+      - macOS 10.12 及之前：不支持。
    - 对于 Ubuntu 19.04 / Debian 10 (或更高)： ~~`qv2ray_VERSION_amd64.deb`~~ (自 v2.6.1 开始， deb 包将迁移至 [官方仓库](https://qv2ray.github.io/debian/) 进行发布)
    - 对于 Arch Linux 系用户：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 

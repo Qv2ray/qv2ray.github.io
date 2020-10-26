@@ -18,7 +18,10 @@ Do as the follows:
 3. Choose in Assets according to your platform and download it! For example:
    - For Windows 64/32bit Users: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer)
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
-   - For macOS Users: `Qv2ray.VERSION.macOS-x64.dmg`
+   - For macOS Users:
+      - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
+      - macOS 10.13: `qv2ray-legacy.dmg` (if any);
+      - macOS 10.12 and before: NOT SUPPORTED.
    - For Ubuntu 19.04 / Debian 10 (or greater): ~~`qv2ray_VERSION_amd64.deb`~~ (Moved to [Qv2ray Debian Repository](https://qv2ray.github.io/debian/) since v2.6.1)
    - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
