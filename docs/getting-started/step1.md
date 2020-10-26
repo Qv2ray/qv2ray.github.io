@@ -169,6 +169,13 @@ $ brew cask install qv2ray
 $ brew cask upgrade qv2ray
 ```
 
+:::tip 更新 Homebrew 软件源
+若你已装有 Homebrew，但在安装 Qv2ray 时遇到问题，可以尝试使用下面的命令更新 Homebrew 仓库后再试：
+```bash
+$ brew update
+```
+:::
+
 :::tip 提示
 使用 brew 安装的 Qv2ray 为稳定版。如果需要安装测试版，请参考上文的方式。
 :::

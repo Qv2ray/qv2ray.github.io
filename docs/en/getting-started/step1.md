@@ -166,6 +166,13 @@ Upgrading is also easy, just replace `install` with `upgrade` in the command.
 $ brew cask upgrade qv2ray
 ```
 
+:::tip Refresh Your Homebrew
+If you encounter some problem with an existing Homebrew installation, try refreshing your repositories:
+```bash
+$ brew update
+```
+:::
+
 :::tip Tip
 Qv2ray installed with Homebrew for the stable version. If you need to install the beta version, please refer to the way above.
 :::
