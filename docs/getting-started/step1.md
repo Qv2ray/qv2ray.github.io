@@ -160,16 +160,18 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 ~~Linux 应该不会有人用 Homebrew 吧？不会吧不会吧？~~
 
-macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。安装完成后就可以使用以下命令安装 Qv2ray 了。
+macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。完成后就可以使用以下命令安装 Qv2ray 和 V2Ray 了。
 
 ```bash
 $ brew cask install qv2ray
+$ brew install v2ray
 ```
 
-升级也是很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
+升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
 
 ```bash
 $ brew cask upgrade qv2ray
+$ brew upgrade v2ray
 ```
 
 :::tip 更新 Homebrew 软件源
@@ -204,13 +206,18 @@ $ brew update
    ```powershell
    scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
+3. 安装 Qv2ray 和 V2Ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
    ```powershell
-   scoop install mochi/qv2ray
+   scoop install mochi/qv2ray mochi/v2ray
+   ```
+4. 若要升级，只需将命令中的 `install` 替换为 `update`:
+
+   ```powershell
+   scoop update mochi/qv2ray mochi/v2ray
    ```
 
 :::tip 提示
-安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`。
+V2Ray 核心的安装位置位于 `%USERPROFILE%\scoop\apps\v2ray\current\v2ray.exe`。
 
 你可能也需要安装[最新的 Visual C++ 可再发行软件包](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads).
 :::
