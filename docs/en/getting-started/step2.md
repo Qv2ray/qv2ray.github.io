@@ -15,8 +15,6 @@ You may check [V2Fly Installation Guide](https://www.v2fly.org/guide/install.htm
 If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
 :::
 
-Go to [the official GitHub Release page of v2fly/v2ray-core](https://github.com/v2fly/v2ray-core/releases) and check the recent stable builds. Choose according to your platform in the asset files. For example, Windows 64-bit users may download `v2ray-windows-64.zip`, Mac OS users may download `v2ray-macos-64.zip`, and for most of the Linux users, `v2ray-linux-64.zip`.
-
 :::tip For Windows 10 ARM64 users
 From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. It is recommended that Windows 10 ARM64 users use this version of the kernel to obtain better performance.
 :::
@@ -26,7 +24,62 @@ Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`
 To make it clear, `arm64` is completely different from `amd64`. Make sure you don't do like this.
 :::
 
-## Place Your V2Ray Core
+
+### Download V2RAy Core via package manager
+
+#### Homebrew's official package (macOS)
+
+```bash
+brew install v2ray
+```
+
+The actual installation location for the package is `/usr/local/Cellar/v2ray/`, the soft link for `v2ray` is `/usr/local/bin/v2ray`, and the soft link for the resource directory is `/usr/local/share/v2ray/`. ** In Qv2ray you should use the soft link instead of the actual location. **
+
+#### Homebrew's Third Party Package (macOS)
+
+See <https://github.com/kofj/homebrew-v2ray>
+
+#### Scoop (Windows)
+
+```pwsh
+scoop install v2ray
+```
+
+The package will be installed into your `UserDirectory\scoop\app\v2ray\`, and the current version of V2Ray will be linked to the `user directory \scoop\app\v2raycurrent`, using the `v2ray.exe` and resource files from that directory.
+
+#### Choaolatey (Windows)
+
+```cmd
+choco install v2ray
+```
+
+The software will be installed on `X:\tools\v2ray` (***X*** is your system disk drive).
+
+#### Debian, Ubuntu and other Debian-based derivatives.
+
+See <https://apt.v2fly.org>
+
+#### Arch Linux and its derivatives
+
+```bash
+sudo pacman -S v2ray
+```
+The binary will be installed to `/usr/bin/v2ray`, the resource file is located at `/usr/share/v2ray/`.
+
+#### V2Ray official installation script (using the Linux distribution of Systemd).
+
+See <https://github.com/v2fly/fhs-install-v2ray>
+
+Although this script is designed to install V2Ray as a server, it can be used as a client without any problems. For use in Qv2ray, it is recommended to turn off its server services.
+
+```bash
+systemctl disable v2ray --now
+```
+
+### Manual Download
+
+**Official Download Link：**
+<https://github.com/v2fly/v2ray-core/releases>
 
 Extract the v2ray core files into a fixed position. As a default, it is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
 
@@ -62,19 +115,5 @@ After configuring, you can click on **Check V2Ray Core Settings** button to vali
 :::warning No Matryoshka!
 Never ever point **Core Executable Path** to **Qv2ray Executable**!
 This will not cause a fork bomb since Qv2ray is single-instanced.
-Do note that V2Ray Core Executable is like `v2ray` or `v2ray.exe`, instead of `qv2ray` or `qv2ray.exe`!
-:::
-
-:::tip Hint for Arch Linux Users
-If you use `v2ray` package, the suggested configuration is as follows:
-
-* **Core Executable Path**: `/usr/bin/v2ray`
-* **V2Ray Assets Directory**: `/usr/share/v2ray`
-:::
-
-:::tip Hint for macOS Users
-If you are using Homebrew to install v2ray-core then you can simply copy the path and directory below:
-
-* **Core Executable Path**: `/usr/local/bin/v2ray`
-* **V2Ray Assets Directory**: `/usr/local/bin/`
+Do note that V2Ray Core Executable is like `v2ray` , `v2ray.exe` or `wv2ray.exe`, instead of `qv2ray` or `qv2ray.exe`, `v2rayN.exe`!
 :::
