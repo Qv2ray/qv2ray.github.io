@@ -45,7 +45,7 @@ scoop install v2ray
 
 软件包将安装到你的 `用户目录\scoop\app\v2ray\` 下，同时当前版本 V2Ray 的文件夹将会被磁盘链接到 `用户目录\scoop\app\v2ray\current`，使用该目录里面的 `v2ray.exe ` 与资源文件即可。
 
-#### Choaolatey（Windows）
+#### Chocolatey（Windows）
 
 ```cmd
 choco install v2ray
@@ -96,6 +96,8 @@ systemctl disable v2ray --now
 
 :::warning 对于 Linux / macOS 用户的温馨提示
 您应该始终为 `v2ray` 和 `v2ctl` 授予**可执行权限**。这通常通过对这些文件执行 `chmod +x ` 来完成。
+:::
+
 
 ## 配置 Qv2ray 去使用核心
 
