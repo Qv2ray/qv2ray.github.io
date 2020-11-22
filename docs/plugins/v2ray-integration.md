@@ -1,8 +1,8 @@
 ---
-title: 内核插件 - V2Ray 集成
+title: V2Ray 集成
 ---
 
-# 插件 - V2Ray 集成
+# V2Ray 集成
 
 - V2Ray 是如何和 ShadowsocksR、Trojan 等内核协同运作的
 

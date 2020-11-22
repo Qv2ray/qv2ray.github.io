@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 To get started with Qv2ray, you should first obtain a release of Qv2ray. We offer many distribution methods, you can choose according to your preference.
 
-## GitHub Release Binary File
+## GitHub Releases Binary
 
 Downloading stable release binary from [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) is favored for **Windows** and **macOS** users. This is also suitable for Linux users where Qv2ray is not officially packaged in their distros, since they can use our **AppImage** releases.
 
@@ -49,7 +49,7 @@ You must login GitHub first to access GitHub Actions.
 
 ## Download From a package manager
 
-### Arch Linux (or Arch-based distros)
+### Arch Linux-based distros
 
 #### Install directly from `archlinuxcn`
 
@@ -155,20 +155,18 @@ Before you install Qv2ray from above OBS project, you need to add the **EPEL** r
 The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
 :::
 
-### Homebrew for Linux/macOS
+### Homebrew (macOS/Linux)
 
-You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray and V2Ray using the following commands:
+You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command:
 
 ```bash
 $ brew cask install qv2ray
-$ brew install v2ray
 ```
 
 Upgrading is also easy, just replace `install` with `upgrade` in the commands:
 
 ```bash
 $ brew cask upgrade qv2ray
-$ brew upgrade v2ray
 ```
 
 :::tip Refresh Your Homebrew
@@ -179,10 +177,10 @@ $ brew update
 :::
 
 :::tip Tip
-Qv2ray installed with Homebrew for the stable version. If you need to install the beta version, please refer to the way above.
+If you need to install the beta/dev version, please download Qv2ray from GitHub releases/actions.
 :::
 
-### Scoop (for Windows Users)
+### Scoop (Windows)
 
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
 
@@ -197,14 +195,14 @@ Run the following commands in **Powershell**:
    ```powershell
    scoop bucket add extras
    ```
-3. Install Qv2ray and V2Ray:
+3. Install Qv2ray:
    ```powershell
-   scoop install qv2ray v2ray
+   scoop install qv2ray
    ```
 4. To update, just replace `install` with `update` in the  commands:
 
    ```powershell
-   scoop update qv2ray v2ray
+   scoop update qv2ray
    ```
 5. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
    ```powershell
@@ -214,12 +212,10 @@ Run the following commands in **Powershell**:
    ```
 
 :::tip
-V2Ray core will be installed in `%USERPROFILE%\scoop\apps\v2ray\current\v2ray.exe`.
-
 You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
-### Chocolatey (for Windows Users)
+### Chocolatey (Windows)
 
 > [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
 
@@ -234,7 +230,7 @@ You may also need to install [the latest Visual C++ Redistributable](https://sup
    choco install qv2ray
    ```
 
-## Download from an app store
+## Download from an Linux app store
 
 ### Snapcraft
 

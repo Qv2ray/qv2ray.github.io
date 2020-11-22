@@ -49,7 +49,7 @@ sidebarDepth: 3
 
 ## 在包管理系统中安装此软件
 
-### Arch Linux（及其衍生发行版）
+### 基于 Arch Linux 的发行版
 
 #### 直接从 `archlinuxcn` 安装
 
@@ -156,22 +156,18 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 在上述 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray)中同样有提供 Qv2ray 相关插件，通过添加软件源方式完成了 Qv2ray 的安装之后，你可直接通过包管理器完成插件（包名同插件项目名，也同时提供带 `-preview` 后缀的预览版）的安装。
 :::
 
-### Homebrew for Linux/macOS
+### Homebrew (macOS/Linux)
 
-~~Linux 应该不会有人用 Homebrew 吧？不会吧不会吧？~~
-
-macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。完成后就可以使用以下命令安装 Qv2ray 和 V2Ray 了。
+macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。完成后就可以使用以下命令安装 Qv2ray 了。
 
 ```bash
 $ brew cask install qv2ray
-$ brew install v2ray
 ```
 
 升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
 
 ```bash
 $ brew cask upgrade qv2ray
-$ brew upgrade v2ray
 ```
 
 :::tip 更新 Homebrew 软件源
@@ -182,10 +178,10 @@ $ brew update
 :::
 
 :::tip 提示
-使用 brew 安装的 Qv2ray 为稳定版。如果需要安装测试版，请参考上文的方式。
+如需使用测试版/开发版的，请从 GitHub releases/actions 下载 Qv2ray。
 :::
 
-### Scoop (针对 Windows 用户)
+### Scoop (Windows)
 
 > [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
 
@@ -206,23 +202,21 @@ $ brew update
    ```powershell
    scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray 和 V2Ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
+3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
    ```powershell
-   scoop install mochi/qv2ray mochi/v2ray
+   scoop install mochi/qv2ray
    ```
 4. 若要升级，只需将命令中的 `install` 替换为 `update`:
 
    ```powershell
-   scoop update mochi/qv2ray mochi/v2ray
+   scoop update mochi/qv2ray
    ```
 
 :::tip 提示
-V2Ray 核心的安装位置位于 `%USERPROFILE%\scoop\apps\v2ray\current\v2ray.exe`。
-
-你可能也需要安装[最新的 Visual C++ 可再发行软件包](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads).
+你可能需要安装[最新的 Visual C++ 可再发行软件包](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
-### Chocolatey (针对 Windows 用户)
+### Chocolatey (Windows)
 
 > [Chocolatey](https://chocolatey.org/) 是 **Windows** 的另一个包管理器。
 
@@ -237,7 +231,7 @@ V2Ray 核心的安装位置位于 `%USERPROFILE%\scoop\apps\v2ray\current\v2ray.
    choco install qv2ray
    ```
 
-## 从应用商店中获取
+## 从 Linux 应用商店中获取
 
 ### Snapcraft
 

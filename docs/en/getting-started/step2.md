@@ -9,7 +9,8 @@ After a correct and successful installation of Qv2ray onto your system, it is ne
 ## Download V2Ray Core Files
 
 Due to political reasons, Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the `v2ray-core`, and most of the time required for users is to download them.
-You may check [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for the official instructions.
+
+**Check out [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for more details.**
 
 :::tip Core Management: Manual vs Automatic
 If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
@@ -27,17 +28,13 @@ To make it clear, `arm64` is completely different from `amd64`. Make sure you do
 
 ### Download V2RAy Core via package manager
 
-#### Homebrew's official package (macOS)
+#### Homebrew（macOS）
 
 ```bash
 brew install v2ray
 ```
 
-The actual installation location for the package is `/usr/local/Cellar/v2ray/`, the soft link for `v2ray` is `/usr/local/bin/v2ray`, and the soft link for the resource directory is `/usr/local/share/v2ray/`. ** In Qv2ray you should use the soft link instead of the actual location. **
-
-#### Homebrew's Third Party Package (macOS)
-
-See <https://github.com/kofj/homebrew-v2ray>
+When installing with Homebrew, V2Ray's executable location is `/usr/local/bin/v2ray`, assets location is `/usr/local/share/v2ray`.
 
 #### Scoop (Windows)
 
@@ -45,9 +42,9 @@ See <https://github.com/kofj/homebrew-v2ray>
 scoop install v2ray
 ```
 
-The package will be installed into your `UserDirectory\scoop\app\v2ray\`, and the current version of V2Ray will be linked to the `user directory \scoop\app\v2raycurrent`, using the `v2ray.exe` and resource files from that directory.
+When installing with Scoop, V2Ray's executable location is `<User Directory>\scoop\apps\v2ray\current\v2ray.exe`, assets location is `<User Directory>\scoop\apps\v2ray\current`.
 
-#### Choaolatey (Windows)
+#### Chocolatey (Windows)
 
 ```cmd
 choco install v2ray
@@ -103,7 +100,7 @@ This is usually done by executing `chmod +x` on these files.
 On macOS, if you use Homebrew to install v2ray-core, you can ignore this tip.
 :::
 
-## Configure Qv2ray to Use the Core
+## Configure V2Ray Core in Qv2ray
 
 Open Qv2ray and go to Preference Window. In **[Core Settings](qv2ray://open/preference/kernel)**, configure the following options:
 
