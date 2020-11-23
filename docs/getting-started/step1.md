@@ -170,16 +170,14 @@ $ brew cask install qv2ray
 $ brew cask upgrade qv2ray
 ```
 
-:::tip 更新 Homebrew 软件源
-若你已装有 Homebrew，但在安装 Qv2ray 时遇到问题，可以尝试使用下面的命令更新 Homebrew 仓库后再试：
-```bash
-$ brew update
-```
-:::
+如需安装插件及 Qv2ary 测试版，请添加 `malt` tap：
 
-:::tip 提示
-如需使用测试版/开发版的，请从 GitHub releases/actions 下载 Qv2ray。
-:::
+```
+brew tap kidonng/malt
+brew install qv2ray-beta
+# 或者直接执行
+brew install kidonng/malt/qv2ray-beta
+```
 
 ### Scoop (Windows)
 

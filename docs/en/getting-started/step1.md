@@ -169,16 +169,14 @@ Upgrading is also easy, just replace `install` with `upgrade` in the commands:
 $ brew cask upgrade qv2ray
 ```
 
-:::tip Refresh Your Homebrew
-If you encounter some problem with an existing Homebrew installation, try refreshing your repositories:
-```bash
-$ brew update
-```
-:::
+If you want to install plugins and Qv2ary beta, please add the `malt` tap:
 
-:::tip Tip
-If you need to install the beta/dev version, please download Qv2ray from GitHub releases/actions.
-:::
+```
+brew tap kidonng/malt
+brew install qv2ray-beta
+# Or directly run
+brew install kidonng/malt/qv2ray-beta
+```
 
 ### Scoop (Windows)
 
