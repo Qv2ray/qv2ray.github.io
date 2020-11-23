@@ -32,7 +32,7 @@ title: 配置 V2Ray 核心
 brew install v2ray
 ```
 
-使用 Homebrew 安装 V2Ray 的可执行文件位于 `/usr/local/bin/v2ray`，资源文件位于 `/usr/local/share/v2ray`。
+使用 Homebrew 安装 V2Ray 的可执行文件位于 `/usr/local/bin/v2ray`，资源文件位于 `/usr/local/share/v2ray-core`。
 
 #### Scoop (Windows)
 
