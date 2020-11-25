@@ -158,17 +158,35 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 ### Homebrew (macOS/Linux)
 
-macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。完成后就可以使用以下命令安装 Qv2ray 了。
+:::tip 非中国大陆用户注意
+以下命令使用了[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/) 加速访问 GitHub，为中国大陆用户提供更好的体验。
+
+若您并非中国大陆用户，或无需要加速访问 GitHub，可参考英文文档操作。
+:::
+
+[Homebrew](https://brew.sh/) 是 macOS 和 Linux 的一个包管理器。
+
+**使用此方法安装需要您对命令行有一定的基本了解**。请在终端中执行以下命令：
+
+1. 安装 Homebrew（已安装可跳过此步）：
+
+   ```sh
+   HOMEBREW_CORE_GIT_REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/kidonng/homebrew-install@tuna/install.sh)"
+   ```
+
+2. 安装 Qv2ray：
 
 ```bash
 $ brew cask install qv2ray
 ```
 
-升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
+3. 升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
 
 ```bash
 $ brew cask upgrade qv2ray
 ```
+
+:::tip 提示
 
 如需安装插件及 Qv2ary 测试版，请添加 `malt` tap：
 
@@ -179,22 +197,24 @@ brew install qv2ray-beta
 brew install kidonng/malt/qv2ray-beta
 ```
 
-### Scoop (Windows)
-
-> [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
-
-:::tip 非中国大陆网络用户注意
-本节使用了 [FastGit](https://doc.fastgit.org/zh-cn/) 加速 GitHub 访问，以为中国大陆用户提供更好的访问体验。
-
-若您并非中国大陆网络用户，或不需要对 GitHub 加速访问，请参考英文版的此部分操作。
 :::
 
-请在 **Powershell** 中执行以下命令：
+### Scoop (Windows)
 
-1. 安装 Scoop 包管理器：
+:::tip 非中国大陆用户注意
+以下命令使用了 [FastGit](https://doc.fastgit.org/zh-cn/) 加速访问 GitHub，为中国大陆用户提供更好的体验。
+
+若您并非中国大陆用户，或无需要加速访问 GitHub，可参考英文文档操作。
+:::
+
+[Scoop](https://scoop.sh) 是 **Windows** 的一个包管理器。
+
+**使用此方法安装需要您对命令行有一定的基本了解**。请在 **Powershell** 中执行以下命令：
+
+1. 安装 Scoop（已安装可跳过此步）：
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
-   iwr -useb 'https://raw.fastgit.org/kidonng/Install/fastgit/install.ps1' | iex
+   iwr -useb 'https://cdn.jsdelivr.net/gh/kidonng/scoop-install@fastgit/install.ps1' | iex
    ```
 2. 添加 `mochi` bucket：
    ```powershell
