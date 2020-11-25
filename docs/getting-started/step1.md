@@ -197,6 +197,13 @@ brew install qv2ray-beta
 brew install kidonng/malt/qv2ray-beta
 ```
 
+Qv2ray 额外提供一个经 [FastGit](https://doc.fastgit.org/zh-cn/) 加速的 Homebrew tap，**但其目前不受支持**。
+
+```
+brew tap qv2ray/rye
+brew install qv2ray/rye/qv2ray qv2ray/rye/v2ray
+```
+
 :::
 
 ### Scoop (Windows)
