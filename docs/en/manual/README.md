@@ -8,3 +8,4 @@ title: Manual
 
 - [General Settings](./general.md)
 - [Advanced Route Settings](./route.md)
+- [About running on Wayland](wayland.md)
