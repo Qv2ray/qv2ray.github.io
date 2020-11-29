@@ -159,7 +159,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 ### Homebrew (macOS/Linux)
 
 :::tip 非中国大陆用户注意
-以下命令使用了[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/) 加速访问 GitHub，为中国大陆用户提供更好的体验。
+以下命令使用了[中国科学技术大学镜像站](https://mirrors.ustc.edu.cn/help/brew.git.html) 加速访问 GitHub，为中国大陆用户提供更好的体验。
 
 若您并非中国大陆用户，或无需要加速访问 GitHub，可参考英文文档操作。
 :::
@@ -171,7 +171,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 1. 安装 Homebrew（已安装可跳过此步）：
 
    ```sh
-   HOMEBREW_CORE_GIT_REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/kidonng/homebrew-install@tuna/install.sh)"
+   HOMEBREW_CORE_GIT_REMOTE=https://mirrors.ustc.edu.cn/homebrew-core.git bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/kidonng/homebrew-install@ustc/install.sh)"
    ```
 
 2. 安装 Qv2ray：
