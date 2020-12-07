@@ -70,6 +70,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 # Or "cmake .. -DCMAKE_INSTALL_PREFIX=" + your installation path.
 # Or "cmake .. -DCMAKE_BUILD_TYPE=Release" if you want to ship a release build.
 
+cd .. # Return to the project root directory.
 cmake --build . # You may want to append `--parallel N` to speed up the build.
 ```
 

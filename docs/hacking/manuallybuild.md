@@ -72,6 +72,7 @@ cmake ..
 # 例如： "cmake .. -DCMAKE_INSTALL_PREFIX=" + 想要的安装目录。
 # 又如： "cmake .. -DCMAKE_BUILD_TYPE=Release" 如果你想编译一个 Release 构建。
 
+cd .. #返回项目根目录
 cmake --build . # 可以再附加 `--parallel N` 选项加速构建.
 ```
 
