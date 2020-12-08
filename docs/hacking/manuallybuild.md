@@ -39,12 +39,20 @@ title: 手动构建 Qv2ray 项目
 假设你：
 
 1. 安装了 Qt 并且配置了相应的环境变量，从而在 Terminal/Shell/Command Prompt 中至少能成功执行 `qmake --version`；
+  
+    如果没有, 你需要准备一套开发环境:
+    
+    - Debian/Ubuntu/RaspberryPiOS: 使用apt安装:
+    
+         `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
+         
 2. 正确获取了源码和所有的子模块 (submodule)。
 
 ### 构建之前
 
 - Arch Linux：使用 pacman 安装这两个包: `pacman -S grpc protobuf`
-- macOS：通过 Homebrew 安装两个包: `brew install grpc protobuf`
+- Debian/Ubuntu/RaspberryPiOS: 安装这两个包: `apt install libprotobuf-dev libgrpc++-dev`
+- macOS：通过 Homebrew 安装这两个包: `brew install grpc protobuf`
 - Windows:
   - 你可以从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库 Release 中下载 [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z)，然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`；或者：
   - 你可以使用 `vcpkg install grpc` 在 Windows 上通过 MSVC 手动构建 `gRPC`, 不过这通常会花点时间，且需要稳定的网络环境（没梯子就算了）。
