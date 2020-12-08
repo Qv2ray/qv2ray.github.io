@@ -40,11 +40,19 @@ There are various approaches to obtain the source code of Qv2ray. You can get it
 
 ## 2. Build instructions
 
-Assume you have Qt installed and currently configured the `$PATH` which can execute at least `qmake --version` within the Terminal/Shell/Command Prompt and you have used the SCM to download the source code, the directory is called `Qv2ray`:
+Assume you have Qt installed and currently configured the `$PATH` which can execute at least `qmake --version` within the Terminal/Shell/Command Prompt and you have used the SCM to download the source code, the directory is called `Qv2ray`
+
+If not, you need to set up a development environment:
+
+- Debian/Ubuntu/RaspberryPiOS: Install packages using apt: 
+
+    `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
 
 ### 2.0 Before Build
 
-- Arch Linux: Install packages using pacman: `pacman -S grpc protobuf` .
+- Arch Linux: Install packages using pacman: `pacman -S grpc protobuf` 
+
+- Debian/Ubuntu/RaspberryPiOS: Install packages using apt: `apt install libprotobuf-dev libgrpc++-dev`
 
 - macOS: Install packages through homebrew: `brew install grpc protobuf`
 
