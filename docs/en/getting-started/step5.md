@@ -6,7 +6,7 @@ title: Further Steps
 
 If you are lucky enough, you may now be able to surf the Internet freely. Here are some optional steps that you can follow, to make your experience with Qv2ray better.
 
-## Joining Qv2ray User Group
+## Join Qv2ray User Group
 
 We suggest you join our [Qv2ray User Group](https://t.me/qv2ray) at [Telegram](https://telegram.org/). Here you can chat directly with Qv2ray developers, and also the great Qv2ray users. For usage problems, it is always more efficient to discuss them in the group, than opening up one issue on GitHub.
 

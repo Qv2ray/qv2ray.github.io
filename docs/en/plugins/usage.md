@@ -9,9 +9,9 @@ title: Using Plugins
 
 ## What is a plugin
 
-A Qv2ray Plugin is, technically, a shared library that implements `QvPlugin` interface, which in order to extent the functionality of Qv2ray.
+> Technically said, a Qv2ray Plugin is a shared library that implements `QvPlugin` interface, which in order to extent the functionality of Qv2ray.
 
-Actually, a Qv2ray Plugin is an extension of Qv2ray, which allows you use more features.
+Qv2ray Plugin extends Qv2ray's functionality, which allows you use more features. **By leveraging plugins, Qv2ray can even run without using V2Ray core at all.**
 
 Qv2ray workgroup has published {{ plugins.length }} officially maintained plugins:
 

@@ -6,7 +6,7 @@ title: 更多
 
 如果你足够幸运，你现在可以自由地上网。 这里有一些你可以遵循的可选步骤，可以让你的 Qv2ray 体验更好。
 
-## 加入 Qv2ray 用户组
+## 加入 Qv2ray 用户群组
 
 我们建议您加入我们在 [Telegram](https://telegram.org/) 的 [Qv2ray 用户组](https://t.me/qv2ray)。 在这里你可以直接与 Qv2ray 开发者聊天，也可以与伟大的 Qv2ray 用户聊天。 对于使用问题，在小组中讨论总是比在 GitHub 上打开一个 issue 更有效率。
 

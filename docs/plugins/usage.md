@@ -9,9 +9,9 @@ title: 使用插件
 
 ## 何为插件
 
-一个 Qv2ray 插件，技术上地说，是一个实现了 `QvPlugin` 接口、从而能扩展 Qv2ray 功能的共享库文件。
+> 从技术上讲，一个 Qv2ray 插件是一个实现了 `QvPlugin` 接口、从而能扩展 Qv2ray 功能的共享库文件。
 
-实际上，Qv2ray 插件是 Qv2ray 的扩展，能让你使用更多特性。
+Qv2ray 插件扩展了 Qv2ray 的功能，能让你使用更多特性。**通过插件，Qv2ray 甚至可以脱离 V2Ray 核心而运行。**
 
 当前，Qv2ray 项目组共发布如下 {{ plugins.length }} 个我们维护的插件：
 

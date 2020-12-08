@@ -1,10 +1,10 @@
 ---
-title: Kernel Plugin - V2ray Integration
+title: V2ray Integration
 ---
 
-# Plugin - V2ray Integration
+# V2ray Integration
 
-- How V2ray can be used together with Trojan / SSR
+- How does V2ray integrate with Trojan / SSR / etc.
 
 ## What is V2ray Integration
 

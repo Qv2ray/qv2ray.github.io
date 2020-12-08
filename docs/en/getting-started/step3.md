@@ -1,13 +1,13 @@
 ---
-title: Importing Hosts into Qv2ray
+title: Adding Hosts into Qv2ray
 ---
 
-# Step 3: Importing Hosts into Qv2ray
+# Step 3: Adding Hosts into Qv2ray
 Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
 
 ## Share Links
 
-> Share links generally looks like these: 
+> Share links generally looks like these:
 > * `vmess://eyJ2Ijoi`...
 > * `ss://NjNlMDAx`...
 

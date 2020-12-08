@@ -41,14 +41,15 @@ module.exports = {
   themeConfig: {
     logo: "/logo.svg",
     displayAllHeaders: true,
+    smoothScroll: true,
     sidebar: {
       "/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
       "/manual/": ["","general","route"],
-      "/hacking/": ["", "manuallybuild"],
+      "/hacking/": ["", "manuallybuild", "cmake-argument"],
       "/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/faq/": ["", "v2ray-core"],
       "/en/getting-started/": ["", "step1", "step2", "step3", "step4", "step5"],
-      "/en/hacking/": ["", "manuallybuild"],
+      "/en/hacking/": ["", "manuallybuild", "cmake-argument", "distribute"],
       "/en/manual/": ["","general","route"],
       "/en/plugins/": ["", "usage", "v2ray-integration", "development"],
       "/en/faq/": ["", "v2ray-core"],

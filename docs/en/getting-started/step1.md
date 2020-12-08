@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 To get started with Qv2ray, you should first obtain a release of Qv2ray. We offer many distribution methods, you can choose according to your preference.
 
-## GitHub Release Binary File
+## GitHub Releases Binary
 
 Downloading stable release binary from [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) is favored for **Windows** and **macOS** users. This is also suitable for Linux users where Qv2ray is not officially packaged in their distros, since they can use our **AppImage** releases.
 
@@ -18,7 +18,10 @@ Do as the follows:
 3. Choose in Assets according to your platform and download it! For example:
    - For Windows 64/32bit Users: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer)
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
-   - For macOS Users: `Qv2ray.VERSION.macOS-x64.dmg`
+   - For macOS Users:
+      - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
+      - macOS 10.13: `qv2ray-legacy.dmg` (if any);
+      - macOS 10.12 and before: NOT SUPPORTED.
    - For Ubuntu 19.04 / Debian 10 (or greater): ~~`qv2ray_VERSION_amd64.deb`~~ (Moved to [Qv2ray Debian Repository](https://qv2ray.github.io/debian/) since v2.6.1)
    - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
@@ -46,9 +49,9 @@ You must login GitHub first to access GitHub Actions.
 
 ## Download From a package manager
 
-### Arch Linux (or Arch-based distros)
+### Arch Linux-based distros
 
-#### Install directly from `archlinuxcn` (recommended)
+#### Install directly from `archlinuxcn`
 
 We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
 
@@ -60,6 +63,13 @@ And that shall be done.
 
 :::tip
 You may also want to install `v2ray` package to use system V2Ray core.
+:::
+
+:::warning Attention to Manjaro Hitchhikers on Arch Linux CN
+
+Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, ***Arch Linux* CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
+
+This nag will be removed whenever something like "Manjaro CN" is founded and officially **take the workload of packaging Qv2ray** for its users.
 :::
 
 #### Download from AUR, using an AUR Helper
@@ -145,25 +155,30 @@ Before you install Qv2ray from above OBS project, you need to add the **EPEL** r
 The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
 :::
 
-### Homebrew for Linux/macOS
+### Homebrew (macOS/Linux)
 
-You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command.
+You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command:
 
 ```bash
 $ brew cask install qv2ray
 ```
 
-Upgrading is also easy, just replace `install` with `upgrade` in the command.
+Upgrading is also easy, just replace `install` with `upgrade` in the commands:
 
 ```bash
 $ brew cask upgrade qv2ray
 ```
 
-:::tip Tip
-Qv2ray installed with Homebrew for the stable version. If you need to install the beta version, please refer to the way above.
-:::
+If you want to install plugins and Qv2ary beta, please add the `malt` tap:
 
-### Scoop (for Windows Users)
+```
+brew tap kidonng/malt
+brew install qv2ray-beta
+# Or directly run
+brew install kidonng/malt/qv2ray-beta
+```
+
+### Scoop (Windows)
 
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
 
@@ -180,9 +195,14 @@ Run the following commands in **Powershell**:
    ```
 3. Install Qv2ray:
    ```powershell
-   scoop install qv2ray vcredist2019
+   scoop install qv2ray
    ```
-4. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
+4. To update, just replace `install` with `update` in the  commands:
+
+   ```powershell
+   scoop update qv2ray
+   ```
+5. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
    ```powershell
    scoop bucket add sushi https://github.com/kidonng/sushi
    # For all apps see https://github.com/kidonng/sushi#qv2ray
@@ -190,10 +210,10 @@ Run the following commands in **Powershell**:
    ```
 
 :::tip
-In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\current\`.
+You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
-### Chocolatey (for Windows Users)
+### Chocolatey (Windows)
 
 > [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
 
@@ -208,7 +228,7 @@ In this case, V2Ray core will be installed in `%userprofile%\scoop\apps\v2ray\cu
    choco install qv2ray
    ```
 
-## Download from an app store
+## Download from an Linux app store
 
 ### Snapcraft
 
@@ -216,10 +236,10 @@ Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
 ```shell
 # To install the package:
-$ snap install qv2ray
-# snap install qv2ray --edge (dev branch)
+$ sudo snap install qv2ray
+# sudo snap install qv2ray --edge (dev branch)
 # To update the package:
-$ snap refresh qv2ray
+$ sudo snap refresh qv2ray
 ```
 
 ### Flathub (Deprecated)

@@ -1,46 +1,47 @@
 name: Deploy Vuepress
 on:
   push:
-    branches: 
+    branches:
       - source
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
-    - name: Install and Build
-      run: |
+      - name: Install and Build
+        run: |
           yarn install
           yarn docs:build
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@3.5.7
-      with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        FOLDER: docs/.vuepress/dist
-        CLEAN: true
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: docs/.vuepress/dist
+          CLEAN: true
 
-    - name: Create 7z Release
-      uses: DuckSoft/create-7z-action@v1.0
-      with:
-        pathSource: ./docs/.vuepress/dist
-        pathTarget: ./release.7z
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Qv2ray-Documentations.7z
-        path: release.7z
-    - name: Upload to release
-      uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: release.7z
-        asset_name: Qv2ray-Documentations.7z
-        tag: doc_release
-        overwrite: true
+      - name: Create 7z Release
+        uses: DuckSoft/create-7z-action@v1.0
+        with:
+          pathSource: ./docs/.vuepress/dist
+          pathTarget: ./release.7z
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Qv2ray-Documentations.7z
+          path: release.7z
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: release.7z
+          asset_name: Qv2ray-Documentations.7z
+          tag: doc_release
+          overwrite: true

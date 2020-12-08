@@ -1,6 +1,6 @@
 ---
 title: 下载 Qv2ray
-sidebarDepth: 2
+sidebarDepth: 3
 ---
 
 # 下载 Qv2ray
@@ -18,7 +18,10 @@ sidebarDepth: 2
 3. 选择一个能在你的系统平台上运行的软件版本，然后下载。 例如:
    - 对于 Windows 64/32bit 用户： `Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`
-   - 对于 macOS 用户： `Qv2ray.VERSION.macOS-x64.dmg`
+   - 对于 macOS 用户：
+      - macOS 10.14 及以后：`Qv2ray.VERSION.macOS-x64.dmg`；
+      - macOS 10.13：`qv2ray-legacy.dmg`（如果有）；
+      - macOS 10.12 及之前：不支持。
    - 对于 Ubuntu 19.04 / Debian 10 (或更高)： ~~`qv2ray_VERSION_amd64.deb`~~ (自 v2.6.1 开始， deb 包将迁移至 [官方仓库](https://qv2ray.github.io/debian/) 进行发布)
    - 对于 Arch Linux 系用户：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
@@ -46,9 +49,9 @@ sidebarDepth: 2
 
 ## 在包管理系统中安装此软件
 
-### Arch Linux（或基于 Arch 的发行版）
+### 基于 Arch Linux 的发行版
 
-#### 直接从 `archlinuxcn` 安装（推荐）
+#### 直接从 `archlinuxcn` 安装
 
 我们已登陆 `archlinuxcn` 仓库。若您已在使用，只需在你的终端输入：
 
@@ -60,6 +63,13 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git, 见下
 
 :::tip 提示
 你可能还需要安装 `v2ray` 包来使用系统 V2Ray 核心。
+:::
+
+:::danger 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
+
+Manjaro 的官方源更新 **滞后** 于 Arch Linux 的官方源，当上游出现 ABI 破坏性更新时，*Arch* Linux CN 会 **优先保证 *Arch* Linux 用户的体验**，Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。如您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。不想遇到类似问题的用户，请从 AUR 获取并自行构建，或取用 Qv2ray 的 AppImage / snap 版本。
+
+本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式**承担 Qv2ray 的打包和分发压力**之后移除。
 :::
 
 #### 使用 AUR Helper 从 AUR 获取
@@ -146,57 +156,92 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 在上述 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray)中同样有提供 Qv2ray 相关插件，通过添加软件源方式完成了 Qv2ray 的安装之后，你可直接通过包管理器完成插件（包名同插件项目名，也同时提供带 `-preview` 后缀的预览版）的安装。
 :::
 
-### Homebrew for Linux/macOS
+### Homebrew (macOS/Linux)
 
-~~Linux 应该不会有人用 Homebrew 吧？不会吧不会吧？~~
+:::tip 非中国大陆用户注意
+以下命令使用了[中国科学技术大学镜像站](https://mirrors.ustc.edu.cn/help/brew.git.html) 加速访问 GitHub，为中国大陆用户提供更好的体验。
 
-macOS 上可以使用 brew 来安装 Qv2ray。如果你还没有安装 brew，可以在 [Homebrew 官网](https://brew.sh/)查看安装方式。安装完成后就可以使用以下命令安装 Qv2ray 了。
+若您并非中国大陆用户，或无需要加速访问 GitHub，可参考英文文档操作。
+:::
+
+[Homebrew](https://brew.sh/) 是 macOS 和 Linux 的一个包管理器。
+
+**使用此方法安装需要您对命令行有一定的基本了解**。请在终端中执行以下命令：
+
+1. 安装 Homebrew（已安装可跳过此步）：
+
+   ```sh
+   HOMEBREW_CORE_GIT_REMOTE=https://mirrors.ustc.edu.cn/homebrew-core.git bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/kidonng/homebrew-install@ustc/install.sh)"
+   ```
+
+2. 安装 Qv2ray：
 
 ```bash
 $ brew cask install qv2ray
 ```
 
-升级也是很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
+3. 升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
 
 ```bash
 $ brew cask upgrade qv2ray
 ```
 
 :::tip 提示
-使用 brew 安装的 Qv2ray 为稳定版。如果需要安装测试版，请参考上文的方式。
+
+如需安装插件及 Qv2ary 测试版，请添加 `malt` tap：
+
+```
+brew tap kidonng/malt
+brew install qv2ray-beta
+# 或者直接执行
+brew install kidonng/malt/qv2ray-beta
+```
+
+Qv2ray 额外提供一个经 [FastGit](https://doc.fastgit.org/zh-cn/) 加速的 Homebrew tap，**但其目前不受支持**。
+
+```
+brew tap qv2ray/rye
+brew install qv2ray/rye/qv2ray qv2ray/rye/v2ray
+```
+
 :::
 
-### Scoop (针对 Windows 用户)
+### Scoop (Windows)
 
-> [Scoop](https://scoop.sh) 是 **Windows** 的一个基于命令行的包管理器。
+:::tip 非中国大陆用户注意
+以下命令使用了 [FastGit](https://doc.fastgit.org/zh-cn/) 加速访问 GitHub，为中国大陆用户提供更好的体验。
 
-请在 **Powershell** 中执行以下命令：
+若您并非中国大陆用户，或无需要加速访问 GitHub，可参考英文文档操作。
+:::
 
-1. [安装 Scoop 包管理器](https://scoop.sh/#installs-in-seconds)：
+[Scoop](https://scoop.sh) 是 **Windows** 的一个包管理器。
+
+**使用此方法安装需要您对命令行有一定的基本了解**。请在 **Powershell** 中执行以下命令：
+
+1. 安装 Scoop（已安装可跳过此步）：
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 允许执行脚本
-   iwr -useb get.scoop.sh | iex
+   iwr -useb 'https://cdn.jsdelivr.net/gh/kidonng/scoop-install@fastgit/install.ps1' | iex
    ```
-2. 添加 `extras` bucket：
+2. 添加 `mochi` bucket：
    ```powershell
-   scoop bucket add extras
+   scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
    ```
-3. 安装 Qv2ray：
+3. 安装 Qv2ray (所有应用和插件参见 https://github.com/Qv2ray/mochi/tree/master/bucket)：
    ```powershell
-   scoop install qv2ray vcredist2019
+   scoop install mochi/qv2ray
    ```
-4. **(可选)** 如需安装插件及 Qv2ray 测试版，可添加 `sushi` bucket：
+4. 若要升级，只需将命令中的 `install` 替换为 `update`:
+
    ```powershell
-   scoop bucket add sushi https://github.com/kidonng/sushi
-   # 全部应用请见 https://github.com/kidonng/sushi#qv2ray
-   scoop install qv2ray-beta
+   scoop update mochi/qv2ray
    ```
 
 :::tip 提示
-安装后的 V2Ray 核心的位置位于 `%userprofile%\scoop\apps\v2ray\current\`.
+你可能需要安装[最新的 Visual C++ 可再发行软件包](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
-### Chocolatey (针对 Windows 用户)
+### Chocolatey (Windows)
 
 > [Chocolatey](https://chocolatey.org/) 是 **Windows** 的另一个包管理器。
 
@@ -211,7 +256,7 @@ $ brew cask upgrade qv2ray
    choco install qv2ray
    ```
 
-## 从应用商店中获取
+## 从 Linux 应用商店中获取
 
 ### Snapcraft
 
@@ -219,11 +264,11 @@ $ brew cask upgrade qv2ray
 
 ```bash
 # 安装 Qv2ray:
-$ snap install qv2ray
-# （或者用 snap install qv2ray --edge 来使用开发版）
+$ sudo snap install qv2ray
+# （或者用 sudo snap install qv2ray --edge 来使用开发版）
 
 # 升级 Qv2ray：
-$ snap refresh qv2ray
+$ sudo snap refresh qv2ray
 ```
 
 ### Flathub (不推荐)

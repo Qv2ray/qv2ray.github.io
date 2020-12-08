@@ -10,3 +10,4 @@ title: 使用手册
 
 - [常规设置](general.md)
 - [高级路由设置](route.md)
+- [关于 Wayland 的说明](wayland.md)

@@ -6,9 +6,9 @@ tagline: 纵使千山多万壑，犹有青鸾踏云间
 actionText: 快速上手 →
 actionLink: ./getting-started/
 features:
-- title: 跨平台 GUI
+- title: 跨平台
   details: 支持 Linux / Windows / macOS
-- title: 多样化节点导入方法
+- title: 多样化节点导入
   details: JSON / VMess / 二维码 / 手动配置
 - title: 订阅
   details: 自动 / 手动更新

@@ -9,23 +9,80 @@ title: 配置 V2Ray 核心
 ## 下载 V2Ray 核心文件
 
 由于社区政策等原因，Qv2ray 本身并 **不包含** V2Ray 核心可执行文件。这些核心文件来自一个叫做 `v2ray-core` 的项目，需要用户手动下载安装到指定位置。
-你可参照 [V2Fly 官方指南](https://www.v2fly.org/guide/install.html) 处的指示进行操作。
+
+**阅读 [V2Fly 官方指南](https://www.v2fly.org/guide/install.html)获取详细信息。**
 
 :::tip 手动管理 vs 自动管理
-如果你正在使用的发行版拥有一个可以自动安装 V2Ray 核心文件的包管理系统，那通过包管理安装 Qv2ray 是最好的选择，因为系统可以自动处理 V2Ray 核心的更新。例如，对于 Arch Linux 用户而言，安装 `v2ray` 软件包就足够了。对于其他情形，请接着阅读下面的说明。
+如果你正在使用的发行版拥有一个可以自动安装 V2Ray 核心文件的包管理系统，那通过包管理安装是最好的选择，因为系统可以自动处理 V2Ray 核心的更新。例如，对于 Arch Linux 用户而言，安装 `v2ray` 软件包就足够了。对于其他情形，请接着阅读下面的说明。
 :::
-
-请前往 [v2fly/v2ray-core 官方 Release 页面](https://github.com/v2fly/v2ray-core/releases)，并下载最新的符合当前系统版本的稳定版软件包。比如，64 位 Windows 用户可以下载 `v2ray-windows-64.zip` ；macOS 用户可以下载 `v2ray-macos-64.zip` ；大多数 Linux 用户可以下载 `v2ray-linux-64.zip`。
 
 :::tip 给 Windows 10 ARM64 用户的建议
 从 V2Ray Core 4.27 起，V2Ray 项目组为 Windows 10 提供了基于 ARM32（ armv7 ）的内核，建议 Windows 10 ARM64 用户使用该版本的内核以获取更好的性能表现。
 :::
 
 :::danger 擦亮眼睛
-如果你在 `x86_64`（`amd64`）平台上运行 Qv2ray，请不要下载 `v2ray-linux-arm64.zip`。明确地说，`arm64` 和 `amd64` 完全不同。请确保你不会这样做。
+如果你在 `x86_64`（`amd64`）平台上运行 Qv2ray，请不要下载 `v2ray-linux-arm64.zip`。明确地说，`arm64` 和 `amd64` 是完全不同的 CPU 架构。请确保你不会这样做。
 :::
 
-## 放置你的 V2Ray 核心
+### 通过软件包管理器下载核心
+
+#### Homebrew（macOS）
+
+```bash
+brew install v2ray
+```
+
+使用 Homebrew 安装 V2Ray 的可执行文件位于 `/usr/local/bin/v2ray`，资源文件位于 `/usr/local/share/v2ray`。
+
+#### Scoop (Windows)
+
+:::tip 非中国大陆网络用户注意
+本节使用了 [FastGit](https://doc.fastgit.org/zh-cn/) 加速 GitHub 访问，以为中国大陆用户提供更好的访问体验。
+
+若您并非中国大陆网络用户，或不需要对 GitHub 加速访问，请参考英文版的此部分操作。
+:::
+
+```pwsh
+# 如果尚未添加 mochi bucket
+scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
+scoop install mochi/qv2ray
+```
+
+使用 Scoop 安装 V2Ray 的可执行文件位于 `<用户目录>\scoop\apps\v2ray\current\v2ray.exe`，资源文件位于 `<用户目录>\scoop\apps\v2ray\current`.
+
+#### Chocolatey（Windows）
+
+```cmd
+choco install v2ray
+```
+
+该软件将安装到 `X:\tools\v2ray\`（**X**为你的系统盘盘符）。
+
+#### Debian、Ubuntu 与其它基于 Debian 的衍生版
+
+请参阅 <https://apt.v2fly.org>
+
+#### Arch 及其衍生版
+
+```bash
+sudo pacman -S v2ray
+```
+其二进制将被安装到 `/usr/bin/v2ray`，资源文件位于 `/usr/share/v2ray/`。
+
+#### V2Ray 官方安装脚本（使用了 Systemd 的 Linux 发行版）
+
+请参阅 <https://github.com/v2fly/fhs-install-v2ray>
+
+虽然此脚本主要是把 V2Ray 安装为服务端，但是作为客户端使用也是没问题的。在 Qv2ray 中使用则建议关掉它的服务端服务：
+
+```bash
+systemctl disable v2ray --now
+```
+
+### 手动下载
+
+**下载链接：**
+<https://hub.fastgit.org/v2fly/v2ray-core/releases>
 
 将下载到的核心文件解压缩到一个固定的位置。默认情况下，我们建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore` 中，其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储其数据的目录。
 
@@ -44,11 +101,10 @@ title: 配置 V2Ray 核心
 
 :::warning 对于 Linux / macOS 用户的温馨提示
 您应该始终为 `v2ray` 和 `v2ctl` 授予**可执行权限**。这通常通过对这些文件执行 `chmod +x ` 来完成。
-
-macOS 用户如果使用的是 Homebrew 进行安装可以忽略此提示。
 :::
 
-## 配置 Qv2ray 去使用核心
+
+## 配置 Qv2ray 使用核心
 
 打开 Qv2ray 并进入**首选项**窗口。在 **[内核设置](qv2ray://open/preference/kernel)** 中，进行如下配置：
 
@@ -61,19 +117,5 @@ macOS 用户如果使用的是 Homebrew 进行安装可以忽略此提示。
 :::warning 严禁套娃！
 永远不要把 **核心可执行文件路径** 指向 **Qv2ray 程序本体**！
 好在 Qv2ray 本身是单例模式运行的，你不会因此而引发 fork 炸弹。
-一定要注意，V2Ray 核心可执行文件是 `v2ray` 或者 `v2ray.exe`，而不是 `qv2ray` 或 `qv2ray.exe`！
-:::
-
-:::tip 给 Arch Linux 用户的提示
-若您使用 `v2ray` 软件包，推荐的路径配置如下：
-
-* **核心可执行文件路径**: `/usr/bin/v2ray`
-* **V2Ray 资源目录**: `/usr/share/v2ray`
-:::
-
-:::tip 给 macOS 用户的提示
-如果你使用 Homebrew 来安装 v2ray-core，那么你可以直接照抄下面的路径和目录：
-
-* **核心可执行文件路径**: `/usr/local/bin/v2ray`
-* **V2Ray 资源目录**: `/usr/local/bin/`
+一定要注意，V2Ray 核心可执行文件是 `v2ray` 、 `v2ray.exe` 或者 `wv2ray.exe`，而不是 `qv2ray` 或 `qv2ray.exe`、`v2rayN.exe` 等名称！
 :::

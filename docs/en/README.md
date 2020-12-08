@@ -2,12 +2,12 @@
 home: true
 heroImage: /logo.svg
 heroText: Qv2ray
-tagline: Qv2ray is a cross-platform v2ray graphical frontend written in Qt.
+tagline: A cross-platform V2Ray graphical frontend
 actionText: Getting Started →
 actionLink: ./getting-started/
 features:
-- title: Cross-platform, multi-distribution support
-  details: Linux / Windows / macOS
+- title: Cross-platform
+  details: Supporting Linux / Windows / macOS
 - title: Versatile Host Importing
   details: JSON / VMess / QR Code / Manual
 - title: Subscriptions
