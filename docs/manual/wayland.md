@@ -47,6 +47,10 @@ QT_QPA_PLATFORM=wayland qv2ray
 
 Gnome 桌面本就不支持托盘图标。Ubuntu 做了个[扩展](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)来支持了一个基于 DBus 通讯的 Gnome 托盘扩展。目前测试的结果是此扩展能在 Arch Linux 下显示运行于 Wayland 的 Qv2ray 的托盘，但是在 Ubuntu 定制的 Ubuntu Wayland 会话下可能无法显示。此为上游的问题，本项目无法处理。
 
+### 程序运行了却没有窗口
+
+如上所述, Gnome本不支持托盘图标, Wayland的官方compositor `Weston`也是如此. 在目前, 如果启用了Qv2ray的自动连接功能, 在程序执行后不会显示主视窗而是隐藏于托盘图标 (see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1080)) 目前只可以通过再次执行Qv2ray来激活被隐藏的窗口.
+
 ## 剪贴板
 
 由于 Wayland 没有统一的剪贴板接口，在运行于 Wayland 的应用之间可能无法使用右键菜单来复制粘贴。作为一个缓解措施，你可以使用 `Ctrl + C/V` 来进行复制粘贴。同时要注意，复制粘贴的时候要同时打开复制源窗口与粘贴目标窗口。
