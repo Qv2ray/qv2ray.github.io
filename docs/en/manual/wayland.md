@@ -45,6 +45,10 @@ No, thanks.
 
 The Gnome desktop does not support tray icons by nature. Ubuntu has made an [extension](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) to support a Gnome tray extension based on DBus communication. The result of testing so far is that the extension will display trays from Qv2ray running on Wayland under Arch Linux, but may not display them under the custom Ubuntu Wayland session. This is an upstream issue and cannot be addressed by this project.
 
+### Where is the application window?
+
+As described above, GNOME does not support tray icons, so does Wayland's reference compositor `weston`. With current version, the application main window will be hidden after launch if ___Auto Connect___ is enabled.(see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1080)). A current workaround is to launch Qv2ray again, then the main window will be activated and become visible.
+
 ## Clipboard
 
 Since Wayland does not have a unified clipboard interface, it may not be possible to use the right-click menu to copy and paste between applications running in Wayland. As a workaround, you can use `Ctrl + C/V` to copy and paste. Also note that when copying and pasting, open both the copy source window and the paste target window at the same time.
