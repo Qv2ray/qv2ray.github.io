@@ -17,7 +17,7 @@ Qv2ray 是原生的 Qt5/C++ 程序，，能够完整地支持 Wayland 显示协�
 Gnome 环境下的 Qt5 程序默认使用 Xorg 协议运行于 Xwayland 上（Xorg 在 Wayland 下的后备模式）。因此，如果要让 Qv2ray 运行在 Wayland 显示协议下你需要运行如下命令：
 
 ```bash
-QT_QPA_PLATFORM=wayland qv2ray
+env QT_QPA_PLATFORM=wayland qv2ray
 ```
 
 运行效果如下：
@@ -46,6 +46,10 @@ QT_QPA_PLATFORM=wayland qv2ray
 ### Gnome 下没有托盘图标
 
 Gnome 桌面本就不支持托盘图标。Ubuntu 做了个[扩展](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)来支持了一个基于 DBus 通讯的 Gnome 托盘扩展。目前测试的结果是此扩展能在 Arch Linux 下显示运行于 Wayland 的 Qv2ray 的托盘，但是在 Ubuntu 定制的 Ubuntu Wayland 会话下可能无法显示。此为上游的问题，本项目无法处理。
+
+### 程序运行了却没有窗口
+
+如上所述, Gnome 本不支持托盘图标, Wayland 的官方 compositor `Weston` 也是如此. 在目前, 如果启用了 Qv2ray 的自动连接功能, 在程序执行后不会显示主视窗而是隐藏于托盘图标 (see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1080)) 目前只可以通过再次执行 Qv2ray 来激活被隐藏的窗口.
 
 ## 剪贴板
 

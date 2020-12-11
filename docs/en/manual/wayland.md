@@ -16,8 +16,8 @@ If everything is in place, you can now try to run Qv2ray with the Wayland displa
 
 Qt5 programs in a Gnome environment run on Xwayland by default using the Xorg protocol (Xorg's fallback mode under Wayland). Therefore, to get Qv2ray to run under the Wayland display protocol you need to run the following command.
 
-``bash
-QT_QPA_PLATFORM=wayland qv2ray
+```bash
+env QT_QPA_PLATFORM=wayland qv2ray
 ```
 
 It works as follows.
@@ -46,6 +46,10 @@ No, thanks.
 ### No tray icon under Gnome
 
 The Gnome desktop does not support tray icons by nature. Ubuntu has made an [extension](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) to support a Gnome tray extension based on DBus communication. The result of testing so far is that the extension will display trays from Qv2ray running on Wayland under Arch Linux, but may not display them under the custom Ubuntu Wayland session. This is an upstream issue and cannot be addressed by this project.
+
+### Where is the application window?
+
+As described above, GNOME does not support tray icons, so does Wayland's reference compositor `weston`. With current version, the application main window will be hidden after launch if ___Auto Connect___ is enabled.(see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1080)). A current workaround is to launch Qv2ray again, then the main window will be activated and become visible.
 
 ## Clipboard
 
