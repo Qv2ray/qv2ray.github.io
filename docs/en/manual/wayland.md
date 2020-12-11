@@ -16,7 +16,9 @@ If everything is in place, you can now try to run Qv2ray with the Wayland displa
 
 Qt5 programs in a Gnome environment run on Xwayland by default using the Xorg protocol (Xorg's fallback mode under Wayland). Therefore, to get Qv2ray to run under the Wayland display protocol you need to run the following command.
 
-``bash QT_QPA_PLATFORM=wayland qv2ray``
+```bash
+env QT_QPA_PLATFORM=wayland qv2ray
+```
 
 It works as follows.
 [! [Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
