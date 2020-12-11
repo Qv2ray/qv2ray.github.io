@@ -49,7 +49,7 @@ Gnome 桌面本就不支持托盘图标。Ubuntu 做了个[扩展](https://exten
 
 ### 程序运行了却没有窗口
 
-如上所述, Gnome 本不支持托盘图标, Wayland 的官方 compositor `Weston` 也是如此. 在目前, 如果启用了 Qv2ray 的自动连接功能, 在程序执行后不会显示主视窗而是隐藏于托盘图标 (see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1080)) 目前只可以通过再次执行 Qv2ray 来激活被隐藏的窗口.
+如上所述, Gnome 本不支持托盘图标, Wayland 的官方 compositor `Weston` 也是如此. 在目前, 如果启用了 Qv2ray 的自动连接功能, 在程序执行后不会显示主视窗而是隐藏于托盘图标 (see [#1080](https://github.com/Qv2ray/Qv2ray/issues/1080) [#1097](https://github.com/Qv2ray/Qv2ray/issues/1097)) 目前只可以通过再次执行 Qv2ray 来激活被隐藏的窗口.
 
 ## 剪贴板
 
