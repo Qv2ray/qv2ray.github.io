@@ -17,7 +17,7 @@ Qv2ray 是原生的 Qt5/C++ 程序，，能够完整地支持 Wayland 显示协�
 Gnome 环境下的 Qt5 程序默认使用 Xorg 协议运行于 Xwayland 上（Xorg 在 Wayland 下的后备模式）。因此，如果要让 Qv2ray 运行在 Wayland 显示协议下你需要运行如下命令：
 
 ```bash
-QT_QPA_PLATFORM=wayland qv2ray
+env QT_QPA_PLATFORM=wayland qv2ray
 ```
 
 运行效果如下：
