@@ -36,8 +36,13 @@ sidebarDepth: 3
 
 默认情况下，UWP 程序禁止使用带有回环地址（如 127.0.0.1）的代理，所以设置系统代理可能会导致你的 UWP 程序无法连接网络。
 
-你可以使用一些第三方工具来 **启用 UWP 回环**，使 UWP 程序可被正常代理。
-这里提供一个来自 [Fiddler](https://www.telerik.com/fiddler) 项目的 [EnableLoopback @ Fiddler](/EnableLoopback.zip)。
+你可以以管理员权限运行CMD并使用以下的代码（[来源](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback)）来 **启用 UWP 回环** ，使你所有的 UWP 程序均可被正常代理。
+
+```shell
+FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
+```
+
+或者，你可以直接简单地使用一些第三方工具，这里提供一个来自 [Fiddler](https://www.telerik.com/fiddler) 项目的 [EnableLoopback @ Fiddler](/EnableLoopback.zip)。
 
 :::
 
