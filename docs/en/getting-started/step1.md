@@ -162,12 +162,13 @@ You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven
 ```bash
 $ brew cask install qv2ray
 ```
-
-Upgrading is also easy, just replace `install` with `upgrade` in the commands:
+**Or with the new command**
 
 ```bash
-$ brew cask upgrade qv2ray
+$ brew install --cask qv2ray
 ```
+
+Upgrading is also easy, just replace `install` with `upgrade` in the commands.
 
 If you want to install plugins and Qv2ary beta, please add the `malt` tap:
 
