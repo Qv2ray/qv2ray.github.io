@@ -176,15 +176,17 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 2. 安装 Qv2ray：
 
+**旧版命令**
 ```bash
 $ brew cask install qv2ray
 ```
 
-3. 升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
-
+**新版命令**
 ```bash
-$ brew cask upgrade qv2ray
+$ brew install --cask qv2ray
 ```
+
+3. 升级也很简单，只需要将上述命令的 `install` 换成 `upgrade` 即可。
 
 :::tip 提示
 
