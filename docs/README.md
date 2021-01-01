@@ -12,7 +12,7 @@ features:
   details: JSON / VMess / 二维码 / 手动配置
 - title: 订阅
   details: 自动 / 手动更新
-footer: 采用 CC-BY-SA | © 2020 Qv2ray 版权所有
+footer: 采用 CC-BY-SA | © 2021 Qv2ray 版权所有
 ---
 
 ## 🚀 起步

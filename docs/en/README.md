@@ -12,7 +12,7 @@ features:
   details: JSON / VMess / QR Code / Manual
 - title: Subscriptions
   details: Automatic / Manual Updates
-footer: CC-BY-SA Licensed | Copyright © 2020 Qv2ray
+footer: CC-BY-SA Licensed | Copyright © 2021 Qv2ray
 ---
 
 **Qv2ray** is a cross-platform v2ray graphical frontend written in Qt.
