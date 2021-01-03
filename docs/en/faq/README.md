@@ -116,7 +116,7 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 ### 4. How to configure proxy for dial-up connections / VPN connections on Windows?
 
-- Already supported on 2.7.0-pre2 version.
+- Already supported on version 2.7.0-pre2.
 - However, because of [an issue from Microsoft](https://support.microsoft.com/en-us/topic/cannot-configure-proxy-settings-if-a-vpn-connection-name-contains-non-ascii-characters-2c648407-bb72-5600-3126-8c721bc91b70) (may also be similar to [this reason](https://github.com/shadowsocks/shadowsocks-windows/issues/1116#issuecomment-294075565)), if a connection name contains non-ASCII characters, proxy settings won't work. A workaround is to rename the connection and make sure the new name only contains ASCII characters.
 
 ### 5. Unable to configure system proxy automatically on macOS (Error: Command requires admin privileges)
