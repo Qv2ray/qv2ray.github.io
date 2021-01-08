@@ -45,7 +45,7 @@ brew install v2ray
 ```pwsh
 # 如果尚未添加 mochi bucket
 scoop bucket add mochi https://hub.fastgit.org/Qv2ray/mochi
-scoop install mochi/qv2ray
+scoop install mochi/v2ray
 ```
 
 使用 Scoop 安装 V2Ray 的可执行文件位于 `<用户目录>\scoop\apps\v2ray\current\v2ray.exe`，资源文件位于 `<用户目录>\scoop\apps\v2ray\current`.
