@@ -16,8 +16,10 @@ Do as the follows:
 1. Open [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a web browser.
 2. Choose a version from the releases. Or, optionally, you may use the [Latest Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
 3. Choose in Assets according to your platform and download it! For example:
-   - For Windows 64/32bit Users: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer)
-   - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`
+   - For Windows Users: 
+      - Windows 95/98/ME/2000/XP/2003: NOT SUPPORTED (since Qt does not support them);
+      - Windows 7/8.1/10: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer).
+   - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`.
    - For macOS Users:
       - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
       - macOS 10.13: `qv2ray-legacy.dmg` (if any);

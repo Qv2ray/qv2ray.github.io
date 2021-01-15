@@ -16,8 +16,10 @@ sidebarDepth: 3
 1. 在浏览器中打开 [Qv2ray GitHub Release 页面](https://github.com/Qv2ray/Qv2ray/releases) 。
 2. 选择一个 Release 版本。 或者直接下载[最新版](https://github.com/Qv2ray/Qv2ray/releases/latest)。
 3. 选择一个能在你的系统平台上运行的软件版本，然后下载。 例如:
-   - 对于 Windows 64/32bit 用户： `Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)
-   - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`
+   - 对于 Windows 用户：
+      - Windows 95/98/ME/2000/XP/2003：不支持（因 Qt 原因）；
+      - Windows 7/8.1/10：`Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)。
+   - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
    - 对于 macOS 用户：
       - macOS 10.14 及以后：`Qv2ray.VERSION.macOS-x64.dmg`；
       - macOS 10.13：`qv2ray-legacy.dmg`（如果有）；
