@@ -20,7 +20,8 @@ Qt5 programs in a Gnome environment run on Xwayland by default using the Xorg pr
 env QT_QPA_PLATFORM=wayland qv2ray
 ```
 
-It works as follows.
+It works as follows:
+
 [! [Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
 
 You can add `QT_QPA_PLATFORM=wayland` to Qv2ray's desktop file so that Qv2ray can use the Wayland display protocol at boot time.
@@ -42,6 +43,20 @@ You may be using an Xorg-based desktop session, or you don't have the Wayland co
 ### Does running under the Wayland display protocol speed up wall-climbing?
 
 No, thanks.
+
+### Issue under KDE Wayland session
+
+Under a KDE Wayland session, if you log out and log back in, Qv2ray will not exit, will not show the notification tray icon and will use a lot of CPU.
+
+**The solution is (use one of three choices):***
+1、Use Gnome Wayland session
+2、Use KDE Plasma or other desktop‘s Xorg sessions
+3. Kill the Qv2ray process by yourself and then open it again.
+
+>Related issues:
+><https://github.com/Qv2ray/Qv2ray/issues/830>
+
+Translated with www.DeepL.com/Translator (free version)
 
 ### No tray icon under Gnome
 
