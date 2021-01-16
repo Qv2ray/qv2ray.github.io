@@ -21,10 +21,20 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    "@vuepress/back-to-top",
-    '@kidonng/vuepress-plugin-contributors'
-  ],
+  plugins: 
+  { 
+    "@vuepress/back-to-top": {},
+    '@kidonng/vuepress-plugin-contributors': {},
+    'seo': {
+      modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+      siteTitle: _ => '纵使千山多万壑，犹有青鸾踏云间',
+      title: _ => 'Qv2ray Official Site',
+      description: _ => '跨平台 V2Ray GUI',
+      type: _ => 'website',
+      url: _ => 'https://qv2ray.net/',
+      image: _ => 'https://raw.githubusercontent.com/Qv2ray/Qv2ray/master/assets/icons/qv2ray.png'
+    }
+  },
   locales: {
     "/en/": {
       lang: "en-US",
