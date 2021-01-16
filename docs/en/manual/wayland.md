@@ -22,7 +22,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 It works as follows:
 
-[! [Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
+[![Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
 
 You can add `QT_QPA_PLATFORM=wayland` to Qv2ray's desktop file so that Qv2ray can use the Wayland display protocol at boot time.
 
