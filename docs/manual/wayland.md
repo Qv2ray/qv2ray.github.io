@@ -43,6 +43,18 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 不能，谢谢。
 
+### KDE Wayland 会话下的故障
+
+在 KDE Wayland 会话下，如果注销后重新登录，那么 Qv2ray 将不会退出，也不会显示通知托盘图标，且占用大量的 CPU。此问题是 KDE Wayland 会话导致的，其会话退出之后不会关闭运行中的应用程序。
+
+**解决方案为（三选一）：***
+1、使用 Gnome Wayland 会话
+2、使用 KDE Plasma 或者其它桌面的 Xorg 会话
+3、自行干掉 Qv2ray 进程后再打开。
+
+>相关 issue：
+><https://github.com/Qv2ray/Qv2ray/issues/830>
+
 ### Gnome 下没有托盘图标
 
 Gnome 桌面本就不支持托盘图标。Ubuntu 做了个[扩展](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)来支持了一个基于 DBus 通讯的 Gnome 托盘扩展。目前测试的结果是此扩展能在 Arch Linux 下显示运行于 Wayland 的 Qv2ray 的托盘，但是在 Ubuntu 定制的 Ubuntu Wayland 会话下可能无法显示。此为上游的问题，本项目无法处理。
