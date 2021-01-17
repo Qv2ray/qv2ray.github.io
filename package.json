@@ -6,13 +6,16 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
+  "prettier": "prettier-config-vuepress",
   "dependencies": {
     "@vuepress/plugin-back-to-top": "^1.4.0",
     "vuepress-plugin-seo": "^0.1.4"
   },
   "devDependencies": {
     "vuepress": "^1.4.0",
-    "vuepress-theme-succinct": "kidonng/vuepress-theme-succinct"
+    "vuepress-theme-succinct": "kidonng/vuepress-theme-succinct",
+    "prettier": "^2.2.1",
+    "prettier-config-vuepress": "^1.1.1"
   },
   "resolutions": {
     "vuepress-plugin-smooth-scroll": "^0.0.10"
