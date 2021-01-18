@@ -34,18 +34,18 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 ```
 
 - **Solution (on Linux)**: ~~You can even use Linux...Don't you know how to kill a process?~~
-  
+
   - **Approach 1**: Terminate the `v2ray` process through the System Monitor application. Since there are serveral desktop environments under Linux, the system monitor that comes with each desktop environment may not be the same software, so the operations of killing process should explore by yourself.
-  
+
   - **Approach 2**: Install the terminal command software `htop` and use it to kill the `v2ray` process.
-  
+
   - **Approach 3**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
 
 -**Solution (on macOS)**:
 
-   -**Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
+-**Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
 
-   -**Approach 2**: Refer to the **Approach 2** solution of the Linux.
+-**Approach 2**: Refer to the **Approach 2** solution of the Linux.
 
 - **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
 
@@ -64,7 +64,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **Cause**: It's caused by a limit in the `SUID` feature on some Linux OSes. Detailed error analysis please see: [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
 
 - **Solution**: `sudo sysctl fs.suid_dumpable=1`  
-The solution will be lost on reboot, please refer to [this blog](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html) if you want to keep it.
+  The solution will be lost on reboot, please refer to [this blog](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html) if you want to keep it.
 
 ### 4. Core error `255`
 
@@ -100,7 +100,8 @@ The solution will be lost on reboot, please refer to [this blog](http://ssdxiao
 
 - **Cause:** V2Ray does not have the permission to set socket options.
 - **Solution:**
-  - For all Linux distros, Use the command below in terminal (with root/sudo access):  
+
+  - For all Linux distros, Use the command below in terminal (with root/sudo access):
 
     ```shell
     /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray

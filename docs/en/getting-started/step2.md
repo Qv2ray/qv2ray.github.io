@@ -25,7 +25,6 @@ Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`
 To make it clear, `arm64` is completely different from `amd64`. Make sure you don't do like this.
 :::
 
-
 ### Download V2RAy Core via package manager
 
 #### Homebrew（macOS）
@@ -50,7 +49,7 @@ When installing with Scoop, V2Ray's executable location is `<User Directory>\sco
 choco install v2ray
 ```
 
-The software will be installed on `X:\tools\v2ray` (***X*** is your system disk drive).
+The software will be installed on `X:\tools\v2ray` (**_X_** is your system disk drive).
 
 #### Debian, Ubuntu and other Debian-based derivatives.
 
@@ -61,6 +60,7 @@ See <https://apt.v2fly.org>
 ```bash
 sudo pacman -S v2ray
 ```
+
 The binary will be installed to `/usr/bin/v2ray`, the resource file is located at `/usr/share/v2ray/`.
 
 #### V2Ray official installation script (using the Linux distribution of Systemd).
@@ -82,9 +82,9 @@ Extract the v2ray core files into a fixed position. As a default, it is suggeste
 
 The directory `vcore` could be in one of these locations:
 
- - `./config/` (`config` subdirectory aside Qv2ray executable, which is recommended for Windows Users)
- - `~/.qv2ray/` (in a dedicated directory of your home folder)
- - `~/.config/qv2ray/` (standard XDG configuration path)
+- `./config/` (`config` subdirectory aside Qv2ray executable, which is recommended for Windows Users)
+- `~/.qv2ray/` (in a dedicated directory of your home folder)
+- `~/.config/qv2ray/` (standard XDG configuration path)
 
 Afterwards, please make sure that these files exists directly in your `vcore` directory:
 
@@ -104,8 +104,8 @@ On macOS, if you use Homebrew to install v2ray-core, you can ignore this tip.
 
 Open Qv2ray and go to Preference Window. In **[Core Settings](qv2ray://open/preference/kernel)**, configure the following options:
 
- - **Core Executable Path**: Set this to where your V2Ray executable exists. This can be the full path of your `v2ray.exe` on Windows, or that `v2ray` executable file on Linux / macOS.
- - **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located.
+- **Core Executable Path**: Set this to where your V2Ray executable exists. This can be the full path of your `v2ray.exe` on Windows, or that `v2ray` executable file on Linux / macOS.
+- **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located.
 
 After configuring, you can click on **Check V2Ray Core Settings** button to validate your V2Ray core settings. Repeat trying until you get the check passed.
 

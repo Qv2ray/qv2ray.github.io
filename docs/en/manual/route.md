@@ -61,7 +61,7 @@ The IP rules are written as follows (in order of common usage):
 
 The domain name rules are written as follows (in order of common use):
 
-- **Pre-defined domain list**: Starts with `geosite:`, and the rest is a name, such as `geosite:google` or `geosite:cn`. For the name and domain name list, please refer to the *predefined domain name list* section of V2Ray document.
+- **Pre-defined domain list**: Starts with `geosite:`, and the rest is a name, such as `geosite:google` or `geosite:cn`. For the name and domain name list, please refer to the _predefined domain name list_ section of V2Ray document.
 - **Subdomain**: Starts with `domain:`, and the rest is a domain name. This rule takes effect when the domain name is the target domain name or its subdomain name. For example, `domain:v2ray.com` matches `www.v2ray.com` and `v2ray.com`, but not `xv2ray.com`.
 - **Complete match**: Starts with `full:`, and the rest is a domain name. When this domain name completely matches the target domain name, the rule takes effect. For example, `full:v2ray.com` matches `v2ray.com` but not `www.v2ray.com`.
 - **String-only**: When this string matches any part of the target domain name, the rule takes effect. For example, `sina.com` can match `sina.com`, `sina.com.cn` and `www.sina.com`, but not `sina.cn`.
@@ -69,9 +69,10 @@ The domain name rules are written as follows (in order of common use):
 - **Loading domain list from external files**: the format is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, and the file must be stored in the V2Ray core resource directory. The file format is the same as `geosite.dat`, and the specified `tag` must exist in the file.
 
 :::tip I'm a newbie, can you be more straightforward?
+
 - If you want to implement a global proxy, that is, regardless of the destination address, all traffic will go through the proxy, then refer to the other tips above. 😅
 - If you want to achieve precise traffict splitting, that is, all outbound traffic should go through the proxy, then just click the `preset plans` button in the interface, select the `blank plan` or the `ad blocking plan`, and set the domain name strategy to `IPIfNonMatch`. 😋
-:::
+  :::
 
 :::tip I'm a advanced user! I want more precise traffic splitting! 🤔
 We recommends using an enhanced version of the V2Ray rules file project. The project is at [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗

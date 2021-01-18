@@ -47,13 +47,13 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 在 KDE Wayland 会话下，如果注销后重新登录，那么 Qv2ray 将不会退出，也不会显示通知托盘图标，且占用大量的 CPU。此问题是 KDE Wayland 会话导致的，其会话退出之后不会关闭运行中的应用程序。
 
-**解决方案为（三选一）：***
+**解决方案为（三选一）：\***
 1、使用 Gnome Wayland 会话
 2、使用 KDE Plasma 或者其它桌面的 Xorg 会话
 3、自行干掉 Qv2ray 进程后再打开。
 
->相关 issue：
-><https://github.com/Qv2ray/Qv2ray/issues/830>
+> 相关 issue：
+> <https://github.com/Qv2ray/Qv2ray/issues/830>
 
 ### Gnome 下没有托盘图标
 

@@ -7,7 +7,9 @@ export default () => {
   document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
       if (location.hash) {
-        document.querySelector(decodeURIComponent(location.hash)).scrollIntoView()
+        document
+          .querySelector(decodeURIComponent(location.hash))
+          .scrollIntoView()
       }
     }
   }

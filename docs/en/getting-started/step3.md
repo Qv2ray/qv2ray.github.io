@@ -3,15 +3,18 @@ title: Adding Hosts into Qv2ray
 ---
 
 # Step 3: Adding Hosts into Qv2ray
+
 Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
 
 ## Share Links
 
 > Share links generally looks like these:
-> * `vmess://eyJ2Ijoi`...
-> * `ss://NjNlMDAx`...
+>
+> - `vmess://eyJ2Ijoi`...
+> - `ss://NjNlMDAx`...
 
 Follow these steps to import them:
+
 1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link) or [QR Code](qv2ray://open/import/qr).
 2. In the **Import File** dialog, choose import source **Share Link**,
 3. Paste your share links into **Share Link** text box.
@@ -30,6 +33,7 @@ Some broken share links may fail to import, but it doesn't matter. The detailed 
 > A subscription link usually looks like this: `https://some-airport.com/links/YjYyODk?sub=3`
 
 To import a subscription, follow these steps:
+
 1. Open **GroupEditor** by clicking **Group** button in main window.
 2. Click the **Add Group** icon button at the left-bottom corner in **[GroupEditor](qv2ray://open/group/connection)** window.
 3. Select the created item in **Group List**, whose details will be shown on the right side.

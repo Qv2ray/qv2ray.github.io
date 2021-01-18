@@ -15,19 +15,19 @@ Please make sure you have already met all the dependency requirements.
 - Qt 5.13, 5.14 is recommended
 
 - gRPC & protobuf
-  
+
   - To build Qv2ray under Windows, both `gRPC` and `protobuf` are required.
-  
+
   - To build Qv2ray under Linux or macOS, only `protobuf` is necessary where `gRPC` can be replaced by a self-made library called `libqvb`
-    
+
     **Packagers’ Note: Do NOT use `gRPC 1.26`, it has a bug preventing Qv2ray to start.**
 
 - OpenSSL
 
 - The build may **not** fail if you don't have it since it's a **<u>runtime dependency</u>**.
 
-- A compiler with `std-c++17` *nested namespace*, *tuple expansion* and *inline variable* support.
-  
+- A compiler with `std-c++17` *nested namespace*, _tuple expansion_ and _inline variable_ support.
+
   - `gcc7` is known to be supported and good to go.
   - At least version 14.2 of MSVC is required.
 
@@ -44,24 +44,24 @@ Assume you have Qt installed and currently configured the `$PATH` which can ex
 
 If not, you need to set up a development environment:
 
-- Debian/Ubuntu/RaspberryPiOS: Install packages using apt: 
+- Debian/Ubuntu/RaspberryPiOS: Install packages using apt:
 
-    `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
+  `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
 
 ### 2.0 Before Build
 
-- Arch Linux: Install packages using pacman: `pacman -S grpc protobuf` 
+- Arch Linux: Install packages using pacman: `pacman -S grpc protobuf`
 
 - Debian/Ubuntu/RaspberryPiOS: Install packages using apt: `apt install libprotobuf-dev libgrpc++-dev`
 
 - macOS: Install packages through homebrew: `brew install grpc protobuf`
 
 - For Windows:
-  
+
   - Download [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) or [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z) from the [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) repo release and extract to the `libs/x**-windows/` directory, where `**` can be `86` or `64`.
   - Alternative method: Use `vcpkg install grpc` to manually build `gRPC` on Windows using **MSVC**, this usually takes long so it’s not encouraged.
 
-:::warning 
+:::warning
 Make sure you have `grpc_cpp_plugin` and `protoc`, which will be used by cmake in the next step
 :::
 

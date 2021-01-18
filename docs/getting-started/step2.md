@@ -67,6 +67,7 @@ choco install v2ray
 ```bash
 sudo pacman -S v2ray
 ```
+
 其二进制将被安装到 `/usr/bin/v2ray`，资源文件位于 `/usr/share/v2ray/`。
 
 #### V2Ray 官方安装脚本（使用了 Systemd 的 Linux 发行版）
@@ -102,7 +103,6 @@ systemctl disable v2ray --now
 :::warning 对于 Linux / macOS 用户的温馨提示
 您应该始终为 `v2ray` 和 `v2ctl` 授予**可执行权限**。这通常通过对这些文件执行 `chmod +x ` 来完成。
 :::
-
 
 ## 配置 Qv2ray 使用核心
 

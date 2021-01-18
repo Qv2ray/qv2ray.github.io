@@ -15,7 +15,7 @@ title: 手动构建 Qv2ray 项目
   - 在 Windows 下构建 Qv2ray 时，`gRPC` 和 `protobuf` 两者都需要。
   - 在 Linux 和 macOS 下构建 Qv2ray 时，只有 `protobuf` 是必须的，而 `gRPC` 可以替换成一个自制的库 `libqvb` 。
 - `OpenSSL`
-  - 如果你没有 `OpenSSL`，构建可能 **不会失败**，因为它是一个 **运行时依赖**。
+  - 如果你没有 `OpenSSL`，构建可能 **不会失败**，因为它是一个 **运行时依赖**。
 
 其次，编译器要支持并使用 C++17，需要包括嵌套命名空间（nested namespace）、结构化绑定（tuple expansion）以及内联变量（inline variable）等特性的支持：
 
@@ -39,13 +39,13 @@ title: 手动构建 Qv2ray 项目
 假设你：
 
 1. 安装了 Qt 并且配置了相应的环境变量，从而在 Terminal/Shell/Command Prompt 中至少能成功执行 `qmake --version`；
-  
-    如果没有, 你需要准备一套开发环境:
-    
-    - Debian/Ubuntu/RaspberryPiOS: 使用apt安装:
-    
-         `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
-         
+
+   如果没有, 你需要准备一套开发环境:
+
+   - Debian/Ubuntu/RaspberryPiOS: 使用 apt 安装:
+
+     `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
+
 2. 正确获取了源码和所有的子模块 (submodule)。
 
 ### 构建之前
@@ -54,8 +54,8 @@ title: 手动构建 Qv2ray 项目
 - Debian/Ubuntu/RaspberryPiOS: 安装这两个包: `apt install libprotobuf-dev libgrpc++-dev`
 - macOS：通过 Homebrew 安装这两个包: `brew install grpc protobuf`
 - Windows:
-  - 你可以从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库 Release 中下载 [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/grpc-x86-windows.7z)，然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`；或者：
-  - 你可以使用 `vcpkg install grpc` 在 Windows 上通过 MSVC 手动构建 `gRPC`, 不过这通常会花点时间，且需要稳定的网络环境（没梯子就算了）。
+  - 你可以从 [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) 这个仓库 Release 中下载  [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/grpc-x64-windows.7z) 或者 [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/grpc-x86-windows.7z)，然后解压到 `libs/x**-windows/` 目录, 其中 `**` 是 `86` 或 `64`；或者：
+  - 你可以使用 `vcpkg install grpc` 在 Windows 上通过 MSVC 手动构建 `gRPC`，不过这通常会花点时间，且需要稳定的网络环境（没梯子就算了）。
 
 :::danger Windows: Qv2ray-deps -> MSVC2019+
 若你选择直接使用 Qv2ray-deps 项目中的预编译包，你至少需要使用 MSVC2019 来进行 Linking，否则可能会遇到各种谜之问题。
@@ -64,7 +64,7 @@ title: 手动构建 Qv2ray 项目
 :::
 
 :::warning
-确保你安装了 `grpc_cpp_plugin` 和 `protoc`, 它们在下一步中由 `cmake` 使用.
+确保你安装了 `grpc_cpp_plugin` 和 `protoc`, 它们在下一步中由 `cmake` 使用.
 :::
 
 ### 构建脚本
