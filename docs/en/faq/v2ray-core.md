@@ -8,12 +8,12 @@ title: V2Ray Core Related
 
 Usually it's because there's already another process using the port required to start V2Ray core. The logs can be like:
 
-* Windows: `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
-* Linux / macOS: `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: address already in use`
+- Windows: `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+- Linux / macOS: `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: address already in use`
 
 ### Existing V2Ray Core Instance
 
-You should always first check if there's an existing V2Ray process. A remaining V2Ray process can be there if Qv2ray happened to crash before it could terminate its V2Ray core. 
+You should always first check if there's an existing V2Ray process. A remaining V2Ray process can be there if Qv2ray happened to crash before it could terminate its V2Ray core.
 
 #### Windows
 
@@ -94,7 +94,7 @@ Notice the fields `42742` and `evil`, which shows the PID and program name of th
 
 This happens only on Windows, whose error log usually looks like this: `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`
 
-Microsoft launched [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) patch on February 13th in 2018, which will modify the *reserved port range* on Windows operating system, so you may be affected. 
+Microsoft launched [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) patch on February 13th in 2018, which will modify the _reserved port range_ on Windows operating system, so you may be affected.
 
 As is stated, you can use `netsh interface ipv4 show excludedportrange protocol=tcp` command to show the reserved ports. If a port is reserved, you should avoid that port and just change the listening port to another one.
 
@@ -104,9 +104,9 @@ Just change the listening port and avoid the clash. That's a pretty straightforw
 
 ## Failed to Execute
 
-This happens when V2Ray core cannot be executed. The typical error message can be: 
+This happens when V2Ray core cannot be executed. The typical error message can be:
 
-* `v2ray core failed with errcode: 255`
+- `v2ray core failed with errcode: 255`
 
 ### Linux / macOS: No Executable Attribute
 

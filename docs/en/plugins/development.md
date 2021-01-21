@@ -27,12 +27,12 @@ A plugin is, technically, a shared library that implements a specific interface,
 
 - These dependencies **should** be statically linked into the plugin library, otherwise:
   - Tell the users to download/install all dependencies’ library from wherever they can.
-- **Exception: OpenSSL *SHOULD NOT* be statically linked.**
+- **Exception: OpenSSL _SHOULD NOT_ be statically linked.**
   - Qv2ray has its own OpenSSL dependency check and will make sure a compatible OpenSSL has been installed.
 
 ## Creating a plugin
 
-*You have 2 choices when initiating a plugin.*
+You have 2 choices when initiating a plugin.
 
 1. Creating plugin using provided `Template` project:
 

@@ -16,14 +16,14 @@ Do as the follows:
 1. Open [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a web browser.
 2. Choose a version from the releases. Or, optionally, you may use the [Latest Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
 3. Choose in Assets according to your platform and download it! For example:
-   - For Windows Users: 
-      - Windows 95/98/ME/2000/XP/2003: NOT SUPPORTED (since Qt does not support them);
-      - Windows 7/8.1/10: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer).
+   - For Windows Users:
+     - Windows 95/98/ME/2000/XP/2003: NOT SUPPORTED (since Qt does not support them);
+     - Windows 7/8.1/10: `Qv2ray.VERSION.Windows-x64/x86.7z` (archive) or `Qv2ray.VERSION.win32/64.exe` (Installer).
    - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`.
    - For macOS Users:
-      - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
-      - macOS 10.13: `qv2ray-legacy.dmg` (if any);
-      - macOS 10.12 and before: NOT SUPPORTED.
+     - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
+     - macOS 10.13: `qv2ray-legacy.dmg` (if any);
+     - macOS 10.12 and before: NOT SUPPORTED.
    - For Ubuntu 19.04 / Debian 10 (or greater): ~~`qv2ray_VERSION_amd64.deb`~~ (Moved to [Qv2ray Debian Repository](https://qv2ray.github.io/debian/) since v2.6.1)
    - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
@@ -69,7 +69,7 @@ You may also want to install `v2ray` package to use system V2Ray core.
 
 :::warning Attention to Manjaro Hitchhikers on Arch Linux CN
 
-Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, ***Arch Linux* CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
+Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
 
 This nag will be removed whenever something like "Manjaro CN" is founded and officially **take the workload of packaging Qv2ray** for its users.
 :::
@@ -141,13 +141,13 @@ Because of the limit of Qt version, we may not be able to support all on-lifetim
 
 Similar to AUR, there are two versions of Qv2ray available. You can choose according to your own flavor:
 
- - Stable OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
- - Preview OBS: [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
+- Stable OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
+- Preview OBS: [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
 Or you can get more detailed installation guide directly from the links below:
 
- - Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
- - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+- Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
 :::warning For CentOS user
 Before you install Qv2ray from above OBS project, you need to add the **EPEL** repository which provided by Fedora for extra needed dependencies. For more info please check the [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL).
@@ -164,6 +164,7 @@ You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven
 ```bash
 $ brew cask install qv2ray
 ```
+
 **Or with the new command**
 
 ```bash
@@ -200,11 +201,12 @@ Run the following commands in **Powershell**:
    ```powershell
    scoop install qv2ray
    ```
-4. To update, just replace `install` with `update` in the  commands:
+4. To update, just replace `install` with `update` in the commands:
 
    ```powershell
    scoop update qv2ray
    ```
+
 5. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
    ```powershell
    scoop bucket add sushi https://github.com/kidonng/sushi

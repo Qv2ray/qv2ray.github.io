@@ -38,7 +38,7 @@ To install a plugin, you need to do these:
 ### 1. Download / Install the plugin
 
 - Some plugins may be shipped via package manager (such as [Scoop](../getting-started/step1.md#scoop-for-windows-users)), you can use them if you want.
-  - *Please go to **step 3** if you have installed the plugin using this method.*
+  - _Please go to **step 3** if you have installed the plugin using this method._
 - From a plugin’s release page, download the file according to your OS.
 
 ### 2. Put your plugin inside `plugins` directory
@@ -48,9 +48,9 @@ To install a plugin, you need to do these:
 
 ### 3. Restart Qv2ray & Enable Plugins
 
-   - Open the “Plugin Manager”, you’ll see the plugin being found.
-   - Check the “enabled” checkbox on the left hand side.
-   - Some plugins, **especially** kernel plugins, will **only** be loaded after Qv2ray restarts.
+- Open the “Plugin Manager”, you’ll see the plugin being found.
+- Check the “enabled” checkbox on the left hand side.
+- Some plugins, **especially** kernel plugins, will **only** be loaded after Qv2ray restarts.
 
 ### 4. Benefit!
 

@@ -9,25 +9,25 @@ sidebarDepth: 3
 
 ## GitHub Release 二进制文件
 
-从 [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) 页面下载 Qv2ray 编译好的二进制版本。 推荐 **Windows** 和 **macOS** 用户采取这种方法。 这种方法同样适用于没有合适的 Qv2ray 软件包的 Linux 发行版来安装，因为他们可以使用我们的 AppImage 发行版。
+从 [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) 页面下载 Qv2ray 编译好的二进制版本。 推荐 **Windows** 和 **macOS** 用户采取这种方法。 这种方法同样适用于没有合适的 Qv2ray 软件包的 Linux 发行版来安装，因为他们可以使用我们的 AppImage 发行版。
 
 遵循如下步骤:
 
-1. 在浏览器中打开 [Qv2ray GitHub Release 页面](https://github.com/Qv2ray/Qv2ray/releases) 。
+1. 在浏览器中打开 [Qv2ray GitHub Release 页面](https://github.com/Qv2ray/Qv2ray/releases) 。
 2. 选择一个 Release 版本。 或者直接下载[最新版](https://github.com/Qv2ray/Qv2ray/releases/latest)。
 3. 选择一个能在你的系统平台上运行的软件版本，然后下载。 例如:
    - 对于 Windows 用户：
-      - Windows 95/98/ME/2000/XP/2003：不支持（因 Qt 原因）；
-      - Windows 7/8.1/10：`Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)。
+     - Windows 95/98/ME/2000/XP/2003：不支持（因 Qt 原因）；
+     - Windows 7/8.1/10：`Qv2ray.VERSION.Windows-x64/x86.7z` (压缩包) 或 `Qv2ray.VERSION.win32/64.exe` (安装包)。
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
    - 对于 macOS 用户：
-      - macOS 10.14 及以后：`Qv2ray.VERSION.macOS-x64.dmg`；
-      - macOS 10.13：`qv2ray-legacy.dmg`（如果有）；
-      - macOS 10.12 及之前：不支持。
+     - macOS 10.14 及以后：`Qv2ray.VERSION.macOS-x64.dmg`；
+     - macOS 10.13：`qv2ray-legacy.dmg`（如果有）；
+     - macOS 10.12 及之前：不支持。
    - 对于 Ubuntu 19.04 / Debian 10 (或更高)： ~~`qv2ray_VERSION_amd64.deb`~~ (自 v2.6.1 开始， deb 包将迁移至 [官方仓库](https://qv2ray.github.io/debian/) 进行发布)
    - 对于 Arch Linux 系用户：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
 
-其中 `VERSION` 是当前 Release 的版本。
+其中 `VERSION` 是当前 Release 的版本。
 
 :::tip Linux AppImage 用户注意事项
 虽然我们已将 `glibc` 和 C++ 基本库捆绑到 **AppImage** 中以支持一些旧的、受支持的发行版，但是我们强烈建议您使用更新版本的发行版或操作系统。
@@ -41,9 +41,9 @@ sidebarDepth: 3
 
 不喜欢稳定版的功能，想要尝试不断开发中的新功能？你可以下载 GitHub Actions 中的编译版本：
 
-1. 在浏览器中打开 [Qv2ray GitHub Actions 页面](https://github.com/Qv2ray/Qv2ray/actions) 。
-2. 选择一个最近的成功编译的版本（会显示为✔️）然后点击。 你会进入这个版本的详细页面。比如 [这里](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
-3. 点击 **Artifacts** 展开下拉菜单, 然后根据你的平台选择一个二进制包并下载。
+1. 在浏览器中打开 [Qv2ray GitHub Actions 页面](https://github.com/Qv2ray/Qv2ray/actions) 。
+2. 选择一个最近的成功编译的版本（会显示为 ✔️）然后点击。 你会进入这个版本的详细页面。比如  [这里](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
+3. 点击 **Artifacts** 展开下拉菜单, 然后根据你的平台选择一个二进制包并下载。
 
 :::tip 提示
 你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts。如您持有 Telegram 账户，也可使用 [Qv2ray 店小二机器人](https://t.me/Qvreleasebot) 以下载最新版本的 Actions Artifact。
@@ -69,7 +69,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git, 见下
 
 :::danger 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
 
-Manjaro 的官方源更新 **滞后** 于 Arch Linux 的官方源，当上游出现 ABI 破坏性更新时，*Arch* Linux CN 会 **优先保证 *Arch* Linux 用户的体验**，Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。如您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。不想遇到类似问题的用户，请从 AUR 获取并自行构建，或取用 Qv2ray 的 AppImage / snap 版本。
+Manjaro 的官方源更新 **滞后** 于 Arch Linux 的官方源，当上游出现 ABI 破坏性更新时，_Arch_ Linux CN 会 **优先保证 _Arch_ Linux 用户的体验**，Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。如您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。不想遇到类似问题的用户，请从 AUR 获取并自行构建，或取用 Qv2ray 的 AppImage / snap 版本。
 
 本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式**承担 Qv2ray 的打包和分发压力**之后移除。
 :::
@@ -179,11 +179,13 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 2. 安装 Qv2ray：
 
 **旧版命令**
+
 ```bash
 $ brew cask install qv2ray
 ```
 
 **新版命令**
+
 ```bash
 $ brew install --cask qv2ray
 ```
@@ -294,4 +296,4 @@ $ sudo snap refresh qv2ray
 
 ## 从源码编译
 
-- 请参考 [手动构建 Qv2ray](../hacking/manuallybuild.md) 一节。
+- 请参考 [手动构建 Qv2ray](../hacking/manuallybuild.md)  一节。

@@ -24,8 +24,8 @@ In this case, please turn to **Preference Window**. In **[General Settings](qv2r
 The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons.
 :::
 
-* **Darkmode Tray Icons**: when enabled, the tray icon turns light-colored to adjust to darkmode themes. if the region of your tray is light-colored, disabling this is recommended.
-* **Darkmode UI Icons**: when enabled, the icons on buttons turn light-colored. if you are using a light-colored window theme, please turn this off.
+- **Darkmode Tray Icons**: when enabled, the tray icon turns light-colored to adjust to darkmode themes. if the region of your tray is light-colored, disabling this is recommended.
+- **Darkmode UI Icons**: when enabled, the icons on buttons turn light-colored. if you are using a light-colored window theme, please turn this off.
 
 ### Multi-languages
 

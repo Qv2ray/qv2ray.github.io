@@ -16,13 +16,13 @@ For **Windows** and **macOS** users, almost all of the applications will follow 
 Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
 
 - **Qv2ray Tray Menu**.
-   1. Right click on the tray icon.
-   2. In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
+  1.  Right click on the tray icon.
+  2.  In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
 - **Qv2ray Preference Window**.
-   1. Click **Preferences** button in the main window.
-   2. In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
-   3. Check the option **Set System Proxy**.
-   4. Click **OK** to apply the settings.
+  1.  Click **Preferences** button in the main window.
+  2.  In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
+  3.  Check the option **Set System Proxy**.
+  4.  Click **OK** to apply the settings.
 
 :::tip Linux Users: KDE/GNOME Proxy Settings
 If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
@@ -65,14 +65,15 @@ To avoid switching back and forth among proxy configurations, you may want to us
 For Java applications, you may use configure proxies through JVM arguments.
 
 Here are some examples:
- - Using SOCKS5:
-   ```shell
-   java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
-   ```
- - Using HTTP(S):
-   ```shell
-   java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
-   ```
+
+- Using SOCKS5:
+  ```shell
+  java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
+  ```
+- Using HTTP(S):
+  ```shell
+  java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
+  ```
 
 :::danger Buggy Minecraft
 Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is not Qv2ray's problem. If you really want to play Minecraft through proxy, consider setting up a Dokodemo-door inbound for that server and connect directly to `localhost`.

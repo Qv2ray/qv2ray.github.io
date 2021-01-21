@@ -6,12 +6,12 @@ tagline: A cross-platform V2Ray graphical frontend
 actionText: Getting Started →
 actionLink: ./getting-started/
 features:
-- title: Cross-platform
-  details: Supporting Linux / Windows / macOS
-- title: Versatile Host Importing
-  details: JSON / VMess / QR Code / Manual
-- title: Subscriptions
-  details: Automatic / Manual Updates
+  - title: Cross-platform
+    details: Supporting Linux / Windows / macOS
+  - title: Versatile Host Importing
+    details: JSON / VMess / QR Code / Manual
+  - title: Subscriptions
+    details: Automatic / Manual Updates
 footer: CC-BY-SA Licensed | Copyright © 2021 Qv2ray
 ---
 

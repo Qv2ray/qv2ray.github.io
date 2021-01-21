@@ -64,7 +64,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **原因**：这个问题是一些 Linux 系统的 `SUID` 特性受限制所导致的。详细的错误分析请参阅 [#59](https://github.com/lhy0403/Qv2ray/issues/59)。
 
 - **解决方案**：`sudo sysctl fs.suid_dumpable=1`  
-这个解决方案会在重启后失效。如果你希望保持这个选项，请参阅 [这里](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)。
+  这个解决方案会在重启后失效。如果你希望保持这个选项，请参阅 [这里](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)。
 
 ### 4. 内核报错 `255`
 
@@ -87,7 +87,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 - **可能原因**：系统时间不同步。如果你使用了 VMess 协议，通信双方的系统时间要求相差在 90 秒以内，否则会拒绝连接。
 - **解决方案（Windows）**：
   - **方法一**：打开设置，选择“时间和语言”，然后启用“自动设置时间”选项即可。如果选项已启用，请点击”立即同步“按钮。
-  - **方法二**：打开控制面板，切换查看方式为“类别”，选择“时钟和区域”，点击  “日期和时间”，在弹出的对话框中选择“Internet 时间”，点击“更改设置”按钮，再勾选“与 Internet 时间服务器同步”，最后点击“确认”。
+  - **方法二**：打开控制面板，切换查看方式为“类别”，选择“时钟和区域”，点击 “日期和时间”，在弹出的对话框中选择“Internet 时间”，点击“更改设置”按钮，再勾选“与 Internet 时间服务器同步”，最后点击“确认”。
 - **解决方案（Linux）**：
   - **方法一**：使用 `systemd-timesyncd`，执行 `sudo systemctl enable systemd-timesyncd --now`。
   - **方法二**：使用 [Chrony](https://www.chrony.tuxfamily.org) 同步时间。
@@ -106,7 +106,8 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **原因：** 由 V2Ray 脚本安装的服务会在启动时添加 `cap_net_admin` 权限，但 Qv2ray 默认调用的 V2Ray 程序本身并未设定包含该权限。
 - **解决方案：**
-  - 对于所有 Linux 发行版，请以管理员 (root / sudo) 权限执行以下命令：  
+
+  - 对于所有 Linux 发行版，请以管理员 (root / sudo) 权限执行以下命令：
 
     ```shell
     /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
@@ -130,7 +131,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **原因**：Qv2ray 默认开启的 `V2Ray 集成` 会让由插件提供支持的协议（如 SSR、Trojan）的流量完整地通过一遍 [V2Ray 路由](../plugins/v2ray-integration.md)，以实现高级路由功能，但~~在低配设备上~~会导致延迟明显增大。
 
-- **解决方案**：在 `首选项` 的 `内核设置` 选项卡中关闭 `V2Ray 集成` 可以提升由插件提供支持的协议的响应速度，但相关协议将会失去 `高级路由`、`绕过中国大陆`、`本地地址直连` 和 `自定义DNS` 功能，这意味着相关协议的路由/分流功能将完全失效，即只能全局代理，无法分流。请注意，该选项不影响由 V2Ray 内核提供支持的协议（如VMess）。也就是说，如果你仅使用由 V2Ray 内核提供支持的协议，开关该功能不会有任何影响。
+- **解决方案**：在 `首选项` 的 `内核设置` 选项卡中关闭 `V2Ray 集成` 可以提升由插件提供支持的协议的响应速度，但相关协议将会失去 `高级路由`、`绕过中国大陆`、`本地地址直连` 和 `自定义DNS` 功能，这意味着相关协议的路由/分流功能将完全失效，即只能全局代理，无法分流。请注意，该选项不影响由 V2Ray 内核提供支持的协议（如 VMess）。也就是说，如果你仅使用由 V2Ray 内核提供支持的协议，开关该功能不会有任何影响。
 - 此外，在杀毒软件~~尤其是 Microsoft Defender~~ 中将 V2Ray 核心设置为白名单程序，也可能会提升响应速度。~~未经科学验证的玄学~~
 
 ## 软件行为 / 外观问题
@@ -166,10 +167,11 @@ nohup gnome-shell --replace &
 
 - **原因**：开发组在没有 macOS 设备的前提下，恕难自掏腰包[实名登记](https://zhuanlan.zhihu.com/p/104912328)后对 Qv2ray 及 Qv2ray 所有插件进行签名，并交给苹果公司逐一[检证](https://krita.org/zh/item/first-notarized-macos-build-of-krita-zh/)后发布。
 - **解决方案**：（仅适用于高级用户）
-   - 本体：`sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app`
-   - 插件：同上，将目录换为插件目录即可。
+  - 本体：`sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app`
+  - 插件：同上，将目录换为插件目录即可。
 
 ### 5. 我怎么找不到 Qv2ray 的“伪装域名”在哪儿？
+
 - **原因**：v2rayN 自造概念，V2Ray 核心 / Qv2ray 均无此概念，找不到很正常。
 - **解决方案**：本质是 HTTP 请求头，在 Qv2ray 的 **流设置**——**请求头** 中按 `Host|example.com` 格式正确填写一行即可，仅此而已。
 

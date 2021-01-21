@@ -9,10 +9,10 @@ sidebarDepth: 3
 
 通常是因为已经有另一个进程使用了启动 V2Ray 核心所需的端口。可能出现如下日志：
 
-* Windows: 
-`failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
-* Linux / macOS: 
-`failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: address already in use`
+- Windows:
+  `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+- Linux / macOS:
+  `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: address already in use`
 
 ### 已存在 V2Ray 核心实例
 
@@ -20,7 +20,7 @@ sidebarDepth: 3
 
 #### Windows
 
-对于 Windows 用户，您可以打开您的 **任务管理器** 来检查是否有  `v2ray.exe` （或是 `wv2ray.exe`，如果您选择选择了将 `wv2ray.exe` 作为核心运行，以下同理）正在运行。
+对于 Windows 用户，您可以打开您的 **任务管理器** 来检查是否有 `v2ray.exe` （或是 `wv2ray.exe`，如果您选择选择了将 `wv2ray.exe` 作为核心运行，以下同理）正在运行。
 
 如果您找到了冲突的 V2Ray 核心进程，您可能需要手动终止其运行。可以按 <kbd>Win</kbd> + <kbd>R</kbd> 来打开 **运行** 窗口，然后输入以下命令并点击确定：
 
@@ -99,7 +99,7 @@ evil   42742 username   11u  IPv6  29087      0t0  TCP *:8888 (LISTEN)
 
 该情况仅会出现在 Windows 平台上，其错误日志通常如下：
 
-* `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`
+- `failed to listen on address: 127.0.0.1:1088 > listen tcp 127.0.0.1:1088: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`
 
 Microsoft 于 2018 年 2 月 13 日发布了 [KB4074588](https://support.microsoft.com/eu-es/help/4074588/windows-10-update-kb4074588) 补丁，它将修改 Windows 操作系统上的*保留端口范围*，因此您可能会受到影响。
 
@@ -108,13 +108,13 @@ Microsoft 于 2018 年 2 月 13 日发布了 [KB4074588](https://support.microso
 ### 还是没搞定
 
 只需更改监听端口就可以避免冲突，这是一种非常简单的方法。
-（译者注：在一般情况下不会遇到1~65535所有端口均被占用的情况，如遇到，请善用互联网搜索引擎或进群交流）
+（译者注：在一般情况下不会遇到 1~65535 所有端口均被占用的情况，如遇到，请善用互联网搜索引擎或进群交流）
 
 ## 运行失败
 
 当 V2Ray 核心无法运行时，会发生这种情况。典型的错误信息可以是：
 
-* `v2ray core failed with errcode: 255`
+- `v2ray core failed with errcode: 255`
 
 ### Linux / macOS: 没有可执行属性
 
@@ -129,7 +129,7 @@ sudo chmod +x v2ctl
 
 ### 罕见情况: 不是有效的可执行文件
 
-您可能下载了不能在您的平台上执行的二进制文件。例如，您正在运行64位 Windows （`amd64`），然后下载了 `arm64` V2Ray 核心。或者，您下载的文件已损坏。
+您可能下载了不能在您的平台上执行的二进制文件。例如，您正在运行 64 位 Windows （`amd64`），然后下载了 `arm64` V2Ray 核心。或者，您下载的文件已损坏。
 
 可以通过双击直接运行 `v2ray`（如果您使用的是 Windows ，则为`v2ray.exe`）快速检查。如果有错误，请删除并重新下载正确的 V2Ray 核心。
 
