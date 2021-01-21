@@ -32,7 +32,7 @@ A plugin is, technically, a shared library that implements a specific interface,
 
 ## Creating a plugin
 
-_You have 2 choices when initiating a plugin._
+You have 2 choices when initiating a plugin.
 
 1. Creating plugin using provided `Template` project:
 

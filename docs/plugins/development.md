@@ -32,7 +32,7 @@ title: 编写插件
 
 ## 创建插件
 
-_你有两条路可选：_
+你有两条路可选：
 
 1. 使用提供的模板工程以开始：
    Qv2ray 有个叫 [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template) 的项目仓库，你可以基于这个来开始你的插件编写。
