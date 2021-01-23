@@ -31,7 +31,7 @@ title: 手动构建 Qv2ray 项目
 
 有多种方式获取 Qv2ray 的源码。你可以通过下面的任意方式获取:
 
-- Git 客户端: `git clone https://github.com/Qv2ray/Qv2ray`
+- Git 客户端: `git clone https://github.com/Qv2ray/Qv2ray.git`
 - 通过 GitHub 直接下载仓库上某个分支的源码（不建议这样做，因为它缺少 Git submodule 的元数据）
 
 ## 构建步骤
