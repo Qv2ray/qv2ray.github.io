@@ -72,6 +72,18 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **解决方案**：在 V2Ray 核心目录中 执行 `chmod +x v2ray && chmod +x v2ctl`，或通过文件管理器给予运行权限。在 macOS 下可以直接双击这两个程序，系统会自动提示是否运行 UNIX 程序，选择“运行”即可给予其运行权限。
 
+### 5. 核心启动失败
+
+- **细节**：一连接节点显示
+```shell
+2021/01/23 13:34:45 [Info] v2ray.com/core/main/jsonem: Reading config: /home/username/.config/qv2ray/generated/config.gen.json
+main: failed to read config files: [/home/username/.config/qv2ray/generated/config.gen.json] > v2ray.com/core/infra/conf: invalid field rule > v2ray.com/core        /infra/conf: failed to load geoip.dat|geosite.dat private > v2ray.com/core/infra/conf: country not found in geoip.dat|geosite.dat : private
+```
+
+- **原因**：V2ray资源文件损坏或者内部数据出错
+
+- **解决方案**：把 /usr/share/v2ray/ 里的 geoip.dat|geosite.dat 文件删除，接着去[v2ray-core releases](https://github.com/v2fly/v2ray-core/releases)里面选择自己系统版本下载解压，再把解压出来的 geoip.dat|geosite.dat 放回去 /usr/share/v2ray/，重启Qv2ray
+
 ## 严重故障
 
 ### 1. 不能执行 AppImage: 权限不够（Cannot execute AppImage: Permission denied）
