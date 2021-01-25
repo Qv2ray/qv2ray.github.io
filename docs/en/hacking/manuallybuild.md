@@ -35,7 +35,7 @@ Please make sure you have already met all the dependency requirements.
 
 There are various approaches to obtain the source code of Qv2ray. You can get it from:
 
-- Git: `git clone https://github.com/Qv2ray/Qv2ray.git`
+- Git: `git clone --recursive https://github.com/Qv2ray/Qv2ray.git`
 - Directly download the source code of a branch (**it’s not suggested for the lack of git submodule metadata.**)
 
 ## 2. Build instructions
