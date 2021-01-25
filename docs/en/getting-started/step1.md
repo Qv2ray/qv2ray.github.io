@@ -14,7 +14,7 @@ Downloading stable release binary from [Qv2ray GitHub Release](https://github.c
 Do as the follows:
 
 1. Open [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a web browser.
-2. Choose a version from the releases. Or, optionally, you may use the [Latest Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
+2. Choose a version from the releases. Or, optionally, you may use the [Latest **Stable** Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
 3. Choose in Assets according to your platform and download it! For example:
    - For Windows Users:
      - Windows 10/8.1/7: `Qv2ray.VERSION.Windows-x64/x86.7z` (Archive) or `Qv2ray.VERSION.win32/64.exe` (Installer).
