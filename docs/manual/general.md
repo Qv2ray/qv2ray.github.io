@@ -46,7 +46,7 @@ title: 常规设置
 设置 Qv2ray 的高级行为。请注意，滥用这些设置可能会造成负面影响！
 
 - **默认设置 `AllowInsecure`**：所有通过 **订阅** / **二维码** / **VMess 协议链接** 导入的新连接将默认开启 `允许不安全的证书` 选项。开启此项设置将会使相关节点失去 TLS 的保护，存在遭受中间人攻击的风险。通过手动填写连接属性或编辑 JSON 添加的节点不受此选项影响。如果你不了解该选项的实际用途，请切勿开启！
-- **默认启用 `SessionResumption`**: Qv2ray v2.6.0 新增。开启时，新导入的 TLS 链接会默认开启 **Session Resumption** 以减少握手时的 RTT。需要服务端各个环节开启相关功能的支持，例如CLoudflare(如果使用了) -> Network -> 0-RTT Connection Resumption、 nginx(如果使用了反代) -> ssl_early_data on 。注意这会加大遭到重放攻击的可能性，会极大程度上提高流量被识别的风险。
+- **默认启用 `SessionResumption`**: Qv2ray v2.6.0 新增。开启时，新导入的 TLS 链接会默认开启 **Session Resumption** 以减少握手时的 RTT。需要服务端各个环节开启相关功能的支持，例如CLoudflare(如果使用了) -> Network -> `0-RTT Connection Resumption`、 nginx(如果使用了反代)配置文件添加`ssl_early_data on`和`proxy_set_header Early-Data $ssl_early_data;` 。注意这会加大遭到重放攻击的可能性，会极大程度上提高流量被识别的风险。
 - **连接时测试延迟**：开启此选项后，Qv2ray 将在连接节点时测试当前所连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
 - **定时测试延迟**：开启此选项后，Qv2ray 将会定期测试当前已连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
 - **禁用系统根证书**：开启此选项后，V2Ray 核心将仅使用内置的根证书进行 TLS 证书校验，可用于防止根证书劫持攻击，但有可能会让核心认不出你的 TLS 证书，导致节点连接失败。
