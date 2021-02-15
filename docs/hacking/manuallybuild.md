@@ -31,8 +31,12 @@ title: 手动构建 Qv2ray 项目
 
 有多种方式获取 Qv2ray 的源码。你可以通过下面的任意方式获取:
 
-- Git 客户端: `git clone --recursive https://github.com/Qv2ray/Qv2ray.git`
+- Git 客户端: `git clone https://github.com/Qv2ray/Qv2ray.git`
 - 通过 GitHub 直接下载仓库上某个分支的源码（不建议这样做，因为它缺少 Git submodule 的元数据）
+
+> 提示：
+>
+> 你可以在 `git clone` 命令后附加一些选项：附加 `--branch <分支/标签>` 以在克隆创建后检出到指定分支/标签，附加 `--recursive/--recurse-submodules` 以在克隆创建后递归初始化和克隆所有子模块。
 
 ## 构建步骤
 
@@ -71,7 +75,8 @@ title: 手动构建 Qv2ray 项目
 
 ```shell
 cd Qv2ray
-git submodule update --init # 拉取然后检出所有子模块到对应的目录。例如，Git 仓库目录下的 3rdparty/ 目录。
+# 如果你在此前的 git clone 命令中附加了 "--recursive" 选项, 则你可以跳过下面一步。
+git submodule update --init --recursive # 拉取然后检出所有子模块到对应的目录。例如，Git 仓库目录下的 3rdparty/ 目录。
 mkdir build && cd build
 
 # 调用cmake
