@@ -39,8 +39,10 @@ There are various approaches to obtain the source code of Qv2ray. You can get it
 - Directly download the source code of a branch (**it’s not suggested for the lack of git submodule metadata.**)
 
 :::tip You can append options after `git clone`
-`--branch <branch/tag>` to checkout the specific branch/tag after clone is created.
-`--recursive/--recurse-submodules` to recursively initialize and clone all submodules after clone is created.
+
+**`--branch <branch/tag>`** To checkout the specific branch/tag after clone is created.
+
+**`--recursive/--recurse-submodules`** To recursively initialize and clone all submodules after clone is created.
 :::
 
 ## 2. Build instructions

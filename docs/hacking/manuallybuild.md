@@ -35,8 +35,10 @@ title: 手动构建 Qv2ray 项目
 - 通过 GitHub 直接下载仓库上某个分支的源码（不建议这样做，因为它缺少 Git submodule 的元数据）
 
 :::tip 你可以在 `git clone` 命令后附加一些选项
-`--branch <分支/标签>` 在克隆创建后检出到指定分支/标签。
-`--recursive/--recurse-submodules` 在克隆创建后递归初始化和克隆所有子模块。
+
+**`--branch <分支/标签>`** 在克隆创建后检出到指定分支/标签。
+
+**`--recursive/--recurse-submodules`** 在克隆创建后递归初始化和克隆所有子模块。
 :::
 
 ## 构建步骤
