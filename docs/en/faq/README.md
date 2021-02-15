@@ -41,11 +41,11 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
   - **Approach 3**:Get the process ID via `ps aux | grep v2ray`, then kill the process via `kill -9 <process ID>`.
 
--**Solution (on macOS)**:
+- **Solution (on macOS)**:
 
--**Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
+  - **Approach 1**: Open Activity Monitor, find the `v2ray` process, and then terminate.
 
--**Approach 2**: Refer to the **Approach 2** solution of the Linux.
+  - **Approach 2**: Refer to the **Approach 2** solution of the Linux.
 
 - **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
 
