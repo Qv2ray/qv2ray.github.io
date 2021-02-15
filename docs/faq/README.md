@@ -57,9 +57,9 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **解决方案**：更换为大于 `2000` 的端口号即可。
 
-### 3. 开启 tProxy 之后，V2ray Core 会启动失败
+### 3. 开启 TProxy 之后，V2Ray Core 会启动失败
 
-- **细节**：开启 tProxy 后，会提示 `Segmentation Fault（段错误）`。
+- **细节**：开启 TProxy 后，会提示 `Segmentation Fault（段错误）`。
 
 - **原因**：这个问题是一些 Linux 系统的 `SUID` 特性受限制所导致的。详细的错误分析请参阅 [#59](https://github.com/lhy0403/Qv2ray/issues/59)。
 
@@ -102,7 +102,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - [**解决方案**](../getting-started/step5.md#调整路由方案)
 
-### 4. Linux 设置了透明代理 (Redirect, tProxy)，为什么不能使用 (提示 failed to set IP_TRANSPARENT > operation not permitted)？
+### 4. Linux 设置了透明代理 (Redirect, TProxy)，为什么不能使用 (提示 failed to set IP_TRANSPARENT > operation not permitted)？
 
 - **原因：** 由 V2Ray 脚本安装的服务会在启动时添加 `cap_net_admin` 权限，但 Qv2ray 默认调用的 V2Ray 程序本身并未设定包含该权限。
 - **解决方案：**
@@ -113,7 +113,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
     /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
-    这是大多数包管理 V2Ray 的安装位置，如若不是（比如通过脚本安装 V2Ray ），请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/bin/v2ray`。
+    这是大多数包管理 V2Ray 的安装位置，如若不是（比如通过脚本安装 V2Ray），请自行查找 V2Ray 真实绝对路径并替换上文命令中的 `/usr/bin/v2ray`。
 
   - 对于 Arch 用户：  
     您也可以使用 `@DuckSoft` 构建的 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) 来自动化该操作。
@@ -121,9 +121,19 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
   - 对于 Fedora 32+ / RHEL 8+ 用户：  
     如果您是通过 dnf / yum 将 V2Ray 二进制文件安装到 `/usr/bin/v2ray`，您也可以使用 `@sixg0000d` 打包的 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/) 来自动化该操作。
 
-### 5. 如何设置拨号连接的代理？
+### 5. 如何设置 Windows 中拨号连接 / VPN 连接的代理？
 
-- [**解决方案**](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)
+- 已在 2.7.0-pre2 版本中支持。
+- 但是，由于一个[来自微软的问题](https://support.microsoft.com/en-us/topic/cannot-configure-proxy-settings-if-a-vpn-connection-name-contains-non-ascii-characters-2c648407-bb72-5600-3126-8c721bc91b70)（也可能是类似这个[原因](https://github.com/shadowsocks/shadowsocks-windows/issues/1116#issuecomment-294075565)），当连接名称中含有非 ASCII 字符时，代理设置不会生效。一个临时解决方案是重命名连接，确保新名称只含有 ASCII 字符。
+
+### 6. macOS 下无法自动设置系统代理（Error: Command requires admin privileges）
+- **原因：** macOS 权限问题。
+- **解决方案：**
+
+    ```shell
+    $ sudo security authorizationdb write system.services.systemconfiguration.network allow
+    YES (0)
+    ```
 
 ## 性能问题
 

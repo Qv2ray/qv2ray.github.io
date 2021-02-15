@@ -57,9 +57,9 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 - **Solution**: Use a port above than `2000`.
 
-### 3. V2Ray Core Failed to start after enabling tProxy
+### 3. V2Ray Core Failed to start after enabling TProxy
 
-- **Detail**: `Segmentation Fault` occurd after enabling tProxy
+- **Detail**: `Segmentation Fault` occurd after enabling TProxy
 
 - **Cause**: It's caused by a limit in the `SUID` feature on some Linux OSes. Detailed error analysis please see: [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
 
@@ -68,7 +68,7 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
 
 ### 4. Core error `255`
 
-- **Cause**: V2Ray core doesn't have permission to **execute**, which happens on POSIX system (Linux、macOS).
+- **Cause**: V2Ray core doesn't have permission to **execute**, which happens on POSIX system (Linux, macOS).
 
 - **Solution**：Run `chmod +x v2ray && chmod +x v2ctl` in V2Ray core directory, or give them execute permission via file manager,You can double click the programs on macOS, the system will ask you whether to run UNIX program, choose "run" will give them permission.
 
@@ -115,9 +115,19 @@ Stop-Process -Name "v2ray"; Stop-Process -Name "wv2ray"
   - For Fedora 32+ / RHEL 8+ users:  
     If you are installed V2Ray by dnf / yum, and the V2Ray binary path is `/usr/bin/v2ray` , you can also install RPM package [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/) packaged by `@sixg0000d` to automate this step.
 
-### 4. How to configure proxy for dial-up connections?
+### 4. How to configure proxy for dial-up connections / VPN connections on Windows?
 
-- [**Solution**](https://github.com/Qv2ray/Qv2ray/issues/873#issuecomment-680128054)
+- Already supported on version 2.7.0-pre2.
+- However, because of [an issue from Microsoft](https://support.microsoft.com/en-us/topic/cannot-configure-proxy-settings-if-a-vpn-connection-name-contains-non-ascii-characters-2c648407-bb72-5600-3126-8c721bc91b70) (may also be similar to [this reason](https://github.com/shadowsocks/shadowsocks-windows/issues/1116#issuecomment-294075565)), if a connection name contains non-ASCII characters, proxy settings won't work. A workaround is to rename the connection and make sure the new name only contains ASCII characters.
+
+### 5. Unable to configure system proxy automatically on macOS (Error: Command requires admin privileges)
+- **Cause:** Permission issue on macOS.
+- **Solution:**
+
+    ```shell
+    $ sudo security authorizationdb write system.services.systemconfiguration.network allow
+    YES (0)
+    ```
 
 ## Performance Issue
 
