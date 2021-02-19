@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.svg
 heroText: Qv2ray
-tagline: A cross-platform V2Ray graphical frontend
+tagline: A cross-platform V2Ray graphical front-end
 actionText: Getting Started →
 actionLink: ./getting-started/
 features:
