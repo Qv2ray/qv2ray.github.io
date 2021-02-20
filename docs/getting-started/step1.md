@@ -56,7 +56,7 @@ sidebarDepth: 3
 安装相关工具：
 
 ```bash
-sudo install gnupg ca-certificates curl
+sudo apt install gnupg ca-certificates curl
 ```
 #### Debian Stable 使用稳定版 Qv2ray
 
