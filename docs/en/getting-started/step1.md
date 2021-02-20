@@ -51,6 +51,13 @@ You must login GitHub first to access GitHub Actions.
 
 ## Download From a package manager
 
+### Debian, Ubuntu and their derivatives
+
+Stable version: <https://qv2ray.net/debian>
+Development version: <https://qv2ray.net/debian-dev>
+
+**Note: It is not recommended to enable both sources at the same time. **
+
 ### Arch Linux-based distros
 
 #### Install directly from `archlinuxcn`
