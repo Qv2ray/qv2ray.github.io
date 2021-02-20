@@ -51,6 +51,13 @@ sidebarDepth: 3
 
 ## 在包管理系统中安装此软件
 
+### Debian、Ubuntu 以及它们的衍生版
+
+稳定版参考：<https://qv2ray.net/debian>
+开发版参考：<https://qv2ray.net/debian-dev>
+
+**注意：不建议同时启用这两个源。**
+
 ### 基于 Arch Linux 的发行版
 
 #### 直接从 `archlinuxcn` 安装
