@@ -62,6 +62,17 @@ choco install v2ray
 
 请参阅 <https://apt.v2fly.org>
 
+使用 FastGit加速：
+
+添加密钥：
+```bash
+curl -sSL https://raw.fastgit.org/v2fly/debian/main/pubkey.gpg | sudo apt-key add -
+```
+
+添加软件源：
+```bash
+echo "deb [arch=amd64] https://raw.fastgit.org/v2fly/debian/main stable main" | sudo tee /etc/apt/sources.list.d/v2ray.list
+```
 #### Arch 及其衍生版
 
 ```bash
