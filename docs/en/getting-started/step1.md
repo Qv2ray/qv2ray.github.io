@@ -56,7 +56,7 @@ You must login GitHub first to access GitHub Actions.
 Install the relevant tools.
 
 ```bash
-sudo install gnupg ca-certificates curl
+sudo apt install gnupg ca-certificates curl
 ```
 
 #### Debian Stable install stable version of Qv2ray
