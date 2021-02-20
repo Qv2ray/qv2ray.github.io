@@ -53,10 +53,96 @@ sidebarDepth: 3
 
 ### Debian、Ubuntu 以及它们的衍生版
 
-稳定版参考：<https://qv2ray.net/debian>
-开发版参考：<https://qv2ray.net/debian-dev>
+安装相关工具：
 
-**注意：不建议同时启用这两个源。**
+```bash
+sudo install gnupg ca-certificates curl
+```
+#### Debian Stable 使用稳定版 Qv2ray
+
+添加密钥（可以选择使用 FastGit加速添加密钥）
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+添加软件源（ FastGit 加速源可按需启用）
+```bash
+echo "deb https://qv2ray.net/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+# echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+安装 Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Debian Stable 使用开发版 Qv2ray
+
+适用于 Debian 的开发版支持 AMD64、ARM64 与 MIPS64EL 架构，可用于 armbian 等衍生版系统上，**理论上**也可以在龙芯、华为鲲鹏的 Deepin/UOS 上运行。
+
+添加密钥（可以选择使用 FastGit加速添加密钥）
+```bash
+curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
+```
+
+添加软件源（ FastGit 加速源可按需启用）
+```bash
+echo "deb https://qv2ray.net/debian-dev/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+```
+
+安装 Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Debian Unstable
+
+作为一个不稳定分支的用户，吾等相信阁下有能力参照 stable 版本的信息添加对应的软件源。Unstable 分支软件源的代号为 `unstable`。
+
+#### Ubuntu 与它的官方衍生版使用稳定版 Qv2ray
+
+*以下命令在 `bash` 中运行，如果你在用其它 Shell，请先在终端中运行 `bash`。*
+
+添加密钥（可以选择使用 FastGit加速添加密钥）
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+添加软件源（ FastGit 加速源可按需启用）
+```bash
+echo "deb https://qv2ray.net/debian/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+安装 Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Ubuntu 与它的官方衍生版使用开发版 Qv2ray
+
+*以下命令在 `bash` 中运行，如果你在用其它 Shell，请先在终端中运行 `bash`。*
+
+添加密钥（可以选择使用 FastGit加速添加密钥）
+```bash
+curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
+```
+
+添加软件源（ FastGit 加速源可按需启用）
+```bash
+echo "deb https://qv2ray.net/debian-dev/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+```
+
+安装 Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
 
 ### 基于 Arch Linux 的发行版
 
