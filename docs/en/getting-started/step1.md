@@ -53,10 +53,97 @@ You must login GitHub first to access GitHub Actions.
 
 ### Debian, Ubuntu and their derivatives
 
-Stable version: <https://qv2ray.net/debian>
-Development version: <https://qv2ray.net/debian-dev>
+Install the relevant tools.
 
-**Note: It is not recommended to enable both sources at the same time. **
+```bash
+sudo install gnupg ca-certificates curl
+```
+
+#### Debian Stable install stable version of Qv2ray
+
+Adding keys (you can optionally use FastGit to speed up adding keys)
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+Add software repositories (FastGit accelerated repositories can be enabled on demand)
+```bash
+echo "deb https://qv2ray.net/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+# echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+Install Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Debian Stable install the development version of Qv2ray
+
+The development version for Debian supports AMD64, ARM64 and MIPS64EL architectures, and can be used on armbian.
+
+Adding keys (optionally using FastGit to speed up adding keys)
+```bash
+curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
+```
+
+Add software repositories (FastGit accelerated repositories can be enabled on demand)
+```bash
+echo "deb https://qv2ray.net/debian-dev/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+```
+
+Install Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Debian Unstable
+
+As a user of the unstable branch, we trust that you have the ability to add the corresponding repositories by referring to the stable version information. the Unstable branch repositories are codenamed ``unstable``.
+
+#### Ubuntu and its official derivatives install the stable version of Qv2ray
+
+* The following commands are run in `bash`, or if you are using another shell, please run `bash` in the terminal first. *
+
+Add a key (you can optionally use FastGit to speed up adding keys)
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+Add software repositories (FastGit accelerated repositories can be enabled on demand)
+```bash
+echo "deb https://qv2ray.net/debian/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+Install Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
+
+#### Ubuntu and its official derivatives install the development version of Qv2ray
+
+* The following commands are run in ``bash``, or if you are using another shell, run ``bash`` in the terminal first. *
+
+Add a key (you can optionally use FastGit to speed up adding keys)
+```bash
+curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
+# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
+```
+
+Add software repositories (FastGit accelerated repositories can be enabled on demand)
+```bash
+echo "deb https://qv2ray.net/debian-dev/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
+# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray- dev.list
+```
+
+Install Qv2ray
+```bash
+sudo apt update; sudo apt install qv2ray
+```
 
 ### Arch Linux-based distros
 
