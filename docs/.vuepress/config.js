@@ -30,7 +30,8 @@ module.exports = {
       type: (_) => 'website',
       url: (_) => 'https://qv2ray.net/',
       image: (_) =>
-        'https://raw.githubusercontent.com/Qv2ray/Qv2ray/master/assets/icons/qv2ray.png',
+        'https://avatars.githubusercontent.com/u/60087221?s=400&v=4',
+      twitterCard: (_) => 'summary',
     },
   },
   locales: {
