@@ -1,0 +1,24 @@
+diff --git a/node_modules/vuepress-theme-succinct/components/Page.vue b/node_modules/vuepress-theme-succinct/components/Page.vue
+index 1830955..cee89ea 100644
+--- a/node_modules/vuepress-theme-succinct/components/Page.vue
++++ b/node_modules/vuepress-theme-succinct/components/Page.vue
+@@ -5,6 +5,8 @@
+     <Content class="theme-succinct-content" />
+     <PageEdit />
+ 
++    <Contributors />
++
+     <PageNav v-bind="{ sidebarItems }" />
+ 
+     <slot name="bottom" />
+diff --git a/node_modules/vuepress-theme-succinct/styles/index.styl b/node_modules/vuepress-theme-succinct/styles/index.styl
+index 18513e8..23ec5fc 100644
+--- a/node_modules/vuepress-theme-succinct/styles/index.styl
++++ b/node_modules/vuepress-theme-succinct/styles/index.styl
+@@ -331,3 +331,6 @@ th, td
+       padding-left 0
+ 
+ @require 'mobile.styl'
++
++.contributors span
++  color: var(--textMutedColor) !important

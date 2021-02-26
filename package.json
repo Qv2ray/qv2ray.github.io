@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "postinstall": "patch-package"
   },
   "prettier": "prettier-config-vuepress",
   "dependencies": {
@@ -12,10 +13,12 @@
     "vuepress-plugin-seo": "^0.1.4"
   },
   "devDependencies": {
-    "vuepress": "^1.4.0",
-    "vuepress-theme-succinct": "kidonng/vuepress-theme-succinct",
+    "@kidonng/vuepress-plugin-contributors": "^0.2.0",
+    "patch-package": "^6.2.2",
     "prettier": "^2.2.1",
-    "prettier-config-vuepress": "^1.1.1"
+    "prettier-config-vuepress": "^1.1.1",
+    "vuepress": "^1.4.0",
+    "vuepress-theme-succinct": "^1.7.2"
   },
   "resolutions": {
     "vuepress-plugin-smooth-scroll": "^0.0.10"
