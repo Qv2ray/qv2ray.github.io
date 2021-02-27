@@ -9,11 +9,11 @@
   },
   "prettier": "prettier-config-vuepress",
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.4.0",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
     "vuepress-plugin-seo": "^0.1.4"
   },
   "devDependencies": {
-    "@kidonng/vuepress-plugin-contributors": "^0.2.0",
+    "@kidonng/vuepress-plugin-contributors": "^0.3.0",
     "patch-package": "^6.2.2",
     "prettier": "^2.2.1",
     "prettier-config-vuepress": "^1.1.1",
