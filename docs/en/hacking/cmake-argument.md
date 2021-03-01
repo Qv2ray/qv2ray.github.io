@@ -4,32 +4,78 @@ title: CMake Argument Reference
 
 # CMake Argument Reference
 
-:::tip Work In Progress
-This part is being written. Contribution welcomed!
-:::
+### `USE_MINGW`
+- Default: `OFF`
+- Description: For compiling use MinGW and gcc.
 
-## Qv2ray
+### `QV2RAY_AUTO_DEPLOY`
+- Default: `ON`
+- Description: Automatically run `windeployqt` and `macdeployqt` after a successful compilation.
 
-- `QV2RAY_DISABLE_AUTO_UPDATE`: when set to `ON`, the built-in new version checker will be disabled. This is useful when distributing Qv2ray through package-manager controlled sources.
-- `QV2RAY_BUILD_INFO` and `QV2RAY_BUILD_EXTRA_INFO`: when set, these strings will be displayed in "About" dialog of Qv2ray.
-- `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`: default values are `"unset"`. When set, the specified paths will be detected upon first-time launch. Useful when Qv2ray is distributed through environments where V2Ray Core paths are fixed.
-- `QV2RAY_HAS_BUILT_IN_THEMES`: when set to `ON`, Qv2ray will be built with built-in themes (such as `psblack` and `flatwhite`) attached.
-- `QV2RAY_AUTO_DEPLOY`: when set to `ON`, command for deploying Qt applications will be automatically run after a successful build.
-- `QV2RAY_TRANSLATION_PATH`: default value is `"unset"`. When set, the specified path will be searched for translations files.
+### `BUILD_TESTING`
+- Default: `OFF`
+- Description: When set to `ON`, the unit tests will be built.
 
-- `EMBED_TRANSLATIONS`: when set to `ON`, the translation resources (`*.qm`) will be embedded into target binary, instead of installing into shared assets like `/usr/share/qv2ray/translations/`.
-- `BUILD_TESTING`: when set to `ON`, the unit tests will be built.
+### `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
+- Default: `unset`, when set, the specified paths will be detected upon first-time launch. 
+- Useful when Qv2ray is distributed through environments where V2Ray Core paths are fixed.
 
-- `QVPLUGIN_INTERFACE_INCLUDE_DIR`: plugin interface source directory.
-- `QV2RAY_QNODEEDITOR_PROVIDER`, `QV2RAY_ZXING_PROVIDER` and `QV2RAY_SINGLEAPPLICATION_PROVIDER`: default values are `"module"`. When set to `"package"`, these dependencies will be sought and dynamically linked, instead of built from and statically linked to submodule sources.
-- `USE_SYSTEM_LIBUV`: default value is `OFF`. When set to `ON`, `libuv` from system package will be dynamically linked. Pay extreme attention to version of `libuv` if you want to turn this on.
+### `QV2RAY_DISABLE_AUTO_UPDATE`
+- Default: `OFF`, the built-in new version checker will be disabled. This is useful when distributing Qv2ray through package-manager controlled sources.
 
-## QvPlugin-SS
 
-## QvPlugin-SSR
+### `QV2RAY_BUILD_INFO` / `QV2RAY_BUILD_EXTRA_INFO`
+- Default: `Qv2ray from manual build` and the ***Version Number***
+- Description: These strings will be displayed in "About" dialog of Qv2ray.
+- Note: You may also want to use the environment variables with the same names.
 
-## QvPlugin-Trojan
+### `QV2RAY_HAS_BUILTIN_THEMES`
+- Default: `ON`
+- Description: Enable built-in themes (such as `psblack` and `flatwhite`).
 
-## QvPlugin-Trojan-Go
+### `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN` 
+- Default: `ON`
+- Description: Build `QvPlugin-BuiltinProtocolSupport` plugin together with Qv2ray.
 
-## QvPlugin-NaiveProxy
+### `QV2RAY_HAS_BUILTIN_SUBSCRIPTION_PLUGIN`
+- Default: `ON`
+- Description: Build `QvPlugin-BuiltinSubscriptionSupport` plugin together with Qv2ray.
+
+### `QV2RAY_EMBED_TRANSLATIONS`
+- Default: `ON`
+- Description: Embed translation resources (`*.qm`) into Qv2ray binary, instead of shared assets like `/usr/share/qv2ray/translations/`.
+
+### `QV2RAY_HAS_SINGLEAPPLICATION`
+- Advanced
+- Default: `ON`
+- Description: Use SingleApplication for handling single application instance.
+
+### `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
+- Advanced
+- Default: `module`
+- Description: Component providers, set to `package` if those could be found as a package.
+
+### `QV2RAY_UI_TYPE`
+- Advanced
+- Default: `QWidget`
+- Description: Qv2ray GUI Type, possible values are `QWidget`, `QML` and `CLI`
+- Deprecated: For Qv2ray v3.0, GUI components will be splitted into plugins.
+
+### `QV2RAY_QT6`
+- Default: `OFF`
+- Description: Make Qv2ray explicitly compile against Qt6
+- Deprecated: For Qv2ray v3.0, only Qt6 is supported
+
+### `QV2RAY_QML_LIVE_UPDATE`
+- Advanced
+- Experimental
+- Default: `OFF`
+- Description: Integrate QMLLive for live QML reload.
+
+### `QV2RAY_TRANSLATION_PATH`
+- Default: `unset`
+- Description: When set, the specified path will be used for searching translations files.
+
+### `USE_SYSTEM_LIBUV`
+- Default: `OFF`
+- Description: When set to `ON`, `libuv` from system package will be dynamically linked. Pay extreme attention to version of `libuv` if you want to turn this on.
