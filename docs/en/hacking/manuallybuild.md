@@ -4,7 +4,7 @@ title: Manually Build Qv2ray
 
 # Manually Build Qv2ray
 
-In case a hacker, you, wants to compile Qv2ray manually.
+In case a hacker wants to compile Qv2ray manually.
 
 ## 0. Requirements and Dependencies
 
