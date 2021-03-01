@@ -99,7 +99,7 @@ Run: `cmake ..`
 - `CMAKE_INSTALL_PREFIX` is always suggested, for packaging and collect all required files in one go.
 - `CMAKE_BUILD_TYPE` is always suggested, see [CMake Documentation](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
   - The `Debug` and `Release` build will have different names for Qv2ray config directories, to prevent a development build from damaging the working copy of configurations. 
-- `-GNinja` is suggested, iff you have `Ninja` or `ninja-build` installed.
+- `-GNinja` is suggested, if you have `Ninja` or `ninja-build` installed.
 - `ANDROID_SDK_ROOT` or `ANDROID_NDK_ROOT` may be required for Android.
 
 ## 4. Start Compilation
