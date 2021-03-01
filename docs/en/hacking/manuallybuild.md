@@ -6,97 +6,112 @@ title: Manually Build Qv2ray
 
 You *can* build Qv2ray manually, on the platform which our release is not currently supported (yet).
 
-## 0. Dependencies
+## 0. Requirements and Dependencies
 
-Please make sure you have already met all the dependency requirements.
+Please make sure you have already met all the requirements.
 
-- Qt version `>= 5.11`
-
-- Qt 5.13, 5.14 is recommended
-
-- gRPC & protobuf
-
-  - To build Qv2ray under Windows, both `gRPC` and `protobuf` are required.
-
-  - To build Qv2ray under Linux or macOS, only `protobuf` is necessary where `gRPC` can be replaced by a self-made library called `libqvb`
-
-    **Packagers’ Note: Do NOT use `gRPC 1.26`, it has a bug preventing Qv2ray to start.**
-
-- OpenSSL
-
-- The build may **not** fail if you don't have it since it's a **<u>runtime dependency</u>**.
-
-- A compiler with `std-c++17` *nested namespace*, _tuple expansion_ and _inline variable_ support.
-
-  - `gcc7` is known to be supported and good to go.
+- Qt version `>= 5.11` is required for compilation without patching.
+  - Never mind when you are porting Qv2ray to a earlier or later version of Qt.
+  - In that case, you may want to modify `QV_QT_MAJOR_VERSION` and `QV_QT_MINOR_VERSION` in `CMakeLists.txt` 
+- The latest version of Qt is always supported and recommended
+- A compiler with `std=c++17` supported:
+  - `gcc7` is known to be good to go.
   - At least version 14.2 of MSVC is required.
 
-## 1. Obtaining Source Code
+- Third-party libraries: (gRPC, protobuf, curl, openssl)
+
+    | Target Platform | Installation Method                                                                 |
+    | --------------- | ----------------------------------------------------------------------------------- |
+    | Linux           | Install corresponding packages                                                      |
+    | Windows (MSVC)  | Use `vcpkg` or use [**prebuilt binaries**](#a-prebuilt-binaries)                    |
+    | Windows (MinGW) | See [Below](#mingw-packages)                                                        |
+    | macOS           | Install corrensponding packages via `homebrew`, (note: macOS already provides curl) |
+    | Android         | Linux host is supported, use [**prebuilt binaries**](#a-prebuilt-binaries),         |
+
+    :::tip Extra Git Submoule for Android 
+    [android-openssl](https://github.com/KDAB/android_openssl) provides OpenSSL binaries: use `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl`
+    :::
+
+### a. Prebuilt Binaries
+- The [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) repo is where we build and provide pre-built library dependencies for targeting Windows and Android.
+- For Android version, we have used a [patched](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch) vcpkg.
+
+#### a.1 Download / Extraction Script
+**Extra Dependencies: bash, jq, curl, 7zip** (Especially for Windows Users)
+
+We have provided `libs/setup-lib.sh` to make it easy to install prebuilt binaries, usage:
+- `cd` to `libs` directory
+- `./setup-libs <PLATFORM> <ARCH`, (e.g. `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`)
+- Possible `<PLATFORM>` values: `windows`, `linux`, `android`
+- Possible `<ARCH>` values: `x86`, `x64`, `arm`, `arm64` 
+  - `tools` to install Protobuf generator binaries when cross-compiling to Android on Linux
+
+The script downloads packages from [this release](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) and extract, move contents to corrensponding `./libs/<ARCH>-<PLATFORM>/` directory.
+
+#### a.2 Manually Obtaining Prebuilt Binaries
+
+- Download the 7z files
+- Extract and move the `{7Z_ROOT}/<PLATFORM>-<ARCH>/installed/<ARCH>-<PLATFORM>` to (not into) the `./libs/<ARCH>-<PLATFORM>` directory. 
+- There must be `include`, `lib` or `share` subdirectories under `./libs/<ARCH>-<PLATFORM>`.
+  - e.g. `./libs/x86-android/include` or `./libs/x64-windows/include/` exists 
+
+### MinGW Packages:
+MSYS2 is suggested, packages: 
+- `mingw-w64-x86_64-grpc`
+- `mingw-w64-x86_64-curl`
+- `mingw-w64-x86_64-protobuf`
+- `mingw-w64-x86_64-protobuf-c`
+- `mingw-w64-x86_64-pkg-config`
+- `mingw-w64-x86_64-re2`
+
+## 1. Obtaining Source Tree
 
 There are various approaches to obtain the source code of Qv2ray. You can get it from:
-
-- Git: `git clone https://github.com/Qv2ray/Qv2ray.git`
-- Directly download the source code of a branch (**it’s not suggested for the lack of git submodule metadata.**)
-
+- Git: `https://github.com/Qv2ray/Qv2ray.git`
+- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**)
 :::tip You can append options after `git clone`
-
 `--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
-
-`--recursive/--recurse-submodules` To recursively initialize and clone all submodules after clone is created.
 :::
-
-## 2. Build instructions
-
-Assume you have Qt installed and currently configured the `$PATH` which can execute at least `qmake --version` within the Terminal/Shell/Command Prompt and you have used the SCM to download the source code, the directory is called `Qv2ray`
-
-If not, you need to set up a development environment:
-
-- Debian/Ubuntu/RaspberryPiOS: Install packages using apt:
-
-  `apt install qtbase5-dev qttools5-dev build-essential cmake git pkg-config libssl-dev`
-
-### 2.0 Before Build
-
-- Arch Linux: Install packages using pacman: `pacman -S grpc protobuf`
-
-- Debian/Ubuntu/RaspberryPiOS: Install packages using apt: `apt install libprotobuf-dev libgrpc++-dev`
-
-- macOS: Install packages through homebrew: `brew install grpc protobuf`
-
-- For Windows:
-
-  - Download [gRPC dependency package - x64](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x64-windows.7z) or [gRPC dependency package - x86](https://github.com/Qv2ray/Qv2ray-deps/releases/download/release/Qv2ray-deps-grpc-x86-windows.7z) from the [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps) repo release and extract to the `libs/x**-windows/` directory, where `**` can be `86` or `64`.
-  - Alternative method: Use `vcpkg install grpc` to manually build `gRPC` on Windows using **MSVC**, this usually takes long so it’s not encouraged.
 
 :::warning
-Make sure you have `grpc_cpp_plugin` and `protoc`, which will be used by cmake in the next step
+Qv2ray contains nested submodules, always use `--recursive` when cloning.
 :::
 
-### 2.1 Build Scripts
+## 2. Entering Compilation Directory
 
-```shell
-cd Qv2ray
-# If you were append option "--recursive" to the git clone command, you can skip the below one.
-git submodule update --init --recursive # To fetch and checkout all submodules
-mkdir build && cd build
+The following steps requires a proper `PATH`, that is, `qmake` could be found in the `PATH`.
+`mkdir build; cd build;` to prevent pollution in the source tree.
 
-# Call cmake
-# There are many options available, for details, you may want the cmake-gui tool.
-cmake .. -DCMAKE_BUILD_TYPE=Release
-# Or "cmake .. -DCMAKE_INSTALL_PREFIX=" + your installation path.
-# Or "cmake .. -DCMAKE_BUILD_TYPE=Release" if you want to ship a release build.
+## 3. Generate Compilation Scripts
 
-cmake --build . # You may want to append `--parallel N` to speed up the build.
-```
+You **need** to check for [CMake Argument References](cmake-argument) and add your own ones.
 
-- **You are not able to run `qv2ray.exe` or open the `qv2ray.app` package on Windows and macOS after these steps, if you want to do so. See below.**
+Run: `cmake ..`
 
-## 3. Deployments
+- `CMAKE_INSTALL_PREFIX` is always suggested, for packaging and collect all required files in one go.
+- `CMAKE_BUILD_TYPE` is always suggested, see [CMake Documentation](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+  - The `Debug` and `Release` build will have different names for Qv2ray config directories, to prevent a development build from damaging the working copy of configurations. 
+- `-GNinja` is suggested, iff you have `Ninja` or `ninja-build` installed.
 
-There are a few more works to do before packaging Qv2ray or start using it, please run following command.
+## 4. Start Compilation
 
-```shell
-cmake --install . # Note there's a dot after "--install "
-```
+Start compilation!
+Run: `cmake --build .` 
+- `--parallel <NUMBER>` is sugguest if you have enough computation power and want to perform parallel compilations.
 
-This will automatically (Windows/macOS) copy all dependencies to the directory which you have specified using `CMAKE_INSTALL_PREFIX` in the previous step. You need to regenerate cmake cache file if you want to change that directory.
+## 5. Finalize Compilation
+
+Copy compiled artifacts and resources, into the destination directory.
+
+Run: `cmake --install .` or with `sudo`
+
+- This will automatically copy all dependencies into `CMAKE_INSTALL_PREFIX`.
+
+:::warning
+There's a bug in `macdeployqt` where `libabsl_debugging_internal` is recognized as a debug library. Which prevents QPlatformPlugin (i.e. QCocoaPlugin) from being deployed. This causes a runtime exception telling that "No Platform Plugin is Found".
+
+Use [Qv2ray-patched `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched) instead. Which supports both Qt5 and Qt6
+:::
+
+## 6. Done
+You have your Qv2ray compiled and deployed! Start hacking!
