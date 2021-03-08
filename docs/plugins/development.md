@@ -1,68 +1,75 @@
 ---
-title: 编写插件
+title: Writing Plugins
 ---
 
-# 编写插件
+# Writing Plugins
 
-- Qv2ray 插件文档
+- Qv2ray Plugin Documentations
 
-## 何为插件
+## What is a plugin
 
-插件，意即实现某一特定接口的共享库。在这里，这一特定接口指的是 `Qv2rayPlugin::QvPluginInterface` 接口。正因实现了这个接口，Qv2ray 的插件才能被正确加载与识别。
+A plugin is, technically, a shared library that implements a specific interface, `Qv2rayPlugin::QvPluginInterface` in this case. So that can be loaded by Qv2ray.
 
-## 编写插件的前置条件
+## Prerequisites when writing a plugin
 
-### 编译器版本 / 选项
+### Compiler Version / Options
 
-- 对于 Linux 和 macOS，并无特殊限制。
-- 对于 Windows，你需要使用 MSVC 来编译插件。
-- 编译插件时应记得使用 `-fno-sized-deallocation` 选项，尤其是在使用 **GitHub Actions** 编译插件时。
+- For Linux and macOS, there’s no compiler limitations.
+- MSVC is required when compiling a plugin.
+- `-fno-sized-deallocation` Should be used when compiling the plugin, especially when “**Building plugins using Github Action**”
 
-### Qt 版本号限制
+### Qt Version Limitations
 
-- Qt 本身有这样的限制：编译插件所使用的 Qt 版本不能高于编译主程序所使用的 Qt 版本。
-- 建议使用 Qt `5.11.3` 版本编译插件，因为这是 Qv2ray 本体所能支持的最低 Qt 版本。
+- It’s a Qt limit that the version which a plugin was built against should not be greater than that of the loader application (Qv2ray in this case)
+- We suggest building plugins using `Qt 5.11.3` since it’s the oldest version Qv2ray supports.
 
-### 第三方的链接时、运行时依赖
+### Third-party link-time and/or run-time dependencies
 
-- 这些依赖应当显式地 **静态链接** 进插件里，否则：
-  - 应当通知用户从哪里能下载到对应的库文件。
-- 例外情况：OpenSSL 不应进行静态链接。
-  - Qv2ray 本体有其自身的 OpenSSL 依赖检查，会保证安装了合适版本的 OpenSSL。
+- These dependencies **should** be statically linked into the plugin library, otherwise:
+  - Tell the users to download/install all dependencies’ library from wherever they can.
+- **Exception: OpenSSL _SHOULD NOT_ be statically linked.**
+  - Qv2ray has its own OpenSSL dependency check and will make sure a compatible OpenSSL has been installed.
 
-## 创建插件
+## Creating a plugin
 
-你有两条路可选：
+You have 2 choices when initiating a plugin.
 
-1. 使用提供的模板工程以开始：
-   Qv2ray 有个叫 [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template) 的项目仓库，你可以基于这个来开始你的插件编写。
-2. 从头来。
+1. Creating plugin using provided `Template` project:
 
-### 1. 使用模板工程
+   There’s a repository called [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template), which can be used to create your own plugin.
 
-1. 在 GitHub 仓库页面点击 “使用这个模板” 按钮，然后遵循说明操作。
-2. 克隆你刚刚创建的仓库。
-3. 执行下列命令，因为 GitHub 不会保留模板仓库的子模块（submodule）信息。
+2. Creating plugin from from scratch.
+
+### 1. Using the template project
+
+1. Click the “Use This Plugin” in the Github Repository page and follow the instructions.
+2. Clone your repository just created.
+3. Execute the command, since Github didn’t persist submodule data within the template repo.
+
    ```bash
    git submodule add --force https://github.com/Qv2ray/QvPlugin-Interface/ ./interface
    ```
-4. 配置你的构建生成器（`Build Generator`）:
-   - 删掉不需要的文件：例如 `QvSimplePlugin.pro` 或者 `CMakeLists.txt`；
-   - 删掉不需要的持续集成配置文件，在 `./.github/workflows/`。
-5. 在 Qt Creator 里打开你选择留下的 `.pro` 或者 `CMakeLists.txt` 文件。
-6. 修改 `QvSimplePlugin.hpp`，尤其是修改其中的 **插件元信息**（plugin metadata）。
-7. 本地编写并测试，同时可以推送到远程以测试能否通过编译。
 
-### 2. 从头来
+4. Select your `Build Generator`, by doing:
+   Remove unwanted project files e.g. `QvSimplePlugin.pro` or `CMakeLists.txt`
+   Remove unwanted CI configurations by removing it from `./.github/workflows/`
 
-1. 建立一个 Git 仓库。
-2. 将 `https://github.com/Qv2ray/QvPlugin-Interface/` 添加为子模块。
-3. 将 `QvPluginInterface.cmake` 或 `QvPluginInterface.pri` 文件加入你的工程。
-4. 编写一个继承 `Qv2rayPlugin::Qv2rayInterface` 的类，并实现所有的虚方法。
-5. 添加下列函数的 slot 实现：
+5. Open the `.pro` file or `CMakeLists.txt` in QtCreator.
+6. Do any modifications **especially plugin metadata** in the `QvSimplePlugin.hpp`
+7. Test build locally, then push to the Github to see if the Github Action can pass.
+
+### 2. Creating a plugin from scratch
+
+1. Create a git repoaitory
+2. Add plugin interface in `https://github.com/Qv2ray/QvPlugin-Interface/` as a submodule
+3. Include `QvPluginInterface.cmake` or `QvPluginInterface.pri` into your project file.
+4. Write a class, which inherits `Qv2rayPlugin::Qv2rayInterface` and implement every virtual functions.
+5. Add slot declaration of those functions:
+
    ```cpp
    void PluginLog(const QString &) const;
    void PluginErrorMessageBox(const QString &);
    ```
-6. 若插件在其元数据中没有 `SPECIAL_TYPE_KERNEL`，你可在 `GetPluginKernel` 函数中返回 `nullptr`。
-   对于 `GetSerializer` 函数也是一样, 但千万不要对 `GetEventHandler()` 也这么做。
+
+6. You may return a `nullptr` in `GetPluginKernel` function if your plugin does not have `SPECIAL_TYPE_KERNEL` in the metadata.
+   The same as `GetSerializer`, but **do not return `nullptr` in the `GetEventHandler()`**.

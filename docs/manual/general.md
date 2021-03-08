@@ -1,63 +1,63 @@
 ---
-title: 常规设置
+title: General Settings
 ---
 
-# 常规设置
+# General Settings
 
-**[常规设置](qv2ray://open/preference/general)** 是针对 Qv2ray 本身的设置，包括**外观**、**行为**和**网络设置**。
+**[General Settings](qv2ray://open/preference/general)** are for Qv2ray itself, including **appearance**, **behavior** and **network settings**.
 
-:::tip 强调
-常规设置是针对 Qv2ray 本身的设置，这意味着这些设置只会改变 Qv2ray 本身的行为，而不会影响 V2Ray 核心代理的行为。
+::: tip Tips
+The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
 :::
 
-## 外观
+## Appearance
 
-设置 Qv2ray 的外观属性。
+Set how Qv2ray looks and feels.
 
-- **最近列表**：设置在 **通知图标右键菜单** - **最近连接** 列表中，展示的最近使用过的连接数量。
-- **日志最大行数**：设置在 Qv2ray 主界面右侧的**日志**窗格中，日志的记录数量上限。超过设定值后，将自动删除时间较早的日志。
-- 其他：怎么喜欢就怎么设啦~🤐
+- **Recent Jumplist**: Set the number of recently used connections displayed in the notification icon **right-click menu** - **recent connections** list.
+- **Maximum Log Lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
+- **Others**: Set up as you like~🤐
 
-## 行为
+## Behavior
 
-设置 Qv2ray 的行为。
+Set the behavior of Qv2ray.
 
-- **安静模式**：启用后，Qv2ray 将不会主动弹出任何通知提醒。
-- 其他：已经很浅显了，这还用我说嘛？😶
+- **Quiet Mode**: When enabled, Qv2ray will not actively pop up any notifications.
+- **Others**: It's already very simple, why should I talk about it? 😶
 
-## 网络设置
+## Network Settings
 
-设置 Qv2ray 访问网络的方式。
+Set the way Qv2ray accesses the network.
 
-- **延迟测试方案**：设置节点延迟的测试方法。
-  - **TCPing**：Qv2ray 默认的延迟测试方法。测试结果更接近于实际使用体验，但无法测试基于 mKCP 协议的节点。
-  - **ICMPing**：基于 ICMP / UDP 协议的延迟测试方法，是目前市面上公认的、主流的延迟测试方法，也是 Windows 和 Unix 系统中 `ping` 命令的测试原理。测试结果远低于 TCPing，远优于实际使用体验。可以用于测试基于 mKCP 协议的节点。
-- **User Agent**：Qv2ray 在进行网络请求时声明的客户端信息。如果你不了解何为 UA，请不要变更本项设置。
-- **Qv2ray 代理**：Qv2ray 在进行网络请求时使用的代理设置，而非 V2Ray 核心的出口流量所使用的代理设置。
+- **Latency Testing Method**: Set the test method for node delay.
+  - **TCPing**: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
+  - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of `ping` command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
+- **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
+- **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
 
-:::tip Qv2ray 代理到底有什么意义？
-如果你想让 Qv2ray 通过代理来更新订阅或检测版本更新，请配置此项。
+:::tip What is Qv2ray proxy?
+If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
 
-如果你想让被 V2Ray 代理的流量通过另一个代理，或者你的网络需要通过一层代理才能连接到互联网，那么请使用前置代理功能，不要配置此项。
+If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
 :::
 
-## 高级行为
+## Advanced Behavior
 
-设置 Qv2ray 的高级行为。请注意，滥用这些设置可能会造成负面影响！
+Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
 
-- **默认设置 `AllowInsecure`**：所有通过 **订阅** / **二维码** / **VMess 协议链接** 导入的新连接将默认开启 `允许不安全的证书` 选项。开启此项设置将会使相关节点失去 TLS 的保护，存在遭受中间人攻击的风险。通过手动填写连接属性或编辑 JSON 添加的节点不受此选项影响。如果你不了解该选项的实际用途，请切勿开启！
-- **默认启用 `SessionResumption`**: Qv2ray v2.6.0 新增。开启时，新导入的 TLS 链接会默认开启 **Session Resumption** 以减少握手时的 RTT，但需要服务端各个环节开启相关功能的支持，例如 CloudFlare 需要开启 0-RTT Connection Resumption、`nginx` 需要开启 `ssl_early_data` 等。注意这会加大遭到重放攻击的可能性，会极大程度上提高流量被识别的风险。
-- **连接时测试延迟**：开启此选项后，Qv2ray 将在连接节点时测试当前所连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
-- **定时测试延迟**：开启此选项后，Qv2ray 将会定期测试当前已连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
-- **禁用系统根证书**：开启此选项后，V2Ray 核心将仅使用内置的根证书进行 TLS 证书校验，可用于防止根证书劫持攻击，但有可能会让核心认不出你的 TLS 证书，导致节点连接失败。
-- （已移除）**默认设置 `AllowInsecureCiphers`**：所有通过 **订阅** / **二维码** / **VMess 协议链接** 导入的新连接将默认开启 `允许不安全的 TLS 算法` 选项。开启此项设置将会使相关节点失去 TLS 的保护，存在遭受中间人攻击的风险。通过手动填写连接属性或编辑 JSON 添加的节点不受此选项影响。如果你不了解该选项的实际用途，请切勿开启！
+- **Set `AllowInsecure` by Default**: All new connections imported via **subscription** / **QR code** / **VMess protocol link** will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- **Enable `SessionResumption` by Default**: New in Qv2ray v2.6.0. When enabled, new connections imported with TLS will enable **Session Resumption** to reduce RTT during handshake. You will also need to enable related functions on the server side, such as `0-RTT Connection Resumption` on Cloudflare and `ssl_early_data` on nginx. However, this will largely increase the risk of traffic being recognised.
+- **Test Latency on Connect**: When enabled, Qv2ray will test the latency of nodes on connect. Enabling this may make it easier for GFW to recognize your connection.
+- **Test Latency Periodically**: When enabled, Qv2ray will periodically test the latency of the currently connected node. Enabling this may make it easier for GFW to recognize your connection.
+- **Disable System Root Certificates**: When enabled, V2Ray core will only use built-in root certificates, which helps to circumvent root certificate hijacking attack. However, this can cause V2Ray core fail to recognise your valid TLS certificates, resulting in connectivity problem with your nodes.
+- (Removed) **Set `AllowInsecureCiphers` by Default**: All new connections imported through **subscription** / **QR code** / **VMess protocol link** will be enabled by default to `allow insecure TLS algorithm` option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
 
-:::danger 再次强调
-滥用上述设置可能会造成负面影响，甚至导致安全问题！如果你不了解这些选项的实际用途，请切勿开启！
+:::warning Re-emphasis:
+Misuse of the above settings may cause negative effects and even lead to security issues! If you do not understand the actual use of these options, please do not open them!
 :::
 
-:::tip （已过时）有关 V2ray-Core 4.23.1 以下版本
-**2021-01-25 更新：** 我们相信已经没人会用这么老的核心了。本提示已过时，仅作历史保留。
+:::tip (Outdated) Notes on V2ray Core versions before 4.23.1
+**Updated at 2021-01-25:** We believe that no one will use that old V2Ray core version. This notice is no longer effective and is only kept for historical reasons.
 
-**2020-05-30 更新：** 由于实现缺陷，V2ray-Core 在禁用 `AllowInsecureCiphers` 选项时，会使用硬编码的 TLS 加密套件列表，这将导致 V2ray-Core 的 TLS 流量出现明显特征，在 Qv2ray 中启用 `AllowInsecureCiphers` 会暂时缓解此问题，开启此选项后需要 **重新导入所有受影响的连接**。
+**Updated at 2020-05-30:** Due to implementation issues，V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**.
 :::

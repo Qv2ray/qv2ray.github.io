@@ -1,75 +1,96 @@
 ---
-title: 功能与特性
+title: Features
 ---
 
-# 特色功能
+# Features
 
-## 插件支持
+## Availability
 
-通过我们的插件系统，你可以使用 Qv2ray 的同时使用 SSR/Trojan，以及获得 V2ray 路由引擎带来的强大体验。
+| Windows                                                                                             | Linux                                                                                                                                                                        | macOS                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Portable Version](https://github.com/Qv2ray/Qv2ray/releases/latest)                                | AppImage [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) | DMG Installer [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) |
+| [Installer Version](https://github.com/Qv2ray/Qv2ray/releases/latest)                               | ArchLinuxCN [Stable](https://build.archlinuxcn.org/packages/#/qv2ray) / [Testing](https://build.archlinuxcn.org/packages/#/qv2ray-dev-git)                                   | Homebrew Cask [Stable](https://formulae.brew.sh/cask/qv2ray)                                                                                                                      |
+| [Scoop Package Manager](https://github.com/lukesampson/scoop-extras/blob/master/bucket/qv2ray.json) | AUR [Stable](https://aur.archlinux.org/packages/qv2ray) / [Testing](https://aur.archlinux.org/packages/qv2ray-dev-git)                                                       |                                                                                                                                                                                   |
+|                                                                                                     | Debian [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+debian+package%22)   |                                                                                                                                                                                   |
+|                                                                                                     | Fedora [Stable](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [Testing](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                    |                                                                                                                                                                                   |
+|                                                                                                     | openSUSE [Stable](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [Testing](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                  |                                                                                                                                                                                   |
+|                                                                                                     | Flathub [Stable](https://flathub.org/apps/details/com.github.Qv2ray)                                                                                                         |                                                                                                                                                                                   |
+|                                                                                                     | Snapcraft [Stable / RC / Testing](https://snapcraft.io/qv2ray)                                                                                                               |                                                                                                                                                                                   |
 
-- 根本不需要额外设置 PAC
-- **一个 GUI 即可配置 V2ray / SSR / Trojan 等服务（_更多敬请期待_）**
+## Special Features
 
-## 路由矩阵设置
+### Plugin Support
 
-Qv2ray 内置的路由矩阵允许你配置自己的，个性化的路由方案。特别是当你想要（直连/使用代理）访问那些不在默认路由规则里的网站。
+With our plugin system, you can use Trojan/SSR together within Qv2ray.
 
-- **路由矩阵语法跟随 V2ray 的路由设置，并带有自动补全（_避免发生打错字的尴尬情况_）**
+And [benefit from the robost routing engine](plugins/v2ray-integration.md) provided by V2ray.
 
-## 全功能 V2ray GUI
+**No More Buggy PAC Configurations**
 
-我们全功能的复杂编辑器允许你创建，编辑你自己的连接，包括路由表，多入站出站规则等。
+**Imagine SSR / Trojan (and many more in the future) connections within ONE GUI?**
 
-- **就像手动写 V2ray 的 JSON 配置一样，但是你将拥有强大流程图式路由编辑。**
+### Routing Matrix
 
-## V2ray 日志高亮
+Qv2ray’s built-in routing matrix will allow you configure your custom routing scheme, especially when you want to access some websites, which is not in the default routing rule, with proxy.
 
-当出问题的时候，V2ray 的日志是最难搞懂的
+**Following V2ray’s Routing Syntax, but with Auto-Completing (Typo-free)**
 
-- **Qv2ray 提供 V2ray 日志的语法高亮，节省你调试连接的时间**
+### Full-featured V2ray Configuration GUI
 
-# 一般特性
+Our full-featured complex editor allows you create, edit your own connection configuration. Including Routing Table, Multiple inbounds / outbounds.
 
-## 导入连接
+**Just The Same As Writing V2ray’s JSON Configuration File Directly, But With Powerful GUI**
 
-### 多种服务器导入方式
+### V2ray Log highlighter
 
-- 高容错的 VMESS 链接批量导入
-- 直接从 JSON 文件导入
-- 扫描屏幕二维码又或者是从二维码文件导入
-- 高级/手动配置
+The log of V2ray is the most difficult thing to understand if things goes wrong.
 
-### 订阅
+Qv2ray provides syntax highlighting for V2ray’s log output.
 
-- 手动更新订阅
-- 自动更新订阅
+**Saving your time when debugging the connection issue.**
 
-## 导出连接
+## General Features
 
-- 导出为二维码
-- 导出单个连接分享链接
-- 导出组分享链接
+### Connection Importing
 
-## 连接编辑
+- Versatile Host Importing
+  - Batched Vmess Importing with Error Tolerance
+  - Direct Importing from JSON Files
+  - Screen QR Code / QR Code File Importing
+  - Advanced / Manual Configuration
+- Subscriptions
 
-- 内置服务器编辑器
-- 简单的出站编辑
-- 自定义 JSON 编辑器
+  - Manual Updating
+  - Automated Updating
 
-## 一般功能支持
+### Connection Editing
 
-- 自动连接到
-- 开机启动
-- 系统代理集成 (Windows / macOS / Linux GNOME 和 KDE)
+- Built-in Host Editors
 
-## 连接管理
+  - Simple Outbound Editor
+  - Custom JSON Editor
 
-- 实时速度流量监控
-- 状态栏出站入站统计
-- 独立的速度图表
+- Full Functionality Support
 
-### TCP 延迟测试
+  - Automatic Connecting
+  - Multiplexing
+  - Start with System Login
+  - System Proxy Integration (Windows / macOS / Linux GNOME and KDE)
 
-- 单个服务器测试
-- 批量服务器测试
+### Connection Exporting
+
+- Export as QR Code
+- Export **Single** Connection Share Link
+- Export **Group** Connection Share Link
+
+### Connection Management
+
+- Real-time Speed & Data Usage Monitoring
+
+  - Inbound / Outbound Statistics in Status Bar
+  - **Dedicated Speed Graph**
+
+- Latency Testing (TCP)
+
+  - Single Host Testing
+  - Batched Testing

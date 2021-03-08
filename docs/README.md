@@ -2,40 +2,44 @@
 home: true
 heroImage: /logo.svg
 heroText: Qv2ray
-tagline: 纵使千山多万壑，犹有青鸾踏云间
-actionText: 快速上手 →
+tagline: A cross-platform V2Ray graphical front-end
+actionText: Getting Started →
 actionLink: ./getting-started/
 features:
-  - title: 跨平台
-    details: 支持 Linux / Windows / macOS
-  - title: 多样化节点导入
-    details: JSON / VMess / 二维码 / 手动配置
-  - title: 订阅
-    details: 自动 / 手动更新
-footer: 采用 CC-BY-SA | © 2021 Qv2ray 版权所有
+  - title: Cross-platform
+    details: Supporting Linux / Windows / macOS
+  - title: Versatile Host Importing
+    details: JSON / VMess / QR Code / Manual
+  - title: Subscriptions
+    details: Automatic / Manual Updates
+footer: CC-BY-SA Licensed | Copyright © 2021 Qv2ray
 ---
 
-## 🚀 起步
+**Qv2ray** is a cross-platform v2ray graphical frontend written in Qt.
 
-对于大多数用户，[快速入门](getting-started/README.md) 将会带领你们在短时间内上手 Qv2ray。
+The supported version currently is `v2.7.0-pre2`.
 
-对于每一种功能对应的详细文档, 请参阅 [使用手册](manual/README.md)。
+## 🚀 Getting Started
 
-## 📃 特色
+For most of the users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray quickly.
 
-请参阅 [软件特色](features.md)。
+For detailed documentation of all functionalities, please view the [User Manual](manual.md).
+
+## 📃 Features
+
+Please view [Features](features.md).
 
 ## ❓ FAQ
 
-请参阅 [问答](faq/README.md)。
+Please view [FAQ](faq/README.md).
 
-## 👷 贡献
+## 👷 Contributing
 
-欢迎参与该项目的贡献中来！就算你不懂如何写代码，也还是有许多种方法可以帮助完善 Qv2ray 的。 这里有一些例子：
+There are many ways to help improve Qv2ray, even if you do not know how to code. Here are some of them:
 
-- 🌐 **翻译** 帮助 Qv2ray 翻译成更多语言的版本，或者提高目前已有的翻译的质量。 你可以在 [Crowdin](https://crowdin.com/translate/qv2ray/) 上找到我们。
-- 🐛 **报告 Bug** 报告 Qv2ray 的 bug 或其他使用时产生的问题, 请给我们提交 [issue](https://github.com/Qv2ray/Qv2ray/issues)。
-- 💡 **新功能建议**
-- ⚙️ **帮助开发 Qv2ray**！ 克隆仓库，签出代码，提交高质量的 Pull request！
-- 📆 **社区维护** 帮助我们创建、维护 Qv2ray 的社区！
-- ...你还可以做更多！
+1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://crowdin.com/translate/qv2ray/).
+2. 🐛 **Reporting Bugs**. Report bugs or incidents of Qv2ray, by posting an issue at [issues](https://github.com/Qv2ray/Qv2ray/issues).
+3. 💡 **Suggest New Features**. [GitHub - Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
+4. ⚙️ **Hacking Qv2ray**. Check out and hack the code of Qv2ray, followed by high-quality pull requests!
+5. 📆 **Ecology Volunteers**. Help us maintain and organize the community of Qv2ray.
+6. ...and even more!

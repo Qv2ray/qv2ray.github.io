@@ -1,11 +1,11 @@
 ---
-title: 插件
+title: Plugins
 ---
 
-# 插件
+# Plugin System
 
-这些页面将详细解说 Qv2ray 插件的工作原理，以及你应如何开发你自己的插件。
+These pages will tell you how Qv2ray Plugin works and how to develop your own plugin.
 
-1. [插件的使用方法](usage.md)
-2. [插件的 V2Ray 整合](v2ray-integration.md)
-3. [开发你自己的插件](development.md)
+1. [Plugin Usage](usage.md)
+2. [V2ray Integration of Kernel Plugin](v2ray-integration.md)
+3. [Writing your own plugin](development.md)
