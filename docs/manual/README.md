@@ -1,13 +1,11 @@
 ---
-title: 使用手册
+title: Manual
 ---
 
-# 使用手册
+# Manual
 
-对，就是你，快点来写啊！🤩
+> This section is translated by a non-native speaker of Chinese. Improvements welcome!
 
-已经编写完成的部分：
-
-- [常规设置](general.md)
-- [高级路由设置](route.md)
-- [关于 Wayland 的说明](wayland.md)
+- [General Settings](./general.md)
+- [Advanced Route Settings](./route.md)
+- [About running on Wayland](wayland.md)

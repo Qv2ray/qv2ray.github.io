@@ -1,0 +1,13 @@
+files:
+  - source: /docs/faq/*.md
+    translation: /docs/lang/%two_letters_code%/faq/%original_file_name%
+  - source: /docs/getting-started/**.md
+    translation: /docs/lang/%two_letters_code%/getting-started/%original_file_name%
+  - source: /docs/hacking/**.md
+    translation: /docs/lang/%two_letters_code%/hacking/%original_file_name%
+  - source: /docs/manual/*.md
+    translation: /docs/lang/%two_letters_code%/manual/%original_file_name%
+  - source: /docs/plugins/*.md
+    translation: /docs/lang/%two_letters_code%/plugins/%original_file_name%
+  - source: /docs/*.md
+    translation: /docs/lang/%two_letters_code%/%original_file_name%
