@@ -1,11 +1,11 @@
 ---
-title: 获取 Qv2ray 分布
+title: 获取 Qv2ray 发行版
 sidebarDepth: 3
 ---
 
-# 第 1 步：获取 Qv2ray 分布
+# 第 1 步：获取 Qv2ray 发行版
 
-要开始使用 Qv2ray，您应该先获得一个 Qv2ray的释放。 我们提供了许多发行方式，您可以根据您的喜好选择。
+要开始使用 Qv2ray，您应该先获得一个 Qv2ray 的 Release。 我们提供了许多发行方式，您可以根据您的喜好选择。
 
 ## GitHub 发布二进制文件
 
@@ -33,7 +33,7 @@ sidebarDepth: 3
 
 :::警告注解在 ARM 上的 Windows ARM64 用户 Windows 10 可以使用 `Qv2ray.VERSION.Windows-x86.7z` (存档) 或 `Qv2ray. ERSION.win32.exe` (Installer) directly ，因为操作系统有 x86 架构的内置兼容层。 :::
 
-## GitHub 操作艺人
+## GitHub Actions 产品
 
 如果您已经加入稳定版本的功能并愿意尝试开发中的新功能， 您可以从 GitHub 操作下载伪影：
 
@@ -103,8 +103,8 @@ sudo apt 更新；sudo apt install qv2ray
 
 添加密钥(您可以选择使用 FastGit 来加速添加密钥)
 ```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key 添加 -
-# curl -SSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key 添加 -
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+# curl -SSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
 ```
 
 添加软件仓库(可以根据要求启用FastGit 加速仓库)
@@ -115,7 +115,7 @@ echo "deb https://qv2ray.net/debian/ `lsb_release -cs` main" | sudo tee /etc/apt
 
 安装 Qv2ray
 ```bash
-sudo apt 更新；sudo apt install qv2ray
+sudo apt update; sudo apt install qv2ray
 ```
 
 #### Ubuntu及其官方衍生工具安装了 Qv2ray 的开发版本
@@ -136,7 +136,7 @@ echo "deb https://qv2ray.net/debian-dev/`lsb_release -cs` main" | sudo tee /etc/
 
 安装 Qv2ray
 ```bash
-sudo apt 更新；sudo apt install qv2ray
+sudo apt update; sudo apt install qv2ray
 ```
 
 ### 基于 Linux 的Arch 盘片
@@ -153,7 +153,7 @@ sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下文。
 
 :::tip 你也可能想要安装 `v2ray` 包来使用系统 V2Ray 核心。 :::
 
-::::警告注意Arch Linux CN 中的Manjaro Hitchhikers
+:::warning Arch Linux CN 中的 Manjaro Hitchhikers
 
 Manjaro 将 **延迟Arch Linux 的软件包更改**。 当断开ABI在上游改变时， **_Arch Linux_ CN** 将 **优先级Arch 用户** 而不是Manjaro。 **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. 如果您坚持要使用它， 请 **不要以任何方式提交到 Qv2ray 或 Arch Linux CN 作为错误**。 对于那些不想遇到麻烦的人，请使用 AppImage / Snapcraft 版本代替。
 
@@ -216,7 +216,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 
 > Qv2ray 提供给 [openSUSE / Fedora / CentOS 用户](https://build.opensuse.org) [@zzndb](https://github.com/zzndb)
 
-:::警告适用版本 因为Qt 版本的限制， 我们可能无法支持上面所有终生的磁盘，支持的磁盘详情请检查下面的 OBS 链接。 :::
+:::warning 适用版本 因为Qt 版本的限制， 我们可能无法支持上面所有终生的磁盘，支持的磁盘详情请检查下面的 OBS 链接。 :::
 
 类似AUR, 有两个版本的 Qv2ray 可供使用。 您可以根据自己的签名选择：
 
@@ -228,7 +228,7 @@ $ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
 - 下载Stagle: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
 - 下载预览： [Qv2ray-预览](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
-::::警告CentOS 用户 在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是Fedora为额外需要的依赖提供的。 欲了解更多信息，请检查 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。 :::
+::::warning CentOS 用户 在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是Fedora为额外需要的依赖提供的。 欲了解更多信息，请检查 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。 :::
 
 :::tip Plugins 以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供Qv2ray 族的插件。 在通过项目仓库安装 Qv2ray 之后(不通过手动下载 & 安装)， 您可以直接安装插件(使用此插件的项目名称相同的名称) 还提供预览版本插件使用 `-预览` postfix，使用您的软件包管理器。 :::
 
