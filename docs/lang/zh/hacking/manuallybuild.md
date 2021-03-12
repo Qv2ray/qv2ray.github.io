@@ -35,7 +35,7 @@ title: 手动生成 Qv2ray
 
 ### a. 预建的二进制文件
 - [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) repo 是我们构建并提供针对Windows 和 Android 的预建库依赖关系的地方。
-- For Android version, we have used a [patched](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch) vcpkg.
+- 对于安卓版本，我们使用了一个[修补过的](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch)vcpkg。
 
 #### a.1 下载/提取脚本
 **额外依赖关系: bash, jq, curl, 7zip** (专门适用于 Windows 用户)
@@ -46,7 +46,7 @@ title: 手动生成 Qv2ray
   - 例如： `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`
   - 可能的 `<PLATFORM>` 值： `winds`, `linux`, `android`
   - 可能的 `<ARCH>` 值： `x86`, `x64`, `arm`, `arm64`
-  - Set `<ARCH>` to `tools` to install Protobuf generator binaries when cross-compiling to Android on Linux
+  - 在Linux上交叉编译到安卓时将 `<ARCH>` 设为 `tools` 以安装 Protobuf 生成器的二进制文件
 
 脚本从 [这个版本](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) 下载和提取的软件包，移动内容到 corrensponding `./libs/ARCH-PLATFORM /` 目录。
 
@@ -110,7 +110,7 @@ title: 手动生成 Qv2ray
 
 - 这将自动将所有依赖项复制到 `CMAKE_INSTALL_PREFIX`。
 
-:::warning There's a bug in `macdeployqt` where `libabsl_debugging_internal` is recognized as a debug library. 阻止QPlatform插件(例如) 正在部署的 QCocoaPlugin。 这会导致运行时异常，告诉“找不到平台插件”。
+:::警告 `macdeployqt` 中存在一个 `libabsl_debugging_internal` 被识别为调试库的 bug。 阻止QPlatform插件(例如) 正在部署的 QCocoaPlugin。 这会导致运行时异常，告诉“找不到平台插件”。
 
 使用 [Qv2ray-补丁 `macdeplaudqt`](https://github.com/Qv2ray/macdeployqt-patched) 代替。 同时支持 Qt5 和 Qt6 :::
 
