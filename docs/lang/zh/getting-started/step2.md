@@ -4,11 +4,11 @@ title: 配置 V2Ray Core
 
 # 步骤 2: 配置 V2Ray Core
 
-在正确和成功安装Qv2ray 到您的系统后，需要在V2Ray 核心文件上配置Qv2ray 才能实际使用。
+After a correct and successful installation of Qv2ray onto your system, it *is* necessary to configure V2Ray Core before actually using it.
 
 ## 下载 V2Ray 核心文件
 
-出于政治原因，Qv2ray 本身 **不** 包括发行V2Ray 可执行文件， 即 `v2ray-core`，用户所需的大部分时间是下载。
+Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the `v2ray-core`, and most of the time required for users is to download them.
 
 **查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
@@ -16,69 +16,21 @@ title: 配置 V2Ray Core
 
 :::tip 适用于 Windows 10 ARM64 用户 从 V2Ray Core 4.27, V2Ray 项目团队为 Windows 10 提供了一个基于ARM32 (armv7)的内核。 建议Windows 10 ARM64 用户使用此版本的内核获取更好的性能。 :::
 
-:::danger sharpen your Eyes 请不要下载 `v2ray-Linux-arm64 IP` 如果您在 `x86_64` (`amd64`) 平台上运行 Qv2ray 要清楚， `arm64` 完全不同于 `amd64`。 请确保您不喜欢这么做。 :::
-
-### 通过软件包管理器下载 V2RAy Core
-
-#### Homebrew(macOS)
-
-```bash
-酿造安装 v2ray
-```
-
-当使用 Homebrew时，V2Ray的可执行文件位置是 `/usr/local/bin/v2ray`, 资产位置是 `/usr/local/shar/v2ray`。
-
-#### 分数 (Windows)
-
-```pwsh
-抓取安装 v2ray
-```
-
-当使用Scop安装时，V2Ray的可执行文件位置是 `<User Directory>\scoop\apps\v2ray\current\v2ray.exe`, 资产位置是 `<User Directory>\scoop\apps\v2ray\current`。
-
-#### 巧克力(Windows)
-
-```cmd
-choco install v2ray
-```
-
-软件将安装在 `X:\tools\v2ray` (**_X_** 是您的系统磁盘驱动器)。
-
-#### Debian, Ubuntu and other Debian基础衍生物。
-
-查看 <https://apt.v2fly.org>
-
-#### Arch Linux及其衍生工具
-
-```bash
-sudo pacman -S v2ray
-```
-
-二进制文件将安装到 `/usr/bin/v2ray`，资源文件位于 `/usr/shar/v2ray/`。
-
-#### V2Ray 官方安装脚本(使用 Linux 发行版系统)。
-
-查看 <https://github.com/v2fly/fhs-install-v2ray>
-
-虽然此脚本旨在安装 V2Ray 作为服务器，但它可以用作客户端而不存在任何问题。 用于Qv2ray，建议关闭服务器服务。
-
-```bash
-systemctl 禁用 v2ray --now
-```
+:::danger sharpen your Eyes 请不要下载 `v2ray-Linux-arm64 IP` 如果您在 `x86_64` (`amd64`) 平台上运行 Qv2ray 要清楚， `arm64` 完全不同于 `amd64`。 :::
 
 ### 手动下载
 
-**官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
+**Official Download Link：** <https://github.com/v2fly/v2ray-core/releases>
 
-将 v2ray 核心文件提取为固定位置。 默认情况下，建议将文件提取到`$QV2RAY_CONFIG_PATH/vcore`，`$QV2RAY_CONFIG_PATH`是Qv2ray 存储数据的目录。
+Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
 
 目录 `vcore` 可能在这些位置之一：
 
-- `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
+- `./config/` (`config` subdirectory aside Qv2ray executable, recommended for Windows Users)
 - `~/.qv2ray/` (在你的主文件夹的专用目录中)
 - `~/.config/qv2ray/` (标准 XDG 配置路径)
 
-然后请确保这些文件直接存在于您的 `vcore` 目录中：
+Please make sure that these files exists directly in your `vcore` directory:
 
 1. `v2ray` / `v2ray.exe`: 核心可执行文件
 2. `v2ctl` / `v2ctl.exe`: 核心控制程序
@@ -91,7 +43,7 @@ systemctl 禁用 v2ray --now
 
 ## 在 Qv2ray 中配置 V2Ray Core
 
-打开 Qv2ray 并转到首选项窗口。 在 **[核心设置](qv2ray://open/preference/kernel)**中，配置以下选项：
+打开 Qv2ray 并转到首选项窗口。 In **[Kernel Settings](qv2ray://open/preference/kernel)**, configure the following options:
 
 - **核心可执行文件路径**: 将此设置为你的 V2Ray 可执行文件存在的地方。 这可能是您在 Windows 上的 `v2ray.exe` 的完整路径，或者 `v2ray` 在 Linux / macOS 上的可执行文件。
 - **V2Ray Assets Directory**: 将此设定为 `geoip.dat` 和 `geosite.dat` 所在位置。
