@@ -14,9 +14,9 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 :::tip 核心管理：手动 / 自动 如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下： :::
 
-:::tip For Windows 10 ARM64 users From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. It is recommended that Windows 10 ARM64 users use this version of the kernel to obtain better performance. :::
+::tip 对于 Windows 10 ARM64 位用户，自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构的内核 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能 :::
 
-:::danger Sharpen Your Eyes Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`amd64`) platform. To make it clear, `arm64` is completely different from `amd64`. :::
+::danger 擦亮你的双眼 当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念 :::
 
 ### Manual Download
 
