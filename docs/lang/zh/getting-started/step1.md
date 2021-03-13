@@ -99,73 +99,73 @@ brew install kidonng/malt/qv2ray-beta
 
 ### Windows: Scoop
 
-> [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
+> [Scoop](https://scoop.sh) 是一个 **Windows 上的** 基于命令行的软件包管理器
 
-Run the following commands in **PowerShell**:
+在 **PowerShell** 中运行以下命令：
 
-1. [Install Scoop](https://scoop.sh/#installs-in-seconds):
+1. [安装 Scoop](https://scoop.sh/#installs-in-seconds):
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # Allow script execution
    iwr -useb get.scoop.sh | iex
    ```
-2. 添加 `extras` 桶：
+2. 添加 `extras` bucket：
    ```powershell
    scoop bucket add extras
    ```
-3. Install Qv2ray:
+3. 安装 Qv2ray:
    ```powershell
    scoop install qv2ray
    ```
-4. To update, just replace `install` with `update` in the commands:
+4. 更新也很容易，仅需要将 `install` 替换成 `upgrade` 即可
 
    ```powershell
    scoop update qv2ray
    ```
 
-5. **(Optional)** If you want to install plugins and Qv2ray beta, add `sushi` bucket:
+5. **(可选的)** 如果你想要安装 Qv2Ray 测试版, 添加  `sushi` 桶:
    ```powershell
    scoop bucket add sushi https://github.com/kidonng/sushi
    # For all apps see https://github.com/kidonng/sushi#qv2ray
    scoop install qv2ray-beta
    ```
 
-:::tip You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads). :::
+:::tip 您可能还需要安装 [最新的  Visual C++ 可再发行组件包](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads). :::
 
 ### Windows: Chocolatey
 
-> [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
+> [Chocolatey](https://chocolatey.org/) 是另一个 **Windows** 的软件包管理器。
 
-**Please open Powershell with administrator permission** and run the following commands:
+**请在管理员权限下打开 Powershell** 并运行以下命令：
 
-1. [Install Chocolatey](https://chocolatey.org/install)：
+1. [安装 Chocolatey](https://chocolatey.org/install)：
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    ```
-2. Install Qv2ray：
+2. 安装 Qv2ray:
    ```powershell
    choco install qv2ray
    ```
 
-## From AppStore
+## 从 AppStore
 
 ### Linux: Snapcraft
 
-Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
+按照我们的 [Snapcraft 页面](https://snapcraft.io/qv2ray) 上的说明操作。
 
 ```shell
-# To install the package:
+# 要安装软件包：
 $ sudo snap install qv2ray
 # sudo snap install qv2ray --edge (dev branch)
-# To update the package:
+# 要更新软件包：
 $ sudo snap refresh qv2ray
 ```
 
-### Linux: Flathub (Deprecated)
+### Linux: Flathub (快被扬了)
 
-:::warning Deprecated (2020/09/18) Installation of Qv2ray from Flathub is officially **deprecated**, since the maintainer is no longer actively maintaining the package. If you are interested in adopting this, please open an issue and let us know. :::
+:::warning 已废弃 (2020/09/18) 从 Flahub 安装Qv2ray 是官方 **已废弃**的方法，因为维护者不再积极维护该包。 如果你有兴趣接手这个包，请告诉我们. :::
 
-1. Set up Flatpak environment according to the [official documentation](https://flatpak.org/setup/).
-2. Install Qv2ray:
+1. 根据 [官方文档](https://flatpak.org/setup/) 设置Flatpak环境。
+2. 安装 Qv2ray：
    ```shell
    # To install the package:
    $ flatpak install com.github.Qv2ray
@@ -178,27 +178,27 @@ $ sudo snap refresh qv2ray
 
 ## GitHub Release 二进制文件
 
-Downloading the release from [Qv2ray Release Page](https://github.com/Qv2ray/Qv2ray/releases) is favored for someone who ***does not want to use Package Managers***.
+从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些***不想使用包管理的用户***。
 
-This is also suitable for Linux users where Qv2ray is not officially packaged in their distros.
+不过这也适用于部分 Linux 用户，因为 Qv2ray 在他们的发行版中没有正式打包。
 
-Do as the follows:
+按以下方式做：
 
-1. Navigate to [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a **web** browser.
+1. 在**浏览器**中打开 [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) 页面。
 2. 从 Release 中选择一个版本。 或者，您可以选择使用 [最新的**稳定版**发布](https://github.com/Qv2ray/Qv2ray/releases/latest)。
-3. 根据你的的平台，在 Release Assets 中选择并下载。 For example:
+3. 根据你的的平台，在 Release Assets 中选择并下载。 例如：
    - 对于 Windows 用户：
-     - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z` (Archive) or `Qv2ray.VERSION.win64.exe` (Installer).
-     - Windows 2003/XP/2000/ME/98/...: ***Are you kidding me bro?***
+     - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
+     - Windows 2003/XP/2000/ME/98/...： ***你确定吗？***
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
    - 对于 macOS 用户：
      - macOS 10.14 及之后的用户：`Qv2ray.VERSION.macOS-x64.dmg`；
      - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
-     - macOS 10.12 and before: ***Try Upgrading Your macOS***.
+     - macOS 10.12及之前: ***升级您的 macOS 好了***。
 
-:::tip Notes for Linux AppImage users Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended. :::
+::::tip 用于 Linux AppImage 用户的一些提醒 虽然我们已将 `glibc` 和一些基本的 C++ 库打包进 **AppImage** 来支持一些旧的发行版，但是我们强烈建议您自己升级到最新版本 :::
 
-:::warning Notes for Windows ARM64 users Windows 10 on ARM added an emulation layer for x86_64 apps in *build 21277*, users can use the x64 version with the latest Windows Insider Preview. :::
+::::warning 给 Windows ARM64 用户的提醒 Windows 10 on ARM 在 *building 21277* 中为 x86_64 应用添加了一个模拟层，用户可以使用最新的 Windows 内部预览的 x64 版本。 :::
 
 ## GitHub Actions
 
@@ -212,6 +212,6 @@ TODO: Branch Selection Tips
 
 :::tip You must login GitHub first to access GitHub Actions. :::
 
-## Building From Source
+## 从源码构建
 
-Please refer to [Manually Build Qv2ray](../hacking/manuallybuild.md) Page.
+请参考页面 [手工构建 Qv2ray](../hacking/manuallybuild.md)
