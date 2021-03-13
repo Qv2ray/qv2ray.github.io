@@ -44,51 +44,51 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现意外变动时， **_Arch Linux_ CN** 将 **优先 Arch 用户** 而不是Manjaro。 **使用 Arch Linux CN 的 Manjaro** 用户应该清楚**这样偷包/延迟更新的严重后果** 包括处理 `symbol lookup error` 此类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
 
-This nag will be removed whenever something like "Manjaro CN" is founded and officially **takes the workload of packaging Qv2ray** for its users. :::
+如果出现了 “Manjaro CN” 此类组织，并且官方 **为其用户提供了 Qv2ray** 后，这一章节将会被立即删除。 :::
 
-**Download from AUR, using an AUR Helper**
+**使用 AUR 助手从 AUR 下载**
 
-You may acquire officially maintained `PKGBUILD` file from AUR (Arch User Repository, [AUR (en) - Home](https://aur.archlinux.org/)), which will instruct the build process of Qv2ray.
+您可以从 AUR (Arch 用户仓库) 获取官方维护的`PKGBUILD`文件。[AUR (en) - Home](https://aur.archlinux.org/), 它将指导 Qv2ray 的构建过程。
 
-All Qv2ray plugins are currently in AUR.
+所有 Qv2ray 插件目前都在 AUR
 
 ### Linux: openSUSE / Fedora / CentOS
 
-> Qv2ray is made available for openSUSE / Fedora / CentOS users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
+> 由 [@zzndb](https://github.com/zzndb) 提供的给 [openSUSE / Fedora / CentOS 用户](https://build.opensuse.org) 的 openSUSE 构建服务。
 
-:::warning 适用版本 因为Qt 版本的限制， 我们可能无法支持上面所有终生的磁盘，支持的磁盘详情请检查下面的 OBS 链接。 :::
+:::warning 适用版本 因为 Qt 版本的限制， 我们可能无法支持上面所有发行版本，有关支持的发行版详请，请检查下面的 OBS 链接。 :::
 
-Similar to AUR, there are two versions of Qv2ray available. You can choose according to your own flavor:
+类似于AUR, 有两个版本的 Qv2ray 可供使用。 您可以根据自己的爱好选择：
 
-- Stable OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
-- Preview OBS: [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
+- 稳定版 OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
+- 预览版 OBS： [Qv2ray-预览](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
-Or you can get more detailed installation guide directly from the links below:
+或者您可以直接从下面的链接获取更详细的安装指南：
 
-- Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
-- Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+- 下载 Stable 版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- 下载 Preview 版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
-::::warning CentOS 用户 在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是Fedora为额外需要的依赖提供的。 For more info please check the [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL). :::
+::::warning CentOS 用户 在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是 Fedora 为额外需要的依赖提供的。 有关更多信息，请看 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。 :::
 
-:::tip Plugins The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager. :::
+:::tip 插件呢？ 以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 这样安装 Qv2ray 之后 (不是手动下载 & 安装那种)， 您可以直接使用包管理器安装插件(插件名字与插件项目名字相同.此外，我们还提供带有 `-preview` 后缀的预览版本插件。 :::
 
 ### Linux / macOS: Homebrew
 
-You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command:
+您可以使用 Homebrew 在 macOS 上安装 Qv2ray (可能 Linux 也行)。 如果您还没安装 Homebrew ，可以查看 Homebrew 网站了解更多信息。 Homebrew 安装完毕后，您可以使用以下命令安装 Qv2ray
 
 ```bash
 $ brew cask install qv2ray
 ```
 
-**Or with the new command**
+**或者使用新命令**
 
 ```bash
 $ brew install --cask qv2ray
 ```
 
-Upgrading is also easy, just replace `install` with `upgrade` in the commands.
+更新也很容易，仅需要将 `install` 替换成 `upgrade` 即可
 
-If you want to install plugins and Qv2ary beta, please add the `malt` tap:
+如果您想要安装插件和 Qv2ary 的 Beta 版本, 请添加 `malt` Tap：
 
 ```
 brew tap kidonng/malt
