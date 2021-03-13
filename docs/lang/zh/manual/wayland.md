@@ -38,7 +38,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 ### 无法在Wayland上运行
 
-您可能正在使用 Xorg-based 桌面会话，或者您没有安装 Qt5 Wayland 组件。 或者，您已经静态地编译了 Qv2ray，但没有包含了 Qt5 的 Wayland 组件。
+You may be using an Xorg-based desktop session, or you don't have the Wayland component for Qt installed. Or, you have statically compiled Qv2ray, but have not included the Wayland component for Qt.
 
 ### 在Wayland显示协议下运行是否加速了爬行？
 
@@ -48,11 +48,15 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 在 KDE Wayland 会话下，如果您注销并重新登录，Qv2ray 将不会退出， 不会显示通知托盘图标，将使用大量的 CPU 。
 
-**这个解决方案是(使用三个选项之一)：** 1Ministers, 使用 Gnome Wayland 会话 2Ministers, Use KDE Plasma or other desktop's Xorg session3. 杀死你自己的 Qv2ray 进程，然后重新打开它。
+**The solution is (use one of three choices):**
+
+1. Use Gnome Wayland session
+
+2. Use KDE Plasma or other desktop‘s Xorg sessions
+
+3. 杀死你自己的 Qv2ray 进程，然后重新打开它。
 
 > 相关问题： <https://github.com/Qv2ray/Qv2ray/issues/830>
-
-翻译为 www.deepL.com/translator(免费版本)
 
 ### Gnome 下没有托盘图标
 
