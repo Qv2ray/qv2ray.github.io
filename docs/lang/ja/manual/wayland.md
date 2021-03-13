@@ -38,7 +38,7 @@ Qv2rayが起動時にWaylandディスプレイプロトコルを使用できる�
 
 ### ウェイランドでは実行できません
 
-Xorg ベースのデスクトップ セッションを使用しているか、Qt5 の Wayland コンポーネントがインストールされていない可能性があります。 または、静的に Qv2ray をコンパイルしていますが、Qt5 の Wayland コンポーネントは含まれていません。
+You may be using an Xorg-based desktop session, or you don't have the Wayland component for Qt installed. Or, you have statically compiled Qv2ray, but have not included the Wayland component for Qt.
 
 ### ウェイランド表示プロトコルの下で実行されている壁の登り速度は上がっていますか?
 
@@ -48,11 +48,15 @@ Xorg ベースのデスクトップ セッションを使用しているか、Qt
 
 KDE Wayland セッションでは、ログアウトして再度ログインすると、Qv2ray は終了しません。 通知トレイアイコンが表示されず、CPUを大量に使用します。
 
-**解決策は (3 つの選択肢のいずれかを使用する):** 1、Gnome Wayland sessionを使用する 2、KDE プラズマまたは他のデスクトップの Xorg session 3. Qv2rayプロセスを自分で殺してから、もう一度開きます。
+**The solution is (use one of three choices):**
+
+1. Use Gnome Wayland session
+
+2. Use KDE Plasma or other desktop‘s Xorg sessions
+
+3. Qv2rayプロセスを自分で殺してから、もう一度開きます。
 
 > 関連する問題: <https://github.com/Qv2ray/Qv2ray/issues/830>
-
-翻訳済み www.DeepL.com/Translator (無料版)
 
 ### Gnomeの下にトレイアイコンがありません
 
