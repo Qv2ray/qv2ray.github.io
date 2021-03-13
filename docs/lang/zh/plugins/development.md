@@ -1,14 +1,14 @@
 ---
-title: Writing Plugins
+title: 编写插件
 ---
 
-# Writing Plugins
+# 编写插件
 
-- Qv2ray Plugin Documentations
+- Qv2ray 插件文档
 
-## What is a plugin
+## 插件是什么
 
-A plugin is, technically, a shared library that implements a specific interface, `Qv2rayPlugin::QvPluginInterface` in this case. So that can be loaded by Qv2ray.
+A plugin is, technically, a shared library that implements a specific interface, `Qv2rayPlugin::QvPluginInterface` in this case. 因此可以被 Qv2ray 加载。
 
 ## Prerequisites when writing a plugin
 
