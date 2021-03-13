@@ -1,18 +1,18 @@
 ---
-title: Configuring V2Ray Core
+title: 配置 V2Ray Core
 ---
 
 # 第二步：配置 V2Ray 核心
 
-After a correct and successful installation of Qv2ray onto your system, it *is* necessary to configure V2Ray Core before actually using it.
+成功将 Qv2ay 安装到系统后，进行 V2Ray Core 的配置*是*有必要的。
 
-## Download V2Ray Core Files
+## 下载 V2Ray 核心文件
 
-Qv2ray itself **does not** include a distribution of V2Ray executable files, namely the `v2ray-core`, and most of the time required for users is to download them.
+Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时候是要自己下载。
 
-**Check out [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for more details.**
+**查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
-:::tip Core Management: Manual vs Automatic If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below. :::
+:::tip 核心管理：手动 / 自动 如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下： :::
 
 :::tip For Windows 10 ARM64 users From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. It is recommended that Windows 10 ARM64 users use this version of the kernel to obtain better performance. :::
 
