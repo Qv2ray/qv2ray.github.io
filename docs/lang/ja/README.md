@@ -15,7 +15,7 @@ features:
   - 
     title: サブスクリプション
     details: 自動 / 手動更新
-footer: CC-BY-SAライセンス | Copyright © 2021 Qv2ray
+footer: CC-BY-SA Licensed | Copyright © 2020-2021 Qv2ray Workgroup and All Contributors
 ---
 
 **Qv2ray**は、Qt で書かれたクロスプラットフォームの v2ray グラフィカルフロントエンドです。
@@ -24,7 +24,7 @@ footer: CC-BY-SAライセンス | Copyright © 2021 Qv2ray
 
 ## 🚀 はじめに
 
-ほとんどのユーザーにとって、[Getting-Started](getting-started/README.md)は Qv2ray のセットアップに役立ちます。
+For most of our users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray in short time.
 
 すべての機能の詳細なドキュメントについては、[ユーザーマニュアル](manual.md) を参照してください。
 
@@ -40,7 +40,7 @@ footer: CC-BY-SAライセンス | Copyright © 2021 Qv2ray
 
 コーディング方法がわからない場合でも、Qv2ray の改善に役立つ方法はたくさんあります。 これらのいくつかは次のとおりです。
 
-1. 🌐**翻訳**. Qv2rayを他の言語に翻訳したり、現在の翻訳の品質を向上させるのに役立ちます:[Crowdin](https://crowdin.com/translate/qv2ray/) でご覧いただけます。
+1. 🌐**翻訳**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://translate.qv2ray.net/).
 2. 🐛**バグの報告**. [課題](https://github.com/Qv2ray/Qv2ray/issues) に課題を投稿することで、Qv2ray のバグやインシデントを報告します。
 3. 💡**新機能を提案する**.[GitHub - Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
 4. ⚙️**Qv2ray をハックする**. Qv2rayのコードを確認してハックし、高品質のプルリクエストが続きます。
