@@ -3,46 +3,46 @@ title: 第一步：获取 Qv2ray 分发
 sidebarDepth: 3
 ---
 
-# Step 1: Obtaining Qv2ray
+# 第 1 步：获取 Qv2ray
 
-To get started with Qv2ray, you should first obtain it (Why not?).
+要开始使用 Qv2ray，那就得先以某种方式获取到它。
 
 - 我们提供了许多种方式，您可以根据您的喜好选择。
 
-## From a Package Manager
+## 来自软件包管理器
 
-### Linux: Debian, Ubuntu and their derivatives
+### Linux: Debian, Ubuntu 及其衍生发行版
 
-1. Install the relevant tools.
+1. 安装相关的工具
 
     ```bash
     # apt install gnupg ca-certificates curl
     ```
 
-2. Follow the steps at [our debian repo](https://qv2ray.net/debian)
+2. 请跟随 [我们的 debian 仓库](https://qv2ray.net/debian) 中的步骤进行操作
 
 
-3. Install Qv2ray
+3. 安装 Qv2ray
 
     ```bash
     # apt update; sudo apt install qv2ray
     ```
 
-### Linux: Arch Linux-based distros
+### Linux: Arch Linux 或基于 Arch 的发行版
 
-**Install directly from `archlinuxcn`**
+**直接从 `arclinuxcn 安装`**
 
-We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
+我们已经进入 `archlinuxcn` 仓库。 如果您已在使用 archcn，只需在终端中输入：
 
 ```shell
-sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
+sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 ```
 
-And that shall be done.
+然后就完事了
 
 :::warning Arch Linux CN 中的 Manjaro Hitchhikers
 
-Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use other versions instead.
+Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现意外变动时， **_Arch Linux_ CN** 将 **优先 Arch 用户** 而不是Manjaro。 **使用 Arch Linux CN 的 Manjaro** 用户应该清楚**这样偷包/延迟更新的严重后果** 包括处理 `symbol lookup error` 此类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
 
 This nag will be removed whenever something like "Manjaro CN" is founded and officially **takes the workload of packaging Qv2ray** for its users. :::
 
