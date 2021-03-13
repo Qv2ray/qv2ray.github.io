@@ -10,12 +10,12 @@ Qv2ray 支持多种方式导入您的配置。 为了让您开始工作，我们
 
 > 共享链接一般看起来像这样：
 > 
-> - `vmess://eyJ2Ijoi`...
-> - `ss://NjNlMDAx`...
+> - `vmess://`...
+> - `ss://`...
 
 按照这些步骤导入它们：
 
-1. 点击 **导入主窗口中的** 按钮，或通过 [链接导入](qv2ray://open/import/link) 或 [QR 代码](qv2ray://open/import/qr)。
+1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link).
 2. 在 **导入文件** 对话框中，选择导入源 **共享链接**
 3. 将您的共享链接粘贴到 **共享链接** 文本框。
 4. 点击 **导入** 按钮来完成。
@@ -26,7 +26,7 @@ Qv2ray 支持多种方式导入您的配置。 为了让您开始工作，我们
 
 ## 订阅
 
-> 订阅链接通常看起来像这样： `https://some-airport.com/links/YjYyODk?sub=3`
+> A subscription link usually looks like this: `https://some-airport.domain/links/YjYyODk?sub=3`
 
 要导入一个订阅，请遵循以下步骤：
 
