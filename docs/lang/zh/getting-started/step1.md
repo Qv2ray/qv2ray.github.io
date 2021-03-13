@@ -202,16 +202,16 @@ $ sudo snap refresh qv2ray
 
 ## GitHub Actions
 
-If you are fed up with the functionalities of stable versions and willing to try out new features in development, you may download artifacts from GitHub Actions:
+如果您已经厌烦了加入稳定版本的功能，并愿意尝试开发中的新功能， 您可以从 GitHub Actions 下载开发版本：
 
-1. Open [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) in your web browser.
-2. Choose a recent and successful (displayed as ✔️) build and click on it. You should be taken to the detail page of that GitHub Build. Here's [an example](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
-3. Click on **Artifacts** drop-down menu to expand it, and then choose binaries according to your platform.
+1. 在浏览器中打开 [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) 页面。
+2. 选择最近成功的 (显示为 ✔️) 构建并点击它。 你应该会看到 GitHub Build 的详细页面。 [这里的页面](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225) 就是一个例子。
+3. 点击**Artifacts**下拉菜单来展开它，然后根据您的平台选择二进制文件。
 
-TODO: Branch Selection Tips
+TODO：如何选择分支
 
-:::tip You must login GitHub first to access GitHub Actions. :::
+:::tip 您必须先登录 GitHub 才能访问 GitHub Actions。 :::
 
-## 从源码构建
+## 从源代码编译
 
-请参考页面 [手工构建 Qv2ray](../hacking/manuallybuild.md)
+请参考页面 [手工构建 Qv2ray](../hacking/manuallybuild.md)。
