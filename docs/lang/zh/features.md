@@ -4,19 +4,6 @@ title: 功能与特性
 
 # 特色功能
 
-## 插件支持
-
-| 窗口                                                                                       | Linux                                                                                                                                                               | macOS                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [便携式版本](https://github.com/Qv2ray/Qv2ray/releases/latest)                                | AppImage [稳定](https://github.com/Qv2ray/Qv2ray/releases/latest) / [测试](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) | DMG 安装器 [稳定](https://github.com/Qv2ray/Qv2ray/releases/latest) / [测试](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) |
-| [安装程序版本](https://github.com/Qv2ray/Qv2ray/releases/latest)                               | ArchLinuxCN [稳定](https://build.archlinuxcn.org/packages/#/qv2ray) / [测试](https://build.archlinuxcn.org/packages/#/qv2ray-dev-git)                                   | Homebrew Cask [稳定](https://formulae.brew.sh/cask/qv2ray)                                                                                                           |
-| [Scop软件包管理器](https://github.com/lukesampson/scoop-extras/blob/master/bucket/qv2ray.json) | AUR [稳定](https://aur.archlinux.org/packages/qv2ray) / [测试](https://aur.archlinux.org/packages/qv2ray-dev-git)                                                       |                                                                                                                                                                    |
-|                                                                                          | Debian [稳定](https://github.com/Qv2ray/Qv2ray/releases/latest) / [测试](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+debian+package%22)   |                                                                                                                                                                    |
-|                                                                                          | Fedora [稳定](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [测试](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                    |                                                                                                                                                                    |
-|                                                                                          | openSUSE [稳定](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [测试](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                  |                                                                                                                                                                    |
-|                                                                                          | Flahub [稳定](https://flathub.org/apps/details/com.github.Qv2ray)                                                                                                     |                                                                                                                                                                    |
-|                                                                                          | 快乐器 [稳定的 /RC / 测试](https://snapcraft.io/qv2ray)                                                                                                                     |                                                                                                                                                                    |
-
 ## 路由矩阵设置
 
 ### 多种服务器导入方式
@@ -35,7 +22,7 @@ Qv2ray 内置的路由矩阵允许你配置自己的，个性化的路由方案�
 
 **路由矩阵语法跟随 V2ray 的路由设置，并带有自动补全（_避免发生打错字的尴尬情况_）**
 
-### TCP 延迟测试
+### The Full-featured V2ray Configuration GUI
 
 我们的全功能复杂编辑器允许您创建，编辑您自己的连接配置。 包括路由表格，多个内界/外界。
 
