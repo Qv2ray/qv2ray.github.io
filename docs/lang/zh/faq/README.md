@@ -39,46 +39,46 @@ title: "true"
   - **方法 1**: 打开设置, 选择 “时间 & 语言”, 启用 “自动设定日期和时间”。 如果该选项已经启用，请点击"立即同步"按钮
   - **方案 2**：打开控制面板，切换到“类别”视图，选择“时间和区域”，然后点击“日期和时间”， 在打开的对话框中选择"Internet time"，然后点击“更改设置”按钮并检查“与Internet time server同步”。
 - **解决方案 (Linux)**:
-  - **方法 1**: 使用 `system-timeyncd`, 运行 `sudo systemctl enable system-timesyncd --now`
+  - **方法 1**: 使用 `system-timeyncd`, 运行 `sudo systemctl enable systemd-timesyncd --now`
   - **方法2**: 使用 [Chrony](https://www.chrony.tuxfamily.org) 来同步时间。
-- **Solution (macOS)**: Open system preference, click “Date & Time”, and enable “Automatically set date and time”.
+- **解决方案 (macOS)**: 打开系统首选项，单击“日期 & 时间”，并开启“自动设置日期和时间”。
 
-### I want to access China mainland websites using the proxy.
+### 我想要使用代理访问中国大陆网站。
 
-- [**Solution**](../getting-started/step5.md#tweaking-routing-schemes)
+- [**解决办法**](../getting-started/step5.md#tweaking-routing-schemes)
 
-### Transparent Proxy (tProxy) not working when under Linux
+### 当在 Linux 下运行时，透明代理 (tProxy) 不工作
 
-- In this case, the log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`
+- 在这种情况下，日志可能显示错误 `failed to set IP_TRANSPARENT > operation not permitted`
 
-- **Cause:** V2Ray does not have the permission to set socket options.
+- **原因:** V2Ray 没有设置套接字选项的权限。
 
-- **Solutions:**
+- **解决方案:**
 
-  - For all Linux distros, Use the command below in terminal (with root/sudo access):
+  - 对于所有 Linux 发行版，在终端中使用下面的命令 (使用 root/sudo)：
 
     ```
     # /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
-    Where `/usr/bin/v2ray` is where V2Ray is installed for most of the Linux distros, if is not (e.g. you have installed V2Ray using the installation script), replace `/usr/bin/v2ray` with the path to your V2Ray core binary.
+    `/usr/bin/v2ray` 是大部分Linux 发行版安装V2Ray 的地方，如果不是，(例如) 您已经使用安装脚本安装了V2Ray，请替换 `/usr/bin/v2ray` 并使用您的 V2Ray 核心二进制路径。
 
-  - For ArchLinux users:  
-    Try the AUR package [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) created by `@DuckSoft` which automates this step.
+  - 对于ArchLinux用户：  
+    尝试 AUR 包 [Aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/) （由 `@DuckSoft 创建）的自动化步骤`
 
-  - For Fedora 32+ / RHEL 8+ users:  
-    If you are installed V2Ray by dnf / yum, and the V2Ray binary path is `/usr/bin/v2ray` , you can also install RPM package [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/) packaged by `@sixg0000d` to automate this step.
+  - 适用于 Fedora 32+ / RHEL 8+ 用户：  
+    如果您通过 dnf / yum 安装 V2Ray，那么 V2Ray 二进制路径应该是 `/usr/bin/v2ray` , 您也可以安装RPM包 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/) （由 `@sixg0000d` 打包）。
 
-### Configure proxy for dial-up connections / VPN connections on Windows
+### 配置 Windows 上拨号连接 / VPN 连接的代理
 
-*Already supported on version 2.7.0-pre2*
+*已经在 2.7.0-pre2 版本上支持*
 
-- However, because of [an issue from Microsoft](https://support.microsoft.com/en-us/topic/cannot-configure-proxy-settings-if-a-vpn-connection-name-contains-non-ascii-characters-2c648407-bb72-5600-3126-8c721bc91b70) (may also be similar to [this reason](https://github.com/shadowsocks/shadowsocks-windows/issues/1116#issuecomment-294075565)), if a connection name contains non-ASCII characters, proxy settings won't work..
-  - A workaround is to rename the connection and make sure the new name only contains ASCII characters.
+- 然而，由于 [微软出现了一个问题](https://support.microsoft.com/en-us/topic/cannot-configure-proxy-settings-if-a-vpn-connection-name-contains-non-ascii-characters-2c648407-bb72-5600-3126-8c721bc91b70) (可能也类似于 [这个原因](https://github.com/shadowsocks/shadowsocks-windows/issues/1116#issuecomment-294075565))， 如果连接名称包含非 ASCII 字符，代理设置将无法工作...
+  - 一个方法是重命名连接，并确保新名称只包含 ASCII 字符。
 
-### Unable to configure system proxy automatically on macOS (Error: Command requires admin privileges)
-- **Cause:** Permission issue on macOS.
-- **Solution:**
+### 无法在 macOS 上自动配置系统代理 (错误: 命令需要管理员权限)
+- **原因：** macOS 上的权限问题。
+- **解决办法:**
 
     ```shell
     > # security authorizationdb write system.services.systemconfiguration.network allow
@@ -87,24 +87,24 @@ title: "true"
 
 
 
-## Behavior & Appearance Issues
+## 行为和外观问题
 
-### No tray icon / The tray icon occasionally disappears in GNOME
+### 没有托盘图标 / 托盘图标偶尔在GNOME中消失。
 
-- **Cause**: This is confirmed as an upstream bug.
-- **Solution**: Gnome does not officially support tray icons. The reason tray icons would show on Gnome is that there are some extensions for Gnome from third-party developers or Linux distributions to display it. You may use the following makeshift command as a temporary solution:
+- **原因**: 这是个上游 Bug
+- **解决办法**: Gnome 不支持托盘图标。 托盘图标是第三方开发者或部分 Linux 发行版的拓展组件 您可以使用以下命令作为临时解决方案：
 
     ```shell
     $ nohup gnome-shell --replace &
     ```
 
-请参阅 [软件特色](features.md)。
+或者您也可以重启 Qv2ray 然后重试。
 
-:::tip A tip for Gnome users The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons. :::
+:::tip Gnome 用户 本机Gnome 桌面不会显示托盘图标。并且 Qv2ray 图标也会不显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。 :::
 
-### macOS wants Qv2ray and/or its plugins to be "moved to trash"
+### macOS 想要将 Qv2ray 和/或其插件移动到回收站中
 
-- **Cause**: To protect developers' privacy, we don't sign the app with their Apple Developer Account. Also, we haven't had our applications "notarized" by Apple. It's unfair to ask Qv2ray developers, who never use macOS, to pay the money for an Apple Developer Account and risk being caught signing the app, plus wasting their time to wait for the so-called Apple ["notarization"](https://krita.org/en/item/first-notarized-macos-build-of-krita/).
+- **原因**: 为了保护开发者的隐私，我们不会使用个人苹果开发者帐户签署 Qv2ray。 Also, we haven't had our applications "notarized" by Apple. It's unfair to ask Qv2ray developers, who never use macOS, to pay the money for an Apple Developer Account and risk being caught signing the app, plus wasting their time to wait for the so-called Apple ["notarization"](https://krita.org/en/item/first-notarized-macos-build-of-krita/).
 - **Solution**: Use `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` like command to bypass.
 
 
