@@ -4,19 +4,6 @@ title: Features
 
 # Features
 
-## Availability
-
-| Windows                                                                                             | Linux                                                                                                                                                                        | macOS                                                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Portable Version](https://github.com/Qv2ray/Qv2ray/releases/latest)                                | AppImage [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) | DMG Installer [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) |
-| [Installer Version](https://github.com/Qv2ray/Qv2ray/releases/latest)                               | ArchLinuxCN [Stable](https://build.archlinuxcn.org/packages/#/qv2ray) / [Testing](https://build.archlinuxcn.org/packages/#/qv2ray-dev-git)                                   | Homebrew Cask [Stable](https://formulae.brew.sh/cask/qv2ray)                                                                                                                      |
-| [Scoop Package Manager](https://github.com/lukesampson/scoop-extras/blob/master/bucket/qv2ray.json) | AUR [Stable](https://aur.archlinux.org/packages/qv2ray) / [Testing](https://aur.archlinux.org/packages/qv2ray-dev-git)                                                       |                                                                                                                                                                                   |
-|                                                                                                     | Debian [Stable](https://github.com/Qv2ray/Qv2ray/releases/latest) / [Testing](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+debian+package%22)   |                                                                                                                                                                                   |
-|                                                                                                     | Fedora [Stable](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [Testing](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                    |                                                                                                                                                                                   |
-|                                                                                                     | openSUSE [Stable](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [Testing](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                  |                                                                                                                                                                                   |
-|                                                                                                     | Flathub [Stable](https://flathub.org/apps/details/com.github.Qv2ray)                                                                                                         |                                                                                                                                                                                   |
-|                                                                                                     | Snapcraft [Stable / RC / Testing](https://snapcraft.io/qv2ray)                                                                                                               |                                                                                                                                                                                   |
-
 ## Special Features
 
 ### Plugin Support
@@ -35,7 +22,7 @@ Qv2ray’s built-in routing matrix will allow you configure your custom routing 
 
 **Following V2ray’s Routing Syntax, but with Auto-Completing (Typo-free)**
 
-### Full-featured V2ray Configuration GUI
+### The Full-featured V2ray Configuration GUI
 
 Our full-featured complex editor allows you create, edit your own connection configuration. Including Routing Table, Multiple inbounds / outbounds.
 

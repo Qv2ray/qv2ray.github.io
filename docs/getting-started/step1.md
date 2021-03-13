@@ -3,151 +3,34 @@ title: Getting Qv2ray Distribution
 sidebarDepth: 3
 ---
 
-# Step 1: Getting Qv2ray Distribution
+# Step 1: Obtaining Qv2ray
 
-To get started with Qv2ray, you should first obtain a release of Qv2ray. We offer many distribution methods, you can choose according to your preference.
+To get started with Qv2ray, you should first obtain it (Why not?).
 
-## GitHub Releases Binary
+- We offer many distribution methods, you can choose according to your preference.
 
-Downloading stable release binary from [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) is favored for **Windows** and **macOS** users. This is also suitable for Linux users where Qv2ray is not officially packaged in their distros, since they can use our **AppImage** releases.
+## From a Package Manager
 
-Do as the follows:
+### Linux: Debian, Ubuntu and their derivatives
 
-1. Open [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a web browser.
-2. Choose a version from the releases. Or, optionally, you may use the [Latest **Stable** Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
-3. Choose in Assets according to your platform and download it! For example:
-   - For Windows Users:
-     - Windows 10/8.1/7: `Qv2ray.VERSION.Windows-x64/x86.7z` (Archive) or `Qv2ray.VERSION.win32/64.exe` (Installer).
-     - Windows 2003/XP/2000/ME/98/...: NOT SUPPORTED (since Qt does not support them);
-   - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`.
-   - For macOS Users:
-     - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
-     - macOS 10.13: `qv2ray-legacy.dmg` (if any);
-     - macOS 10.12 and before: NOT SUPPORTED.
-   - For Ubuntu 19.04 / Debian 10 (or greater): ~~`qv2ray_VERSION_amd64.deb`~~ (Moved to [Qv2ray Debian Repository](https://qv2ray.github.io/debian/) since v2.6.1)
-   - For Arch Linux Users：`qv2ray-VERSION-1-x86_64.pkg.tar.xz`
+1. Install the relevant tools.
 
-Where `VERSION` is the version of that release.
+	```bash
+	# apt install gnupg ca-certificates curl
+	```
 
-:::tip Notes for Linux AppImage users
-Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
-:::
+2. Follow the steps at [our debian repo](https://qv2ray.net/debian)
 
-:::warning Notes for Windows ARM64 users
-Windows 10 on ARM users can use `Qv2ray.VERSION.Windows-x86.7z` (archive) or `Qv2ray.VERSION.win32.exe` (Installer) directly, since the operating system has a built-in compatibility layer for x86 architecture.
-:::
 
-## GitHub Actions Artifact
+3. Install Qv2ray
 
-If you are fed up with the functionalities of stable versions and willing to try out new features in development, you may download artifacts from GitHub Actions:
+	```bash
+	# apt update; sudo apt install qv2ray
+	```
 
-1. Open [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) in your web browser.
-2. Choose a recent and successful (displayed as ✔️) build and click on it. You should be taken to the detail page of that GitHub Build. Here's [an example](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
-3. Click on **Artifacts** drop-down menu to expand it, and then choose binaries according to your platform.
+### Linux: Arch Linux-based distros
 
-:::tip
-You must login GitHub first to access GitHub Actions.
-:::
-
-## Download From a package manager
-
-### Debian, Ubuntu and their derivatives
-
-Install the relevant tools.
-
-```bash
-sudo apt install gnupg ca-certificates curl
-```
-
-#### Debian Stable install stable version of Qv2ray
-
-Adding keys (you can optionally use FastGit to speed up adding keys)
-```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
-```
-
-Add software repositories (FastGit accelerated repositories can be enabled on demand)
-```bash
-echo "deb https://qv2ray.net/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
-# echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
-```
-
-Install Qv2ray
-```bash
-sudo apt update; sudo apt install qv2ray
-```
-
-#### Debian Stable install the development version of Qv2ray
-
-The development version for Debian supports AMD64, ARM64 and MIPS64EL architectures, and can be used on armbian.
-
-Adding keys (optionally using FastGit to speed up adding keys)
-```bash
-curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
-```
-
-Add software repositories (FastGit accelerated repositories can be enabled on demand)
-```bash
-echo "deb https://qv2ray.net/debian-dev/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
-# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
-```
-
-Install Qv2ray
-```bash
-sudo apt update; sudo apt install qv2ray
-```
-
-#### Debian Unstable
-
-As a user of the unstable branch, we trust that you have the ability to add the corresponding repositories by referring to the stable version information. the Unstable branch repositories are codenamed ``unstable``.
-
-#### Ubuntu and its official derivatives install the stable version of Qv2ray
-
-* The following commands are run in `bash`, or if you are using another shell, please run `bash` in the terminal first. *
-
-Add a key (you can optionally use FastGit to speed up adding keys)
-```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
-```
-
-Add software repositories (FastGit accelerated repositories can be enabled on demand)
-```bash
-echo "deb https://qv2ray.net/debian/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
-# echo "deb https://raw.fastgit.org/Qv2ray/debian/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
-```
-
-Install Qv2ray
-```bash
-sudo apt update; sudo apt install qv2ray
-```
-
-#### Ubuntu and its official derivatives install the development version of Qv2ray
-
-* The following commands are run in ``bash``, or if you are using another shell, run ``bash`` in the terminal first. *
-
-Add a key (you can optionally use FastGit to speed up adding keys)
-```bash
-curl -sSL https://qv2ray.net/debian-dev/pubkey.gpg | sudo apt-key add -
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian-dev/master/pubkey.gpg | sudo apt-key add -
-```
-
-Add software repositories (FastGit accelerated repositories can be enabled on demand)
-```bash
-echo "deb https://qv2ray.net/debian-dev/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray-dev.list
-# echo "deb https://raw.fastgit.org/Qv2ray/debian-dev/master/ `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray- dev.list
-```
-
-Install Qv2ray
-```bash
-sudo apt update; sudo apt install qv2ray
-```
-
-### Arch Linux-based distros
-
-#### Install directly from `archlinuxcn`
+**Install directly from `archlinuxcn`**
 
 We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
 
@@ -157,75 +40,20 @@ sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
 
 And that shall be done.
 
-:::tip
-You may also want to install `v2ray` package to use system V2Ray core.
-:::
-
 :::warning Attention to Manjaro Hitchhikers on Arch Linux CN
 
-Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use AppImage / Snapcraft versions instead.
+Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use other versions instead.
 
-This nag will be removed whenever something like "Manjaro CN" is founded and officially **take the workload of packaging Qv2ray** for its users.
+This nag will be removed whenever something like "Manjaro CN" is founded and officially **takes the workload of packaging Qv2ray** for its users.
 :::
 
-#### Download from AUR, using an AUR Helper
+**Download from AUR, using an AUR Helper**
 
 You may acquire officially maintained `PKGBUILD` file from AUR (Arch User Repository, [AUR (en) - Home](https://aur.archlinux.org/)), which will instruct the build process of Qv2ray.
 
-You may use an AUR helper such as `yay`, `yaourt`, `pikaur` and so on to automatically handle the build process of AUR packages.
+All Qv2ray plugins are currently in AUR.
 
-:::tip NOTE
-The following example is utilizing `yay`. For other AUR helpers, check the usage in respective documentations.
-:::
-
-First, you may try searching `qv2ray` in AUR:
-
-```shell
-$ yay -Ss qv2ray
-aur/qv2ray-dev-git 1.99.4.r47514d2-1 (+2 0.98%)
-     Qt cross platform v2ray GUI client (Dev branch build release)
-aur/qv2ray 1.3.8.0-1 (+4 1.23%)
-     Qt cross platform v2ray GUI client
-```
-
-Then, choose the adequate version of Qv2ray to install. There are two versions available:
-
-- **Stable version**, with package name `qv2ray`. This package is built from the master branch of Git repository, and shall be stable enough for cautious users.
-- **Development version**, with package name `qv2ray-dev-git`. This package is built from the dev branch of Git repository. Along with the newest features and improvements, there are potential risks for using an unstable distribution.
-
-Choose according to your actual situation. Here, we choose to install `qv2ray-dev-git`:
-
-```bash
-$ yay -S qv2ray-dev-git
-```
-
-Qv2ray will be ready to use after finishing the command.
-
-#### Download from AUR, the hard way
-
-You may not want to use an AUR helper to install Qv2ray from AUR. Then take a look at the following example.
-
-```bash
-# 1. Clone the AUR repository (`qv2ray-dev-git` as an example):
-$ git clone https://aur.archlinux.org/qv2ray-dev-git.git
-
-# 2. Enter `PKGBUILD` folder:
-$ cd qv2ray-dev-git
-
-# 3. Build Qv2ray:
-$ makepkg -sf
-
-# 4. Install the generated package after building:
-$ sudo pacman -U qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst
-```
-
-You are done.
-
-:::tip
-The package filename (`qv2ray-dev-git-v1.99.4.2550-1-x86_64.pkg.tar.zst`) depends on the actual version of Qv2ray. It may differ on your machine, but that's not a problem.
-:::
-
-### openSUSE / Fedora / CentOS
+### Linux: openSUSE / Fedora / CentOS
 
 > Qv2ray is made available for openSUSE / Fedora / CentOS users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
 
@@ -251,7 +79,7 @@ Before you install Qv2ray from above OBS project, you need to add the **EPEL** r
 The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
 :::
 
-### Homebrew (macOS/Linux)
+### Linux / macOS: Homebrew
 
 You can use Homebrew to install Qv2ray on macOS (and Linux, maybe). If you haven't installed Homebrew yet, you can check the Homebrew website for more details about how to install it. Once Homebrew is installed, you can install Qv2ray using the following command:
 
@@ -276,11 +104,11 @@ brew install qv2ray-beta
 brew install kidonng/malt/qv2ray-beta
 ```
 
-### Scoop (Windows)
+### Windows: Scoop
 
 > [Scoop](https://scoop.sh) is a command-line-based software packages manager for **Windows**.
 
-Run the following commands in **Powershell**:
+Run the following commands in **PowerShell**:
 
 1. [Install Scoop](https://scoop.sh/#installs-in-seconds):
    ```powershell
@@ -312,7 +140,7 @@ Run the following commands in **Powershell**:
 You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 :::
 
-### Chocolatey (Windows)
+### Windows: Chocolatey
 
 > [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
 
@@ -327,9 +155,9 @@ You may also need to install [the latest Visual C++ Redistributable](https://sup
    choco install qv2ray
    ```
 
-## Download from an Linux app store
+## From AppStore
 
-### Snapcraft
+### Linux: Snapcraft
 
 Follow the instructions on our [Snapcraft page](https://snapcraft.io/qv2ray).
 
@@ -341,7 +169,7 @@ $ sudo snap install qv2ray
 $ sudo snap refresh qv2ray
 ```
 
-### Flathub (Deprecated)
+### Linux: Flathub (Deprecated)
 
 :::warning Deprecated (2020/09/18)
 Installation of Qv2ray from Flathub is officially **deprecated**, since the maintainer is no longer actively maintaining the package. If you are interested in adopting this, please open an issue and let us know.
@@ -355,6 +183,51 @@ Installation of Qv2ray from Flathub is officially **deprecated**, since the main
    # To update the package:
    $ flatpak update
    ```
+   
+
+
+
+## GitHub Releases Binary
+
+Downloading the release from [Qv2ray Release Page](https://github.com/Qv2ray/Qv2ray/releases) is favored for someone who ***does not want to use Package Managers***.
+
+This is also suitable for Linux users where Qv2ray is not officially packaged in their distros.
+
+Do as the follows:
+
+1. Navigate to [Qv2ray GitHub Release Page](https://github.com/Qv2ray/Qv2ray/releases) in a **web** browser.
+2. Choose a version from the releases. Or, optionally, you may use the [Latest **Stable** Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
+3. Choose in Assets according to your platform and download it! For example:
+   - For Windows Users:
+     - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z` (Archive) or `Qv2ray.VERSION.win64.exe` (Installer).
+     - Windows 2003/XP/2000/ME/98/...: ***Are you kidding me bro?***
+   - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`.
+   - For macOS Users:
+     - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
+     - macOS 10.13: `qv2ray-legacy.dmg` (if any);
+     - macOS 10.12 and before: ***Try Upgrading Your macOS***.
+
+:::tip Notes for Linux AppImage users
+Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
+:::
+
+:::warning Notes for Windows ARM64 users
+Windows 10 on ARM added an emulation layer for x86_64 apps in *build 21277*, users can use the x64 version with the latest Windows Insider Preview.
+:::
+
+## GitHub Actions
+
+If you are fed up with the functionalities of stable versions and willing to try out new features in development, you may download artifacts from GitHub Actions:
+
+1. Open [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) in your web browser.
+2. Choose a recent and successful (displayed as ✔️) build and click on it. You should be taken to the detail page of that GitHub Build. Here's [an example](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225).
+3. Click on **Artifacts** drop-down menu to expand it, and then choose binaries according to your platform.
+
+TODO: Branch Selection Tips
+
+:::tip
+You must login GitHub first to access GitHub Actions.
+:::
 
 ## Building From Source
 

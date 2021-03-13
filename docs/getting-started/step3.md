@@ -10,12 +10,12 @@ Qv2ray supports many ways of importing your configuration. To get you started, w
 
 > Share links generally looks like these:
 >
-> - `vmess://eyJ2Ijoi`...
-> - `ss://NjNlMDAx`...
+> - `vmess://`...
+> - `ss://`...
 
 Follow these steps to import them:
 
-1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link) or [QR Code](qv2ray://open/import/qr).
+1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link).
 2. In the **Import File** dialog, choose import source **Share Link**,
 3. Paste your share links into **Share Link** text box.
 4. Click on **Import** button to finish.
@@ -30,7 +30,7 @@ Some broken share links may fail to import, but it doesn't matter. The detailed 
 
 ## Subscription
 
-> A subscription link usually looks like this: `https://some-airport.com/links/YjYyODk?sub=3`
+> A subscription link usually looks like this: `https://some-airport.domain/links/YjYyODk?sub=3`
 
 To import a subscription, follow these steps:
 

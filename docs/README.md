@@ -12,7 +12,7 @@ features:
     details: JSON / VMess / QR Code / Manual
   - title: Subscriptions
     details: Automatic / Manual Updates
-footer: CC-BY-SA Licensed | Copyright © 2021 Qv2ray
+footer: CC-BY-SA Licensed | Copyright © 2020-2021 Qv2ray Workgroup and All Contributors
 ---
 
 **Qv2ray** is a cross-platform v2ray graphical frontend written in Qt.
@@ -21,7 +21,7 @@ The supported version currently is `v2.7.0-pre2`.
 
 ## 🚀 Getting Started
 
-For most of the users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray quickly.
+For most of our users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray in short time.
 
 For detailed documentation of all functionalities, please view the [User Manual](manual.md).
 
@@ -37,7 +37,7 @@ Please view [FAQ](faq/README.md).
 
 There are many ways to help improve Qv2ray, even if you do not know how to code. Here are some of them:
 
-1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://crowdin.com/translate/qv2ray/).
+1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://translate.qv2ray.net/).
 2. 🐛 **Reporting Bugs**. Report bugs or incidents of Qv2ray, by posting an issue at [issues](https://github.com/Qv2ray/Qv2ray/issues).
 3. 💡 **Suggest New Features**. [GitHub - Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
 4. ⚙️ **Hacking Qv2ray**. Check out and hack the code of Qv2ray, followed by high-quality pull requests!

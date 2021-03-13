@@ -38,7 +38,7 @@ Not tested, contributions from those with experience in using it are welcome. Sp
 
 ### Cannot run on Wayland
 
-You may be using an Xorg-based desktop session, or you don't have the Wayland component for Qt5 installed. Or, you have statically compiled Qv2ray, but have not included the Wayland component for Qt5.
+You may be using an Xorg-based desktop session, or you don't have the Wayland component for Qt installed. Or, you have statically compiled Qv2ray, but have not included the Wayland component for Qt.
 
 ### Does running under the Wayland display protocol speed up wall-climbing?
 
@@ -49,13 +49,15 @@ No, thanks.
 Under a KDE Wayland session, if you log out and log back in, Qv2ray will not exit, will not show the notification tray icon and will use a lot of CPU.
 
 **The solution is (use one of three choices):**
-1、Use Gnome Wayland session
-2、Use KDE Plasma or other desktop‘s Xorg sessions 3. Kill the Qv2ray process by yourself and then open it again.
+
+1. Use Gnome Wayland session
+
+2. Use KDE Plasma or other desktop‘s Xorg sessions 
+
+3. Kill the Qv2ray process by yourself and then open it again.
 
 > Related issues:
 > <https://github.com/Qv2ray/Qv2ray/issues/830>
-
-Translated with www.DeepL.com/Translator (free version)
 
 ### No tray icon under Gnome
 
