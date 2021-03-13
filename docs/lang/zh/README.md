@@ -15,7 +15,7 @@ features:
   - 
     title: 订阅
     details: 自动/手动更新
-footer: 'CC-BY-SA 授权 | 版权所有 :版权: 2021 Qv2ray'
+footer: CC-BY-SA Licensed | Copyright © 2020-2021 Qv2ray Workgroup and All Contributors
 ---
 
 **Qv2ray**是一个使用 Qt 写入的跨平台的 v2ray 图像前端。
@@ -24,7 +24,7 @@ footer: 'CC-BY-SA 授权 | 版权所有 :版权: 2021 Qv2ray'
 
 ## :ro火箭: 入门
 
-对于大多数用户来说，[Getting-Started](getting-started/README.md)将帮助他们快速设置Qv2ray
+For most of our users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray in short time.
 
 欲了解所有功能的详细文档，请查看[用户手册](manual.md)。
 
@@ -40,7 +40,7 @@ footer: 'CC-BY-SA 授权 | 版权所有 :版权: 2021 Qv2ray'
 
 即使你不知道如何编程，也有许多方法来帮助改进 Qv2ray。 以下是其中一些：
 
-1. 🌐**翻译**。 帮助将 Qv2ray 翻译成更多语言，或者提高当前翻译的质量：您可以在[Crowdin](https://crowdin.com/translate/qv2ray/) 找到我们。
+1. 🌐**翻译**。 Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://translate.qv2ray.net/).
 2. 🐛**报告错误**。 在[issues](https://github.com/Qv2ray/Qv2ray/issues) 中发布一个问题来报告 Qv2ray的bug或事件。
 3. 💡**推荐新功能**。[GitHub - Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
 4. ⚙️**黑客Qv2ray**. 看看并破解Qv2ray代码，然后是高质量的拉取请求！
