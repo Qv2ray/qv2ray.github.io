@@ -104,21 +104,21 @@ title: "true"
 
 ### macOS 想要将 Qv2ray 和/或其插件移动到回收站中
 
-- **原因**: 为了保护开发者的隐私，我们不会使用个人苹果开发者帐户签署 Qv2ray。 Also, we haven't had our applications "notarized" by Apple. It's unfair to ask Qv2ray developers, who never use macOS, to pay the money for an Apple Developer Account and risk being caught signing the app, plus wasting their time to wait for the so-called Apple ["notarization"](https://krita.org/en/item/first-notarized-macos-build-of-krita/).
-- **Solution**: Use `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` like command to bypass.
+- **原因**: 为了保护开发者的隐私，我们不会使用个人苹果开发者帐户签署 Qv2ray。 此外，我们还没有让苹果的 “公证” 过我们的应用程序。 在这种情况下询问 Qv2ray 开发者是不公平的，我们从未使用过 macOS，或为苹果开发者账户交钱，或在应用程序上签名， 此外，等待苹果公司的所谓 [“公证”](https://krita.org/en/item/first-notarized-macos-build-of-krita/)简直太浪费时间了。
+- **解决方案**: 使用 `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` 跳过阴间验证。
 
 
 
-## Miscellaneous
+## 其他问题
 
-### Why doesn't Qv2ray pack plugins and V2Ray core, or provide download function?
+### 为什么 Qv2ray 不自带插件和 V2Ray 核心，或者提供内置下载功能？
 
-We hope our users can get to know how the it works, and willing to solve potential problems and needs by themselves.
+我们希望我们的用户能够知道 Qv2ray / V2Ray 如何工作，并愿意自己解决潜在的问题和需求。
 
-If Qv2ray doesn't suit you, you are free to choose other software.
+如果 Qv2ray 不适合您，您可以自由选择其他软件。
 
-- ~~Try Package Managers!~~
+- ~~试试包管理？~~
 
-### Will Qv2ray support mobile platform (Android、iOS)?
+### Qv2ray 是否会支持移动平台 (Android，iOS)？
 
-There is no plan at the moment. Depending on developers will, there **may** be mobile platform support when the program migrate to QML.
+目前尚无计划。 取决于开发者的个人需求，在将来**可能**会有对于移动平台的支持（在项目迁移到 QML 之后）
