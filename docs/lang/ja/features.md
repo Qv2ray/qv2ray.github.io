@@ -4,19 +4,6 @@ title: 特徴
 
 # 特徴
 
-## 在庫状況
-
-| Windows                                                                                       | Linux                                                                                                                                                                | macOS                                                                                                                                                                  |
-| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ポータブルバージョン](https://github.com/Qv2ray/Qv2ray/releases/latest)                                | AppImage [安定](https://github.com/Qv2ray/Qv2ray/releases/latest) / [テスト](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) | DMGインストーラ [安定版](https://github.com/Qv2ray/Qv2ray/releases/latest) / [テスト](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+matrix+-+cmake%22) |
-| [インストーラのバージョン](https://github.com/Qv2ray/Qv2ray/releases/latest)                              | ArchLinuxCN [安定性](https://build.archlinuxcn.org/packages/#/qv2ray) / [テスト](https://build.archlinuxcn.org/packages/#/qv2ray-dev-git)                                  | Homebrew Cask [安定](https://formulae.brew.sh/cask/qv2ray)                                                                                                               |
-| [スクープパッケージマネージャー](https://github.com/lukesampson/scoop-extras/blob/master/bucket/qv2ray.json) | AUR [安定性](https://aur.archlinux.org/packages/qv2ray) / [テスト](https://aur.archlinux.org/packages/qv2ray-dev-git)                                                      |                                                                                                                                                                        |
-|                                                                                               | Debian [安定版](https://github.com/Qv2ray/Qv2ray/releases/latest) / [テスト](https://github.com/Qv2ray/Qv2ray/actions?query=workflow%3A%22Qv2ray+build+debian+package%22)  |                                                                                                                                                                        |
-|                                                                                               | Fedora [安定版](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [テスト](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                   |                                                                                                                                                                        |
-|                                                                                               | openSUSE [安定](https://build.opensuse.org/package/show/home:zzndb/Qv2ray) / [テスト](https://build.opensuse.org/package/show/home:zzndb/Qv2ray-preview)                  |                                                                                                                                                                        |
-|                                                                                               | Flathub [安定](https://flathub.org/apps/details/com.github.Qv2ray)                                                                                                     |                                                                                                                                                                        |
-|                                                                                               | Snapcraft [安定版 / RC / テスト](https://snapcraft.io/qv2ray)                                                                                                              |                                                                                                                                                                        |
-
 ## 特別な機能
 
 ### プラグインのサポート
@@ -35,7 +22,7 @@ Qv2rayの内蔵ルーティングマトリクスにより、カスタムルー�
 
 **V2ray のルーティング構文に従っていますが、自動補完機能付き（タイポフリー）**
 
-### フル機能の V2ray 設定 GUI
+### The Full-featured V2ray Configuration GUI
 
 フル機能の複雑なエディタを使用すると、独自の接続設定を作成、編集できます。 ルーティングテーブル、複数のインバウンド/アウトバウンドを含みます。
 
