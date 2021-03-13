@@ -2,45 +2,45 @@
 title: "true"
 ---
 
-# 订阅
+# 常见问题
 
-:::tip Some message can only be seen when the `loglevel` in **Kernel Settings** set to `info` or `debug`. :::
+::tip 有些错误内容可能需要将 **核心设置** 中的 `日志等级` 调整成 `info` 或者 `debug` 后才会出现。 :::
 
-## Startup Issues
+## 启动问题
 
 ### `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
-- **The Root Cause**: A port conflict occurred.
-- **Cause 1**: Previous V2Ray process did not exit normally and occupied the relevant port.
-- **Solution**: Terminate the current process which takes up that port.
-- **Cause 2**: The relevant ports set in Qv2ray have been occupied by other software.
-- **Solution**: Change the port settings of Qv2ray or other software.
+- **根本原因**: 出现了端口冲突
+- **原因 1**: 上一个 V2Ray 进程没有正常退出，占用了相关的端口。
+- **解决办法**: 终止当前占用该端口的进程。
+- **原因2**: 在 Qv2ray 中设置的相关端口已被其他软件占用。
+- **解决方案**: 更改 Qv2ray 或其他软件的端口设置。
 
 ### `An attempt was made to access a socket in a way forbidden by its access permissions.`
 
-- **Cause**: If you are using Windows, a patch might set ports between `1000-2000` as privileged / reserved ports.
+- **原因**: 如果您正在使用 Windows, 一个补丁可能会在 `1000-2000` 之间设置端口作为特权/保留端口。
 
-- **Solution**: Use a port above than `2000`.
+- **解决方案**: 使用超过 `2000` 的端口。
 
-### V2Ray Core Failed to start after enabling TProxy
+### 启用 TProxy 后启动 V2Ray 核心失败
 
-- **Detail**: `Segmentation Fault` occurd after enabling TProxy
+- **详情**: 开启 TProxy 后出现了 `Segmentation Fault`
 
-- **Cause**: It's caused by a limit in the `SUID` feature on some Linux OSes. Detailed error analysis please see: [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
-  - **Solution**: `sudo sysctl fs.suid_dumpable=1`  
-    The solution will be lost on reboot, please refer to [this blog](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html) if you want to keep it.
+- **原因**: 它是由某些 Linux 上的 `SUID` 限制所引起的。 详细的错误分析请查看：[#59](https://github.com/Qv2ray/Qv2ray/issues/59)
+  - **解决方案**: `sudo sysctl fs.suid_dumpable=1`  
+    这种方法将会在重启后失效，请查看 [这篇文章](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)
 
-## Connectivity Issues
+## 网络连接问题
 
-### Connection configuration is confirmed to be correct but seen runtime warnings.
+### 连接配置是正确的，但运行时可以看到警告。
 
-- **Possible cause**: System time is out of sync. If VMess is your proxy protocol, it requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
-- **Solutions (Windows)**:
-  - **Approach 1**: Open Settings, select “Time & Language”, enable “Automatically set date and time”. If the option is already enabled, please click the "Sync now" button.
-  - **Approach 2**：Open control panel, switch to “Categories” view，choose “Time and Zone”，then click “Date and Time”, select "Internet time" in the open dialog, then click "change settings" button and check “Sync with Internet time server”.
-- **Solutions (Linux)**:
-  - **Approach 1**: Use `systemd-timesyncd`, run `sudo systemctl enable systemd-timesyncd --now`.
-  - **Approach 2**: Use [Chrony](https://www.chrony.tuxfamily.org) to sync time.
+- **可能的原因**: 系统时间不匹配。 如果VMess是您的代理协议，它需要客户端和服务器的系统时间差小于90秒，否则它将拒绝连接。
+- **解决方案 (Windows)**:
+  - **方法 1**: 打开设置, 选择 “时间 & 语言”, 启用 “自动设定日期和时间”。 如果该选项已经启用，请点击"立即同步"按钮
+  - **方案 2**：打开控制面板，切换到“类别”视图，选择“时间和区域”，然后点击“日期和时间”， 在打开的对话框中选择"Internet time"，然后点击“更改设置”按钮并检查“与Internet time server同步”。
+- **解决方案 (Linux)**:
+  - **方法 1**: 使用 `system-timeyncd`, 运行 `sudo systemctl enable system-timesyncd --now`
+  - **方法2**: 使用 [Chrony](https://www.chrony.tuxfamily.org) 来同步时间。
 - **Solution (macOS)**: Open system preference, click “Date & Time”, and enable “Automatically set date and time”.
 
 ### I want to access China mainland websites using the proxy.
