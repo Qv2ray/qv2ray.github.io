@@ -6,7 +6,7 @@ DEFAULT_SIDE_BAR = {
     '/manual/': ['', 'general', 'route'],
     '/hacking/': ['', 'manuallybuild', 'cmake-argument'],
     '/plugins/': ['', 'usage', 'v2ray-integration', 'development'],
-    '/faq/': ['', 'v2ray-core'],
+    '/faq/': [''],
 }
 
 website_config = {
