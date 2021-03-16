@@ -1,0 +1,16 @@
+{
+    "lang": "zh-CN",
+    "description": "🌟 V2Ray Linux / Windows / macOS 跨平台 GUI 🔨 使用 C++17 / Qt5 ，支持订阅，扫描二维码，支持自定义路由编辑 🌟",
+    "selectText": "选择语言",
+    "ariaLabel": "选择语言",
+    "label": "中文",
+    "editLinkText": "编辑本页",
+    "lastUpdated": "上次更新",
+    "nav": {
+        "getting-started": "新手起步",
+        "manual": "用户手册",
+        "faq": "常见问题",
+        "hacking": "折腾",
+        "plugins": "插件"
+    }
+} 
