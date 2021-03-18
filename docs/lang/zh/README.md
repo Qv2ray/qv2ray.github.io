@@ -2,29 +2,29 @@
 home: true
 heroImage: /logo.svg
 heroText: Qv2ray
-tagline: A cross-platform V2Ray graphical front-end
-actionText: Getting Started →
+tagline: 纵使千山多万壑，犹有青鸾踏云间
+actionText: 快速上手 →
 actionLink: ./getting-started/
 features:
   - 
-    title: Cross-platform
-    details: Supporting Linux / Windows / macOS
+    title: 跨平台
+    details: 支持 Linux / Windows / macOS
   - 
-    title: Versatile Host Importing
-    details: JSON / VMess / QR Code / Manual
+    title: 多样化节点导入
+    details: JSON / VMess / 二维码 / 手动配置
   - 
-    title: 手动更新订阅
-    details: Automatic / Manual Updates
-footer: CC-BY-SA Licensed | Copyright © 2020-2021 Qv2ray Workgroup and All Contributors
+    title: 订阅
+    details: 自动 / 手动更新
+footer: 采用 CC-BY-SA | © 2021 Qv2ray 版权所有
 ---
 
-**Qv2ray** is a cross-platform v2ray graphical frontend written in Qt.
+**Qv2ray **是一个使用 Qt 编写的跨平台的 v2ray 图形前端。
 
-The supported version currently is `v2.7.0-pre2`.
+目前支持的版本是 `v2.7.0-pre2`。
 
-## 🚀 Getting Started
+## 🚀 起步
 
-For most of our users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray in short time.
+对于大多数用户，[快速入门](getting-started/README.md) 将会带领他们在短时间内上手 Qv2ray。
 
 For detailed documentation of all functionalities, please view the [User Manual](manual.md).
 
