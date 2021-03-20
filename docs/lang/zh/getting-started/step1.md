@@ -44,7 +44,9 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现意外变动时， **_Arch Linux_ CN** 将 **优先 Arch 用户** 而不是Manjaro。 **使用 Arch Linux CN 的 Manjaro** 用户应该清楚**这样偷包/延迟更新的严重后果** 包括处理 `symbol lookup error` 此类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
 
-如果出现了 “Manjaro CN” 此类组织，并且官方 **为其用户提供了 Qv2ray** 后，这一章节将会被立即删除。 :::
+如果出现了 “Manjaro CN” 此类组织，并且官方 **为其用户提供了 Qv2ray** 后，这一章节将会被立即删除。
+
+:::
 
 **使用 AUR 助手从 AUR 下载**
 
@@ -56,7 +58,11 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 
 > 由 [@zzndb](https://github.com/zzndb) 提供的给 [openSUSE / Fedora / CentOS 用户](https://build.opensuse.org) 的 openSUSE 构建服务。
 
-:::warning 适用版本 因为 Qt 版本的限制， 我们可能无法支持上面所有发行版本，有关支持的发行版详请，请检查下面的 OBS 链接。 :::
+:::warning Applicable Versions
+
+Because of the limit of Qt version, we may not be able to support all on-lifetime distro above, the detail of supported distro please check the OBS link below.
+
+:::
 
 类似于AUR, 有两个版本的 Qv2ray 可供使用。 您可以根据自己的爱好选择：
 
@@ -68,9 +74,17 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 - 下载 Stable 版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
 - 下载 Preview 版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
-::::warning CentOS 用户 在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是 Fedora 为额外需要的依赖提供的。 有关更多信息，请看 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。 :::
+:::warning For CentOS user
 
-:::tip 插件呢？ 以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 这样安装 Qv2ray 之后 (不是手动下载 & 安装那种)， 您可以直接使用包管理器安装插件(插件名字与插件项目名字相同.此外，我们还提供带有 `-preview` 后缀的预览版本插件。 :::
+Before you install Qv2ray from above OBS project, you need to add the **EPEL** repository which provided by Fedora for extra needed dependencies. 有关更多信息，请看 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。
+
+:::
+
+:::tip Plugins
+
+The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. 这样安装 Qv2ray 之后 (不是手动下载 & 安装那种)， 您可以直接使用包管理器安装插件(插件名字与插件项目名字相同.此外，我们还提供带有 `-preview` 后缀的预览版本插件。
+
+:::
 
 ### Linux / macOS: Homebrew
 
@@ -129,7 +143,11 @@ brew install kidonng/malt/qv2ray-beta
    scoop install qv2ray-beta
    ```
 
-:::tip 您可能还需要安装 [最新的  Visual C++ 可再发行组件包](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads). :::
+:::tip
+
+You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
+
+:::
 
 ### Windows: Chocolatey
 
@@ -162,7 +180,11 @@ $ sudo snap refresh qv2ray
 
 ### Linux: Flathub (快被扬了)
 
-:::warning 已废弃 (2020/09/18) 从 Flahub 安装Qv2ray 是官方 **已废弃**的方法，因为维护者不再积极维护该包。 如果你有兴趣接手这个包，请告诉我们. :::
+:::warning Deprecated (2020/09/18)
+
+Installation of Qv2ray from Flathub is officially **deprecated**, since the maintainer is no longer actively maintaining the package. 如果你有兴趣接手这个包，请告诉我们.
+
+:::
 
 1. 根据 [官方文档](https://flatpak.org/setup/) 设置Flatpak环境。
 2. 安装 Qv2ray：
@@ -196,9 +218,17 @@ $ sudo snap refresh qv2ray
      - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
      - macOS 10.12及之前: ***升级您的 macOS 好了***。
 
-::::tip 用于 Linux AppImage 用户的一些提醒 虽然我们已将 `glibc` 和一些基本的 C++ 库打包进 **AppImage** 来支持一些旧的发行版，但是我们强烈建议您自己升级到最新版本 :::
+:::tip Notes for Linux AppImage users
 
-::::warning 给 Windows ARM64 用户的提醒 Windows 10 on ARM 在 *building 21277* 中为 x86_64 应用添加了一个模拟层，用户可以使用最新的 Windows 内部预览的 x64 版本。 :::
+Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
+
+:::
+
+:::warning Notes for Windows ARM64 users
+
+Windows 10 on ARM added an emulation layer for x86_64 apps in *build 21277*, users can use the x64 version with the latest Windows Insider Preview.
+
+:::
 
 ## GitHub Actions
 
@@ -210,7 +240,11 @@ $ sudo snap refresh qv2ray
 
 TODO：如何选择分支
 
-:::tip 您必须先登录 GitHub 才能访问 GitHub Actions。 :::
+:::tip
+
+You must login GitHub first to access GitHub Actions.
+
+:::
 
 ## 从源代码编译
 
