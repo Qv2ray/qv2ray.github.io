@@ -29,11 +29,11 @@ title: 进一步的步骤
 
 与图标风格一样，Qv2ray 将尽力检测您的系统的显示语言，并在首次启动时将其设置为 Qv2ray 的界面语言。 如果自动检测结果不能令人满意，或者您只想尝试以另一种语言使用 Qv2ray。您可以在 **首选项** -> **常规设置** -> **语言** 中调整该设置。
 
-选项根据 ISO-639/ISO-3166 规范列出。 For example, `zh_CN` for **Chinese Simplified**, `ja_JP` for **Japanese**, `en_US` for **American English**, etc. Most of the user interface can be retranslated immediately after a change, but a complete restart of Qv2ray is recommended to make the changes take effect.
+选项根据 ISO-639/ISO-3166 规范列出。 举个例子： `zh_CN` 对应 **简体中文**，`ja_JP` 对应 **日语**，`en_US` 对应 **英文（美国）**，等等。 大多数界面的显示语言都可以在更改选项后立即变更。 但建议重新启动 Qv2ray 以使更改得到完全生效。
 
-:::tip Restart After Change If changes don't seems to apply, you could try restarting Qv2ray. :::
+:::tip 修改选项后重启 如果更改选项似乎没有生效，您可以尝试重启 Qv2ray。 :::
 
-## Tweaking Routing Schemes
+## 调整路由设置
 
 By default, Qv2ray will be set to **bypass the traffic of China mainland**, according to `geosite.dat` and `geoip.dat` from V2Ray core, thus it is not necessary to configure some awkward PAC rules. You can override this default setting in the **Preference Window**, by simply turning off this function in tab **[Connection Settings](qv2ray://open/preference/connection)**.
 
