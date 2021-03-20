@@ -13,16 +13,22 @@ Qv2ray itself **does not** include a distribution of V2Ray executable files, nam
 **Check out [V2Fly Installation Guide](https://www.v2fly.org/guide/install.html) for more details.**
 
 :::tip Core Management: Manual vs Automatic
+
 If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
+
 :::
 
 :::tip For Windows 10 ARM64 users
+
 From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. It is recommended that Windows 10 ARM64 users use this version of the kernel to obtain better performance.
+
 :::
 
 :::danger Sharpen Your Eyes
+
 Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`amd64`) platform.
 To make it clear, `arm64` is completely different from `amd64`.
+
 :::
 
 ### Manual Download
@@ -45,10 +51,12 @@ Please make sure that these files exists directly in your `vcore` directory:
 4. `geosite.dat`: domain rules database
 
 :::warning Special Hint for Linux / macOS Users
+
 You should always grant **executable permission** to `v2ray` and `v2ctl`.
 This is usually done by executing `chmod +x` on these files.
 
 On macOS, if you use Homebrew to install v2ray-core, you can ignore this tip.
+
 :::
 
 ## Configure V2Ray Core in Qv2ray
@@ -61,7 +69,9 @@ Open Qv2ray and go to Preference Window. In **[Kernel Settings](qv2ray://open/pr
 After configuring, you can click on **Check V2Ray Core Settings** button to validate your V2Ray core settings. Repeat trying until you get the check passed.
 
 :::warning No Matryoshka!
+
 Never ever point **Core Executable Path** to **Qv2ray Executable**!
 This will not cause a fork bomb since Qv2ray is single-instanced.
 Do note that V2Ray Core Executable is like `v2ray` , `v2ray.exe` or `wv2ray.exe`, instead of `qv2ray` or `qv2ray.exe`, `v2rayN.exe`!
+
 :::

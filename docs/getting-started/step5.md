@@ -24,7 +24,9 @@ In this case, please turn to **Preference Window**. In **[General Settings](qv2r
 - **Adapt Dark Tray Theme**: when enabled, the tray icon turns light-colored to adjust to darkmode themes. if the region of your tray is light-colored, disabling this is recommended.
 
 :::tip A tip for Gnome users
+
 The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons.
+
 :::
 
 ### Multi-languages
@@ -34,7 +36,9 @@ Similarly, Qv2ray will do its best to detect the display language of your system
 Choose according to ISO-639/ISO-3166 codes. For example, `zh_CN` for **Chinese Simplified**, `ja_JP` for **Japanese**, `en_US` for **American English**, etc. Most of the user interface can be retranslated immediately after a change, but a complete restart of Qv2ray is recommended to make the changes take effect.
 
 :::tip Restart After Change
+
 If changes don't seems to apply, you could try restarting Qv2ray.
+
 :::
 
 ## Tweaking Routing Schemes

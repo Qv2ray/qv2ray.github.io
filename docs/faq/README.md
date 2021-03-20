@@ -5,7 +5,9 @@ title: FAQ
 # FAQ
 
 :::tip
+
 Some message can only be seen when the `loglevel` in **Kernel Settings** set to `info` or `debug`.
+
 :::
 
 ## Startup Issues
@@ -103,7 +105,9 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 Or you can also restart Qv2ray and try again.
 
 :::tip A tip for Gnome users
+
 The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons.
+
 :::
 
 ### macOS wants Qv2ray and/or its plugins to be "moved to trash"

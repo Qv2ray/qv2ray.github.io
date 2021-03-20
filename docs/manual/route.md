@@ -7,9 +7,11 @@ title: Advanced Route Settings
 **Advanced routing settings** and the **routing editor** are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as **on-demand proxy**, **split traffic to domestic and foreign websites**, etc., and even do **Matryoshkas** 🤣~
 
 :::tip What is routing? What about PAC and GFWList?
+
 If you don't know what the routing function of V2Ray is, then you can understand it as a new generation PAC implementation with simpler configuration, more efficient use, and better rules.
 
 The routing function is far more powerful than PAC, so please don't ask whether Qv2ray supports PAC! The data used by the routing function is more complete than GFWList, so GFWList is no longer needed.
+
 :::
 
 ## Global routing rules
@@ -47,6 +49,7 @@ These 6 rules in Qv2ray are matched according to the priority of `domain name bl
 :::tip I just want a global proxy~~~ 🤗
 
 It's very simple. Just clear these rules, go to the Connection tab of Preferences, and uncheck the Bypass China check box. 🙄
+
 :::
 
 According to the official V2Ray documentation:
@@ -72,14 +75,19 @@ The domain name rules are written as follows (in order of common use):
 
 - If you want to implement a global proxy, that is, regardless of the destination address, all traffic will go through the proxy, then refer to the other tips above. 😅
 - If you want to achieve precise traffict splitting, that is, all outbound traffic should go through the proxy, then just click the `preset plans` button in the interface, select the `blank plan` or the `ad blocking plan`, and set the domain name strategy to `IPIfNonMatch`. 😋
-  :::
+
+:::
 
 :::tip I'm a advanced user! I want more precise traffic splitting! 🤔
+
 We recommends using an enhanced version of the V2Ray rules file project. The project is at [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗
+
 :::
 
 :::tip I want a highly customizable traffic splitting rules! 🤪
+
 Please refer to the next section **Routing Editor**. 😄
+
 :::
 
 ## Routing Editor
