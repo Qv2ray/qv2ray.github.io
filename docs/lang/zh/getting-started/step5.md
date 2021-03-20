@@ -18,7 +18,7 @@ title: 进一步的步骤
 
 尽管 Qv2ray 已经尽最大努力适配您的平台的 UI 风格，但您仍然可以在 Qv2ray 上看到违和的 UI 细节。 例如无法看清太亮的托盘图标，按钮上的图标颜色不一致等等。
 
-In this case, please turn to **Preference Window**. In **[General Settings](qv2ray://open/preference/general)** Tab, please adjust the following items according to your real situation:
+在这种情况下，请打开 **首选项**。 In **[General Settings](qv2ray://open/preference/general)** Tab, please adjust the following items according to your real situation:
 
 - **Adapt Dark Theme**: when enabled, the icons on buttons turn light-colored. if you are using a light-colored window theme, please turn this off.
 - **Adapt Dark Tray Theme**: when enabled, the tray icon turns light-colored to adjust to darkmode themes. if the region of your tray is light-colored, disabling this is recommended.
