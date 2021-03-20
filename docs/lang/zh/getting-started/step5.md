@@ -45,7 +45,7 @@ title: 进一步的步骤
 
 ## 共享代理至本地网络（局域网）
 
-为了安全，默认情况下 Qv2ray 只监听来自 `127.0.0` 的连接。 换句话说，只有运行 Qv2ray 的设备才能使用代理服务器。 If you want to share your proxy over your local network (LAN), there are changes to be made.
+为了安全，默认情况下 Qv2ray 只监听来自 `127.0.0` 的连接。 换句话说，只有运行 Qv2ray 的设备才能使用代理服务器。 如果您想要在您的本地网络（局域网）上分享您的代理，则需要修改一些设置。
 
 The most simple and overkill method is to change the listen address from `127.0.0.1` to `0.0.0.0`, which will allow all incoming connections to your little proxy.
 
