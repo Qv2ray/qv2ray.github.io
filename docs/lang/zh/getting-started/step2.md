@@ -18,36 +18,36 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 ::danger 擦亮你的双眼 当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念 :::
 
-### Manual Download
+### 手动下载
 
-**Official Download Link：** <https://github.com/v2fly/v2ray-core/releases>
+**官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
 
-Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
+将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到`$QV2RAY_CONFIG_PATH/vcore`, 其中`$QV2RAY_CONFIG_PATH`是Qv2ray 存储数据的目录。
 
-The directory `vcore` could be in one of these locations:
+目录 `vcore` 可能是在这些位置之一：
 
-- `./config/` (`config` subdirectory aside Qv2ray executable, recommended for Windows Users)
-- `~/.qv2ray/` (in a dedicated directory of your home folder)
-- `~/.config/qv2ray/` (standard XDG configuration path)
+- `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
+- `~/.qv2ray/` (在您的主文件夹的专用目录中)
+- `~/.config/qv2ray/` (标准 XDG 配置路径)
 
-Please make sure that these files exists directly in your `vcore` directory:
+请确保这些文件直接存在于您的 `vcore` 目录中：
 
-1. `v2ray` / `v2ray.exe`: core executable file
-2. `v2ctl` / `v2ctl.exe`: core controlling program
-3. `geoip.dat`: IP rules database
-4. `geosite.dat`: domain rules database
+1. `v2ray` / `v2ray.exe`: 核心可执行文件
+2. `v2ctl` / `v2ctl.exe`: 核心控制程序
+3. `geoip.dat`: IP 规则数据库
+4. `geosite.dat`: 域规则数据库
 
-:::warning Special Hint for Linux / macOS Users You should always grant **executable permission** to `v2ray` and `v2ctl`. This is usually done by executing `chmod +x` on these files.
+:::警告用于 Linux / macOS 用户的特殊提示 你应该始终给予 **可执行权限** `v2ray` 和 `v2ctl` 这通常是通过在这些文件上执行 `chmod +x` 来完成的。
 
-On macOS, if you use Homebrew to install v2ray-core, you can ignore this tip. :::
+在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。 :::
 
-## Configure V2Ray Core in Qv2ray
+## 在 Qv2ray 中配置 V2Ray Core
 
-Open Qv2ray and go to Preference Window. In **[Kernel Settings](qv2ray://open/preference/kernel)**, configure the following options:
+打开 Qv2ray 并转到首选项窗口。 在 **[内核设置](qv2ray://open/preference/kernel)**中，配置以下选项：
 
-- **Core Executable Path**: Set this to where your V2Ray executable exists. This can be the full path of your `v2ray.exe` on Windows, or that `v2ray` executable file on Linux / macOS.
-- **V2Ray Assets Directory**: Set this to where `geoip.dat` and `geosite.dat` are located.
+- **核心可执行文件路径**: 将此设置为您的 V2Ray 可执行文件存在的地方。 这可能是您在 Windows 上的 `v2ray.exe` 的完整路径，或者 `v2ray` 在 Linux / macOS 上的可执行文件。
+- **V2Ray 资源目录**: 将此设定为 `geoip.dat` 和 `geosite.dat` 所在位置。
 
-After configuring, you can click on **Check V2Ray Core Settings** button to validate your V2Ray core settings. Repeat trying until you get the check passed.
+配置后，您可以点击 **检查 V2Ray 核心设置** 按钮来验证您的 V2Ray 核心设置。 重复尝试，直到检查通过。
 
-:::warning No Matryoshka! Never ever point **Core Executable Path** to **Qv2ray Executable**! This will not cause a fork bomb since Qv2ray is single-instanced. Do note that V2Ray Core Executable is like `v2ray` , `v2ray.exe` or `wv2ray.exe`, instead of `qv2ray` or `qv2ray.exe`, `v2rayN.exe`! :::
+:::警告没有 Matryoshka! 永远不要点 **核心可执行路径** 到 **Qv2ray 可执行性**！ This will not cause a fork bomb since Qv2ray is single-instanced. 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray。 xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！ :::

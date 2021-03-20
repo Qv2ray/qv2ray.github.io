@@ -1,57 +1,57 @@
 ---
-title: 进一步的步骤
+title: 更多步骤
 ---
 
-# 进一步的步骤
+# 更多步骤
 
-If you are lucky enough, you may now be able to surf the Internet freely. Here are some optional steps that you can follow, to make your experience with Qv2ray better.
+如果运气足够好，现在您可以自由上网了。 以下是一些可选步骤，以使您获得更好的 Qv2ray 体验。
 
-## Join Qv2ray User Group
+## 加入 Qv2ray 用户群组
 
-We suggest you join our [Qv2ray User Group](https://t.me/qv2ray) at [Telegram](https://telegram.org/). Here you can chat directly with Qv2ray developers, and also the great Qv2ray users. For usage problems, it is always more efficient to discuss them in the group, than opening up one issue on GitHub.
+我们建议您加入我们在[ Telegram ](https://telegram.org/)的[ Qv2ray 用户组](https://t.me/qv2ray)。 在这里，您可以直接和 Qv2ray 开发者和 Qv2ray 的优秀用户聊天。 在群组中讨论使用问题总是比在 GitHub 上打开一个 issue 更有效。
 
-Also, optionally, you may subscribe [Qv2ray Outpost](https://t.me/qv2ray_outpost) channel at Telegram, if you don't like to talk too much or even show up. We will push news updates of Qv2ray, and even send polls that maybe decides Qv2ray's fate! Make sure you don't miss it.
+另外，如果您不想说太多话，也可以在 Telegram 上订阅 [Qv2ray Outpost](https://t.me/qv2ray_outpost) 频道。 我们会推送 Qv2ray 的更新消息，甚至发送可能决定 Qv2ray 命运的投票！ 请确保您不要错过它。
 
-## Tweaking UI & Languages
+## 调整界面 & 语言
 
-### UI & Tray Icons
+### 界面 & 托盘图标
 
-Despite Qv2ray's best efforts to detect the UI style of your platform, you may still see offending UI details on Qv2ray. For example, the tray icon color is too light to see, the icon color on the button is incongruous, etc.
+尽管 Qv2ray 已经尽最大努力适配您的平台的 UI 风格，但您仍然可以在 Qv2ray 上看到违和的 UI 细节。 例如无法看清太亮的托盘图标，按钮上的图标颜色不一致等等。
 
-In this case, please turn to **Preference Window**. In **[General Settings](qv2ray://open/preference/general)** Tab, please adjust the following items according to your real situation:
+在这种情况下，请打开 **首选项**。 在 **[常规设置](qv2ray://open/preference/general)** 标签中，请根据您的实际状况调整以下项目：
 
-- **Adapt Dark Theme**: when enabled, the icons on buttons turn light-colored. if you are using a light-colored window theme, please turn this off.
-- **Adapt Dark Tray Theme**: when enabled, the tray icon turns light-colored to adjust to darkmode themes. if the region of your tray is light-colored, disabling this is recommended.
+- **使用浅色界面图标**: 启用后，按钮上的图标会变成浅色。 如果您正在使用一个浅色窗口主题，请关闭此选项。
+- **使用浅色托盘图标**: 启用后，托盘图标会变成浅色以适应深色背景主题。 如果您的托盘区域背景颜色是浅色的，请关闭此选项。
 
-:::tip A tip for Gnome users The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons. :::
+:::tip 给 Gnome 用户的提示： 原生的 Gnome 桌面不会显示托盘图标。所以 Qv2ray 托盘图标也不会显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 的扩展。安装扩展后，您应该注销并重新登录，在 `Tweaks` (或者说 `gnome-tweaks`) 中启用拓展，然后您会在 Gnome 中看到应用的托盘图标。 :::
 
-### Multi-languages
+### 多语言
 
-Similarly, Qv2ray will do its best to detect the display language of your system and set it to Qv2ray's interface language when it first starts. If the results of automatic detection are not satisfactory, or if you just want to try Qv2ray in another language, you can adjust that in **Preference Window** -> **General Settings** -> **Language**.
+与图标风格一样，Qv2ray 将尽力检测您的系统的显示语言，并在首次启动时将其设置为 Qv2ray 的界面语言。 如果自动检测结果不能令人满意，或者您只想尝试以另一种语言使用 Qv2ray。您可以在 **首选项** -> **常规设置** -> **语言** 中调整该设置。
 
-Choose according to ISO-639/ISO-3166 codes. For example, `zh_CN` for **Chinese Simplified**, `ja_JP` for **Japanese**, `en_US` for **American English**, etc. Most of the user interface can be retranslated immediately after a change, but a complete restart of Qv2ray is recommended to make the changes take effect.
+选项根据 ISO-639/ISO-3166 规范列出。 举个例子： `zh_CN` 对应 **简体中文**，`ja_JP` 对应 **日语**，`en_US` 对应 **英文（美国）**，等等。 大多数界面的显示语言都可以在更改选项后立即变更。 但建议重新启动 Qv2ray 以使更改得到完全生效。
 
-:::tip Restart After Change If changes don't seems to apply, you could try restarting Qv2ray. :::
+:::tip 修改选项后重启 如果更改选项似乎没有生效，您可以尝试重启 Qv2ray。 :::
 
-## Tweaking Routing Schemes
+## 调整路由设置
 
-By default, Qv2ray will be set to **bypass the traffic of China mainland**, according to `geosite.dat` and `geoip.dat` from V2Ray core, thus it is not necessary to configure some awkward PAC rules. You can override this default setting in the **Preference Window**, by simply turning off this function in tab **[Connection Settings](qv2ray://open/preference/connection)**.
+默认情况下，Qv2ray 将勾选 **绕过中国大陆**。这个选项根据 V2Ray 核心中的 `geosite.dat` 和 `geoip.dat` 决定哪些是需要直连的流量，因此您没有必要配置一些复杂的 PAC 规则。 您可以在 **首选项** -> **[连接设置](qv2ray://open/preference/connection)** 中取消勾选此设置。
 
-However, sometimes, these rules won't always apply. For example, you have a special proxy for [bilibili](https://bilibili.com/) that unlocks the Hong Kong/Macau/Taiwan episodes. Since it is a China mainland website, by default, the traffic won't go through the proxy, thus not satisfying your need. The solution is using our **[Advanced Route Settings](qv2ray://open/preference/route)** in the **Preference Window**.
+然而，**绕过中国大陆** 的规则并不总是适用于所有人。 比如说，您有一个解锁 [B站](https://bilibili.com/) 香港/澳门/台湾区域限制的的特殊代理。 [B站](https://bilibili.com/) 是中国大陆的网站，默认情况下相应的流量并不会经过您的代理，显然这样的情况并不符合您的需求。 解决方案是修改 **首选项** -> **[高级路由设置](qv2ray://open/preference/route)**中的设置。
 
-A valid route setting scheme is basically a 2x3 routing rule matrix. Syntax for the rules can be found in [RuleObject Documentation](https://www.v2fly.org/config/routing.html#routingobject) from V2Ray Official Website. Here, if we want to force bilibili go through proxy, we just write a rule `geosite:bilibili` at `(Domain, Proxy)` position.
+一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。 规则的语法可在 V2Ray 官方网站的 [ RuleObject 文档](https://www.v2fly.org/config/routing.html#routingobject) 中找到 。 在之前的情况中，我们想要强制 B站 的流量通过代理，这只需要在矩阵的 `(域名, 代理)` 位置添加一条路由规则： `geosite:bilibili` 。
 
-There are other advanced usages of routing schemes. If you are interested, try explore more into it.
+路由方案还有其他的高级用途。 如果您有兴趣的话，可以尝试着去探索更多的内容。
 
-## Sharing Proxy over Local Network (LAN)
+## 共享代理至本地网络（局域网）
 
-For the sake of safety, by default, Qv2ray will only listen on `127.0.0.1`, that is to say, only the device which Qv2ray is running on can use the proxy. If you want to share your proxy over your local network (LAN), there are changes to be made.
+为了安全，默认情况下 Qv2ray 只监听来自 `127.0.0` 的连接。 换句话说，只有运行 Qv2ray 的设备才能使用代理服务器。 如果您想要在您的本地网络（局域网）上分享您的代理，则需要修改一些设置。
 
-The most simple and overkill method is to change the listen address from `127.0.0.1` to `0.0.0.0`, which will allow all incoming connections to your little proxy.
+简单但又矫枉过正的方法是将 **首选项** -> **入站设置** 中的 **监听地址** 从 `127.0.0.1` 修改为 `0.0.0.0`，这将允许所有人连接到您的代理。
 
-However, this is **not as safe**, since your proxy can be easily abused and attacked by others. To prevent this, you have to either shield yourself under NAT (for example, using a trusted router and don't expose your proxy ports), or setup a firewall to block the unwanted addresses (iptables, and etc).
+然而，这并不那么 **安全** ，因为您的代理很容易被他人滥用和攻击。 为了防止这种情况发生，您要么使用 NAT（例如，使用可信路由器，不要暴露你的代理端口）来保护自己，要么设置一个防火墙来阻止不需要的地址（iptables 等）。
 
-You may encounter connectivity problems when sharing proxy. Here are some troubleshooting tips:
+分享代理服务器时，您可能会遇到连接问题。 以下是一些故障排除技巧：
 
-- allow V2Ray core to listen on `0.0.0.0` in Windows Firewall
-- disable Intranet Isolation / AP Isolation on your router
+- 在 Windows 防火墙允许 V2Ray 内核监听 `0.0.0.0`
+- 禁用路由器上的 Intranet 隔离 / AP 隔离
