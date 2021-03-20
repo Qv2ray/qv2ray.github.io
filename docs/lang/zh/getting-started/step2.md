@@ -50,4 +50,4 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 配置后，您可以点击 **检查 V2Ray 核心设置** 按钮来验证您的 V2Ray 核心设置。 重复尝试，直到检查通过。
 
-:::警告没有 Matryoshka! 永远不要点 **核心可执行路径** 到 **Qv2ray 可执行性**！ This will not cause a fork bomb since Qv2ray is single-instanced. 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray。 xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！ :::
+:::警告没有 Matryoshka! 永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray。 xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！ :::
