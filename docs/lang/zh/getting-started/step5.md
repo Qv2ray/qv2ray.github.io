@@ -35,9 +35,9 @@ title: 进一步的步骤
 
 ## 调整路由设置
 
-By default, Qv2ray will be set to **bypass the traffic of China mainland**, according to `geosite.dat` and `geoip.dat` from V2Ray core, thus it is not necessary to configure some awkward PAC rules. You can override this default setting in the **Preference Window**, by simply turning off this function in tab **[Connection Settings](qv2ray://open/preference/connection)**.
+默认情况下，Qv2ray 将勾选 **绕过中国大陆**。这选项根据 V2Ray 核心中的 `geosite.dat` 和 `geoip.dat` 决定哪些是需要直连的流量，因此您没有必要配置一些复杂的 PAC 规则。 您可以在 **首选项** -> **[连接设置](qv2ray://open/preference/connection)** 中取消勾选此设置。
 
-However, sometimes, these rules won't always apply. For example, you have a special proxy for [bilibili](https://bilibili.com/) that unlocks the Hong Kong/Macau/Taiwan episodes. Since it is a China mainland website, by default, the traffic won't go through the proxy, thus not satisfying your need. The solution is using our **[Advanced Route Settings](qv2ray://open/preference/route)** in the **Preference Window**.
+然而，**绕过中国大陆** 的规则并不总是适用于所有人。 比如说，您有一个解锁 [B站](https://bilibili.com/) 香港/澳门/台湾区域限制的的特殊代理。 Since it is a China mainland website, by default, the traffic won't go through the proxy, thus not satisfying your need. The solution is using our **[Advanced Route Settings](qv2ray://open/preference/route)** in the **Preference Window**.
 
 A valid route setting scheme is basically a 2x3 routing rule matrix. Syntax for the rules can be found in [RuleObject Documentation](https://www.v2fly.org/config/routing.html#routingobject) from V2Ray Official Website. Here, if we want to force bilibili go through proxy, we just write a rule `geosite:bilibili` at `(Domain, Proxy)` position.
 
