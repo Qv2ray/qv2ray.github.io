@@ -99,7 +99,7 @@ fs.readdirSync("docs/lang").forEach(lang => {
     Object.keys(DEFAULT_SIDE_BAR).forEach(key => {
         _navkey = key.substring(1, key.length - 1)
         website_config.themeConfig.sidebar["/lang/" + lang + key] = DEFAULT_SIDE_BAR[key]
-        lang_locale_object.nav.push({ link: lang_path + _navkey, text: lang_info.nav[_navkey] })
+        lang_locale_object.nav.push({ link: lang_path + _navkey + '/', text: lang_info.nav[_navkey] })
     });
     website_config.themeConfig.locales[lang_path] = lang_locale_object
 });
