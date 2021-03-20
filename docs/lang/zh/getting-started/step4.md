@@ -36,21 +36,21 @@ sidebarDepth: 3
 
 默认情况下，UWP 应用程序被禁止访问本地回环地址(127.0.0.1)，所以系统代理设置可能会导致您的 UWP 应用程序停止正常工作。
 
-According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt with admin privileges:
+根据 [微软的一篇文章](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback) ，您可以在具有管理员权限的命令提示符（例如 Cmd,PowerShell）中运行以下命令来解决回环问题：
 
 ```shell
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
 ```
 
-Or, You can just simply use some third-party tools. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
+或者，您只需轻松地使用一些第三方工具。 我们在这里给您介绍来自 [Fiddler 项目](https://www.telerik.com/fiddler) 的这个 [程序](/EnableLoopback.zip)。
 
 :::
 
-### Configure Manually in Applications
+### 手动配置应用程序
 
 #### Telegram
 
-You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
+您可以在 Telegram 应用中设置其使用代理。 Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
 
 In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings.
 
