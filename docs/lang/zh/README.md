@@ -15,7 +15,7 @@ features:
   - 
     title: 订阅
     details: 自动 / 手动更新
-footer: 采用 CC-BY-SA | © 2021 Qv2ray 版权所有
+footer: 采用 CC-BY-SA | © 2020-2021 Qv2ray 版权所有
 ---
 
 **Qv2ray **是一个使用 Qt 编写的跨平台的 v2ray 图形前端。
