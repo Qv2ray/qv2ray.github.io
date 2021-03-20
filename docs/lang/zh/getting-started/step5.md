@@ -1,5 +1,5 @@
 ---
-title: 进一步的步骤
+title: 更多步骤
 ---
 
 # 更多步骤
@@ -47,11 +47,11 @@ title: 进一步的步骤
 
 为了安全，默认情况下 Qv2ray 只监听来自 `127.0.0` 的连接。 换句话说，只有运行 Qv2ray 的设备才能使用代理服务器。 如果您想要在您的本地网络（局域网）上分享您的代理，则需要修改一些设置。
 
-The most simple and overkill method is to change the listen address from `127.0.0.1` to `0.0.0.0`, which will allow all incoming connections to your little proxy.
+简单但又矫枉过正的方法是将 **首选项** -> **入站设置** 中的 **监听地址** 从 `127.0.0` 修改为 `0.0.0.0`，这将允许所有人连接到您的代理。
 
-However, this is **not as safe**, since your proxy can be easily abused and attacked by others. To prevent this, you have to either shield yourself under NAT (for example, using a trusted router and don't expose your proxy ports), or setup a firewall to block the unwanted addresses (iptables, and etc).
+然而，这并不那么 **安全** ，因为您的代理很容易被他人滥用和攻击。 为了防止这种情况发生，您要么使用 NAT（例如，使用可信路由器，不要暴露你的代理端口）来保护自己，要么设置一个防火墙来阻止不需要的地址（iptables 等）。
 
-You may encounter connectivity problems when sharing proxy. Here are some troubleshooting tips:
+分享代理服务器时，您可能会遇到连接问题。 以下是一些故障排除技巧：
 
-- allow V2Ray core to listen on `0.0.0.0` in Windows Firewall
-- disable Intranet Isolation / AP Isolation on your router
+- 在 Windows 防火墙允许 V2Ray 内核监听 `0.0.0.0`
+- 禁用路由器上的 Intranet 隔离 / AP 隔离
