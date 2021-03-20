@@ -8,9 +8,9 @@ title: 功能与特性
 
 ### 多种服务器导入方式
 
-通过我们的插件系统，你可以使用 Qv2ray 的同时使用 SSR/Trojan，以及获得 V2ray 路由引擎带来的强大体验。
+通过我们的插件系统，你可以使用 Qv2ray 的同时使用 SSR/Trojan，
 
-And [benefit from the robost routing engine](plugins/v2ray-integration.md) provided by V2ray.
+以及获得 V2ray 提供的[路由引擎](plugins/v2ray-integration.md)带来的强大体验。
 
 **根本不需要额外设置 PAC**
 
@@ -44,7 +44,7 @@ Qv2ray 提供 V2ray 日志的语法高亮。
   - 高容错的 VMESS 链接批量导入
   - 直接从 JSON 文件导入
   - 扫描屏幕二维码/从二维码文件导入
-  - Advanced / Manual Configuration
+  - 高级/手动配置
 - 订阅
 
   - 手动更新订阅
@@ -60,7 +60,7 @@ Qv2ray 提供 V2ray 日志的语法高亮。
 - 一般功能支持
 
   - 自动连接
-  - Multiplexing
+  - 多路复用
   - 开机启动
   - 系统代理集成 (Windows / macOS / Linux GNOME 和 KDE)
 
@@ -77,7 +77,7 @@ Qv2ray 提供 V2ray 日志的语法高亮。
   - 状态栏出站入站统计
   - **独立的速度图表**
 
-- Latency Testing (TCP)
+- 延迟测试 (TCP)
 
   - 单个服务器测试
   - 批量服务器测试
