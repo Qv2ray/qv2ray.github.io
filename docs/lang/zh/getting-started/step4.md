@@ -24,11 +24,17 @@ Currently, automatic setting of system proxy is supported by Qv2ray, including *
   3.  Check the option **Set System Proxy**.
   4.  Click **OK** to apply the settings.
 
-:::tip Linux Users: KDE/GNOME Proxy Settings If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
+:::tip Linux Users: KDE/GNOME Proxy Settings
 
-However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications. :::
+If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
 
-:::warning Windows Users: UWP Loopback Problem By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
+However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications.
+
+:::
+
+:::warning Windows Users: UWP Loopback Problem
+
+By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
 
 According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt with admin privileges:
 
@@ -36,7 +42,9 @@ According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
 ```
 
-Or, You can just simply use some third-party tools. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project. :::
+Or, You can just simply use some third-party tools. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
+
+:::
 
 ### Configure Manually in Applications
 
@@ -52,7 +60,11 @@ Finally, click on the proxy entry that you've just configured. You are done.
 
 Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
 
-:::tip Using Proxy Plugins To avoid switching back and forth among proxy configurations, you may want to use a third-party plugin (eg: SwitchyOmega) to enhance your browser. These plugins can help to implement a more sophisticated configuration, including multiple profiles and further traffic diversion. :::
+:::tip Using Proxy Plugins
+
+To avoid switching back and forth among proxy configurations, you may want to use a third-party plugin (eg: SwitchyOmega) to enhance your browser. These plugins can help to implement a more sophisticated configuration, including multiple profiles and further traffic diversion.
+
+:::
 
 #### Java Applications
 
@@ -69,7 +81,11 @@ Here are some examples:
   java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
   ```
 
-:::danger Buggy Minecraft Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is not Qv2ray's problem. If you really want to play Minecraft through proxy, consider setting up a Dokodemo-door inbound for that server and connect directly to `localhost`. :::
+:::danger Buggy Minecraft
+
+Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is not Qv2ray's problem. If you really want to play Minecraft through proxy, consider setting up a Dokodemo-door inbound for that server and connect directly to `localhost`.
+
+:::
 
 ## Platform-dependent Methods
 
