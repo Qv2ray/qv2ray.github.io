@@ -1,5 +1,5 @@
 ---
-title: "true"
+title: 常见问题
 ---
 
 # 常见问题
@@ -104,7 +104,7 @@ title: "true"
 
 或者您也可以重启 Qv2ray 然后重试。
 
-给 Gnome 用户的提示
+:::tip 给 Gnome 用户的提示
 
 原生的 Gnome 桌面不会显示托盘图标。所以 Qv2ray 托盘图标也不会显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。
 

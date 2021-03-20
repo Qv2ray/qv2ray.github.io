@@ -26,7 +26,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 :::danger 仔细看！
 
-当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
+当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包。 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
 
 :::
 
@@ -36,7 +36,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore`, 其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储数据的目录。
 
-`vcore` 可能解压的位置示例：
+`vcore` 可能提取到的位置示例：
 
 - `./config/vcore` （这里的 `config` 指在 Qv2ray 可执行文件旁边的 `config` 子目录，Windows 用户推荐）
 - `~/.qv2ray/vcore` （在您的 `home` 文件夹的专用子目录中）
@@ -66,8 +66,8 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 配置后，您可以点击 **检查 V2Ray 核心设置** 按钮来验证您的 V2Ray 核心设置。 重复尝试，直到检查通过。
 
-:::警告没有 Matryoshka!
+:::warning 不要俄罗斯套娃！
 
-永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
+永远不要设置 **核心可执行路径** 为 **Qv2ray 可执行程序路径** 。 这不会造成进程爆炸，因为 Qv2ray 是一个单实例程序。 注意可用的 V2Ray Core 可执行文件看起来就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
 
 :::

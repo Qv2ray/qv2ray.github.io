@@ -11,54 +11,54 @@ sidebarDepth: 3
 
 ### 使用系统代理
 
-For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings.
+对于 **Windows** 和 **macOS** 用户，几乎所有应用程序都遵循系统代理设置。 对于 **Linux** 用户，一部分应用程序如 Firefox 和 Chromium 将会读取并使用 GNOME/KDE 设置的代理配置，但另一部分应用程序并不会这样。
 
-Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
+目前，Qv2ray 的自动设置系统代理功能支持 **Windows**, **macOS** 和 **Linux** (GNOME/KDE) 用户。 您可以在以下位置找到 Qv2ray 的设置系统代理选项：
 
-- **Qv2ray Tray Menu**.
-  1.  Right click on the tray icon.
-  2.  In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
-- **Qv2ray Preference Window**.
-  1.  Click **Preferences** button in the main window.
-  2.  In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
-  3.  Check the option **Set System Proxy**.
-  4.  Click **OK** to apply the settings.
+- **Qv2ray 托盘菜单**。
+  1.  右键点击托盘图标。
+  2.  在的弹出菜单中，依次选择 **系统代理** -> **启用/禁用系统代理**。
+- **Qv2ray 首选项**。
+  1.  点击 Qv2ray 主窗口中的 **首选项** 按钮。
+  2.  在 **首选项** 中，选择 **[入站设置](qv2ray://open/preference/inbound)** 标签。
+  3.  勾选选项 **设置系统代理**。
+  4.  点击 **确定** 保存您的设置。
 
-:::tip Linux Users: KDE/GNOME Proxy Settings
+:::tip Linux用户: KDE/GNOME 代理设置
 
-If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
+如果您使用 GNOME 作为您的主要桌面环境，您可能会发现 GNOME 的系统代理设置非常有效。 这是因为 GNOME 的系统代理设置得到了普遍的适配。
 
-However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications.
+然而，KDE 用户可能会遭遇困境，因为 KDE 的系统代理设置更像是一个玩具。 甚至 KDE 系列应用程序本身也不会读取和使用那个配置。 在这种情况下，您可能需要寻求替代方案来配置您的应用程序。
 
 :::
 
-:::warning Windows Users: UWP Loopback Problem
+:::warning Windows用户: UWP 应用回环问题
 
-By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
+默认情况下，UWP 应用程序被禁止访问本地回环地址(127.0.0.1)，所以系统代理设置可能会导致您的 UWP 应用程序停止正常工作。
 
-According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt with admin privileges:
+根据 [微软的一篇文章](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback) ，您可以在具有管理员权限的命令提示符（例如 Cmd,PowerShell）中运行以下命令来解决回环问题：
 
 ```shell
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
 ```
 
-Or, You can just simply use some third-party tools. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
+或者，您只需轻松地使用一些第三方工具。 我们在这里给您介绍来自 [Fiddler 项目](https://www.telerik.com/fiddler) 的这个 [程序](/EnableLoopback.zip)。
 
 :::
 
-### Configure Manually in Applications
+### 手动配置应用程序
 
 #### Telegram
 
-You can configure Telegram to use proxies in the app. Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
+您可以在 Telegram 应用中设置其使用代理。 前往 **设置/Settings** -> **高级/Advanced** -> **网络和代理/Network and proxy** 然后点击 **连接类型/Connection**，**代理设置/Proxy Settings** 对话框将被打开。（译者注：不同的 Telegram 客户端和不同的翻译会导致选项略有不同。）
 
-In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings.
+在 **代理设置/Proxy Settings** 中点击底部的 **添加代理/Add Proxy** 按钮。 根据您自己的口味选择 SOCKS5/HTTP ，然后用 Qv2ray 入站设置中的信息填写剩下的选项。
 
-Finally, click on the proxy entry that you've just configured. You are done.
+最后，单击您刚刚配置的代理。 Telegram 就设置好了。
 
-#### Web Browsers
+#### 网络浏览器
 
-Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
+几乎所有的网络浏览器都支持手动配置代理服务器。 将 Firefox 为例子，您可以在 **首选项 -> 常规-> 网络 -> 手动代理配置** 中找到代理设置。 用 Qv2ray 入站设置中的信息填写这些字段以使用 Qv2ray 代理。
 
 :::tip 使用代理插件。
 
