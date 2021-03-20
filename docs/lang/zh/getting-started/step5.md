@@ -23,7 +23,11 @@ title: 更多步骤
 - **使用浅色界面图标**: 启用后，按钮上的图标会变成浅色。 如果您正在使用一个浅色窗口主题，请关闭此选项。
 - **使用浅色托盘图标**: 启用后，托盘图标会变成浅色以适应深色背景主题。 如果您的托盘区域背景颜色是浅色的，请关闭此选项。
 
-:::tip 给 Gnome 用户的提示： 原生的 Gnome 桌面不会显示托盘图标。所以 Qv2ray 托盘图标也不会显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 的扩展。安装扩展后，您应该注销并重新登录，在 `Tweaks` (或者说 `gnome-tweaks`) 中启用拓展，然后您会在 Gnome 中看到应用的托盘图标。 :::
+:::tip A tip for Gnome users
+
+The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。
+
+:::
 
 ### 多语言
 
@@ -31,7 +35,11 @@ title: 更多步骤
 
 选项根据 ISO-639/ISO-3166 规范列出。 举个例子： `zh_CN` 对应 **简体中文**，`ja_JP` 对应 **日语**，`en_US` 对应 **英文（美国）**，等等。 大多数界面的显示语言都可以在更改选项后立即变更。 但建议重新启动 Qv2ray 以使更改得到完全生效。
 
-:::tip 修改选项后重启 如果更改选项似乎没有生效，您可以尝试重启 Qv2ray。 :::
+:::tip Restart After Change
+
+If changes don't seems to apply, you could try restarting Qv2ray.
+
+:::
 
 ## 调整路由设置
 
