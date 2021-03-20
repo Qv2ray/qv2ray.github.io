@@ -38,11 +38,11 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 `vcore` 可能解压的位置示例：
 
-- `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
-- `~/.qv2ray/` (在您的主文件夹的专用目录中)
-- `~/.config/qv2ray/` (标准 XDG 配置路径)
+- `./config/vcore` （这里的 `config` 指在 Qv2ray 可执行文件旁边的 `config` 子目录，Windows 用户推荐）
+- `~/.qv2ray/vcore` （在您的 `home` 文件夹的专用子目录中）
+- `~/.config/qv2ray/vcore` (标准 XDG 配置路径)
 
-请确保这些文件直接存在于您的 `vcore` 目录中：
+请确保这些文件存在于您的 `vcore` 目录中：
 
 1. `v2ray` / `v2ray.exe`: 核心可执行文件
 2. `v2ctl` / `v2ctl.exe`: 核心控制程序
@@ -51,7 +51,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 :::warning 给 Linux / macOS 用户的特殊提示
 
-你应该始终给予 **可执行权限** `v2ray` 和 `v2ctl` 这通常是通过在这些文件上执行 `chmod +x` 来完成的。
+你应该始终给予 `v2ray` 和 `v2ctl` **可执行权限**。 这通常是需要对这些文件执行一次 `chmod +x` 。
 
 在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。
 
