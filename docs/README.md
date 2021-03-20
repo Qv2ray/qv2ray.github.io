@@ -23,7 +23,7 @@ The supported version currently is `v2.7.0-pre2`.
 
 For most of our users, [Getting-Started](getting-started/README.md) will help them set up Qv2ray in short time.
 
-For detailed documentation of all functionalities, please view the [User Manual](manual.md).
+For detailed documentation of all functionalities, please view the [User Manual](manual/README.md).
 
 ## 📃 Features
 
