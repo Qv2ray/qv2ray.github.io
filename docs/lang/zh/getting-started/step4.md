@@ -21,7 +21,7 @@ sidebarDepth: 3
 - **Qv2ray 首选项**。
   1.  点击 Qv2ray 主窗口中的 **首选项** 按钮。
   2.  在 **首选项** 中，选择 **[入站设置](qv2ray://open/preference/inbound)** 标签。
-  3.  勾选选项 **设置系统代理**。
+  3.  勾选 **设置系统代理**选项。
   4.  点击 **确定** 保存您的设置。
 
 :::tip Linux用户: KDE/GNOME 代理设置
