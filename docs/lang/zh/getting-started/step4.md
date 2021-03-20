@@ -22,19 +22,19 @@ sidebarDepth: 3
   1.  点击 Qv2ray 主窗口中的 **首选项** 按钮。
   2.  在 **首选项** 中，选择 **[入站设置](qv2ray://open/preference/inbound)** 标签。
   3.  勾选选项 **设置系统代理**。
-  4.  Click **OK** to apply the settings.
+  4.  点击 **确定** 保存您的设置。
 
-:::tip Linux Users: KDE/GNOME Proxy Settings
+:::tip Linux用户: KDE/GNOME 代理设置
 
-If you are using GNOME as your main desktop environment, you may find it quite useful to set a system proxy. That's because GNOME Proxy Settings is almost universally acknowledged.
+如果您使用 GNOME 作为您的主要桌面环境，您可能会发现 GNOME 的系统代理设置非常有效。 这是因为 GNOME 的系统代理设置得到了普遍的适配。
 
-However, KDE users may have a difficult time, since KDE Proxy Settings is more like a toy. Even KDE Applications themselves won't read and obey that configuration. In that case, you may seek for an alternative solution to configure your applications.
+然而，KDE 用户可能会遭遇困境，因为 KDE 的系统代理设置更像是一个玩具。 甚至 KDE 系列应用程序本身也不会读取和使用那个配置。 在这种情况下，您可能需要寻求替代方案来配置您的应用程序。
 
 :::
 
-:::warning Windows Users: UWP Loopback Problem
+:::warning Windows用户: UWP 应用回环问题
 
-By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
+默认情况下，UWP 应用程序被禁止访问本地回环地址(127.0.0.1)，所以系统代理设置可能会导致您的 UWP 应用程序停止正常工作。
 
 According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt with admin privileges:
 
