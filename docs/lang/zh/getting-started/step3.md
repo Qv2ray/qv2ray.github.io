@@ -2,21 +2,21 @@
 title: Adding Hosts into Qv2ray
 ---
 
-# Step 3: Adding Hosts into Qv2ray
+# 第三步：导入节点到 Qv2ray
 
-Qv2ray supports many ways of importing your configuration. To get you started, we have just picked these most common use cases.
+Qv2ray 支持多种方式导入您的配置。 为了让您入门，我们只是挑选了这些最常见的用例
 
-## Share Links
+## 分享链接
 
-> Share links generally looks like these:
+> 共享链接一般看起来像这样：
 > 
 > - `vmess://`...
 > - `ss://`...
 
-Follow these steps to import them:
+按照这些步骤导入它们：
 
-1. Click **Import** button in the main window, or import via [link](qv2ray://open/import/link).
-2. In the **Import File** dialog, choose import source **Share Link**,
+1. 点击 **主窗口中的导入** 按钮，或通过 [链接导入](qv2ray://open/import/link)。
+2. 在 **导入文件** 对话框中，选择导入源 **共享链接**
 3. Paste your share links into **Share Link** text box.
 4. Click on **Import** button to finish.
 
