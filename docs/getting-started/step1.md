@@ -45,6 +45,7 @@ And that shall be done.
 Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use other versions instead.
 
 This nag will be removed whenever something like "Manjaro CN" is founded and officially **takes the workload of packaging Qv2ray** for its users.
+
 :::
 
 **Download from AUR, using an AUR Helper**
@@ -58,7 +59,9 @@ All Qv2ray plugins are currently in AUR.
 > Qv2ray is made available for openSUSE / Fedora / CentOS users from [openSUSE Build Service](https://build.opensuse.org) by [@zzndb](https://github.com/zzndb).
 
 :::warning Applicable Versions
+
 Because of the limit of Qt version, we may not be able to support all on-lifetime distro above, the detail of supported distro please check the OBS link below.
+
 :::
 
 Similar to AUR, there are two versions of Qv2ray available. You can choose according to your own flavor:
@@ -72,11 +75,15 @@ Or you can get more detailed installation guide directly from the links below:
 - Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
 :::warning For CentOS user
+
 Before you install Qv2ray from above OBS project, you need to add the **EPEL** repository which provided by Fedora for extra needed dependencies. For more info please check the [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL).
+
 :::
 
 :::tip Plugins
+
 The above [OBS project](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) also provide the plugins of Qv2ray family. After installing Qv2ray through project's repository (not download & install by hand), you can directly install plugins (with the same name of the plugin's project name, also provide the preview version plugin with `-preview` postfix) using your package manager.
+
 :::
 
 ### Linux / macOS: Homebrew
@@ -137,7 +144,9 @@ Run the following commands in **PowerShell**:
    ```
 
 :::tip
+
 You may also need to install [the latest Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
+
 :::
 
 ### Windows: Chocolatey
@@ -172,7 +181,9 @@ $ sudo snap refresh qv2ray
 ### Linux: Flathub (Deprecated)
 
 :::warning Deprecated (2020/09/18)
+
 Installation of Qv2ray from Flathub is officially **deprecated**, since the maintainer is no longer actively maintaining the package. If you are interested in adopting this, please open an issue and let us know.
+
 :::
 
 1. Set up Flatpak environment according to the [official documentation](https://flatpak.org/setup/).
@@ -208,11 +219,15 @@ Do as the follows:
      - macOS 10.12 and before: ***Try Upgrading Your macOS***.
 
 :::tip Notes for Linux AppImage users
+
 Although we have bundled `glibc` and some basic C++ libraries into the **AppImage** package to support some old but supported distros, moving yourself to a newer version of Distro/OS is strongly recommended.
+
 :::
 
 :::warning Notes for Windows ARM64 users
+
 Windows 10 on ARM added an emulation layer for x86_64 apps in *build 21277*, users can use the x64 version with the latest Windows Insider Preview.
+
 :::
 
 ## GitHub Actions
@@ -226,7 +241,9 @@ If you are fed up with the functionalities of stable versions and willing to try
 TODO: Branch Selection Tips
 
 :::tip
+
 You must login GitHub first to access GitHub Actions.
+
 :::
 
 ## Building From Source
