@@ -24,7 +24,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 :::
 
-:::danger 仔细看！
+:::danger 注意！
 
 当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包。 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
 
@@ -38,9 +38,9 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 `vcore` 可能提取到的位置示例：
 
-- `./config/vcore` （这里的 `config` 指在 Qv2ray 可执行文件旁边的 `config` 子目录，Windows 用户推荐）
-- `~/.qv2ray/vcore` （在您的 `home` 文件夹的专用子目录中）
-- `~/.config/qv2ray/vcore` (标准 XDG 配置路径)
+- `./config/` （这里的 `config` 指在 Qv2ray 可执行文件旁边的 `config` 子目录，Windows 用户推荐）
+- `~/.qv2ray/` （在您的 `home` 文件夹的专用子目录中）
+- `~/.config/qv2ray/` (标准 XDG 配置路径)
 
 请确保这些文件存在于您的 `vcore` 目录中：
 

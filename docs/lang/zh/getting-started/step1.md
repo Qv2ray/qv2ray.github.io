@@ -1,9 +1,9 @@
 ---
-title: 第一步：获取 Qv2ray 分发
+title: 获取 Qv2ray
 sidebarDepth: 3
 ---
 
-# 第 1 步：获取 Qv2ray
+# 获取 Qv2ray
 
 要开始使用 Qv2ray，那就得先以某种方式获取到它。
 
