@@ -1,15 +1,15 @@
 ---
-title: Configuring Softwares to Use Qv2ray
+title: 配置软件以使用 Qv2ray
 sidebarDepth: 3
 ---
 
-# Step 4: Configuring Softwares to Use Qv2ray
+# 第 4 步：配置浏览器/软件以使用 Qv2ray
 
-Congratulations! There's only one step left in order to access the unlocked Internet!
+恭喜！ 只剩下一个步骤就可以访问真正的互联网了！
 
-## General Methods
+## 一般方法
 
-### Using System Proxy
+### 使用系统代理
 
 For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings.
 
@@ -121,39 +121,39 @@ export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
   编码文本： <code>{{ escaped }}</code>
 </template>
 
-对于在 `sudo` 中运行的程序，, 如果您不在 shell 中运行`sudo`则需要配置 `sudo` 来保存这些变量。 Call `visudo` with root and add the following line:
+对于在 `sudo` 中运行的程序，, 如果您不在 shell 中运行`sudo`则需要配置 `sudo` 来保存这些变量。 用 root 调用`visudo`并添加以下行：
 
 ```shell
 Defaults env_keep += "HTTP_PROXY HTTPS_PROXY"
 ```
 
-Still, there are some programs who are using their own variables. For example, `rsync` uses `RSYNC_PROXY` for HTTP proxies:
+但还有一些程序正在使用自己的变量。 例如，`rsync`使用`RSYNC_PROXY`用于 HTTP 代理：
 
 ```shell
 export RSYNC_PROXY=user:pass@127.0.0.1:8000
 ```
 
-It is strongly recommended to read the manual of programs that you want to configure proxy with.
+强烈建议阅读您想要配置代理的程序手册。
 
-### Using `proxychains`
+### 使用 `proxychains`
 
-If none of the above methods works, you can try using `proxychains`, which hijacks program's function/library to redirect network connections into your proxies.
+如果上述任何方法都不起作用，您可以尝试使用 `proxychains`， 它劫持了程序的功能/库来将网络连接重定向到您的代理服务器.
 
-First, you should install `proxychains-ng`. Installation methods varies with each operating system.
+首先，您应该安装`proxychains-ng`。 每个操作系统的安装方法各不相同。
 
 - [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
 - [Windows](https://github.com/shunf4/proxychains-windows)
 
-Edit `/etc/proxychains.conf` (for global proxychains) or `$HOME/.proxychains/proxychains.conf` (for user), edit `[ProxyList]` section and change the proxy to SOCKS5 Proxy in Qv2ray:
+编辑`/etc/proxychains.conf`(用于全局代理链) 或`$HOME/.proxychains/proxychains.conf`(用户)，编辑`[ProxyList]`部分，并在 Qv2ray 中将代理更改为 SOCKS5 代理：
 
 ```ini
 [ProxyList]
 socks5  127.0.0.1  1088
 ```
 
-After configuring `proxychains`, you may use `proxychains <program>` in terminal to make `proxychains` hijack the program to use the given proxy. If you are fed up with the noisy output, you may append `-q` option after `proxychains`.
+配置`代理链`之后,, 您可以在终端中使用`代理链 <program>`来制作`代理链`劫持程序来使用指定的代理程序。 如果你觉得输出很多很烦，你可以在`proxychains` 之后追加`-q`选项。
 
-One thing to note is that `proxychains` does not work with statically-linked programs, for example, Golang programs.
+要注意的一件事是，`代理链`不能与静态链接的程序兼容，例如Golang程序。
 
 <script>
 export default {
