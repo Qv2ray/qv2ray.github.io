@@ -35,17 +35,17 @@ title: 进一步的步骤
 
 ## 调整路由设置
 
-默认情况下，Qv2ray 将勾选 **绕过中国大陆**。这选项根据 V2Ray 核心中的 `geosite.dat` 和 `geoip.dat` 决定哪些是需要直连的流量，因此您没有必要配置一些复杂的 PAC 规则。 您可以在 **首选项** -> **[连接设置](qv2ray://open/preference/connection)** 中取消勾选此设置。
+默认情况下，Qv2ray 将勾选 **绕过中国大陆**。这个选项根据 V2Ray 核心中的 `geosite.dat` 和 `geoip.dat` 决定哪些是需要直连的流量，因此您没有必要配置一些复杂的 PAC 规则。 您可以在 **首选项** -> **[连接设置](qv2ray://open/preference/connection)** 中取消勾选此设置。
 
 然而，**绕过中国大陆** 的规则并不总是适用于所有人。 比如说，您有一个解锁 [B站](https://bilibili.com/) 香港/澳门/台湾区域限制的的特殊代理。 [B站](https://bilibili.com/) 是中国大陆的网站，默认情况下相应的流量并不会经过您的代理，显然这样的情况并不符合您的需求。 解决方案是修改 **首选项** -> **[高级路由设置](qv2ray://open/preference/route)**中的设置。
 
-A valid route setting scheme is basically a 2x3 routing rule matrix. 规则的语法可在 V2Ray 官方网站的 [ RuleObject 文档](https://www.v2fly.org/config/routing.html#routingobject) 中找到 。 Here, if we want to force bilibili go through proxy, we just write a rule `geosite:bilibili` at `(Domain, Proxy)` position.
+一个有效的路由设置方案基本上是一个 2x3 路由规则矩阵。 规则的语法可在 V2Ray 官方网站的 [ RuleObject 文档](https://www.v2fly.org/config/routing.html#routingobject) 中找到 。 在之前的情况中，我们想要强制 B站 的流量通过代理，这只需要在矩阵的 `(域名, 代理)` 位置添加一条路由规则： `geosite:bilibili` 。
 
-There are other advanced usages of routing schemes. If you are interested, try explore more into it.
+路由方案还有其他的高级用途。 如果您有兴趣的话，可以尝试着去探索更多的内容。
 
-## Sharing Proxy over Local Network (LAN)
+## 共享代理至本地网络（局域网）
 
-For the sake of safety, by default, Qv2ray will only listen on `127.0.0.1`, that is to say, only the device which Qv2ray is running on can use the proxy. If you want to share your proxy over your local network (LAN), there are changes to be made.
+为了安全，默认情况下 Qv2ray 只监听来自 `127.0.0` 的连接。 换句话说，只有运行 Qv2ray 的设备才能使用代理服务器。 If you want to share your proxy over your local network (LAN), there are changes to be made.
 
 The most simple and overkill method is to change the listen address from `127.0.0.1` to `0.0.0.0`, which will allow all incoming connections to your little proxy.
 
