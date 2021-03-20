@@ -18,27 +18,27 @@ features:
 footer: 采用 CC-BY-SA | © 2020-2021 Qv2ray 版权所有
 ---
 
-**Qv2ray **是一个使用 Qt 编写的跨平台的 v2ray 图形前端。
+**Qv2ray** 是一个使用 Qt 编写的跨平台的 v2ray 图形前端。
 
 目前支持的版本是 `v2.7.0-pre2`。
 
 ## 🚀 起步
 
-对于大多数用户，[快速入门](getting-started/README.md) 将会带领他们在短时间内上手 Qv2ray。
+对于大多数用户， [快速入门](getting-started/README.md) 将会带领他们在短时间内上手 Qv2ray。
 
-For detailed documentation of all functionalities, please view the [User Manual](manual.md).
+对于每一种功能对应的详细文档，请参阅 [使用手册。](manual.md)
 
-## 📃 Features
+## 📃 特色
 
-Please view [Features](features.md).
+请参阅 [软件特色](features.md)。
 
 ## ❓ FAQ
 
-Please view [FAQ](faq/README.md).
+请参阅 [问答](faq/README.md)。
 
-## 👷 Contributing
+## 👷 贡献
 
-There are many ways to help improve Qv2ray, even if you do not know how to code. Here are some of them:
+欢迎参与该项目的贡献中来！就算你不懂如何写代码，也还是有许多种方法可以帮助完善 Qv2ray 的。 这里有一些例子：
 
 1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://translate.qv2ray.net/).
 2. 🐛 **Reporting Bugs**. Report bugs or incidents of Qv2ray, by posting an issue at [issues](https://github.com/Qv2ray/Qv2ray/issues).
