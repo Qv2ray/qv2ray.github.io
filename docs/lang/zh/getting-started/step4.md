@@ -60,68 +60,68 @@ Finally, click on the proxy entry that you've just configured. You are done.
 
 Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
 
-:::tip Using Proxy Plugins
+:::tip 使用代理插件。
 
-To avoid switching back and forth among proxy configurations, you may want to use a third-party plugin (eg: SwitchyOmega) to enhance your browser. These plugins can help to implement a more sophisticated configuration, including multiple profiles and further traffic diversion.
+为了避免在代理配置之间重新切换，您可能想要使用第三方插件(例如，SwitchyOmega) 来增强您的浏览器。 这些插件可以帮助实现更复杂的配置，包括多个配置文件和更多的流量转移。
 
 :::
 
-#### Java Applications
+#### Java 应用程序
 
-For Java applications, you may use configure proxies through JVM arguments.
+对于Java 应用程序，您可以使用 JVM 参数配置代理程序。
 
-Here are some examples:
+以下是一些例子：
 
-- Using SOCKS5:
+- 使用 SOCKS5：
   ```shell
   java -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1088 -jar some-application.jar
   ```
-- Using HTTP(S):
+- 使用 HTTP(S)：
   ```shell
   java -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=8000 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8000 -jar some-application.jar
   ```
 
-:::danger Buggy Minecraft
+:::danger 有问题的 Minecraft
 
-Newer versions of Minecraft (`>=1.5.2`) won't follow JVM proxy settings. That is not Qv2ray's problem. If you really want to play Minecraft through proxy, consider setting up a Dokodemo-door inbound for that server and connect directly to `localhost`.
+Minecraft的较新版本(`>=1.5.2`) 不会使用JVM 代理设置。 这不是Qv2ray的问题。 如果你真的想要通过代理玩Minecraft， 考虑为该服务器设置一个 Dokodemo-door 入站，并直接连接到 `localhost`。
 
 :::
 
-## Platform-dependent Methods
+## 依赖平台的方法
 
-### Using Environment Variables
+### 使用环境变量
 
-Many CLI programs (for example `curl` and `wget`) will use the proxies given by `<PROTOCOL>_PROXY` environment variable.
+许多CLI 程序 (例如，`curl` 和 `wget`) 将使用由`<PROTOCOL><PROTOCOL>_PROXY` 环境变量。
 
-Here is a configuration example:
+下面是一个配置示例：
 
 ```shell
-# Change the host and port according to Qv2ray inbound configuration
+# 更改主机和端口，基于 Qv2ray 入站配置
 export HTTP_PROXY="http://127.0.0.1:8000"
 export HTTPS_PROXY="http://127.0.0.1:8000"
 ```
 
-If authentication is enabled in Qv2ray, use the following settings:
+如果在 Qv2ray 中启用了身份验证，请使用以下设置：
 
 ```shell
-# Change user/pass according to your configuration
+# 更改用户名和密码，基于 Qv2ray 入站配置
 export HTTP_PROXY="http://user:pass@127.0.0.1:8000"
 export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
 ```
 
-Note that if there is a special character in your username or password, you need to encode it. Here's a quick reference:
+请注意，如果您的用户名或密码有特殊字符，您需要对其进行编码。 下面是一个快速方法：
 
 | `!`   | `#`   | `$`   | `&` | `'`   | `(`   | `)`   | `*`   | `+`   | `,`   | `/`   | `:`   | `;`   | `=`   | `?`   | `@`   | `[`   | `]`   |
 | ----- | ----- | ----- | ------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | `%21` | `%23` | `%24` | `%26`   | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D` |
 
-Or enter the text you want to encode: <input v-model="input" />
+或者输入您想要编码的文本： <input v-model="input" />
 
 <template v-if="input">
-  Encoded text: <code>{{ escaped }}</code>
+  编码文本： <code>{{ escaped }}</code>
 </template>
 
-For programs running in `sudo`, it is required to configure `sudo` to preserve these variables if you do not run `sudo` in a shell. Call `visudo` with root and add the following line:
+对于在 `sudo` 中运行的程序，, 如果您不在 shell 中运行`sudo`则需要配置 `sudo` 来保存这些变量。 Call `visudo` with root and add the following line:
 
 ```shell
 Defaults env_keep += "HTTP_PROXY HTTPS_PROXY"
