@@ -16,7 +16,7 @@ Qv2ray 支持多种方式导入您的配置。 为了让您入门，我们只是
 按照这些步骤导入它们：
 
 1. 点击 **主窗口中的导入** 按钮，或通过 [链接导入](qv2ray://open/import/link)。
-2. In the **Import File** dialog, choose import source **Share Link**,
+2. 在 **导入文件** 对话框中，选择导入源 **共享链接**
 3. Paste your share links into **Share Link** text box.
 4. Click on **Import** button to finish.
 
