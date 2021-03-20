@@ -12,21 +12,21 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 **查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
-:::tip Core Management: Manual vs Automatic
+:::tip 核心管理：手动还是自动？
 
-If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下：
-
-:::
-
-:::tip For Windows 10 ARM64 users
-
-From V2Ray Core 4.27, the V2Ray project team has provided an ARM32 (armv7)-based kernel for Windows 10. 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能
+如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下：
 
 :::
 
-:::danger Sharpen Your Eyes
+:::tip 给 Windows 10 ARM64 用户的提示
 
-Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`amd64`) platform. 事实上，`arm64`和`amd64`是完全不同的两个概念
+自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构的内核 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能
+
+:::
+
+::::danger 仔细看！
+
+当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念
 
 :::
 
@@ -49,9 +49,9 @@ Do not download `v2ray-linux-arm64.zip` if you are running Qv2ray on `x86_64` (`
 3. `geoip.dat`: IP 规则数据库
 4. `geosite.dat`: 域规则数据库
 
-:::warning Special Hint for Linux / macOS Users
+:::warning 给 Linux / macOS 用户的特殊提示
 
-You should always grant **executable permission** to `v2ray` and `v2ctl`. 这通常是通过在这些文件上执行 `chmod +x` 来完成的。
+你应该始终给予 **可执行权限** `v2ray` 和 `v2ctl` 这通常是通过在这些文件上执行 `chmod +x` 来完成的。
 
 在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。
 
@@ -68,6 +68,6 @@ You should always grant **executable permission** to `v2ray` and `v2ctl`. 这通
 
 :::警告没有 Matryoshka!
 
-永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray。 xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
+永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
 
 :::
