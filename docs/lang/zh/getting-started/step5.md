@@ -8,15 +8,15 @@ title: 进一步的步骤
 
 ## 加入 Qv2ray 用户群组
 
-我们建议您加入我们在[ Telegram ](https://telegram.org/)的[ Qv2ray 用户组](https://t.me/qv2ray)。 在这里，您可以直接和 Qv2ray 开发者和 Qv2ray 的优秀用户聊天。 For usage problems, it is always more efficient to discuss them in the group, than opening up one issue on GitHub.
+我们建议您加入我们在[ Telegram ](https://telegram.org/)的[ Qv2ray 用户组](https://t.me/qv2ray)。 在这里，您可以直接和 Qv2ray 开发者和 Qv2ray 的优秀用户聊天。 在群组中讨论使用问题总是比在 GitHub 上打开一个 issue 更有效。
 
-Also, optionally, you may subscribe [Qv2ray Outpost](https://t.me/qv2ray_outpost) channel at Telegram, if you don't like to talk too much or even show up. We will push news updates of Qv2ray, and even send polls that maybe decides Qv2ray's fate! Make sure you don't miss it.
+另外，如果您不想说太多话，也可以在 Telegram 上订阅 [Qv2ray Outpost](https://t.me/qv2ray_outpost) 频道。 我们会推送 Qv2ray 的更新消息，甚至发送可能决定 Qv2ray 命运的投票！ 请确保您不要错过它。
 
-## Tweaking UI & Languages
+## 调整界面 & 语言
 
-### UI & Tray Icons
+### 界面 & 托盘图标
 
-Despite Qv2ray's best efforts to detect the UI style of your platform, you may still see offending UI details on Qv2ray. For example, the tray icon color is too light to see, the icon color on the button is incongruous, etc.
+尽管 Qv2ray 已经尽最大努力适配您的平台的 UI 风格，但您仍然可以在 Qv2ray 上看到违和的 UI 细节。 例如无法看清太亮的托盘图标，按钮上的图标颜色不一致等等。
 
 In this case, please turn to **Preference Window**. In **[General Settings](qv2ray://open/preference/general)** Tab, please adjust the following items according to your real situation:
 
