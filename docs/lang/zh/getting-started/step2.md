@@ -18,15 +18,15 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 ::danger 擦亮你的双眼 当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念 :::
 
-### Manual Download
+### 手动下载
 
-**Official Download Link：** <https://github.com/v2fly/v2ray-core/releases>
+**官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
 
-Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
+将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到`$QV2RAY_CONFIG_PATH/vcore`, 其中`$QV2RAY_CONFIG_PATH`是Qv2ray 存储数据的目录。
 
-The directory `vcore` could be in one of these locations:
+目录 `vcore` 可能是在这些位置之一：
 
-- `./config/` (`config` subdirectory aside Qv2ray executable, recommended for Windows Users)
+- `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
 - `~/.qv2ray/` (in a dedicated directory of your home folder)
 - `~/.config/qv2ray/` (standard XDG configuration path)
 
