@@ -65,11 +65,11 @@ Qv2ray 支持多种方式导入您的配置。 为了让您入门，我们只是
 2. 填写 **名称/前缀** 或留空，或者您可以在完成配置后重命名它。
 3. 点击 **手动输入** -> **打开连接编辑器**.
 4. 填写 **Tag**。 此标签将出现在日志中。 你也可以留空。
-5. Fill in **Host** and choose your proxy type.
-6. Config **Misc Settings** Optionally.
-7. Fill in **Outbound settings** and **Stream Settings**.
-8. Click **OK** to save your config.
+5. 填写 **主机** 并选择您的代理类型。
+6. 配置 **杂项设置** 可选.
+7. 填写 **出站设置** 和 **流设置**.
+8. 点击 **确定** 保存您的配置。
 
-## Import an existing configuration
+## 导入现有配置
 
-If you are using v2ray-core, you can import an existing configuration file. **Advanced** -> **Select**, or **Open JSON Editor** and paste it.
+如果您使用 v2ray-core, 您可以导入现有的配置文件。 **高级** -> **选择**, 或 **打开 JSON 编辑器** 并粘贴它。
