@@ -1,12 +1,37 @@
 const { resolve } = require('path')
 const r = (path) => resolve(__dirname, path)
 
-DEFAULT_SIDE_BAR = {
-    '/getting-started/': ['', 'step1', 'step2', 'step3', 'step4', 'step5'],
-    '/manual/': ['', 'general', 'route'],
-    '/hacking/': ['', 'manuallybuild', 'cmake-argument'],
-    '/plugins/': ['', 'usage', 'v2ray-integration', 'development'],
-    '/faq/': [''],
+const NAVS = {
+    'getting-started': ['', 'step1', 'step2', 'step3', 'step4', 'step5'],
+    'manual': ['', 'general', 'route'],
+    'plugins': ['', 'usage', 'v2ray-integration', 'development'],
+    'hacking': ['', 'manuallybuild', 'cmake-argument'],
+    'faq': [''],
+}
+
+function addLanguage(info_json, lang_path) {
+    lang_locale_object = {
+        title: "Qv2ray",
+        lang: info_json.lang,
+        description: info_json.description
+    }
+
+    theme_lang_locale_object = {
+        selectText: info_json.selectText,
+        label: info_json.label,
+        editLinkText: info_json.editLinkText,
+        lastUpdated: info_json.lastUpdated,
+        nav: []
+    }
+
+    Object.keys(NAVS).forEach(key => {
+        website_config.themeConfig.sidebar[lang_path + key + "/"] = NAVS[key]
+        theme_lang_locale_object.nav.push({ link: lang_path + key + "/", text: info_json.nav[key] })
+    })
+
+    website_config.locales[lang_path] = lang_locale_object
+    website_config.themeConfig.locales[lang_path] = theme_lang_locale_object
+    console.log("Added language:", lang_path, lang_locale_object, theme_lang_locale_object)
 }
 
 website_config = {
@@ -16,13 +41,7 @@ website_config = {
         'link',
         { rel: 'icon', href: '/logo.svg' }
     ]],
-    configureWebpack: {
-        resolve: {
-            alias: {
-                '@img': r('img'),
-            },
-        },
-    },
+    configureWebpack: { resolve: { alias: { '@img': r('img') } } },
     plugins: {
         '@vuepress/back-to-top': {},
         '@kidonng/vuepress-plugin-contributors': {},
@@ -33,40 +52,17 @@ website_config = {
             description: (_) => '跨平台 V2Ray GUI',
             type: (_) => 'website',
             url: (_) => 'https://qv2ray.net/',
-            image: (_) =>
-                'https://avatars.githubusercontent.com/u/60087221?s=400&v=4',
+            image: (_) => 'https://avatars.githubusercontent.com/u/60087221?s=400&v=4',
             twitterCard: (_) => 'summary',
         },
     },
-    locales: {
-        '/': {
-            lang: 'en-US',
-            title: 'Qv2ray',
-            description: 'Qv2ray - Cross Platform Qt GUI Front-end for V2Ray',
-        },
-    },
+    locales: {},
     themeConfig: {
         logo: '/logo.svg',
         displayAllHeaders: true,
         smoothScroll: true,
-        sidebar: { ...DEFAULT_SIDE_BAR },
-        locales: {
-            '/': {
-                selectText: 'Languages',
-                ariaLabel: 'Select language',
-                label: 'English',
-                editLinkText: 'Edit This Page',
-                lastUpdated: 'Last Updated',
-                contributorsLabel: 'Contributors',
-                nav: [
-                    { text: 'Getting Started', link: '/getting-started/' },
-                    { text: 'User Manual', link: '/manual/' },
-                    { text: 'FAQ', link: '/faq/' },
-                    { text: 'Hacking', link: '/hacking/' },
-                    { text: 'Plugins', link: '/plugins/' },
-                ],
-            },
-        },
+        sidebar: {},
+        locales: {},
         repo: 'Qv2ray/Qv2ray',
         repoLabel: 'GitHub',
         docsRepo: 'Qv2ray/qv2ray.github.io',
@@ -80,28 +76,19 @@ website_config = {
     },
 }
 
-
 const fs = require("fs")
 
+// Base Language
+addLanguage(JSON.parse(fs.readFileSync("docs/language.json")), "/")
+
 fs.readdirSync("docs/lang").forEach(lang => {
-    lang_info = JSON.parse(fs.readFileSync("docs/lang/" + lang + "/language.json"))
-    console.log("Find language:", lang, lang_info.label)
-    lang_path = "/lang/" + lang + "/"
-    website_config.locales[lang_path] = { lang: lang_info.lang, title: "Qv2ray", description: lang_info.description }
-    lang_locale_object = {
-        selectText: lang_info.selectText,
-        ariaLabel: lang_info.ariaLabel,
-        label: lang_info.label,
-        editLinkText: lang_info.editLinkText,
-        lastUpdated: lang_info.lastUpdated,
-        nav: []
+    lang_infofile_path = "docs/lang/" + lang + "/language.json";
+    lang_basedir = "/lang/" + lang + "/";
+
+    if (fs.existsSync(lang_infofile_path)) {
+        info_json = JSON.parse(fs.readFileSync(lang_infofile_path))
+        addLanguage(info_json, lang_basedir)
     }
-    Object.keys(DEFAULT_SIDE_BAR).forEach(key => {
-        _navkey = key.substring(1, key.length - 1)
-        website_config.themeConfig.sidebar["/lang/" + lang + key] = DEFAULT_SIDE_BAR[key]
-        lang_locale_object.nav.push({ link: lang_path + _navkey, text: lang_info.nav[_navkey] })
-    });
-    website_config.themeConfig.locales[lang_path] = lang_locale_object
 });
 
 module.exports = website_config

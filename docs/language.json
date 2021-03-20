@@ -1,0 +1,15 @@
+{
+    "lang": "en-US",
+    "description": "🌟 Cross-Platform Qt Front-end for V2Ray 🔨 Built With C++17 / Qt5/6, Full-Featured 🌟",
+    "selectText": "选择语言",
+    "label": "English",
+    "editLinkText": "Edit Current Page",
+    "lastUpdated": "Last Updated",
+    "nav": {
+        "getting-started": "Getting Started",
+        "manual": "User Manual",
+        "plugins": "Plugin System",
+        "hacking": "Hacking",
+        "faq": "FAQ"
+    }
+}
