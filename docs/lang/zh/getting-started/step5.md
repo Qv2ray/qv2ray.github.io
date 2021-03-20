@@ -39,7 +39,7 @@ title: 进一步的步骤
 
 然而，**绕过中国大陆** 的规则并不总是适用于所有人。 比如说，您有一个解锁 [B站](https://bilibili.com/) 香港/澳门/台湾区域限制的的特殊代理。 [B站](https://bilibili.com/) 是中国大陆的网站，默认情况下相应的流量并不会经过您的代理，显然这样的情况并不符合您的需求。 解决方案是修改 **首选项** -> **[高级路由设置](qv2ray://open/preference/route)**中的设置。
 
-A valid route setting scheme is basically a 2x3 routing rule matrix. Syntax for the rules can be found in [RuleObject Documentation](https://www.v2fly.org/config/routing.html#routingobject) from V2Ray Official Website. Here, if we want to force bilibili go through proxy, we just write a rule `geosite:bilibili` at `(Domain, Proxy)` position.
+A valid route setting scheme is basically a 2x3 routing rule matrix. 规则的语法可在 V2Ray 官方网站的 [ RuleObject 文档](https://www.v2fly.org/config/routing.html#routingobject) 中找到 。 Here, if we want to force bilibili go through proxy, we just write a rule `geosite:bilibili` at `(Domain, Proxy)` position.
 
 There are other advanced usages of routing schemes. If you are interested, try explore more into it.
 
