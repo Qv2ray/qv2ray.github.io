@@ -11,17 +11,17 @@ sidebarDepth: 3
 
 ### 使用系统代理
 
-For **Windows** and **macOS** users, almost all of the applications will follow the system proxy settings. For **Linux** users, some applications such as Firefox and Chromium, but not all, will read and obey the proxy configurations in GNOME/KDE Settings.
+对于 **Windows** 和 **macOS** 用户，几乎所有应用程序都遵循系统代理设置。 对于 **Linux** 用户，一部分应用程序如 Firefox 和 Chromium 将会读取并使用 GNOME/KDE 设置的代理配置，但另一部分应用程序并不会这样。
 
-Currently, automatic setting of system proxy is supported by Qv2ray, including **Windows**, **macOS** and **Linux** (GNOME/KDE). You may find System Proxy options of Qv2ray in the following positions:
+目前，Qv2ray 的自动设置系统代理功能支持 **Windows**, **macOS** 和 **Linux** (GNOME/KDE) 用户。 您可以在以下位置找到 Qv2ray 的设置系统代理选项：
 
-- **Qv2ray Tray Menu**.
-  1.  Right click on the tray icon.
-  2.  In the popup menu, choose **System Proxy** -> **Enable/Disable System Proxy**.
-- **Qv2ray Preference Window**.
-  1.  Click **Preferences** button in the main window.
-  2.  In **Preference Window**, choose the tab **[Inbound Settings](qv2ray://open/preference/inbound)**.
-  3.  Check the option **Set System Proxy**.
+- **Qv2ray 托盘菜单**。
+  1.  右键点击托盘图标。
+  2.  在的弹出菜单中，依次选择 **系统代理** -> **启用/禁用系统代理**。
+- **Qv2ray 首选项**。
+  1.  点击 Qv2ray 主窗口中的 **首选项** 按钮。
+  2.  在 **首选项** 中，选择 **[入站设置](qv2ray://open/preference/inbound)** 标签。
+  3.  勾选选项 **设置系统代理**。
   4.  Click **OK** to apply the settings.
 
 :::tip Linux Users: KDE/GNOME Proxy Settings
