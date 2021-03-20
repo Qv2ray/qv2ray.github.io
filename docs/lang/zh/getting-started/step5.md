@@ -23,7 +23,7 @@ title: 进一步的步骤
 - **使用浅色界面图标**: 启用后，按钮上的图标会变成浅色。 如果您正在使用一个浅色窗口主题，请关闭此选项。
 - **使用浅色托盘图标**: 启用后，托盘图标会变成浅色以适应深色背景主题。 如果您的托盘区域背景颜色是浅色的，请关闭此选项。
 
-:::tip A tip for Gnome users The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons. :::
+:::tip 给 Gnome 用户的提示： 原生的 Gnome 桌面不会显示托盘图标。所以 Qv2ray 托盘图标也不会显示。 If you want to display the tray icons, you can install a Gnome extension called [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (also called `ubuntu-appindicator`) , After installing the extension you should log out, log in again, and then enable it in the `Tweaks` app (ie `gnome-tweaks`), and then you will see the tray icons. :::
 
 ### Multi-languages
 
