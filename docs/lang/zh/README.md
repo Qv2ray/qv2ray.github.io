@@ -24,7 +24,7 @@ footer: 采用 CC-BY-SA | © 2020-2021 Qv2ray 版权所有
 
 ## 🚀 起步
 
-对于大多数用户， [快速入门](getting-started/README.md) 将会带领他们在短时间内上手 Qv2ray。
+对于大多数用户， [快速上手](getting-started/README.md) 将会带领他们在短时间内上手 Qv2ray。
 
 对于每一种功能对应的详细文档，请参阅 [使用手册。](manual.md)
 
