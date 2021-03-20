@@ -50,15 +50,15 @@ FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Setti
 
 #### Telegram
 
-您可以在 Telegram 应用中设置其使用代理。 Go to **Settings** -> **Advanced** -> **Network and proxy** and click **Connection type**, where **Proxy Settings** dialog will be opened.
+您可以在 Telegram 应用中设置其使用代理。 前往 **设置/Settings** -> **高级/Advanced** -> **网络和代理/Network and proxy** 然后点击 **连接类型/Connection**，**代理设置/Proxy Settings** 对话框将被打开。（译者注：不同的 Telegram 客户端和不同的翻译会导致选项略有不同。）
 
-In **Proxy Settings**, click **Add Proxy** button on the bottom. Choose SOCKS5/HTTP according to your own flavor and fill in the blanks with the information from Qv2ray Inbound Settings.
+在 **代理设置/Proxy Settings** 中点击底部的 **添加代理/Add Proxy** 按钮。 根据您自己的口味选择 SOCKS5/HTTP ，然后用 Qv2ray 入站设置中的信息填写剩下的选项。
 
-Finally, click on the proxy entry that you've just configured. You are done.
+最后，单击您刚刚配置的代理。 Telegram 就设置好了。
 
-#### Web Browsers
+#### 网络浏览器
 
-Almost all web browsers support manual configuration of proxies. Taking Firefox as example, you can find this settings in **Preferences -> General -> Network -> Manual Proxy Configuration**. Fill these fields with the information from Qv2ray Inbound Settings to use Qv2ray.
+几乎所有的网络浏览器都支持手动配置代理服务器。 将 Firefox 为例子，您可以在 **首选项 -> 常规-> 网络 -> 手动代理配置** 中找到代理设置。 用 Qv2ray 入站设置中的信息填写这些字段以使用 Qv2ray 代理。
 
 :::tip 使用代理插件。
 
