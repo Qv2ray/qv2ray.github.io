@@ -6,7 +6,11 @@ title: General Settings
 
 **[General Settings](qv2ray://open/preference/general)** are for Qv2ray itself, including **appearance**, **behavior** and **network settings**.
 
-::: tip Tips The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core. :::
+::: tip Tips
+
+The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
+
+:::
 
 ## Appearance
 
@@ -33,9 +37,13 @@ Set the way Qv2ray accesses the network.
 - **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
 - **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
 
-:::tip What is Qv2ray proxy? If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
+:::tip What is Qv2ray proxy?
 
-If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option. :::
+If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
+
+If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
+
+:::
 
 ## Advanced Behavior
 
@@ -48,8 +56,16 @@ Set the advanced behavior of Qv2ray. Please do note that abuse of these settings
 - **Disable System Root Certificates**: When enabled, V2Ray core will only use built-in root certificates, which helps to circumvent root certificate hijacking attack. However, this can cause V2Ray core fail to recognise your valid TLS certificates, resulting in connectivity problem with your nodes.
 - (Removed) **Set `AllowInsecureCiphers` by Default**: All new connections imported through **subscription** / **QR code** / **VMess protocol link** will be enabled by default to `allow insecure TLS algorithm` option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
 
-:::warning Re-emphasis: Misuse of the above settings may cause negative effects and even lead to security issues! If you do not understand the actual use of these options, please do not open them! :::
+:::warning Re-emphasis:
 
-:::tip (Outdated) Notes on V2ray Core versions before 4.23.1 **Updated at 2021-01-25:** We believe that no one will use that old V2Ray core version. This notice is no longer effective and is only kept for historical reasons.
+Misuse of the above settings may cause negative effects and even lead to security issues! If you do not understand the actual use of these options, please do not open them!
 
-**Updated at 2020-05-30:** Due to implementation issues，V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**. :::
+:::
+
+:::tip (Outdated) Notes on V2ray Core versions before 4.23.1
+
+**Updated at 2021-01-25:** We believe that no one will use that old V2Ray core version. This notice is no longer effective and is only kept for historical reasons.
+
+**Updated at 2020-05-30:** Due to implementation issues，V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**.
+
+:::
