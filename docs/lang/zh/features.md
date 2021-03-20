@@ -8,9 +8,9 @@ title: 功能与特性
 
 ### 多种服务器导入方式
 
-通过我们的插件系统，你可以使用 Qv2ray 的同时使用 SSR/Trojan，以及获得 V2ray 路由引擎带来的强大体验。
+通过我们的插件系统，你可以使用 Qv2ray 的同时使用 SSR/Trojan，
 
-And [benefit from the robost routing engine](plugins/v2ray-integration.md) provided by V2ray.
+以及获得 V2ray 提供的[路由引擎](plugins/v2ray-integration.md)带来的强大体验。
 
 **根本不需要额外设置 PAC**
 
@@ -22,62 +22,62 @@ Qv2ray 内置的路由矩阵允许你配置自己的，个性化的路由方案�
 
 **路由矩阵语法跟随 V2ray 的路由设置，并带有自动补全（_避免发生打错字的尴尬情况_）**
 
-### The Full-featured V2ray Configuration GUI
+### 全功能 V2ray GUI
 
-Our full-featured complex editor allows you create, edit your own connection configuration. Including Routing Table, Multiple inbounds / outbounds.
+我们全功能的复杂编辑器允许你创建，编辑你自己的连接。 包括路由表，多入站出站规则等。
 
 **就像手动写 V2ray 的 JSON 配置一样，但是你将拥有强大流程图式路由编辑。**
 
-### V2ray Log highlighter
+### V2ray 日志高亮
 
 当出问题的时候，V2ray 的日志是最难搞懂的
 
-Qv2ray 提供 V2ray 日志的语法高亮，节省你调试连接的时间
+Qv2ray 提供 V2ray 日志的语法高亮。
 
-**Saving your time when debugging the connection issue.**
+**节省你调试连接的时间。**
 
 ## 全功能 V2ray GUI
 
 ### 导入连接
 
-- Versatile Host Importing
+- 多种服务器导入方式
   - 高容错的 VMESS 链接批量导入
-  - Direct Importing from JSON Files
-  - Screen QR Code / QR Code File Importing
-  - Advanced / Manual Configuration
-- 手动更新订阅
+  - 直接从 JSON 文件导入
+  - 扫描屏幕二维码/从二维码文件导入
+  - 高级/手动配置
+- 订阅
 
+  - 手动更新订阅
   - 自动更新订阅
-  - 自动连接到
 
-### Connection Editing
+### 连接编辑
 
 - 内置服务器编辑器
 
   - 简单的出站编辑
-  - Custom JSON Editor
+  - 自定义 JSON 编辑器
 
 - 一般功能支持
 
-  - 连接管理
-  - Multiplexing
+  - 自动连接
+  - 多路复用
   - 开机启动
-  - System Proxy Integration (Windows / macOS / Linux GNOME and KDE)
+  - 系统代理集成 (Windows / macOS / Linux GNOME 和 KDE)
 
 ### 导出连接
 
-- Export as QR Code
+- 导出为二维码
 - 导出单个连接分享链接
 - 导出组分享链接
 
-### Connection Management
+### 连接管理
 
 - 实时速度流量监控
 
   - 状态栏出站入站统计
   - **独立的速度图表**
 
-- Latency Testing (TCP)
+- 延迟测试 (TCP)
 
   - 单个服务器测试
   - 批量服务器测试
