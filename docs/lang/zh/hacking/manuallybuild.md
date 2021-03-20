@@ -31,7 +31,11 @@ Please make sure you have already met all the requirements.
     | macOS           | Install packages via `homebrew`, (note: curl is pre-installed)              |
     | Android         | Linux host is supported, use [**prebuilt binaries**](#a-prebuilt-binaries), |
 
-    :::tip Extra Git Submoule for Android [android-openssl](https://github.com/KDAB/android_openssl) provides OpenSSL binaries: use `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl` :::
+    :::tip Extra Git Submoule for Android
+
+    [android-openssl](https://github.com/KDAB/android_openssl) provides OpenSSL binaries: use `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl`
+
+    :::
 
 ### a. Prebuilt Binaries
 - The [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) repo is where we build and provide pre-built library dependencies for targeting Windows and Android.
@@ -70,9 +74,17 @@ MSYS2 is suggested, packages:
 
 There are various approaches to obtain the source code of Qv2ray. You can get it from:
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
-- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**) :::tip You can append options after `git clone` `--branch <branch/tag>` To checkout the specific branch/tag after clone is created. :::
+- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**) :::tip You can append options after `git clone`
 
-:::warning Qv2ray contains nested submodules, always use `--recursive` when cloning. :::
+`--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
+
+:::
+
+:::warning
+
+Qv2ray contains nested submodules, always use `--recursive` when cloning.
+
+:::
 
 ## 2. Entering Compilation Directory
 
@@ -110,9 +122,13 @@ Run: `cmake --install .` or with `sudo`
 
 - This will automatically copy all dependencies into `CMAKE_INSTALL_PREFIX`.
 
-:::警告 `macdeployqt` 中存在一个 `libabsl_debugging_internal` 被识别为调试库的 bug。 Which prevents QPlatformPlugin (i.e. QCocoaPlugin) from being deployed. This causes a runtime exception telling that "No Platform Plugin is Found".
+:::warning
 
-Use [Qv2ray-patched `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched) instead. Which supports both Qt5 and Qt6 :::
+There's a bug in `macdeployqt` where `libabsl_debugging_internal` is recognized as a debug library. Which prevents QPlatformPlugin (i.e. QCocoaPlugin) from being deployed. This causes a runtime exception telling that "No Platform Plugin is Found".
+
+Use [Qv2ray-patched `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched) instead. Which supports both Qt5 and Qt6
+
+:::
 
 ## 6. Done
 You have your Qv2ray compiled and deployed!

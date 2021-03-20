@@ -15,9 +15,13 @@ Qv2ray Plugin extends Qv2ray's functionality, which allows you use more features
 
 
 
-:::tip Builtin Shadowsocks Support vs QvPlugin-SS It is a common gotcha that people think Qv2ray needs QvPlugin-SS to support Shadowsocks. Qv2ray already has [built-in Shadowsocks support](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject) from V2Ray Core, which will suffice general use cases. Therefore, you don't necessarily need to use QvPlugin-SS.
+:::tip Builtin Shadowsocks Support vs QvPlugin-SS
 
-Though strongly unrecommended, however, if you insist on using outdated/deprecated ciphers (for example, `rc4-md5`), you may need QvPlugin-SS to make them work. Servers with SIP003 plugins (for example, [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) and [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)) will also require QvPlugin-SS to work. :::
+It is a common gotcha that people think Qv2ray needs QvPlugin-SS to support Shadowsocks. Qv2ray already has [built-in Shadowsocks support](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject) from V2Ray Core, which will suffice general use cases. Therefore, you don't necessarily need to use QvPlugin-SS.
+
+Though strongly unrecommended, however, if you insist on using outdated/deprecated ciphers (for example, `rc4-md5`), you may need QvPlugin-SS to make them work. Servers with SIP003 plugins (for example, [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) and [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)) will also require QvPlugin-SS to work.
+
+:::
 
 ## How to download and use a plugin
 

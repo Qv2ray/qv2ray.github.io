@@ -8,38 +8,54 @@ title: 配置 V2Ray Core
 
 ## 下载 V2Ray 核心文件
 
-Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时候是要自己下载。
+Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，多数时候您需要自己下载。
 
 **查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
-:::tip 核心管理：手动 / 自动 如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下： :::
+:::tip 核心管理：手动还是自动？
 
-::tip 对于 Windows 10 ARM64 位用户，自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构的内核 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能 :::
+如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。 对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。 关于其他发行版，请阅读如下：
 
-::danger 擦亮你的双眼 当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念 :::
+:::
+
+:::tip 给 Windows 10 ARM64 用户的提示
+
+自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构的内核 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能
+
+:::
+
+:::danger 仔细看！
+
+当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
+
+:::
 
 ### 手动下载
 
 **官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
 
-将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到`$QV2RAY_CONFIG_PATH/vcore`, 其中`$QV2RAY_CONFIG_PATH`是Qv2ray 存储数据的目录。
+将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore`, 其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储数据的目录。
 
-目录 `vcore` 可能是在这些位置之一：
+`vcore` 可能解压的位置示例：
 
-- `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
-- `~/.qv2ray/` (在您的主文件夹的专用目录中)
-- `~/.config/qv2ray/` (标准 XDG 配置路径)
+- `./config/vcore` （这里的 `config` 指在 Qv2ray 可执行文件旁边的 `config` 子目录，Windows 用户推荐）
+- `~/.qv2ray/vcore` （在您的 `home` 文件夹的专用子目录中）
+- `~/.config/qv2ray/vcore` (标准 XDG 配置路径)
 
-请确保这些文件直接存在于您的 `vcore` 目录中：
+请确保这些文件存在于您的 `vcore` 目录中：
 
 1. `v2ray` / `v2ray.exe`: 核心可执行文件
 2. `v2ctl` / `v2ctl.exe`: 核心控制程序
 3. `geoip.dat`: IP 规则数据库
 4. `geosite.dat`: 域规则数据库
 
-:::警告用于 Linux / macOS 用户的特殊提示 你应该始终给予 **可执行权限** `v2ray` 和 `v2ctl` 这通常是通过在这些文件上执行 `chmod +x` 来完成的。
+:::warning 给 Linux / macOS 用户的特殊提示
 
-在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。 :::
+你应该始终给予 `v2ray` 和 `v2ctl` **可执行权限**。 这通常是需要对这些文件执行一次 `chmod +x` 。
+
+在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。
+
+:::
 
 ## 在 Qv2ray 中配置 V2Ray Core
 
@@ -50,4 +66,8 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 配置后，您可以点击 **检查 V2Ray 核心设置** 按钮来验证您的 V2Ray 核心设置。 重复尝试，直到检查通过。
 
-:::警告没有 Matryoshka! 永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray。 xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！ :::
+:::警告没有 Matryoshka!
+
+永远不要点 **核心可执行路径** 到 **Qv2ray 执行程序** 这不会造成交叉轰炸，因为Qv2ray 单实例型的。 注意V2Ray Core 可执行文件就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
+
+:::
