@@ -8,7 +8,7 @@ title: 配置 V2Ray Core
 
 ## 下载 V2Ray 核心文件
 
-Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时候是要自己下载。
+Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，多数时候您需要自己下载。
 
 **查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
@@ -24,9 +24,9 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 :::
 
-::::danger 仔细看！
+:::danger 仔细看！
 
-当你想在`x86_64`(`amd64`)平台上使用 Qv2ray 时，请不要下载`v2ray-linux-arm64.zip`安装包 事实上，`arm64`和`amd64`是完全不同的两个概念
+当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
 
 :::
 
@@ -34,9 +34,9 @@ Qv2ray 本身 **不** 包含V2Ray 可执行文件的， `v2ray-core`，多数时
 
 **官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
 
-将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到`$QV2RAY_CONFIG_PATH/vcore`, 其中`$QV2RAY_CONFIG_PATH`是Qv2ray 存储数据的目录。
+将 v2ray 核心文件提取到一个固定路径。 建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore`, 其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储数据的目录。
 
-目录 `vcore` 可能是在这些位置之一：
+`vcore` 可能解压的位置示例：
 
 - `./config/` (`config` 子目录留空Qv2ray 可执行文件，推荐给 Windows 用户)
 - `~/.qv2ray/` (在您的主文件夹的专用目录中)
