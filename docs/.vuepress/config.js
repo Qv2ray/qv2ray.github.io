@@ -25,8 +25,9 @@ function addLanguage(info_json, lang_path) {
     }
 
     Object.keys(NAVS).forEach(key => {
-        website_config.themeConfig.sidebar[lang_path + key + "/"] = NAVS[key]
-        theme_lang_locale_object.nav.push({ link: lang_path + key + "/", text: info_json.nav[key] })
+        keypath = lang_path + key + "/"
+        website_config.themeConfig.sidebar[keypath] = NAVS[key]
+        theme_lang_locale_object.nav.push({ link: keypath, text: info_json.nav[key] })
     })
 
     website_config.locales[lang_path] = lang_locale_object
