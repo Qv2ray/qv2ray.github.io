@@ -4,7 +4,11 @@ title: "true"
 
 # 常见问题
 
-::tip 有些错误内容可能需要将 **核心设置** 中的 `日志等级` 调整成 `info` 或者 `debug` 后才会出现。 :::
+:::tip
+
+Some message can only be seen when the `loglevel` in **Kernel Settings** set to `info` or `debug`.
+
+:::
 
 ## 启动问题
 
@@ -100,7 +104,11 @@ title: "true"
 
 或者您也可以重启 Qv2ray 然后重试。
 
-:::tip Gnome 用户 本机Gnome 桌面不会显示托盘图标。并且 Qv2ray 图标也会不显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。 :::
+:::tip A tip for Gnome users
+
+The native Gnome desktop will not display the tray icons, and the Qv2ray icon will also not be displayed. 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。
+
+:::
 
 ### macOS 想要将 Qv2ray 和/或其插件移动到回收站中
 
