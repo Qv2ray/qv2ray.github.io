@@ -67,8 +67,8 @@ IP规则有以下几种写法(按照是否常用排序):
 - **预定义域名列表**: 以 `geosite:`开头, 后面跟一个名称，例如 `geosite:google` 或 `geosite:cn` 名称 及 域名列表 请参考 _预定义域名列表_
 - **子域名**：由 `"domain:" `开始，后面跟一个域名。 当此域名是目标域名或其子域名时，该规则生效。 例如` "domain:v2ray.com"` 匹配` "www.v2ray.com"`、`"v2ray.com"`，但不匹配 `"xv2ray.com"`。
 - **完全匹配**： 由</strong> "full:" </code>开始，后面跟一个域名。 当此域名完整匹配目标域名时，该规则生效。 例如` "full:v2ray.com" `匹配`"v2ray.com" `但不匹配` "www.v2ray.com"。`
-- **纯字符串**：当此字符串匹配目标域名中任意部分，该规则生效。 For example, `sina.com` can match `sina.com`, `sina.com.cn` and `www.sina.com`, but not `sina.cn`.
-- **Regular expression**: Starts with `regexp:`, and the rest is a regular expression. When this regular expression matches the target domain name, the rule takes effect. For example, `regexp:\\.goo.*\\.com$` matches `www.google.com`, `fonts.googleapis.com`, but not `google.com`.
+- **纯字符串**：当此字符串匹配目标域名中任意部分，该规则生效。 比如`"sina.com" `可以匹配 `"sina.com"`、`"sina.com.cn" `和 `"www.sina.com"`，但不匹配 `"sina.cn"`。
+- **正则表达式**：由 `"regexp:"` 开始，余下部分是一个正则表达式。 当此正则表达式匹配目标域名时，该规则生效。 例如` "regexp:\\.goo.*\\.com$"` 匹配 `"www.google.com"`、`"fonts.googleapis.com"`，但不匹配` "google.com"`。
 - **Loading domain list from external files**: the format is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, and the file must be stored in the V2Ray core resource directory. The file format is the same as `geosite.dat`, and the specified `tag` must exist in the file.
 
 :::tip I'm a newbie, can you be more straightforward?
