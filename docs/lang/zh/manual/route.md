@@ -92,10 +92,10 @@ IP规则有以下几种写法(按照是否常用排序):
 
 ## 路由编辑器
 
-在 Qv2ray的主界面， **右键点击** 代理节点，然后选择 **编辑为一个复杂的配置** 打开 **路由编辑器** 接口。
+在 Qv2ray的主界面， **右键点击** 代理节点，然后选择 **编辑为一个复杂配置** 打开 **路由编辑器** 接口。
 
-In this interface, you can arbitrarily combine matching conditions such as **user**, **source IP**, **target IP**, **domain name**, **target domain name**, **protocol**, and **port** to create sufficiently accurate inbound/outbound rules, and you can also adjust the **priority** of the rules arbitrarily Level, even achieving **load balancing**.
+在这个界面中，你可以把**用户**，**源IP地址**，**目标IP地址**，**域名**，**目标域名**，**协议**和**端口**任意设置组合，精准地设计出你想要的入站/出站规则. 你还可以调整不同规则之间的**优先级**, 甚至可以实现**负载均衡**.
 
-What needs reiterating is that the matching conditions in each routing rule are `and` / `&&` relationships, that is, if a routing rule contains multiple matching conditions, the actual matching conditions finally obtained are the intersection of these conditions. For example, if a routing rule contains both the port condition `443` and the target domain name condition `qv2ray.github.io`, then only the target `qv2ray.github.io:443` that meets both conditions will match this item rule.
+需要再次重申的是，每条路由规则中的匹配条件是 `and` / `&&` 关系 也就是说，如果路由规则包含多个匹配条件，最终获得的实际匹配条件就是这些条件的交集。 例如，如果路由规则包含 端口 规则 `443` 和 目标域名 规则 `qv2ray.github.io`, 那么只有目标 `qv2ray.github.io:443` 符合这两项条件,并将与此项规则相匹配。
 
-If you don't know much about V2Ray's routing rules mechanism, please refer to V2Ray's official documentation.
+如果您对 V2Ray 路由规则的作用机制不了解，请参阅V2Ray的官方文档。
