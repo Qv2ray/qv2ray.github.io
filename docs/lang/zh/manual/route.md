@@ -24,17 +24,17 @@ Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDe
 
 根据V2Ray的官方文档，这三种域名策略的定义如下：
 
-- **`AsIs`**: Use only the domain name for routing. Defaults.
-- **`IPIfNonMatch`**: When the domain name does not match any rules, the domain name is resolved into IP (A record or AAAA record) for matching again:
-  - When a domain name has multiple A records, it will try to match all A records until one of them matches a certain rule;
-  - The resolved IP only works during routing, and the original domain name is still used in the forwarded data packets.
-- **`IPOnDemand`**: When any IP-based rules are encountered during matching, the domain name will be immediately resolved to IP for matching.
+- **`AsIs`**: 只使用域名进行路由选择， 默认值;
+- **`IPIfNonMatch`**: 当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）再次进行匹配；
+  - 当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；
+  - 解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名;
+- **`IPOnDemand`**: 匹配时碰到任何基于 IP 的规则，立即将域名解析为 IP 后进行匹配;
 
-In short, based on a developer’s statement:
+用某位开发者的话说, 就是:
 
-- **`AsIs`**: fast analysis, imprecise diversion;
-- **`IPIfNonMatch`**: parsing is slightly slower, and shunt is accurate
-- **`IPOnDemand`**: Useless.
+- **`AsIs`**: 分流速度快, 但分流不够精确;
+- **`IPIfNonMatch`**: 在牺牲部分速度的同时能带来足够精确的分流;
+- **`IPOndemand`**: 别用;
 
 > Note: `IPOnDemand` should be the slowest but most accurate, but in most cases, `IPIfNonMatch` is sufficient, so the actual effect of `IPOnDemand` is not obvious.
 
