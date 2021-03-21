@@ -56,7 +56,7 @@ Qv2ray 对于这些策略组的优先级排序是: `域名阻断` -> `域名代�
 
 IP规则有以下几种写法(按照是否常用排序):
 
-- **GeoIP**: 形如 "geoip:cn"，必须以 geoip:（小写）开头，后面跟双字符国家代码。 For example, `geoip:cn` represents an IP address in China, and `geoip:us` represents an IP address in the United States.
+- **GeoIP**: 形如 "geoip:cn"，必须以 geoip:（小写）开头，后面跟双字符国家代码。 例如 ：`geoip:cn`  包含了常见的中国IP地址，`geoip:us` 包含了常见的美国IP地址；
 - **Special value**: `geoip:private`, including all private addresses, such as `127.0.0.1` (this rule only supports V2Ray 3.5 and above).
 - **IP**: The format is `127.0.0.1`.
 - **CIDR**: The format is `10.0.0.0/8`.
