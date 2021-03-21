@@ -4,9 +4,9 @@ title: 高级路由设置
 
 # 高级路由设置
 
-**高级路由设置** 和 **路由编辑器** 是Qv2ray的特有功能。 With their functionality, you can achieve precise control of traffic, such as **on-demand proxy**, **split traffic to domestic and foreign websites**, etc., and even do **Matryoshkas** 🤣~
+**高级路由设置** 和 **路由编辑器** 是Qv2ray的特有功能。 这两项功能可以帮助您精确地控制流量，如 **按需代理**， **分流国内/国外网站**等。 你甚至可以 **设置代理链(多层套娃)**🤣~
 
-:::tip What is routing? What about PAC and GFWList?
+::: tip 路由功能是什么？ 为什么不用 PAC 和 GFW List?
 
 If you don't know what the routing function of V2Ray is, then you can understand it as a new generation PAC implementation with simpler configuration, more efficient use, and better rules.
 
