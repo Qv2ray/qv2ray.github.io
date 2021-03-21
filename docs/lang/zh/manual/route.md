@@ -4,98 +4,98 @@ title: 高级路由设置
 
 # 高级路由设置
 
-**Advanced routing settings** and the **routing editor** are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as **on-demand proxy**, **split traffic to domestic and foreign websites**, etc., and even do **Matryoshkas** 🤣~
+**高级路由设置** 和 **路由编辑器** 是Qv2ray的特有功能。 这两项功能可以帮助您精确地控制流量，如 **按需代理**， **分流国内/国外网站**等。 你甚至可以 **设置代理链(多层套娃)**🤣~
 
-:::tip What is routing? What about PAC and GFWList?
+:::  路由功能是什么？ 为什么不用 PAC 和 GFW List?
 
-If you don't know what the routing function of V2Ray is, then you can understand it as a new generation PAC implementation with simpler configuration, more efficient use, and better rules.
+如果你不了解 V2ray 的路由功能具体是什么, 那么你可以把它理解为一个更加简便, 高效且精准的新一代 PAC 实现。
 
-The routing function is far more powerful than PAC, so please don't ask whether Qv2ray supports PAC! The data used by the routing function is more complete than GFWList, so GFWList is no longer needed.
-
-:::
-
-## Global routing rules
-
-The global routing rule configuration function is in the **Advanced Routing Settings** tab of **Preferences**.
-
-### Domain strategy
-
-Contains three types: `AsIs`, `IPIfNonMatch`, and `IPOnDemand`.
-
-According to V2Ray's official documents, the meaning of the three domain name strategies are as follows:
-
-- **`AsIs`**: Use only the domain name for routing. Defaults.
-- **`IPIfNonMatch`**: When the domain name does not match any rules, the domain name is resolved into IP (A record or AAAA record) for matching again:
-  - When a domain name has multiple A records, it will try to match all A records until one of them matches a certain rule;
-  - The resolved IP only works during routing, and the original domain name is still used in the forwarded data packets.
-- **`IPOnDemand`**: When any IP-based rules are encountered during matching, the domain name will be immediately resolved to IP for matching.
-
-In short, based on a developer’s statement:
-
-- **`AsIs`**: fast analysis, imprecise diversion;
-- **`IPIfNonMatch`**: parsing is slightly slower, and shunt is accurate
-- **`IPOnDemand`**: Useless.
-
-> Note: `IPOnDemand` should be the slowest but most accurate, but in most cases, `IPIfNonMatch` is sufficient, so the actual effect of `IPOnDemand` is not obvious.
-
-You can choose the corresponding domain name strategy according to your actual needs. Generally speaking, IPIfNonMatch is the ideal choice in most situations.
-
-### Routing Methods
-
-The routing plan consists of a `3x2` matrix, from top left to bottom right: `IP direct connection`, `IP proxy`, `IP blocking`, `domain name direct connection`, `domain name proxy`, `domain name blocking`, one per line, no comma separation.
-
-These 6 rules in Qv2ray are matched according to the priority of `domain name blocking` -> `domain name proxy` -> `domain name direct connection` -> `IP blocking` -> `IP proxy` -> `IP direct connection`. If the match fails, the private address and the mainland China domestic address are directly connected, otherwise the agent will be used.
-
-:::tip I just want a global proxy~~~ 🤗
-
-It's very simple. Just clear these rules, go to the Connection tab of Preferences, and uncheck the Bypass China check box. 🙄
+路由功能 比 PAC 强大太多, 以后请别再问为什么 Qv2ray 不支持 PAC 了。 路由功能所采用的分流表也比 GFW List 更加完善，完全没有必要再使用GFW List。
 
 :::
 
-According to the official V2Ray documentation:
+## 全局路由规则
 
-The IP rules are written as follows (in order of common usage):
+配置全局路由规则 请打开**首选项** ---> **高级路由设置** 。
 
-- **GeoIP**: The form is `geoip:cn`, which must start with `geoip:` (all lowercase) followed by a two-character country code. For example, `geoip:cn` represents an IP address in China, and `geoip:us` represents an IP address in the United States.
-- **Special value**: `geoip:private`, including all private addresses, such as `127.0.0.1` (this rule only supports V2Ray 3.5 and above).
-- **IP**: The format is `127.0.0.1`.
-- **CIDR**: The format is `10.0.0.0/8`.
-- **Load IP rules from external files**: the form is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, the file must be stored in the V2Ray core resource directory. The file format is the same as `geoip.dat`, and the specified `tag` must exist in the file.
+### 域名策略
 
-The domain name rules are written as follows (in order of common use):
+Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDemand`.
 
-- **Pre-defined domain list**: Starts with `geosite:`, and the rest is a name, such as `geosite:google` or `geosite:cn`. For the name and domain name list, please refer to the _predefined domain name list_ section of V2Ray document.
-- **Subdomain**: Starts with `domain:`, and the rest is a domain name. This rule takes effect when the domain name is the target domain name or its subdomain name. For example, `domain:v2ray.com` matches `www.v2ray.com` and `v2ray.com`, but not `xv2ray.com`.
-- **Complete match**: Starts with `full:`, and the rest is a domain name. When this domain name completely matches the target domain name, the rule takes effect. For example, `full:v2ray.com` matches `v2ray.com` but not `www.v2ray.com`.
-- **String-only**: When this string matches any part of the target domain name, the rule takes effect. For example, `sina.com` can match `sina.com`, `sina.com.cn` and `www.sina.com`, but not `sina.cn`.
-- **Regular expression**: Starts with `regexp:`, and the rest is a regular expression. When this regular expression matches the target domain name, the rule takes effect. For example, `regexp:\\.goo.*\\.com$` matches `www.google.com`, `fonts.googleapis.com`, but not `google.com`.
-- **Loading domain list from external files**: the format is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, and the file must be stored in the V2Ray core resource directory. The file format is the same as `geosite.dat`, and the specified `tag` must exist in the file.
+根据V2Ray的官方文档，这三种域名策略的定义如下：
 
-:::tip I'm a newbie, can you be more straightforward?
+- **`AsIs`**: 只使用域名进行路由选择， 默认值;
+- **`IPIfNonMatch`**: 当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）后再次进行匹配；
+  - 当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；
+  - 解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名;
+- **`IPOnDemand`**: 匹配时碰到任何基于 IP 的规则，立即将域名解析为 IP 后进行匹配;
 
-- If you want to implement a global proxy, that is, regardless of the destination address, all traffic will go through the proxy, then refer to the other tips above. 😅
-- If you want to achieve precise traffict splitting, that is, all outbound traffic should go through the proxy, then just click the `preset plans` button in the interface, select the `blank plan` or the `ad blocking plan`, and set the domain name strategy to `IPIfNonMatch`. 😋
+用某位开发者的话说, 就是:
+
+- **`AsIs`**: 分流速度快, 但分流不够精确;
+- **`IPIfNonMatch`**: 在牺牲部分速度的同时能带来足够精确的分流;
+- **`IPOndemand`**: 别用;
+
+> 请注意: `IPOnDemand` 理论上是最慢而结果最准确的，然而在大多数情况下 `IPIfNonMatch` 已经足够准确了，所以 `IPOndemand` 的实际应用效果并不明显。
+
+您可以根据您的实际需求选择最适合你的域名匹配策略。 但就结果来说，一般情况下，`IPIfNonMatch` 是最佳选择。
+
+### 路由策略
+
+路由策略由 `3x2`  个区块组成，他们分别是（左上到右下）： `IP 直连` ,`IP 代理`, `IP 阻断`，`域名直连`, `域名代理`, `域名阻断`, 填入规则时请保持 **每行一个，中间没有逗号分隔**。
+
+Qv2ray 对于这些策略组的优先级排序是: `域名阻断` -> `域名代理` -> `域名直连` -> `IP 阻断` -> `IP 代理` -> `IP 直连`。 如果最后没有成功匹配, 私有地址 和 中国大陆地址 会默认直连, 其他地址则会使用代理。
+
+:::tip 我就想要全局代理~~~ 🤗
+
+很简单， 清空所有的路由规则 然后打开 **首选项** ---> ** 链接设置** 取消勾选 ** 绕过私有地址 **和 ** 绕过中国大陆** 即可 🙄
 
 :::
 
-:::tip I'm a advanced user! I want more precise traffic splitting! 🤔
+根据 V2Ray 官方文档：
 
-We recommends using an enhanced version of the V2Ray rules file project. The project is at [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗
+IP规则有以下几种写法(按照是否常用排序):
+
+- **GeoIP**: 形如 "geoip:cn"，必须以 geoip:（小写）开头，后面跟双字符国家代码。 例如 ：`geoip:cn`  包含了常见的中国IP地址，`geoip:us` 包含了常见的美国IP地址；
+- 特殊值："geoip:private"（仅支持V2Ray 3.5+），包含所有私有地址，如 127.0.0.1。
+- IP：直接填写，形如 "127.0.0.1"。
+- **CIDR**：形如 "10.0.0.0/8"。
+- **从文件中加载 IP**：形如 `"ext:file:tag"`，必须以` ext:`（小写）开头，后面跟文件名（不带扩展名）和 标签，文件存放在 和 v2ray 核心文件相同的路径中。 文件格式与 `geoip.dat` 相同，标签 必须在文件中声明。
+
+域名规则有以下几种写法(按照是否常用排序):
+
+- **预定义域名列表**: 以 `geosite:`开头, 后面跟一个名称，例如 `geosite:google` 或 `geosite:cn` 名称 及 域名列表 请参考 _预定义域名列表_
+- **子域名**：由 `"domain:" `开始，后面跟一个域名。 当此域名是目标域名或其子域名时，该规则生效。 例如` "domain:v2ray.com"` 匹配` "www.v2ray.com"`、`"v2ray.com"`，但不匹配 `"xv2ray.com"`。
+- **完全匹配**： 由</strong> "full:" </code>开始，后面跟一个域名。 当此域名完整匹配目标域名时，该规则生效。 例如` "full:v2ray.com" `匹配`"v2ray.com" `但不匹配` "www.v2ray.com"。`
+- **纯字符串**：当此字符串匹配目标域名中任意部分，该规则生效。 比如`"sina.com" `可以匹配 `"sina.com"`、`"sina.com.cn" `和 `"www.sina.com"`，但不匹配 `"sina.cn"`。
+- **正则表达式**：由 `"regexp:"` 开始，余下部分是一个正则表达式。 当此正则表达式匹配目标域名时，该规则生效。 例如` "regexp:\\.goo.*\\.com$"` 匹配 `"www.google.com"`、`"fonts.googleapis.com"`，但不匹配` "google.com"`。
+- **从文件中加载域名**：形如` "ext:file:tag"`，必须以` ext:`（小写）开头，后面跟 文件名 和 标签 ，文件存放在与v2ray核心相同的路径中， 文件格式与 `geosite.dat` 相同， 标签 必须在文件中声明。
+
+:::tip 长话短说，我是萌新😅
+
+- 如果你不想考虑分流 只想代理全部的流量，请按照上方的 全局代理 步骤操作 😅
+- 如果您想要实现精确的分流，即代理所有的出站流量， 请点击下方的 `预设方案` 按钮。 选择 `空白方案` 或 `空白方案（去广告）`, 并将域名策略设置为 `IPIfNonMatch` 😋
 
 :::
 
-:::tip I want a highly customizable traffic splitting rules! 🤪
+:::tip 我是个老司机 ， 我想要更加精准的分流！ 🤔
 
-Please refer to the next section **Routing Editor**. 😄
+我们推荐您使用一个更加细化的 V2ray 路由规则集 项目地址： [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗
 
 :::
 
-## Routing Editor
+:::tip 我想可以自定义的分流规则！ 🤪
 
-In the main interface of Qv2ray, **right-click** the agent node and select **Edit as a complex configuration** to open the **Route Editor** interface.
+请参考下一章节 **路由编辑器** 😄
 
-In this interface, you can arbitrarily combine matching conditions such as **user**, **source IP**, **target IP**, **domain name**, **target domain name**, **protocol**, and **port** to create sufficiently accurate inbound/outbound rules, and you can also adjust the **priority** of the rules arbitrarily Level, even achieving **load balancing**.
+:::
 
-What needs reiterating is that the matching conditions in each routing rule are `and` / `&&` relationships, that is, if a routing rule contains multiple matching conditions, the actual matching conditions finally obtained are the intersection of these conditions. For example, if a routing rule contains both the port condition `443` and the target domain name condition `qv2ray.github.io`, then only the target `qv2ray.github.io:443` that meets both conditions will match this item rule.
+## 路由编辑器
 
-If you don't know much about V2Ray's routing rules mechanism, please refer to V2Ray's official documentation.
+在 Qv2ray的主界面， **右键点击** 代理节点，然后选择 **编辑为一个复杂配置** 打开 **路由编辑器** 接口。
+
+在这个界面中，你可以把**用户**，**源IP地址**，**目标IP地址**，**域名**，**目标域名**，**协议**和**端口**任意设置组合，精准地设计出你想要的入站/出站规则. 你还可以调整不同规则之间的**优先级**, 甚至可以实现**负载均衡**.
+
+需要再次重申的是，每条路由规则中的匹配条件是 `and` / `&&` 关系 也就是说，如果路由规则包含多个匹配条件，最终获得的实际匹配条件就是这些条件的交集。 例如，如果路由规则包含 端口 规则 `443` 和 目标域名 规则 `qv2ray.github.io`, 那么只有目标 `qv2ray.github.io:443` 符合这两项条件,并将与此项规则相匹配。
+
+如果您对 V2Ray 路由规则的作用机制不了解，请参阅V2Ray的官方文档。
