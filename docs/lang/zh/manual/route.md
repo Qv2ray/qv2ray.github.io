@@ -4,7 +4,7 @@ title: 高级路由设置
 
 # 高级路由设置
 
-**Advanced routing settings** and the **routing editor** are distinctive features of Qv2ray. With their functionality, you can achieve precise control of traffic, such as **on-demand proxy**, **split traffic to domestic and foreign websites**, etc., and even do **Matryoshkas** 🤣~
+**高级路由设置** 和 **路由编辑器** 是Qv2ray的特有功能。 With their functionality, you can achieve precise control of traffic, such as **on-demand proxy**, **split traffic to domestic and foreign websites**, etc., and even do **Matryoshkas** 🤣~
 
 :::tip What is routing? What about PAC and GFWList?
 
