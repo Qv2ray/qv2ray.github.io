@@ -48,15 +48,15 @@ Qv2ray 对于这些策略组的优先级排序是: `域名阻断` -> `域名代�
 
 :::tip 我就想要全局代理~~~ 🤗
 
-很简单， Just clear these rules, go to the Connection tab of Preferences, and uncheck the Bypass China check box. 🙄
+很简单， 清空所有的路由规则 然后打开 **首选项** ---> ** 链接设置** 取消勾选 ** 绕过私有地址 **和 ** 绕过中国大陆** 即可 🙄
 
 :::
 
-According to the official V2Ray documentation:
+根据 V2Ray 官方文档：
 
-The IP rules are written as follows (in order of common usage):
+IP规则有以下几种写法(按照是否常用排序):
 
-- **GeoIP**: The form is `geoip:cn`, which must start with `geoip:` (all lowercase) followed by a two-character country code. For example, `geoip:cn` represents an IP address in China, and `geoip:us` represents an IP address in the United States.
+- **GeoIP**: 形如 "geoip:cn"，必须以 geoip:（小写）开头，后面跟双字符国家代码。 For example, `geoip:cn` represents an IP address in China, and `geoip:us` represents an IP address in the United States.
 - **Special value**: `geoip:private`, including all private addresses, such as `127.0.0.1` (this rule only supports V2Ray 3.5 and above).
 - **IP**: The format is `127.0.0.1`.
 - **CIDR**: The format is `10.0.0.0/8`.
