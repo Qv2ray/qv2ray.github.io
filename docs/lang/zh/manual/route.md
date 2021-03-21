@@ -74,25 +74,25 @@ IP规则有以下几种写法(按照是否常用排序):
 :::tip 长话短说，我是萌新😅
 
 - 如果你不想考虑分流 只想代理全部的流量，请按照上方的 全局代理 步骤操作 😅
-- If you want to achieve precise traffict splitting, that is, all outbound traffic should go through the proxy, then just click the `preset plans` button in the interface, select the `blank plan` or the `ad blocking plan`, and set the domain name strategy to `IPIfNonMatch`. 😋
+- 如果您想要实现精确的分流，即代理所有的出站流量， 请点击下方的 `预设方案` 按钮。 选择 `空白方案` 或 `空白方案（去广告）`, 并将域名策略设置为 `IPIfNonMatch` 😋
 
 :::
 
-:::tip I'm a advanced user! I want more precise traffic splitting! 🤔
+:::tip 我是个老司机 ， 我想要更加精准的分流！ 🤔
 
-We recommends using an enhanced version of the V2Ray rules file project. The project is at [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗
-
-:::
-
-:::tip I want a highly customizable traffic splitting rules! 🤪
-
-Please refer to the next section **Routing Editor**. 😄
+我们推荐您使用一个更加细化的 V2ray 路由规则集 项目地址： [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat). 🤗
 
 :::
 
-## Routing Editor
+:::tip 我想可以自定义的分流规则！ 🤪
 
-In the main interface of Qv2ray, **right-click** the agent node and select **Edit as a complex configuration** to open the **Route Editor** interface.
+请参考下一章节 **路由编辑器** 😄
+
+:::
+
+## 路由编辑器
+
+在 Qv2ray的主界面， **右键点击** 代理节点，然后选择 **编辑为一个复杂的配置** 打开 **路由编辑器** 接口。
 
 In this interface, you can arbitrarily combine matching conditions such as **user**, **source IP**, **target IP**, **domain name**, **target domain name**, **protocol**, and **port** to create sufficiently accurate inbound/outbound rules, and you can also adjust the **priority** of the rules arbitrarily Level, even achieving **load balancing**.
 
