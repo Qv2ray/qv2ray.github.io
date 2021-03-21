@@ -57,14 +57,14 @@ Qv2ray 对于这些策略组的优先级排序是: `域名阻断` -> `域名代�
 IP规则有以下几种写法(按照是否常用排序):
 
 - **GeoIP**: 形如 "geoip:cn"，必须以 geoip:（小写）开头，后面跟双字符国家代码。 例如 ：`geoip:cn`  包含了常见的中国IP地址，`geoip:us` 包含了常见的美国IP地址；
-- **Special value**: `geoip:private`, including all private addresses, such as `127.0.0.1` (this rule only supports V2Ray 3.5 and above).
-- **IP**: The format is `127.0.0.1`.
-- **CIDR**: The format is `10.0.0.0/8`.
-- **Load IP rules from external files**: the form is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, the file must be stored in the V2Ray core resource directory. The file format is the same as `geoip.dat`, and the specified `tag` must exist in the file.
+- 特殊值："geoip:private"（仅支持V2Ray 3.5+），包含所有私有地址，如 127.0.0.1。
+- IP：直接填写，形如 "127.0.0.1"。
+- **CIDR**：形如 "10.0.0.0/8"。
+- **从文件中加载 IP**：形如 `"ext:file:tag"`，必须以` ext:`（小写）开头，后面跟文件名（不带扩展名），文件存放在 `资源目录（默认和 v2ray 核心文件同路径）` 中，文件格式与 geoip.dat 相同。 文件格式与 `geoip.dat` 相同， `tag` 必须在文件中声明。
 
-The domain name rules are written as follows (in order of common use):
+域名规则有以下几种写法(按照是否常用排序):
 
-- **Pre-defined domain list**: Starts with `geosite:`, and the rest is a name, such as `geosite:google` or `geosite:cn`. For the name and domain name list, please refer to the _predefined domain name list_ section of V2Ray document.
+- **预定义域名列表**: 以 `geosite:`开头, 后面跟一个名称，例如 `geosite:google` 或 `geosite:cn` For the name and domain name list, please refer to the _predefined domain name list_ section of V2Ray document.
 - **Subdomain**: Starts with `domain:`, and the rest is a domain name. This rule takes effect when the domain name is the target domain name or its subdomain name. For example, `domain:v2ray.com` matches `www.v2ray.com` and `v2ray.com`, but not `xv2ray.com`.
 - **Complete match**: Starts with `full:`, and the rest is a domain name. When this domain name completely matches the target domain name, the rule takes effect. For example, `full:v2ray.com` matches `v2ray.com` but not `www.v2ray.com`.
 - **String-only**: When this string matches any part of the target domain name, the rule takes effect. For example, `sina.com` can match `sina.com`, `sina.com.cn` and `www.sina.com`, but not `sina.cn`.
