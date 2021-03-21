@@ -42,13 +42,13 @@ Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDe
 
 ### 路由策略
 
-The routing plan consists of a `3x2` matrix, from top left to bottom right: `IP direct connection`, `IP proxy`, `IP blocking`, `domain name direct connection`, `domain name proxy`, `domain name blocking`, one per line, no comma separation.
+路由策略由 `3x2`  个区块组成，他们分别是（左上到右下）： `IP 直连` ,`IP 代理`, `IP 阻断`，`域名直连`, `域名代理`, `域名阻断`, 填入规则时请保持 **每行一个，中间没有逗号分隔**。
 
-These 6 rules in Qv2ray are matched according to the priority of `domain name blocking` -> `domain name proxy` -> `domain name direct connection` -> `IP blocking` -> `IP proxy` -> `IP direct connection`. If the match fails, the private address and the mainland China domestic address are directly connected, otherwise the agent will be used.
+Qv2ray 对于这些策略组的优先级排序是: `域名阻断` -> `域名代理` -> `域名直连` -> `IP 阻断` -> `IP 代理` -> `IP 直连`。 如果最后没有成功匹配, 私有地址 和 中国大陆地址 会默认直连, 其他地址则会使用代理。
 
-:::tip I just want a global proxy~~~ 🤗
+:::tip 我就想要全局代理~~~ 🤗
 
-It's very simple. Just clear these rules, go to the Connection tab of Preferences, and uncheck the Bypass China check box. 🙄
+很简单， Just clear these rules, go to the Connection tab of Preferences, and uncheck the Bypass China check box. 🙄
 
 :::
 
