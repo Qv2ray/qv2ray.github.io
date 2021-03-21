@@ -200,7 +200,7 @@ $ sudo snap refresh qv2ray
 
 ## GitHub Release 二进制文件
 
-从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些***不想使用包管理的用户***。
+从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些 ***不想使用包管理的用户***。
 
 不过这也适用于部分 Linux 用户，因为 Qv2ray 在他们的发行版中没有正式打包。
 
