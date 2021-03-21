@@ -60,7 +60,7 @@ IP规则有以下几种写法(按照是否常用排序):
 - 特殊值："geoip:private"（仅支持V2Ray 3.5+），包含所有私有地址，如 127.0.0.1。
 - IP：直接填写，形如 "127.0.0.1"。
 - **CIDR**：形如 "10.0.0.0/8"。
-- **从文件中加载 IP**：形如 `"ext:file:tag"`，必须以` ext:`（小写）开头，后面跟文件名（不带扩展名），文件存放在 `资源目录（默认和 v2ray 核心文件同路径）` 中，文件格式与 geoip.dat 相同。 文件格式与 `geoip.dat` 相同， `tag` 必须在文件中声明。
+- **从文件中加载 IP**：形如 `"ext:file:tag"`，必须以` ext:`（小写）开头，后面跟文件名（不带扩展名）和 标签，文件存放在 和 v2ray 核心文件相同的路径中。 文件格式与 `geoip.dat` 相同，标签 必须在文件中声明。
 
 域名规则有以下几种写法(按照是否常用排序):
 
@@ -69,11 +69,11 @@ IP规则有以下几种写法(按照是否常用排序):
 - **完全匹配**： 由</strong> "full:" </code>开始，后面跟一个域名。 当此域名完整匹配目标域名时，该规则生效。 例如` "full:v2ray.com" `匹配`"v2ray.com" `但不匹配` "www.v2ray.com"。`
 - **纯字符串**：当此字符串匹配目标域名中任意部分，该规则生效。 比如`"sina.com" `可以匹配 `"sina.com"`、`"sina.com.cn" `和 `"www.sina.com"`，但不匹配 `"sina.cn"`。
 - **正则表达式**：由 `"regexp:"` 开始，余下部分是一个正则表达式。 当此正则表达式匹配目标域名时，该规则生效。 例如` "regexp:\\.goo.*\\.com$"` 匹配 `"www.google.com"`、`"fonts.googleapis.com"`，但不匹配` "google.com"`。
-- **Loading domain list from external files**: the format is `ext:file:tag`, which must start with `ext:` (all lowercase), followed by the file name (without extension) `file` and `tag`, and the file must be stored in the V2Ray core resource directory. The file format is the same as `geosite.dat`, and the specified `tag` must exist in the file.
+- **从文件中加载域名**：形如` "ext:file:tag"`，必须以` ext:`（小写）开头，后面跟 文件名 和 标签 ，文件存放在与v2ray核心相同的路径中， 文件格式与 `geosite.dat` 相同， 标签 必须在文件中声明。
 
-:::tip I'm a newbie, can you be more straightforward?
+:::tip 长话短说，我是萌新😅
 
-- If you want to implement a global proxy, that is, regardless of the destination address, all traffic will go through the proxy, then refer to the other tips above. 😅
+- 如果你不想考虑分流 只想代理全部的流量，请按照上方的 全局代理 步骤操作 😅
 - If you want to achieve precise traffict splitting, that is, all outbound traffic should go through the proxy, then just click the `preset plans` button in the interface, select the `blank plan` or the `ad blocking plan`, and set the domain name strategy to `IPIfNonMatch`. 😋
 
 :::
