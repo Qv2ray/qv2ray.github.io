@@ -10,19 +10,19 @@ title: 高级路由设置
 
 如果你不了解 V2ray 的路由功能具体是什么, 那么你可以把它理解为一个更加简便, 高效且精准的新一代 PAC 实现。
 
-路由功能 比 PAC 强大太多, 以后请别再问为什么 Qv2ray 不支持 PAC 了。 The data used by the routing function is more complete than GFWList, so GFWList is no longer needed.
+路由功能 比 PAC 强大太多, 以后请别再问为什么 Qv2ray 不支持 PAC 了。 路由功能所采用的分流表也比 GFW List 更加完善，完全没有必要再使用GFW List。
 
 :::
 
-## Global routing rules
+## 全局路由规则
 
-The global routing rule configuration function is in the **Advanced Routing Settings** tab of **Preferences**.
+配置全局路由规则 请打开**首选项** ---> **高级路由设置** 。
 
-### Domain strategy
+### 域名策略
 
-Contains three types: `AsIs`, `IPIfNonMatch`, and `IPOnDemand`.
+Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDemand`.
 
-According to V2Ray's official documents, the meaning of the three domain name strategies are as follows:
+根据V2Ray的官方文档，这三种域名策略的定义如下：
 
 - **`AsIs`**: Use only the domain name for routing. Defaults.
 - **`IPIfNonMatch`**: When the domain name does not match any rules, the domain name is resolved into IP (A record or AAAA record) for matching again:
