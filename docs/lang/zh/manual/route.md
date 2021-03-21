@@ -25,7 +25,7 @@ Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDe
 根据V2Ray的官方文档，这三种域名策略的定义如下：
 
 - **`AsIs`**: 只使用域名进行路由选择， 默认值;
-- **`IPIfNonMatch`**: 当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）再次进行匹配；
+- **`IPIfNonMatch`**: 当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）后再次进行匹配；
   - 当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；
   - 解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名;
 - **`IPOnDemand`**: 匹配时碰到任何基于 IP 的规则，立即将域名解析为 IP 后进行匹配;
@@ -36,11 +36,11 @@ Qv2ray 有三种域名匹配策略可选： `AsIs`, `IPIfNonMatch`, 和 ` IPOnDe
 - **`IPIfNonMatch`**: 在牺牲部分速度的同时能带来足够精确的分流;
 - **`IPOndemand`**: 别用;
 
-> Note: `IPOnDemand` should be the slowest but most accurate, but in most cases, `IPIfNonMatch` is sufficient, so the actual effect of `IPOnDemand` is not obvious.
+> 请注意: `IPOnDemand` 理论上是最慢而结果最准确的，然而在大多数情况下 `IPIfNonMatch` 已经足够准确了，所以 `IPOndemand` 的实际应用效果并不明显。
 
-You can choose the corresponding domain name strategy according to your actual needs. Generally speaking, IPIfNonMatch is the ideal choice in most situations.
+您可以根据您的实际需求选择最适合你的域名匹配策略。 但就结果来说，一般情况下，`IPIfNonMatch` 是最佳选择。
 
-### Routing Methods
+### 路由策略
 
 The routing plan consists of a `3x2` matrix, from top left to bottom right: `IP direct connection`, `IP proxy`, `IP blocking`, `domain name direct connection`, `domain name proxy`, `domain name blocking`, one per line, no comma separation.
 
