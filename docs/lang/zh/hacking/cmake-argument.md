@@ -30,8 +30,8 @@ title: CMake 参数引用
 - 注意：您也可能想要使用具有相同名称的环境变量。
 
 ## `QV2RAY内置主题`
-- Default: `ON`
-- Description: Enable built-in themes (such as `psblack` and `flatwhite`).
+- 默认： `开启`
+- 描述：启用内置主题(例如 `psblock` 和`flatwhile`)。
 
 ## `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN`
 - Default: `ON`
