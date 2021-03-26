@@ -1,10 +1,10 @@
 ---
-title: 手动构建Qv2ray
+title: Manually Build Qv2ray
 ---
 
-# 手动创建 Qv2ray
+# Manually Build Qv2ray
 
-以防黑客想要手动编译Qv2ray。
+In case a hacker wants to compile Qv2ray manually.
 
 ## 0. Requirements and Dependencies
 
@@ -42,27 +42,27 @@ Please make sure you have already met all the requirements.
 - 对于安卓版本，我们使用了一个[修补过的](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch)vcpkg。
 
 #### a.1 Download / Extraction Script
-**额外依赖关系: bash, jq, curl, 7zip** (专门适用于 Windows 用户)
+**Extra Dependencies: bash, jq, curl, 7zip** (Especially for Windows Users)
 
-我们提供了 `./libs/setup-lib.sh` 以便于安装预构建的二进制文件，用法：
-- `cd` 到 `libs` 目录
+We have provided `./libs/setup-lib.sh` to make it easy to install prebuilt binaries, usage:
+- `cd` to `libs` directory
 - `./setup-libs <PLATFORM> <ARCH>`
-  - 例如： `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`
-  - 可能的 `<PLATFORM>` 值： `winds`, `linux`, `android`
-  - 可能的 `<ARCH>` 值： `x86`, `x64`, `arm`, `arm64`
+  - e.g. `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`
+  - Possible `<PLATFORM>` values: `windows`, `linux`, `android`
+  - Possible `<ARCH>` values: `x86`, `x64`, `arm`, `arm64`
   - 在Linux上交叉编译到安卓时将 `<ARCH>` 设为 `tools` 以安装 Protobuf 生成器的二进制文件
 
-脚本从 [这个版本](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) 下载和提取的软件包，移动内容到 相应的 `./libs/ARCH-PLATFORM /` 目录。
+The script downloads packages from [this release](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) and extract, move contents to corrensponding `./libs/ARCH-PLATFORM/` directory.
 
-#### a.2 手动获取预构建的二进制文件
+#### a.2 Manually Obtaining Prebuilt Binaries
 
-- 下载7z 文件
-- 解压并移动 `{7Z_ROOT}/PLATFORM-ARCH/已安装/ARCH-PLATFORM` 到 `./libs/` 目录。
-- 必须有 `包含`, `lib` 或 `share` 下的子目录`./libs/ARCH-PLATFORM`
-  - 例如： `./libs/x86-android/include` 或 `.libs/x64-windows/incluse/` 存在
+- Download the 7z files
+- Extract and move the `{7Z_ROOT}/PLATFORM-ARCH/installed/ARCH-PLATFORM` into the `./libs/` directory.
+- There must be `include`, `lib` or `share` subdirectories under `./libs/ARCH-PLATFORM`.
+  - e.g. `./libs/x86-android/include` or `./libs/x64-windows/include/` exists
 
-### MinGW 软件包：
-建议使用 MSYS2 软件包：
+### MinGW Packages:
+MSYS2 is suggested, packages:
 - `mingw-w64-x86_64-grpc`
 - `mingw-w64-x86_64-curl`
 - `mingw-w64-x86_64-protobuf`
@@ -72,49 +72,49 @@ Please make sure you have already met all the requirements.
 
 ## 1. 获取源树
 
-获取Qv2ray的源代码有多种方法。 你可以从：
+There are various approaches to obtain the source code of Qv2ray. You can get it from:
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
-- 直接下载分支的源代码（<strong x-id=“1”>由于缺少git子模块元数据，因此永远不要这样做。</strong>） ：：提示 您可以在`git clone`
+- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**) :::tip You can append options after `git clone`
 
-`--brant <branch/tag>` 在克隆创建后检查指定的分支/标签。
-
-:::
-
-:::警告
-
-Qv2ray 包含嵌套子模块，克隆时总是使用 `--recursive`。
+`--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
 
 :::
 
-## 2. 进入编译目录
+:::warning
 
-以下步骤需要一个适当的`PATH`，即，`qmake`可以在`PATH`中找到。
+Qv2ray contains nested submodules, always use `--recursive` when cloning.
 
-运行: `mkdir build; cd build;`
-- 只是为了防止污染源。
+:::
 
-## 3. 生成编译脚本
+## 2. Entering Compilation Directory
 
-您需要检查<a href=“cmake argument”>cmake 参数引用并添加自己的引用参数。
+The following steps requires a proper `PATH`, that is, `qmake` could be found in the `PATH`.
 
-运行: `cmake ...`
+Run: `mkdir build; cd build;`
+- Simply to prevent pollutions in the source tree.
 
-***对于Android，建议使用`qt cmake..`而不是`cmake..`。***
+## 3. Generate Compilation Scripts
 
-- 始终建议使用`CMAKE_INSTALL_PREFIX` ，以便一次性打包和收集所有所需文件。
-- 始终建议使用`CMAKE_BUILD_TYPE`，请参见[ CMake文档](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
-  - 对于Qv2ray config目录，`Debug`和`Release`构建将具有不同的名称，以防止开发构建损坏配置的工作副本。
-- 如果您安装了`Ninja`或`Ninja版本`，建议使用`GNinja`。
-- Android可能需要。`ANDROID_SDK_ROOT` or或`ANDROID_NDK_ROOT`
+You **need** to check for [CMake Argument References](cmake-argument) and add your own ones.
 
-## 4. 开始编译
+Run: `cmake ..`
 
-开始编译！
+***For Android, using `qt-cmake ..` is suggested instead of `cmake ..`.***
 
-运行 `cmake --build .`
-- `parallel<NUMBER>`如果您有足够的计算能力并希望执行并行编译，则为sugguest。
+- `CMAKE_INSTALL_PREFIX` is always suggested, for packaging and collect all required files in one go.
+- `CMAKE_BUILD_TYPE` is always suggested, see [CMake Documentation](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+  - The `Debug` and `Release` build will have different names for Qv2ray config directories, to prevent a development build from damaging the working copy of configurations.
+- `-GNinja` is suggested, iff you have `Ninja` or `ninja-build` installed.
+- `ANDROID_SDK_ROOT` or `ANDROID_NDK_ROOT` may be required for Android.
 
-## 5. 完成编译
+## 4. Start Compilation
+
+Start compilation!
+
+Run: `cmake --build .`
+- `--parallel <NUMBER>` is sugguest if you have enough computation power and want to perform parallel compilations.
+
+## 5. Finalize Compilation
 
 Copy compiled artifacts and resources, into the destination directory.
 
