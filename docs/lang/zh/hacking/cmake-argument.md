@@ -1,12 +1,12 @@
 ---
-title: CMake Argument Reference
+title: CMake 参数引用
 ---
 
-# CMake Argument Reference
+# CMake 参数引用
 
-## `USE_MINGW`
-- Default: `OFF`
-- Description: For compiling use MinGW and gcc.
+## `使用教程`
+- 默认： `关闭`
+- 说明：用于编译MinGW 和 gcc。
 
 ## `QV2RAY_AUTO_DEPLOY`
 - Default: `ON`
