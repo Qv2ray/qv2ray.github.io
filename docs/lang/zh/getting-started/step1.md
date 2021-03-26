@@ -56,33 +56,33 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 
 ### Linux: openSUSE / Fedora / CentOS
 
-> 由 [@zzndb](https://github.com/zzndb) 提供的给 [openSUSE / Fedora / CentOS 用户](https://build.opensuse.org) 的 openSUSE 构建服务。
+> openSUSE / Fedora / CentOS 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE 构建服务](https://build.opensuse.org)提供。
 
 :::warning 适用版本
 
-因为Qt 版本的限制， 我们可能无法支持上面所有发行版，支持的发行版列表请看下面的 OBS 链接。
+因为 Qt 版本的限制，我们可能无法支持上面所有任在支持期的发行版，支持的发行版列表请参见下面的 OBS 链接。
 
 :::
 
-类似于AUR, 有两个版本的 Qv2ray 可供使用。 您可以根据自己的爱好选择：
+类似于AUR，有两个版本的 Qv2ray 可供使用。 您可以根据自己的爱好选择：
 
-- 稳定版 OBS: [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
-- 预览版 OBS： [Qv2ray-预览](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
+- 稳定版 OBS： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
+- 预览版 OBS： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
 或者您可以直接从下面的链接获取更详细的安装指南：
 
-- 下载 Stable 版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
-- 下载 Preview 版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+- 下载稳定版：[Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- 下载预览版：[Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
-:::warning 给 CentOS 用户的警告
+:::warning 对于 CentOS 用户
 
-在您安装OBS 项目上方的 Qv2ray 之前。 您需要添加 **EPEL** 仓库，这是 Fedora 为额外需要的依赖提供的。 有关更多信息，请看 [Fedora EPELWiki](https://fedoraproject.org/wiki/EPEL)。
+在开始从 OBS 安装之前，你需要添加由 Fedora 提供的 **EPEL** 仓库以获取所需额外依赖， 具体请参见 [Fedora EPEL Wiki](https://fedoraproject.org/wiki/EPEL)。
 
 :::
 
 :::tip 插件
 
-以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 这样安装 Qv2ray 之后 (不是手动下载 & 安装那种)， 您可以直接使用包管理器安装插件(插件名字与插件项目名字相同.此外，我们还提供带有 `-preview` 后缀的预览版本插件。
+以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 通过项目软件源安装 Qv2ray 之后（不是手动下载 & 安装那种）， 您可以直接使用包管理器安装插件（插件名字与插件项目名字相同，同时提供带有 `-preview` 后缀的预览版本插件）。
 
 :::
 
@@ -200,7 +200,7 @@ $ sudo snap refresh qv2ray
 
 ## GitHub Release 二进制文件
 
-从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些 ***不想使用包管理的用户***。
+从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些***不想使用包管理的用户***。
 
 不过这也适用于部分 Linux 用户，因为 Qv2ray 在他们的发行版中没有正式打包。
 

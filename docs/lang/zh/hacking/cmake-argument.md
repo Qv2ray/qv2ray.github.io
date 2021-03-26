@@ -64,7 +64,7 @@ title: CMake Argument Reference
 ## `QV2RAY_QT6`
 - Default: `OFF`
 - Description: Make Qv2ray explicitly compile against Qt6
-- Deprecated: For Qv2ray v3.0, only Qt6 is supported
+- 已弃用：对于Qv2ray v3.0 ，只支持 Qt6
 
 ## `QV2RAY_QML_LIVE_UPDATE`
 - 高级
