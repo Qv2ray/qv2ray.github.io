@@ -27,15 +27,15 @@ title: 常规设置
 - **安静模式**: 启用时，Qv2ray 不会主动弹出任何通知。
 - **其他**: 它已经非常简单，我为什么要谈它？ 😶
 
-## Network Settings
+## 网络设置
 
-Set the way Qv2ray accesses the network.
+设置Qv2ray 访问网络的方式。
 
-- **Latency Testing Method**: Set the test method for node delay.
-  - **TCPing**: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
-  - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of `ping` command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
+- **延迟测试方法**: 设置节点延迟的测试方法。
+  - **TCPing**: Qv2ray 的默认延迟测试方法。 测试结果更接近实际用户体验。 但是基于mKCP 协议的节点无法测试，因为它基于UDP而不是TCP。
+  - **ICMPing**: 基于ICMP/ UDP 协议的延迟测试方法目前已被承认，并且在市场上主流化的延迟测试方法。 并且它也是在 Windows 和 Unix 系统中的 `ping` 命令的测试原则。 试验结果明显低于TCPing，远优于实际经验。 It can be used to test nodes based on mKCP protocol.
 - **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
-- **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
+- <strong x-id=“1”>Qv2ray代理</strong>：Qv2ray在发出网络请求时使用的代理设置，而不是V2Ray核心用于网络流量的代理设置。
 
 :::tip What is Qv2ray proxy?
 
