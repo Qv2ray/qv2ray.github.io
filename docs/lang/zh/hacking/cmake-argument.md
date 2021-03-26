@@ -8,9 +8,9 @@ title: CMake 参数引用
 - 默认： `关闭`
 - 说明：用于编译MinGW 和 gcc。
 
-## `QV2RAY_AUTO_DEPLOY`
-- Default: `ON`
-- Description: Automatically run `windeployqt` and `macdeployqt` after a successful compilation.
+## `自动部署`
+- 默认： `开启`
+- 说明：在编译成功后自动运行 `win部署qt` 和 `mac部署qt`
 
 ## `BUILD_TESTING`
 - Default: `OFF`
