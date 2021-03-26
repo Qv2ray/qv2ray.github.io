@@ -1,14 +1,14 @@
 ---
-title: General Settings
+title: 常规设置
 ---
 
-# General Settings
+# 常规设置
 
-**[General Settings](qv2ray://open/preference/general)** are for Qv2ray itself, including **appearance**, **behavior** and **network settings**.
+**[常规设置](qv2ray://open/preference/general)** 是 Qv2ray 本身，包括 **外观**, **行为** 和 **网络设置**。
 
 ::: tip Tips
 
-The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
+常规设置只能改变Qv2ray 本身的行为，但不会影响V2Ray 核心的代理行为。
 
 :::
 
@@ -49,12 +49,12 @@ If you want the traffic proxied by V2Ray to pass through another proxy, or your 
 
 Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
 
-- **Set `AllowInsecure` by Default**: All new connections imported via **subscription** / **QR code** / **VMess protocol link** will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- **Set `AllowInsecure` by Default**: All new connections imported via **subscription** / **QR code** / **VMess protocol link** will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. 通过手动填写连接属性或编辑 JSON 添加的节点不受此选项的影响。 If you do not understand the actual use of this option, please do not open it!
 - **Enable `SessionResumption` by Default**: New in Qv2ray v2.6.0. When enabled, new connections imported with TLS will enable **Session Resumption** to reduce RTT during handshake. You will also need to enable related functions on the server side, such as `0-RTT Connection Resumption` on Cloudflare and `ssl_early_data` on nginx. However, this will largely increase the risk of traffic being recognised.
 - **Test Latency on Connect**: When enabled, Qv2ray will test the latency of nodes on connect. Enabling this may make it easier for GFW to recognize your connection.
 - **Test Latency Periodically**: When enabled, Qv2ray will periodically test the latency of the currently connected node. Enabling this may make it easier for GFW to recognize your connection.
 - **Disable System Root Certificates**: When enabled, V2Ray core will only use built-in root certificates, which helps to circumvent root certificate hijacking attack. However, this can cause V2Ray core fail to recognise your valid TLS certificates, resulting in connectivity problem with your nodes.
-- (Removed) **Set `AllowInsecureCiphers` by Default**: All new connections imported through **subscription** / **QR code** / **VMess protocol link** will be enabled by default to `allow insecure TLS algorithm` option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- (Removed) **Set `AllowInsecureCiphers` by Default**: All new connections imported through **subscription** / **QR code** / **VMess protocol link** will be enabled by default to `allow insecure TLS algorithm` option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. 通过手动填写连接属性或编辑 JSON 添加的节点不受此选项的影响。 If you do not understand the actual use of this option, please do not open it!
 
 :::warning Re-emphasis:
 
