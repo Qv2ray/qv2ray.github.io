@@ -16,8 +16,8 @@ title: CMake 参数引用
 - 默认： `关闭`
 - 描述：当设置为 `开启`时，将会构建单元测试。
 
-## `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
-- Default: `unset`, when set, the specified paths will be detected upon first-time launch.
+## `QV2RAY默认设置路径` 和 `QV2RAY默认核心路径`
+- 默认： `取消设置`，当设置时，将在首次启动时检测到指定的路径。
 - Useful when Qv2ray is distributed through environments where V2Ray Core paths are fixed.
 
 ## `QV2RAY_DISABLE_AUTO_UPDATE`
