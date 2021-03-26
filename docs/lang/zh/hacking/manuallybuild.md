@@ -112,9 +112,9 @@ Qv2ray 包含嵌套子模块，克隆时总是使用 `--recursive`。
 开始编译！
 
 运行 `cmake --build .`
-- `--parallel <NUMBER>` is sugguest if you have enough computation power and want to perform parallel compilations.
+- `parallel<NUMBER>`如果您有足够的计算能力并希望执行并行编译，则为sugguest。
 
-## 5. Finalize Compilation
+## 5. 完成编译
 
 Copy compiled artifacts and resources, into the destination directory.
 
