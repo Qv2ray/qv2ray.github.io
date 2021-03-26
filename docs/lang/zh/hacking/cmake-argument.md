@@ -43,16 +43,16 @@ title: CMake 参数引用
 
 ## `QV2Ray嵌入式翻译`
 - 默认： `开启`
-- Description: Embed translation resources (`*.qm`) into Qv2ray binary, instead of shared assets like `/usr/share/qv2ray/translations/`.
+- 描述：嵌入翻译资源 (`*.qm`) 到 Qv2ray 二进制，而不是共享资源，例如 `/usr/share/qv2ray/translations/`。
 
-## `QV2RAY_HAS_SINGLEAPPLICATION`
+## `QV2RAY只有一个应用程序`
 - 高级
-- Default: `ON`
-- Description: Use SingleApplication for handling single application instance.
+- 默认： `开启`
+- 描述：使用单个应用程序处理单个应用程序实例。
 
-## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
+## `QV2RAY应用程序提供程序` / `QV2RAY Q节点编辑器提供程序`
 - 高级
-- Default: `module`
+- 默认： `模块`
 - Description: Component providers, set to `package` if those could be found as a package.
 
 ## `QV2RAY_UI_TYPE`
