@@ -1,14 +1,14 @@
 ---
-title: General Settings
+title: 常规设置
 ---
 
-# General Settings
+# 常规设置
 
-**[General Settings](qv2ray://open/preference/general)** are for Qv2ray itself, including **appearance**, **behavior** and **network settings**.
+**[常规设置](qv2ray://open/preference/general)** 是 Qv2ray 本身的设置，包括 **外观**，**行为** 和 **网络设置**。
 
-::: tip Tips
+::: tip 提示
 
-The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
+常规设置只会更改 Qv2ray 自身的行为，并不会影响 V2Ray 核心的代理行为。
 
 :::
 
