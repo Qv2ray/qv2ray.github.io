@@ -56,7 +56,7 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 
 ### Linux: openSUSE / Fedora / CentOS
 
-> 由 [@zzndb](https://github.com/zzndb) 提供的给 [openSUSE / Fedora / CentOS 用户](https://build.opensuse.org) 的 openSUSE 构建服务。
+> openSUSE / Fedora / CentOS 上的 Qv2ray 由 [@zzndb](https://github.com/zzndb) 于 [openSUSE 构建服务](https://build.opensuse.org)提供。
 
 :::warning 适用版本
 
@@ -200,7 +200,7 @@ $ sudo snap refresh qv2ray
 
 ## GitHub Release 二进制文件
 
-从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些 ***不想使用包管理的用户***。
+从 [Qv2ray 发布页面](https://github.com/Qv2ray/Qv2ray/releases) 下载的版本仅适用于那些***不想使用包管理的用户***。
 
 不过这也适用于部分 Linux 用户，因为 Qv2ray 在他们的发行版中没有正式打包。
 
