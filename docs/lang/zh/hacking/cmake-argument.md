@@ -53,13 +53,13 @@ title: CMake 参数引用
 ## `QV2RAY应用程序提供程序` / `QV2RAY Q节点编辑器提供程序`
 - 高级
 - 默认： `模块`
-- Description: Component providers, set to `package` if those could be found as a package.
+- 描述：组件提供程序，设置为`package`（如果可以作为包找到）。
 
-## `QV2RAY_UI_TYPE`
+## `QV2RAY UI类型`
 - 高级
-- Default: `QWidget`
-- Description: Qv2ray GUI Type, possible values are `QWidget`, `QML` and `CLI`
-- Deprecated: For Qv2ray v3.0, GUI components will be splitted into plugins.
+- 默认： `编辑小部件`
+- 说明：Qv2ray GUI 类型，可能的值是 `QWidget`, `QML` 和 `CLI`
+- 废弃：对于Qv2ray v3.0，GUI组件将被拆分成插件。
 
 ## `QV2RAY_QT6`
 - Default: `OFF`
