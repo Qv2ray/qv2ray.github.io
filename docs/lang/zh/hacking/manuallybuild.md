@@ -42,22 +42,22 @@ Please make sure you have already met all the requirements.
 - 对于安卓版本，我们使用了一个[修补过的](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch)vcpkg。
 
 #### a.1 Download / Extraction Script
-**Extra Dependencies: bash, jq, curl, 7zip** (Especially for Windows Users)
+**额外依赖关系: bash, jq, curl, 7zip** (专门适用于 Windows 用户)
 
-We have provided `./libs/setup-lib.sh` to make it easy to install prebuilt binaries, usage:
-- `cd` to `libs` directory
+我们提供了 `./libs/setup-lib.sh` 以便于安装预构建的二进制文件，用法：
+- `cd` 到 `libs` 目录
 - `./setup-libs <PLATFORM> <ARCH>`
-  - e.g. `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`
-  - Possible `<PLATFORM>` values: `windows`, `linux`, `android`
-  - Possible `<ARCH>` values: `x86`, `x64`, `arm`, `arm64`
+  - 例如： `./setup-libs.sh windows x64` or `./setup-libs.sh android arm`
+  - 可能的 `<PLATFORM>` 值： `winds`, `linux`, `android`
+  - 可能的 `<ARCH>` 值： `x86`, `x64`, `arm`, `arm64`
   - 在Linux上交叉编译到安卓时将 `<ARCH>` 设为 `tools` 以安装 Protobuf 生成器的二进制文件
 
-The script downloads packages from [this release](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) and extract, move contents to corrensponding `./libs/ARCH-PLATFORM/` directory.
+脚本从 [这个版本](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) 下载和提取的软件包，移动内容到 相应的 `./libs/ARCH-PLATFORM /` 目录。
 
 #### a.2 手动获取预构建的二进制文件
 
-- Download the 7z files
-- Extract and move the `{7Z_ROOT}/PLATFORM-ARCH/installed/ARCH-PLATFORM` into the `./libs/` directory.
+- 下载7z 文件
+- 解压并移动 `{7Z_ROOT}/PLATFORM-ARCH/已安装/ARCH-PLATFORM` 到 `./libs/` 目录。
 - There must be `include`, `lib` or `share` subdirectories under `./libs/ARCH-PLATFORM`.
   - e.g. `./libs/x86-android/include` or `./libs/x64-windows/include/` exists
 
