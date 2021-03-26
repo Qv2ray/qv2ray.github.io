@@ -1,9 +1,9 @@
 ---
-title: Hacking
+title: 黑名单
 ---
 
-# Hacking
+# 黑名单
 
-1. [Manually Build Qv2ray](manuallybuild.md)
+1. [手动创建 Qv2ray](manuallybuild.md)
 2. [CMake Argument Reference](cmake-argument.md)
 3. [Distributing Qv2ray](distribute.md)
