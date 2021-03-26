@@ -95,9 +95,9 @@ Qv2ray 包含嵌套子模块，克隆时总是使用 `--recursive`。
 
 ## 3. 生成编译脚本
 
-You **need** to check for [CMake Argument References](cmake-argument) and add your own ones.
+您需要检查<a href=“cmake argument”>cmake 参数引用并添加自己的引用参数。
 
-Run: `cmake ..`
+运行: `cmake ...`
 
 ***For Android, using `qt-cmake ..` is suggested instead of `cmake ..`.***
 
