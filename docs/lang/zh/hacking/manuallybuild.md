@@ -1,10 +1,10 @@
 ---
-title: Manually Build Qv2ray
+title: 手动构建Qv2ray
 ---
 
-# Manually Build Qv2ray
+# 手动创建 Qv2ray
 
-In case a hacker wants to compile Qv2ray manually.
+以防黑客想要手动编译Qv2ray。
 
 ## 0. Requirements and Dependencies
 
@@ -54,7 +54,7 @@ We have provided `./libs/setup-lib.sh` to make it easy to install prebuilt binar
 
 The script downloads packages from [this release](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) and extract, move contents to corrensponding `./libs/ARCH-PLATFORM/` directory.
 
-#### a.2 Manually Obtaining Prebuilt Binaries
+#### a.2 手动获取预构建的二进制文件
 
 - Download the 7z files
 - Extract and move the `{7Z_ROOT}/PLATFORM-ARCH/installed/ARCH-PLATFORM` into the `./libs/` directory.
