@@ -82,7 +82,7 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 
 :::tip 插件
 
-以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 这样安装 Qv2ray 之后 (不是手动下载 & 安装那种)， 您可以直接使用包管理器安装插件(插件名字与插件项目名字相同.此外，我们还提供带有 `-preview` 后缀的预览版本插件。
+以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 通过项目软件源安装 Qv2ray 之后（不是手动下载 & 安装那种）， 您可以直接使用包管理器安装插件（插件名字与插件项目名字相同，同时提供带有 `-preview` 后缀的预览版本插件）。
 
 :::
 
