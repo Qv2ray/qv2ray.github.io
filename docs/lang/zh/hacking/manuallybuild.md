@@ -72,28 +72,28 @@ Please make sure you have already met all the requirements.
 
 ## 1. 获取源树
 
-There are various approaches to obtain the source code of Qv2ray. You can get it from:
+获取Qv2ray的源代码有多种方法。 你可以从：
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
-- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**) :::tip You can append options after `git clone`
+- 直接下载分支的源代码（<strong x-id=“1”>由于缺少git子模块元数据，因此永远不要这样做。</strong>） ：：提示 您可以在`git clone`
 
-`--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
-
-:::
-
-:::warning
-
-Qv2ray contains nested submodules, always use `--recursive` when cloning.
+`--brant <branch/tag>` 在克隆创建后检查指定的分支/标签。
 
 :::
 
-## 2. Entering Compilation Directory
+:::警告
 
-The following steps requires a proper `PATH`, that is, `qmake` could be found in the `PATH`.
+Qv2ray 包含嵌套子模块，克隆时总是使用 `--recursive`。
 
-Run: `mkdir build; cd build;`
-- Simply to prevent pollutions in the source tree.
+:::
 
-## 3. Generate Compilation Scripts
+## 2. 进入编译目录
+
+以下步骤需要一个适当的`PATH`，即，`qmake`可以在`PATH`中找到。
+
+运行: `mkdir build; cd build;`
+- 只是为了防止污染源。
+
+## 3. 生成编译脚本
 
 You **need** to check for [CMake Argument References](cmake-argument) and add your own ones.
 
