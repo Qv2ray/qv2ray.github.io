@@ -12,9 +12,9 @@ title: 常规设置
 
 :::
 
-## Appearance
+## 外观
 
-Set how Qv2ray looks and feels.
+调整 Qv2ray 的界面和使用体验。
 
 - **Recent Jumplist**: Set the number of recently used connections displayed in the notification icon **right-click menu** - **recent connections** list.
 - **Maximum Log Lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
