@@ -58,11 +58,11 @@ Please make sure you have already met all the requirements.
 
 - 下载7z 文件
 - 解压并移动 `{7Z_ROOT}/PLATFORM-ARCH/已安装/ARCH-PLATFORM` 到 `./libs/` 目录。
-- There must be `include`, `lib` or `share` subdirectories under `./libs/ARCH-PLATFORM`.
-  - e.g. `./libs/x86-android/include` or `./libs/x64-windows/include/` exists
+- 必须有 `包含`, `lib` 或 `share` 下的子目录`./libs/ARCH-PLATFORM`
+  - 例如： `./libs/x86-android/include` 或 `.libs/x64-windows/incluse/` 存在
 
-### MinGW Packages:
-MSYS2 is suggested, packages:
+### MinGW 软件包：
+建议使用 MSYS2 软件包：
 - `mingw-w64-x86_64-grpc`
 - `mingw-w64-x86_64-curl`
 - `mingw-w64-x86_64-protobuf`
