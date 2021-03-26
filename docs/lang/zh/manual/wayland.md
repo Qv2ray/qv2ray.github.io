@@ -2,13 +2,13 @@
 title: A few notes about Wayland
 ---
 
-# A few notes about Wayland
+# 关于Wayland 的一些笔记
 
-**Note: This section is only relevant for GNU/Linux systems**.
+**注意：本节仅适用于 GNU/Linux 系统**。
 
-## Run
+## 运行
 
-Qv2ray is a native Qt5/C++ program, which fully supports the Wayland display protocol. However, for Qv2ray to run under the Wayland protocol, you need a Wayland session (e.g., Gnome session, KDE Wayland session, Sway, etc.), and you also need to install Wayland support for Qt5 (usually the package name `qt5-wayland` or `(qtwayland5`).
+Qv2ray 是一个本地的 Qt5/C++ 程序，它完全支持Wayland 显示协议。 However, for Qv2ray to run under the Wayland protocol, you need a Wayland session (e.g., Gnome session, KDE Wayland session, Sway, etc.), and you also need to install Wayland support for Qt5 (usually the package name `qt5-wayland` or `(qtwayland5`).
 
 If everything is in place, you can now try to run Qv2ray with the Wayland display protocol.
 
