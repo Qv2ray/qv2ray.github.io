@@ -18,14 +18,14 @@ title: 常规设置
 
 - <strong x-id=“1”>最近的跳转列表</strong>：设置通知图标<strong x-id=“1”>右键单击菜单</strong>-<strong x-id=“1”>最近的连接列表中显示的最近使用的连接。
 - <strong x-id=“1”>最大日志行数</strong>：在Qv2ray主界面右侧的<strong x-id=“1”>日志</strong>窗格中设置日志记录数的上限。 After the set value is exceeded, the older logs will be purged automatically.
-- **Others**: Set up as you like~🤐
+- **其他**: 按照你喜欢的方式设置~🤐
 
-## Behavior
+## 行为
 
-Set the behavior of Qv2ray.
+设置Qv2ray的行为。
 
-- **Quiet Mode**: When enabled, Qv2ray will not actively pop up any notifications.
-- **Others**: It's already very simple, why should I talk about it? 😶
+- **安静模式**: 启用时，Qv2ray 不会主动弹出任何通知。
+- **其他**: 它已经非常简单，我为什么要谈它？ 😶
 
 ## Network Settings
 
@@ -45,9 +45,9 @@ If you want the traffic proxied by V2Ray to pass through another proxy, or your 
 
 :::
 
-## Advanced Behavior
+## 高级行为
 
-Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
+设置 Qv2ray的高级行为。 Please do note that abuse of these settings may have negative effects!
 
 - **Set `AllowInsecure` by Default**: All new connections imported via **subscription** / **QR code** / **VMess protocol link** will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. 通过手动填写连接属性或编辑 JSON 添加的节点不受此选项的影响。 If you do not understand the actual use of this option, please do not open it!
 - **Enable `SessionResumption` by Default**: New in Qv2ray v2.6.0. When enabled, new connections imported with TLS will enable **Session Resumption** to reduce RTT during handshake. You will also need to enable related functions on the server side, such as `0-RTT Connection Resumption` on Cloudflare and `ssl_early_data` on nginx. However, this will largely increase the risk of traffic being recognised.
