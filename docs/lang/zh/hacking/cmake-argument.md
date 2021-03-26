@@ -12,9 +12,9 @@ title: CMake 参数引用
 - 默认： `开启`
 - 说明：在编译成功后自动运行 `win部署qt` 和 `mac部署qt`
 
-## `BUILD_TESTING`
-- Default: `OFF`
-- Description: When set to `ON`, the unit tests will be built.
+## `构建测试`
+- 默认： `关闭`
+- 描述：当设置为 `开启`时，将会构建单元测试。
 
 ## `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
 - Default: `unset`, when set, the specified paths will be detected upon first-time launch.
