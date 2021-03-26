@@ -99,19 +99,19 @@ Qv2ray 包含嵌套子模块，克隆时总是使用 `--recursive`。
 
 运行: `cmake ...`
 
-***For Android, using `qt-cmake ..` is suggested instead of `cmake ..`.***
+***对于Android，建议使用`qt cmake..`而不是`cmake..`。***
 
-- `CMAKE_INSTALL_PREFIX` is always suggested, for packaging and collect all required files in one go.
-- `CMAKE_BUILD_TYPE` is always suggested, see [CMake Documentation](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
-  - The `Debug` and `Release` build will have different names for Qv2ray config directories, to prevent a development build from damaging the working copy of configurations.
-- `-GNinja` is suggested, iff you have `Ninja` or `ninja-build` installed.
-- `ANDROID_SDK_ROOT` or `ANDROID_NDK_ROOT` may be required for Android.
+- 始终建议使用`CMAKE_INSTALL_PREFIX` ，以便一次性打包和收集所有所需文件。
+- 始终建议使用`CMAKE_BUILD_TYPE`，请参见[ CMake文档](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+  - 对于Qv2ray config目录，`Debug`和`Release`构建将具有不同的名称，以防止开发构建损坏配置的工作副本。
+- 如果您安装了`Ninja`或`Ninja版本`，建议使用`GNinja`。
+- Android可能需要。`ANDROID_SDK_ROOT` or或`ANDROID_NDK_ROOT`
 
-## 4. Start Compilation
+## 4. 开始编译
 
-Start compilation!
+开始编译！
 
-Run: `cmake --build .`
+运行 `cmake --build .`
 - `--parallel <NUMBER>` is sugguest if you have enough computation power and want to perform parallel compilations.
 
 ## 5. Finalize Compilation
