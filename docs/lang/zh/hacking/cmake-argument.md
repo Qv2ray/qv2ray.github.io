@@ -48,7 +48,7 @@ title: CMake 参数参考
 ## `QV2RAY_HAS_SINGLEAPPLICATION`
 - 高级
 - 默认： `ON`
-- Description: Use SingleApplication for handling single application instance.
+- 说明：使用单个应用程序处理单个应用程序实例。
 
 ## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
 - 高级
@@ -58,19 +58,19 @@ title: CMake 参数参考
 ## `QV2RAY_UI_TYPE`
 - 高级
 - 默认： `QWidget`
-- Description: Qv2ray GUI Type, possible values are `QWidget`, `QML` and `CLI`
-- Deprecated: For Qv2ray v3.0, GUI components will be splitted into plugins.
+- 说明：Qv2ray GUI 类型，可能的值是 `QWidget`, `QML` 和 `CLI`
+- 将被废弃：在 Qv2ray v3.0，GUI组件将被拆分为插件。
 
 ## `QV2RAY_QT6`
-- Default: `OFF`
-- Description: Make Qv2ray explicitly compile against Qt6
-- 已弃用：对于Qv2ray v3.0 ，只支持 Qt6
+- 默认： `OFF`
+- 说明：构建 Qv2ray时显式声明不使用Qt6
+- 将被弃用：在Qv2ray v3.0 ，只有 Qt6 受到支持
 
 ## `QV2RAY_QML_LIVE_UPDATE`
 - 高级
-- Experimental
-- Default: `OFF`
-- Description: Integrate QMLLive for live QML reload.
+- 实验性
+- 默认： `OFF`
+- 说明：集成 QMLLive 以进行实时QML重载。
 
 ## `QV2RAY_TRANSLATION_PATH`
 - 默认： `unset`
