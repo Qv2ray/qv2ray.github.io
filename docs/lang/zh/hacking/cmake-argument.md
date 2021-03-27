@@ -18,23 +18,23 @@ title: CMake 参数参考
 
 ## `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
 - 默认： `unset`，当设置为 set 时，将在首次启动时检测指定路径。
-- Useful when Qv2ray is distributed through environments where V2Ray Core paths are fixed.
+- 在通过环境变量分发 Qv2ray 且 V2Ray Core 路径不变时，这很有用。
 
 ## `QV2RAY_DISABLE_AUTO_UPDATE`
 - 默认： `OFF`
-- 说明：禁用自带的更新检查器。 当通过软件包管理器控制源分发Qv2ray 时，这很有用。
+- 说明：禁用自带的更新检查器。 在通过软件包管理器控制源分发Qv2ray 时，这很有用。
 
 ## `QV2RAY_BUILD_INFO` / `QV2RAY_BUILD_EXTRA_INFO`
-- Default: `Qv2ray from manual build` and the ***Version Number***
-- Description: These strings will be displayed in "About" dialog of Qv2ray.
-- Note: You may also want to use the environment variables with the same names.
+- 默认： `Qv2ray from manual build` 和 ***版本号***
+- 说明：这些字符串将在 Qv2ray的“关于”对话框中显示。
+- 注意：您可能也想使用具有相同名称的环境变量。
 
 ## `QV2RAY_HAS_BUILTIN_THEMES`
-- Default: `ON`
-- Description: Enable built-in themes (such as `psblack` and `flatwhite`).
+- 默认： `ON`
+- 说明：启用内置主题(例如 `psblock` 和 `flatwhile`)。
 
 ## `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN`
-- Default: `ON`
+- 默认： `ON`
 - Description: Build `QvPlugin-BuiltinProtocolSupport` plugin together with Qv2ray.
 
 ## `QV2RAY_HAS_BUILTIN_SUBSCRIPTION_PLUGIN`
