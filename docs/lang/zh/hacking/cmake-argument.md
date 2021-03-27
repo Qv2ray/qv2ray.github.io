@@ -2,14 +2,14 @@
 title: CMake 参数参考
 ---
 
-# CMake Argument Reference
+# CMake 参数参考
 
 ## `USE_MINGW`
-- Default: `OFF`
-- Description: For compiling use MinGW and gcc.
+- 默认： `OFF`
+- 说明：是否使用MinGW或gcc进行编译
 
 ## `QV2RAY_AUTO_DEPLOY`
-- Default: `ON`
+- 默认: `ON`
 - Description: Automatically run `windeployqt` and `macdeployqt` after a successful compilation.
 
 ## `BUILD_TESTING`
