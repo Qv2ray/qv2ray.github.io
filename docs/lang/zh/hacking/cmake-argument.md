@@ -53,7 +53,7 @@ title: CMake 参数参考
 ## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
 - 高级
 - 默认： `module`
-- Description: Component providers, set to `package` if those could be found as a package.
+- 说明：如果您是组件提供者，而且这应该作为一个包被找到，请设置为 `package`
 
 ## `QV2RAY_UI_TYPE`
 - 高级
