@@ -35,29 +35,29 @@ title: CMake 参数参考
 
 ## `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN`
 - 默认： `ON`
-- Description: Build `QvPlugin-BuiltinProtocolSupport` plugin together with Qv2ray.
+- 说明： 在编译 Qv2ray 时也一同编译 `内置协议支持` 插件。
 
 ## `QV2RAY_HAS_BUILTIN_SUBSCRIPTION_PLUGIN`
-- Default: `ON`
-- Description: Build `QvPlugin-BuiltinSubscriptionSupport` plugin together with Qv2ray.
+- 默认： `ON`
+- 说明： 在编译 Qv2ray 时也一同编译 `内置订阅支持` 插件。
 
 ## `QV2RAY_EMBED_TRANSLATIONS`
-- Default: `ON`
-- Description: Embed translation resources (`*.qm`) into Qv2ray binary, instead of shared assets like `/usr/share/qv2ray/translations/`.
+- 默认： `ON`
+- 说明：将翻译资源 (`*.qm`) 嵌入到 Qv2ray 二进制文件，而不是像 `/usr/share/qv2ray/translations/` 一样。
 
 ## `QV2RAY_HAS_SINGLEAPPLICATION`
 - 高级
-- Default: `ON`
+- 默认： `ON`
 - Description: Use SingleApplication for handling single application instance.
 
 ## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
 - 高级
-- Default: `module`
+- 默认： `module`
 - Description: Component providers, set to `package` if those could be found as a package.
 
 ## `QV2RAY_UI_TYPE`
 - 高级
-- Default: `QWidget`
+- 默认： `QWidget`
 - Description: Qv2ray GUI Type, possible values are `QWidget`, `QML` and `CLI`
 - Deprecated: For Qv2ray v3.0, GUI components will be splitted into plugins.
 
@@ -73,9 +73,9 @@ title: CMake 参数参考
 - Description: Integrate QMLLive for live QML reload.
 
 ## `QV2RAY_TRANSLATION_PATH`
-- Default: `unset`
+- 默认： `unset`
 - Description: When set, the specified path will be used for searching translations files.
 
 ## `USE_SYSTEM_LIBUV`
-- Default: `OFF`
+- 默认： `OFF`
 - Description: When set to `ON`, `libuv` from system package will be dynamically linked. Pay extreme attention to version of `libuv` if you want to turn this on.
