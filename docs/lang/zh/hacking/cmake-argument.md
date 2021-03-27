@@ -17,7 +17,7 @@ title: CMake 参数参考
 - 描述：当设置为 `ON`时，将会构建单元测试。
 
 ## `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
-- 默认： `unset`，当设置为 set 时，将在首次启动时检测指定路径。
+- 默认： `unset`，设置后将在首次启动时检测指定路径。
 - 在通过环境变量分发 Qv2ray 且 V2Ray Core 路径不变时，这很有用。
 
 ## `QV2RAY_DISABLE_AUTO_UPDATE`
@@ -74,8 +74,8 @@ title: CMake 参数参考
 
 ## `QV2RAY_TRANSLATION_PATH`
 - 默认： `unset`
-- Description: When set, the specified path will be used for searching translations files.
+- 说明：设置后将会在指定路径搜索翻译文件
 
 ## `USE_SYSTEM_LIBUV`
 - 默认： `OFF`
-- Description: When set to `ON`, `libuv` from system package will be dynamically linked. Pay extreme attention to version of `libuv` if you want to turn this on.
+- 说明：当设置为 `ON` 时， `libuv` 系统包将被动态连接。 如果您想要开启这个选项，请特别注意 `libuv` 版本。
