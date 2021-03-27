@@ -6,23 +6,23 @@ title: CMake 参数参考
 
 ## `USE_MINGW`
 - 默认： `OFF`
-- 说明：是否使用MinGW或gcc进行编译
+- 说明：使用MinGW或gcc进行编译
 
 ## `QV2RAY_AUTO_DEPLOY`
-- 默认: `ON`
-- Description: Automatically run `windeployqt` and `macdeployqt` after a successful compilation.
+- 默认： `OFF`
+- 说明：在编译成功后自动运行 `windeplaudqt` 和 `macdeplaudqt`
 
 ## `BUILD_TESTING`
-- Default: `OFF`
-- Description: When set to `ON`, the unit tests will be built.
+- 默认： `OFF`
+- 描述：当设置为 `ON`时，将会构建单元测试。
 
 ## `QV2RAY_DEFAULT_VASSETS_PATH` and `QV2RAY_DEFAULT_VCORE_PATH`
-- Default: `unset`, when set, the specified paths will be detected upon first-time launch.
+- 默认： `unset`，当设置为 set 时，将在首次启动时检测指定路径。
 - Useful when Qv2ray is distributed through environments where V2Ray Core paths are fixed.
 
 ## `QV2RAY_DISABLE_AUTO_UPDATE`
-- Default: `OFF`
-- Description: The built-in new version checker will be disabled. This is useful when distributing Qv2ray through package-manager controlled sources.
+- 默认： `OFF`
+- 说明：禁用自带的更新检查器。 当通过软件包管理器控制源分发Qv2ray 时，这很有用。
 
 ## `QV2RAY_BUILD_INFO` / `QV2RAY_BUILD_EXTRA_INFO`
 - Default: `Qv2ray from manual build` and the ***Version Number***
