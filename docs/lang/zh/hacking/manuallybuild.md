@@ -1,8 +1,8 @@
 ---
-title: Manually Build Qv2ray
+title: 手动构建 Qv2ray 项目
 ---
 
-# Manually Build Qv2ray
+# 手动构建 Qv2ray 项目
 
 In case a hacker wants to compile Qv2ray manually.
 
