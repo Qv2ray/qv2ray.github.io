@@ -13,9 +13,9 @@ In case a hacker wants to compile Qv2ray manually.
 - 对于桌面平台：仅支持 `x64` 架构
 - 对于 Android 平台：`arm`、 `arm64`、 `x86` 或 `x86_64` 架构
 
-- Qt version `>= 5.11` is required for desktop platforms, `>= 6.0` required for Android.
-  - ~~Never mind when you are porting Qv2ray to a earlier or later version of Qt.~~
-  - In that case, you may want to modify `QV_QT_MAJOR_VERSION` and `QV_QT_MINOR_VERSION` in `CMakeLists.txt`
+- 桌面平台需要 Qt 版本 `>= 5.11` ，Android 平台需要 Qt 版本 `>= 6.0`
+  - ~~将 Qv2ray 移植到更低或更高版本的 Qt 时请无视该条件~~
+  - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`
 - The latest version of Qt is always supported and recommended
 - A compiler with `std=c++17` supported:
   - `gcc7` is known to be good to go.
