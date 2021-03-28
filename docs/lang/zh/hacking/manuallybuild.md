@@ -33,7 +33,7 @@ In case a hacker wants to compile Qv2ray manually.
 
     :::tip Android 平台下的额外 Git 子模块
 
-    [android-openssl](https://github.com/KDAB/android_openssl) provides OpenSSL binaries: use `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl`
+    [android-openssl](https://github.com/KDAB/android_openssl) 提供了 OpenSSL 二进制文件：使用命令 `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl` 下载
 
     :::
 
