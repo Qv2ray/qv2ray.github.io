@@ -18,16 +18,16 @@ In case a hacker wants to compile Qv2ray manually.
   - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`
 - 总是支持最新版本的 Qt ，推荐使用
 - 支持 `std=c+17` 的编译器：
-  - `gcc7` 即可支持。
-  - At least version 14.2 of MSVC is required.
+  - `gcc7` 即可支持
+  - 最低 14.2 版本的 MSVC
 
-- Third-party libraries: (gRPC, protobuf, curl, openssl)
+- 第三方库：(gRPC、protobuf、curl、openssl)
 
-    | Target Platform | Installation Method                                                         |
+    | 目标平台            | 安装方式                                                                        |
     | --------------- | --------------------------------------------------------------------------- |
-    | Linux           | Install corresponding packages                                              |
-    | Windows (MSVC)  | Use `vcpkg` or use [**prebuilt binaries**](#a-prebuilt-binaries)            |
-    | Windows (MinGW) | See [Below](#mingw-packages)                                                |
+    | Linux           | 安装相应的软件包                                                                    |
+    | Windows (MSVC)  | 使用 `vcpkg` 或使用 [**预构建的二进制文件**](#a-prebuilt-binaries)                        |
+    | Windows (MinGW) | 见 [下文](#mingw-packages)                                                     |
     | macOS           | Install packages via `homebrew`, (note: curl is pre-installed)              |
     | Android         | Linux host is supported, use [**prebuilt binaries**](#a-prebuilt-binaries), |
 
