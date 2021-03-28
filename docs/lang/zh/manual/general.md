@@ -16,23 +16,23 @@ title: 常规设置
 
 调整 Qv2ray 的界面和使用体验。
 
-- **最近列表**：设置通知图标 **右键菜单** - **最近连接** 列表中显示的最近连接数。
+- **最近列表**：设置在通知图标 **右键菜单** - **最近连接** 列表中，展示的最近使用过的连接数量。
 - **日志最大行数**：设置在 Qv2ray 主界面右侧的 **日志** 面板中日志记录数量的上限。 超过设定值后，较旧的日志将被自动清除。
-- **Others**: Set up as you like~🤐
+- **其他**：按照你喜欢的方式设置~🤐
 
-## Behavior
+## 行为
 
-Set the behavior of Qv2ray.
+设置 Qv2ray 的行为。
 
-- **Quiet Mode**: When enabled, Qv2ray will not actively pop up any notifications.
-- **Others**: It's already very simple, why should I talk about it? 😶
+- **安静模式**：启用后，Qv2ray 将不会主动弹出任何通知提醒。
+- **其他**：已经很浅显了，这还用我说嘛？ 😶
 
-## Network Settings
+## 网络设置
 
-Set the way Qv2ray accesses the network.
+设置 Qv2ray 本身访问网络的方式。
 
-- **Latency Testing Method**: Set the test method for node delay.
-  - **TCPing**: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
+- **延迟测试方案**：设置测试节点延迟的方法。
+  - **TCPing**： Qv2ray 默认的延迟测试方法。 The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
   - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of `ping` command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
 - **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
 - **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
