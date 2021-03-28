@@ -6,9 +6,9 @@ title: 手动构建 Qv2ray 项目
 
 In case a hacker wants to compile Qv2ray manually.
 
-## 0. Requirements and Dependencies
+## 0. 构建依赖
 
-Please make sure you have already met all the requirements.
+请确保你的环境满足以下依赖的要求。
 
 - `x64`-only for desktop platforms.
 - `arm`, `arm64`, `x86`, `x86_64` for Android platform.
