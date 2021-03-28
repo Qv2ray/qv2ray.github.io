@@ -32,20 +32,20 @@ title: 常规设置
 设置 Qv2ray 本身访问网络的方式。
 
 - **延迟测试方案**：设置测试节点延迟的方法。
-  - **TCPing**： Qv2ray 默认的延迟测试方法。 The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
-  - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of `ping` command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
-- **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
-- **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
+  - **TCPing**： Qv2ray 默认的延迟测试方法。 测试结果更接近于实际使用体验，但无法测试基于 mKCP 协议的节点，因为 mKCP 协议基于 UDP 而非 TCP 。
+  - **ICMPing**：基于 ICMP / UDP 协议的延迟测试方法，是目前市面上公认的、主流的延迟测试方法，也是 Windows 和 Unix 系统中 `ping` 命令的测试原理。 测试结果远低于 TCPing，远优于实际使用体验。 可以用于测试基于 mKCP 协议的节点。
+- **User Agent**：Qv2ray 在进行网络请求时声明的客户端信息。 如果你不了解何为 UA，请不要变更本项设置。
+- **Qv2ray 代理**：Qv2ray 在进行网络请求时使用的代理设置，而非 V2Ray 核心的出口流量所使用的代理设置。
 
-:::tip What is Qv2ray proxy?
+:::tip Qv2ray 代理有什么意义？
 
-If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
+如果你想让 Qv2ray 通过代理来更新订阅或检测版本更新，请配置此项。
 
-If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
+如果你想让被 V2Ray 代理的流量通过另一个代理，或者你的网络需要通过一层代理才能连接到互联网，那么请使用前置代理功能，不要配置此项。
 
 :::
 
-## Advanced Behavior
+## 高级行为
 
 Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
 
