@@ -16,9 +16,9 @@ In case a hacker wants to compile Qv2ray manually.
 - 桌面平台需要 Qt 版本 `>= 5.11` ，Android 平台需要 Qt 版本 `>= 6.0`
   - ~~将 Qv2ray 移植到更低或更高版本的 Qt 时请无视该条件~~
   - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`
-- The latest version of Qt is always supported and recommended
-- A compiler with `std=c++17` supported:
-  - `gcc7` is known to be good to go.
+- 总是支持最新版本的 Qt ，推荐使用
+- 支持 `std=c+17` 的编译器：
+  - `gcc7` 即可支持。
   - At least version 14.2 of MSVC is required.
 
 - Third-party libraries: (gRPC, protobuf, curl, openssl)
