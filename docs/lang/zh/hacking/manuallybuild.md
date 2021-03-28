@@ -10,8 +10,8 @@ In case a hacker wants to compile Qv2ray manually.
 
 请确保你的环境满足以下依赖的要求。
 
-- `x64`-only for desktop platforms.
-- `arm`, `arm64`, `x86`, `x86_64` for Android platform.
+- 对于桌面平台：仅支持 `x64` 架构
+- 对于 Android 平台：`arm`、 `arm64`、 `x86` 或 `x86_64` 架构
 
 - Qt version `>= 5.11` is required for desktop platforms, `>= 6.0` required for Android.
   - ~~Never mind when you are porting Qv2ray to a earlier or later version of Qt.~~
