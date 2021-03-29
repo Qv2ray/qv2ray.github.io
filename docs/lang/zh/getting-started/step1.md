@@ -226,7 +226,7 @@ $ sudo snap refresh qv2ray
 
 :::warning 给 Windows ARM64 用户的提醒
 
-Windows 10 on ARM 在 *building 21277* 中为 x86_64 应用添加了一个模拟层，用户可以使用最新的 Windows 内部预览的 x64 版本。
+Windows 10 on ARM 的 *building 21277* 中已经添加了 x86_64 应用的模拟层，因此用户应该可以使用最新的 Windows 内部预览的 x64 版本。
 
 :::
 
