@@ -19,7 +19,7 @@ sidebarDepth: 3
     # apt install gnupg ca-certificates curl
     ```
 
-2. 请跟随 [我们的 debian 仓库](https://qv2ray.net/debian) 中的步骤进行操作
+2. 请跟随 [我们的 Debian 仓库](https://qv2ray.net/debian) 中的步骤进行操作。
 
 
 3. 安装 Qv2ray
@@ -32,7 +32,7 @@ sidebarDepth: 3
 
 **直接从 `arclinuxcn 安装`**
 
-我们已经进入 `archlinuxcn` 仓库。 如果您已在使用 archcn，只需在终端中输入：
+我们已经进入 `archlinuxcn` 仓库。 如果您已在使用它，只需在终端中输入：
 
 ```shell
 sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
@@ -40,11 +40,11 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 然后就完事了
 
-:::warning Arch Linux CN 中的 Manjaro Hitchhikers
+:::warning 对偷 Arch Linux CN 包的 Manjaro 用户的警告
 
-Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现意外变动时， **_Arch Linux_ CN** 将 **优先 Arch 用户** 而不是Manjaro。 **使用 Arch Linux CN 的 Manjaro** 用户应该清楚**这样偷包/延迟更新的严重后果** 包括处理 `symbol lookup error` 此类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
+Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 若是上游出现了 ABI 意外变动，**_Arch Linux_ CN** 只会优先考虑 ** Arch 用户** 的使用体验，而不是 Manjaro。 **偷 Arch Linux CN 包的 **Manjaro 用户应该清楚**这所可能带来的严重后果**，并包括处理 `symbol lookup error` 一类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
 
-如果出现了 “Manjaro CN” 此类组织，并且官方 **为其用户提供了 Qv2ray** 后，这一章节将会被立即删除。
+本章节将会在出现 “Manjaro CN” 之类组织并且承担了 **Qv2ray 的打包和分发压力后** 后被立即删除。
 
 :::
 
@@ -52,7 +52,7 @@ Manjaro 会 **延迟Arch Linux 的软件包更改**。 当 ABI 在上游出现�
 
 您可以从 AUR (Arch 用户仓库) 获取官方维护的`PKGBUILD`文件。[AUR (en) - Home](https://aur.archlinux.org/), 它将指导 Qv2ray 的构建过程。
 
-所有 Qv2ray 插件目前都在 AUR
+目前所有 Qv2ray 插件都在 AUR。
 
 ### Linux: openSUSE / Fedora / CentOS
 
@@ -204,23 +204,23 @@ $ sudo snap refresh qv2ray
 
 不过这也适用于部分 Linux 用户，因为 Qv2ray 在他们的发行版中没有正式打包。
 
-按以下方式做：
+跟随下面的指引：
 
 1. 在**浏览器**中打开 [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) 页面。
 2. 从 Release 中选择一个版本。 或者，您可以选择使用 [最新的**稳定版**发布](https://github.com/Qv2ray/Qv2ray/releases/latest)。
 3. 根据你的的平台，在 Release Assets 中选择并下载。 例如：
    - 对于 Windows 用户：
      - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
-     - Windows 2003/XP/2000/ME/98/...： ***你确定吗？***
+     - Windows 2003/XP/2000/ME/98/...： ***你逗我呢？***
    - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
    - 对于 macOS 用户：
      - macOS 10.14 及之后的用户：`Qv2ray.VERSION.macOS-x64.dmg`；
      - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
-     - macOS 10.12及之前: ***升级您的 macOS 好了***。
+     - macOS 10.12及之前: ***请升级 macOS***。
 
 :::tip Linux AppImage 用户的注意事项
 
-虽然我们已将 `glibc` 和一些基本的 C++ 库打包进 **AppImage** 来支持一些旧的发行版，但是我们强烈建议您自己升级到最新版本
+虽然我们已将 `glibc` 和一些基本的 C++ 库打包进 **AppImage** 来支持一些旧的发行版，但是我们强烈建议您自己升级到最新版本。
 
 :::
 
