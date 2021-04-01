@@ -33,13 +33,12 @@ title: CMake Argument Reference
 - Default: `ON`
 - Description: Enable built-in themes (such as `psblack` and `flatwhite`).
 
-## `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN` 
+## `QV2RAY_HAS_BUILTIN_PLUGINS` 
 - Default: `ON`
-- Description: Build `QvPlugin-BuiltinProtocolSupport` plugin together with Qv2ray.
-
-## `QV2RAY_HAS_BUILTIN_SUBSCRIPTION_PLUGIN`
-- Default: `ON`
-- Description: Build `QvPlugin-BuiltinSubscriptionSupport` plugin together with Qv2ray.
+- Description: Build builtin plugins together with Qv2ray, for now, there are 
+  - `QvPlugin-BuiltinSubscriptionSupport`
+  - `QvPlugin-BuiltinPluginSupport`
+  - `QvPlugin-BuiltinUtils`
 
 ## `QV2RAY_EMBED_TRANSLATIONS`
 - Default: `ON`
