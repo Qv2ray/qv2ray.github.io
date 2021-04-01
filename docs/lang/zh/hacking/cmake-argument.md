@@ -33,13 +33,12 @@ title: CMake 参数参考
 - 默认： `ON`
 - 说明：启用内置主题(例如 `psblock` 和 `flatwhile`)。
 
-## `QV2RAY_HAS_BUILTIN_PROTOCOL_PLUGIN`
+## `QV2RAY_HAS_BUILTIN_PLUGINS`
 - 默认： `ON`
-- 说明： 在编译 Qv2ray 时也一同编译 `内置协议支持` 插件。
-
-## `QV2RAY_HAS_BUILTIN_SUBSCRIPTION_PLUGIN`
-- 默认： `ON`
-- 说明： 在编译 Qv2ray 时也一同编译 `内置订阅支持` 插件。
+- Description: Build builtin plugins together with Qv2ray, for now, there are
+  - `QvPlugin-BuiltinSubscriptionSupport`
+  - `QvPlugin-BuiltinPluginSupport`
+  - `QvPlugin-BuiltinUtils`
 
 ## `QV2RAY_EMBED_TRANSLATIONS`
 - 默认： `ON`
@@ -47,7 +46,7 @@ title: CMake 参数参考
 
 ## `QV2RAY_HAS_SINGLEAPPLICATION`
 - 高级
-- 默认： `ON`
+- 默认： `OFF`
 - 说明：使用单个应用程序处理单个应用程序实例。
 
 ## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
