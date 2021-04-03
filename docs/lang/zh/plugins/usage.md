@@ -17,21 +17,21 @@ Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 *
 
 :::tip 内置 Shadowsocks 支持与 QvPlugin-SS 插件的对比
 
-人们普遍认为 Qv2ray 需要 QvPlugin-SS 来支持 Shadowsocks，这是一个常见的误区。 Qv2ray 已经通过 V2Ray 核心获得了[ Shadowsocks 协议支持 ](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，这将满足大部分的 Shadowsocks 使用需求。 Therefore, you don't necessarily need to use QvPlugin-SS.
+人们普遍认为 Qv2ray 需要 QvPlugin-SS 来支持 Shadowsocks，这是一个常见的误区。 Qv2ray 已经通过 V2Ray 核心获得了[ Shadowsocks 协议支持 ](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，这将满足大部分的 Shadowsocks 使用需求。 因此，您不一定需要 QvPlugin-SS 插件。
 
-Though strongly unrecommended, however, if you insist on using outdated/deprecated ciphers (for example, `rc4-md5`), you may need QvPlugin-SS to make them work. Servers with SIP003 plugins (for example, [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) and [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)) will also require QvPlugin-SS to work.
+尽管强烈不推荐，如果您坚持使用过时/弃用的加密方式(例如， `rc4-md5`)，您可能需要QvPlugin-SS 插件才能正常使用。 如果服务器使用了 SIP003 规范的插件（例如，[`simple-obfs`](https://github.com/shadowsocks/simple-obfs)，[`kcptun`](https://github.com/xtaci/kcptun) 和 [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)）也需要 QvPlugin 才能工作。
 
 :::
 
-## How to download and use a plugin
+## 如何下载和使用插件
 
-You can download and enable as many plugins as you want.
+你可以下载和启用您想要的尽可能多的插件。
 
-To install a plugin, you need to do these:
+要安装插件，您需要这样做：
 
-### 1. Download / Install the plugin
+### 1. 下载 / 安装插件
 
-- Some plugins may be shipped via package manager (such as [Scoop](../getting-started/step1.md#scoop-for-windows-users)), you can use them if you want.
+- 一些插件可能会通过软件包管理器（例如 [Scoop](../getting-started/step1.md#scoop-for-windows-users)）分发，您可以直接使用它们。
   - _Please go to **step 3** if you have installed the plugin using this method._
 - From a plugin’s release page, download the file according to your OS.
 
