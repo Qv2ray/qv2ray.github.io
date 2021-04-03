@@ -48,24 +48,24 @@ Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 *
 
 ### 4. 噫，好！
 
-- Your plugin is ready to use!
+- 您的插件已经可以使用了！
 
-## Plugin FAQ
+## 插件常见问题
 
-### Qv2ray doesn't recogonize the plugin:
+### Qv2ray 无法识别插件。
 
-- Please confirm the plugin in placed into Qv2ray's plugin directory (`config\plugins`).
-- Please confirm the plugin version matches Qv2ray version. Currently, only Qv2ray `v2.6.0-rc2` and later supports plugin version `2.0.0` and later.
-- If the problem persists, you are welcome to report this issue directly to the plugin provider, please include:
-  - The exact information of Qv2ray, with **the source of the program**, **[Qv2ray version](qv2ray://open/preference/about)**, and the **build version**.
-  - The exact version of the Plugin, with the **sha256** or **md5** of the plugin file.
-  - Qv2ray log, can be collected by executing `qv2ray(.exe) --debug > log.txt`
+- 请确认插件已经放置到 Qv2ray 的插件目录(`config\plugins`)。
+- 请确认插件版本和 Qv2ray 版本相互匹配。 目前，Qv2ray 只有 `v2.6.0-rc2` 和其后版本支持 `2.0.0` 版本及更高版本的插件。
+- 如果问题仍然存在，欢迎您直接向插件者报告此问题，请附上以下内容：
+  - Qv2ray的确切信息，包括 **程序的来源**， **[Qv2ray 版本](qv2ray://open/preference/about)**, 和 **构建版本**。
+  - 插件的确切版本，包括插件文件的 **sha256** 或 **md5** 校验码。
+  - Qv2ray 日志。您可以通过在命令行中执行 `qv2ray(.exe) --debug > log.txt` 来收集 Qv2ray 的日志。
 
-### I cannot find a plugin file for my OS:
+### 我找不到适合我的操作系统的插件文件：
 
-- This can happen if the plugin writer is lazy to support your OS, or
-- The plugin is not suitable for your OS:
-  - e.g. A Linux-specific `iptables` setting plugin is not suitable on macOS and Windows
+- 如果插件作者（鸽了或者因为懒）迟迟不支持您的系统，可能会发生这种情况。
+- 另一种情况是插件不适合您的操作系统：
+  - 例如，Linux 系统特有的 `iptables` 设置插件无法在 macOS 和 Windows 上使用。
 
 ### Qv2ray crashed after loading a plugin:
 
