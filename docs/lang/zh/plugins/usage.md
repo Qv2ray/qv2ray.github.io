@@ -67,7 +67,7 @@ Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 *
 - 另一种情况是插件不适合您的操作系统：
   - 例如，Linux 系统特有的 `iptables` 设置插件无法在 macOS 和 Windows 上使用。
 
-### Qv2ray crashed after loading a plugin:
+### Qv2ray加载插件后崩溃。
 
-- Please try `qv2ray(.exe) --noPlugin` to skip loading all plugins.
-- If the Qv2ray started successfully, please report the error using methods mentioned above.
+- 请尝试用 `qv2ray(.exe) --noPlugin` 命令来跳过所有插件的加载。
+- 如果 Qv2ray 启动成功，请用前述方法报告错误。
