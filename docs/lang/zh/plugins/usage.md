@@ -15,9 +15,9 @@ Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 *
 
 
 
-:::tip Builtin Shadowsocks Support vs QvPlugin-SS
+:::tip 内置 Shadowsocks 支持与 QvPlugin-SS 插件的对比
 
-It is a common gotcha that people think Qv2ray needs QvPlugin-SS to support Shadowsocks. Qv2ray already has [built-in Shadowsocks support](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject) from V2Ray Core, which will suffice general use cases. Therefore, you don't necessarily need to use QvPlugin-SS.
+人们普遍认为 Qv2ray 需要 QvPlugin-SS 来支持 Shadowsocks，这是一个常见的误区。 Qv2ray 已经通过 V2Ray 核心获得了[ Shadowsocks 协议支持 ](https://www.v2fly.org/config/protocols/shadowsocks.html#outboundconfigurationobject)，这将满足大部分的 Shadowsocks 使用需求。 Therefore, you don't necessarily need to use QvPlugin-SS.
 
 Though strongly unrecommended, however, if you insist on using outdated/deprecated ciphers (for example, `rc4-md5`), you may need QvPlugin-SS to make them work. Servers with SIP003 plugins (for example, [`simple-obfs`](https://github.com/shadowsocks/simple-obfs), [`kcptun`](https://github.com/xtaci/kcptun) and [`v2ray-plugin`](https://github.com/shadowsocks/v2ray-plugin)) will also require QvPlugin-SS to work.
 
