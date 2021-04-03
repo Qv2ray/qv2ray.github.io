@@ -31,22 +31,22 @@ Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 *
 
 ### 1. 下载 / 安装插件
 
-- 一些插件可能会通过软件包管理器（例如 [Scoop](../getting-started/step1.md#scoop-for-windows-users)）分发，您可以直接使用它们。
-  - _Please go to **step 3** if you have installed the plugin using this method._
-- From a plugin’s release page, download the file according to your OS.
+- 一些插件可能会通过软件包管理器（例如 [Scoop](../getting-started/step1.md#scoop-for-windows-users)）提供，您可以直接使用它们。
+  - _如果您已经使用此方法安装了插件，请前往 **步骤3**。_
+- 根据您的系统从插件发布页面下载插件。
 
-### 2. Put your plugin inside `plugins` directory
+### 2. 将你的插件放入 `plugins` 目录
 
-- Click **[Open Local Plugin Folder](qv2ray://open/plugin/metadata)** in the **[Plugin Manager](qv2ray://open/plugin/plugindir)** window, which a folder named `plugins` will be opened.
-- Place your downloaded plugin `dll`/`dylib`/`so` file into this directory.
+- 在 **[插件管理器](qv2ray://open/plugin/plugindir)** 窗口点击 **[打开本地插件目录](qv2ray://open/plugin/metadata)** 按钮，将会打开一个名为 `plugins` 的文件夹。
+- 将您上一步中已下载的插件文件（后缀名为 `dll`/`dylib`/`so`）放入此目录。
 
-### 3. Restart Qv2ray & Enable Plugins
+### 3. 重启 Qv2ray & 启用插件
 
-- Open the “Plugin Manager”, you’ll see the plugin being found.
-- Check the “enabled” checkbox on the left hand side.
+- 打开 **[插件管理器](qv2ray://open/plugin/plugindir)**，您会发现安装好的插件。
+- 勾选左侧的“启用”复选框。
 - 有些插件，**尤其是**核心插件，需要在 Qv2ray 重启之后**才能**加载。
 
-### 4. Benefit!
+### 4. 噫，好！
 
 - Your plugin is ready to use!
 
