@@ -20,13 +20,13 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 :::tip 给 Windows 10 ARM64 用户的提示
 
-自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构的内核 我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能
+自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构。 因此我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能。
 
 :::
 
 :::danger 注意！
 
-当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包。 事实上， `arm64` 和 `amd64` 是完全不同的两个概念
+当你想在 `x86_64` (`amd64`)平台上使用 Qv2ray 时，请不要下载 `v2ray-linux-arm64.zip` 安装包。 明确的说， `arm64` 和 `amd64` 是完全不同的两个概念。
 
 :::
 
@@ -66,8 +66,8 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 配置后，您可以点击 **检查 V2Ray 核心设置** 按钮来验证您的 V2Ray 核心设置。 重复尝试，直到检查通过。
 
-:::warning 不要俄罗斯套娃！
+:::warning 严禁套娃！
 
-永远不要设置 **核心可执行路径** 为 **Qv2ray 可执行程序路径** 。 这不会造成进程爆炸，因为 Qv2ray 是一个单实例程序。 注意可用的 V2Ray Core 可执行文件看起来就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
+永远不要设置 **核心可执行路径** 到 **Qv2ray 的可执行程序路径** ！ 这不会造成进程爆炸，因为 Qv2ray 是一个单实例程序。 注意可用的 V2Ray Core 可执行文件看起来就像 `v2ray` , `v2ray.exe` 或 `wv2ray.xe`, 而不是 `qv2ray` 或 `qv2ray.exe`, `v2rayN.exe`！
 
 :::

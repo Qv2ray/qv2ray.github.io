@@ -1,43 +1,43 @@
 ---
-title: Manually Build Qv2ray
+title: 手动构建 Qv2ray 项目
 ---
 
-# Manually Build Qv2ray
+# 手动构建 Qv2ray 项目
 
 In case a hacker wants to compile Qv2ray manually.
 
-## 0. Requirements and Dependencies
+## 0. 构建依赖
 
-Please make sure you have already met all the requirements.
+请确保你的环境满足以下依赖的要求。
 
-- `x64`-only for desktop platforms.
-- `arm`, `arm64`, `x86`, `x86_64` for Android platform.
+- 对于桌面平台：仅支持 `x64` 架构
+- 对于 Android 平台：`arm`、 `arm64`、 `x86` 或 `x86_64` 架构
 
-- Qt version `>= 5.11` is required for desktop platforms, `>= 6.0` required for Android.
-  - ~~Never mind when you are porting Qv2ray to a earlier or later version of Qt.~~
-  - In that case, you may want to modify `QV_QT_MAJOR_VERSION` and `QV_QT_MINOR_VERSION` in `CMakeLists.txt`
-- The latest version of Qt is always supported and recommended
-- A compiler with `std=c++17` supported:
-  - `gcc7` is known to be good to go.
-  - At least version 14.2 of MSVC is required.
+- 桌面平台需要 Qt 版本 `>= 5.11` ，Android 平台需要 Qt 版本 `>= 6.0`
+  - ~~将 Qv2ray 移植到更低或更高版本的 Qt 时请无视该条件~~
+  - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`
+- 总是支持最新版本的 Qt ，推荐使用
+- 支持 `std=c+17` 的编译器：
+  - `gcc7` 即可支持
+  - 最低 14.2 版本的 MSVC
 
-- Third-party libraries: (gRPC, protobuf, curl, openssl)
+- 第三方库：(gRPC、protobuf、curl、openssl)
 
-    | Target Platform | Installation Method                                                         |
+    | 目标平台            | 安装方式                                                                        |
     | --------------- | --------------------------------------------------------------------------- |
-    | Linux           | Install corresponding packages                                              |
-    | Windows (MSVC)  | Use `vcpkg` or use [**prebuilt binaries**](#a-prebuilt-binaries)            |
-    | Windows (MinGW) | See [Below](#mingw-packages)                                                |
-    | macOS           | Install packages via `homebrew`, (note: curl is pre-installed)              |
+    | Linux           | 安装相应的软件包                                                                    |
+    | Windows (MSVC)  | 使用 `vcpkg` 或使用 [**预构建的二进制文件**](#a-预构建的二进制文件)                                |
+    | Windows (MinGW) | 见 [下文](#mingw-packages)                                                     |
+    | macOS           | 通过 `homebrew` 安装软件包（注意：curl 已经被预先安装）                                        |
     | Android         | Linux host is supported, use [**prebuilt binaries**](#a-prebuilt-binaries), |
 
-    :::tip Extra Git Submoule for Android
+    :::tip Android 平台下的额外 Git 子模块
 
-    [android-openssl](https://github.com/KDAB/android_openssl) provides OpenSSL binaries: use `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl`
+    [android-openssl](https://github.com/KDAB/android_openssl) 提供了 OpenSSL 二进制文件：使用命令 `git clone https://github.com/KDAB/android_openssl 3rdparty/android-openssl` 下载
 
     :::
 
-### a. Prebuilt Binaries
+### a. 预构建的二进制文件
 - The [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) repo is where we build and provide pre-built library dependencies for targeting Windows and Android.
 - 对于安卓版本，我们使用了一个[修补过的](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch)vcpkg。
 

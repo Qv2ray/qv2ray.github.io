@@ -1,13 +1,13 @@
 ---
-title: Distributing Qv2ray
+title: 分发 Qv2ray
 ---
 
-# Distributing Qv2ray
+# 分发 Qv2ray
 
 :::tip WIP
 
-This part of documentation is working in progress.
+这部分文档正在编写之中。
 
-Contribution welcomed!
+欢迎贡献！
 
 :::

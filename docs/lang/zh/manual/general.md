@@ -1,51 +1,51 @@
 ---
-title: General Settings
+title: 常规设置
 ---
 
-# General Settings
+# 常规设置
 
-**[General Settings](qv2ray://open/preference/general)** are for Qv2ray itself, including **appearance**, **behavior** and **network settings**.
+**[常规设置](qv2ray://open/preference/general)** 是 Qv2ray 本身的设置，包括 **外观**，**行为** 和 **网络设置**。
 
-::: tip Tips
+::: tip 提示
 
-The general settings will only change the behavior of Qv2ray itself, but will not affect the proxying behavior of the V2Ray Core.
-
-:::
-
-## Appearance
-
-Set how Qv2ray looks and feels.
-
-- **Recent Jumplist**: Set the number of recently used connections displayed in the notification icon **right-click menu** - **recent connections** list.
-- **Maximum Log Lines**: Set the upper limit of the number of log records in the **Log** pane on the right side of the Qv2ray main interface. After the set value is exceeded, the older logs will be purged automatically.
-- **Others**: Set up as you like~🤐
-
-## Behavior
-
-Set the behavior of Qv2ray.
-
-- **Quiet Mode**: When enabled, Qv2ray will not actively pop up any notifications.
-- **Others**: It's already very simple, why should I talk about it? 😶
-
-## Network Settings
-
-Set the way Qv2ray accesses the network.
-
-- **Latency Testing Method**: Set the test method for node delay.
-  - **TCPing**: Qv2ray's default delay test method. The test result is closer to the actual user experience, but the node based on the mKCP protocol cannot be tested, since it's based on UDP instead of TCP.
-  - **ICMPing**: The delay test method based on ICMP / UDP protocol is currently recognized and mainstream delay test method on the market, and it is also the test principle of `ping` command in Windows and Unix systems. The test result is much lower than TCPing and far better than the actual experience. It can be used to test nodes based on mKCP protocol.
-- **User Agent**: The client information declared by Qv2ray when making network requests. If you do not understand what UA is, please do not change this setting.
-- **Qv2ray Proxy**: The proxy settings used by Qv2ray when making network requests, not the proxy settings used by V2Ray Core for network traffic.
-
-:::tip What is Qv2ray proxy?
-
-If you want Qv2ray to update subscriptions or detect version updates through a proxy, please configure this.
-
-If you want the traffic proxied by V2Ray to pass through another proxy, or your network needs to pass through a layer of proxy to connect to the Internet, then please use the Forward Proxy function and do not configure this option.
+常规设置只会更改 Qv2ray 自身的行为，并不会影响 V2Ray 核心的代理行为。
 
 :::
 
-## Advanced Behavior
+## 外观
+
+调整 Qv2ray 的界面和使用体验。
+
+- **最近列表**：设置在通知图标 **右键菜单** - **最近连接** 列表中，展示的最近使用过的连接数量。
+- **日志最大行数**：设置在 Qv2ray 主界面右侧的 **日志** 面板中日志记录数量的上限。 超过设定值后，较旧的日志将被自动清除。
+- **其他**：按照你喜欢的方式设置~🤐
+
+## 行为
+
+设置 Qv2ray 的行为。
+
+- **安静模式**：启用后，Qv2ray 将不会主动弹出任何通知提醒。
+- **其他**：已经很浅显了，这还用我说嘛？ 😶
+
+## 网络设置
+
+设置 Qv2ray 本身访问网络的方式。
+
+- **延迟测试方案**：设置测试节点延迟的方法。
+  - **TCPing**： Qv2ray 默认的延迟测试方法。 测试结果更接近于实际使用体验，但无法测试基于 mKCP 协议的节点，因为 mKCP 协议基于 UDP 而非 TCP 。
+  - **ICMPing**：基于 ICMP / UDP 协议的延迟测试方法，是目前市面上公认的、主流的延迟测试方法，也是 Windows 和 Unix 系统中 `ping` 命令的测试原理。 测试结果远低于 TCPing，远优于实际使用体验。 可以用于测试基于 mKCP 协议的节点。
+- **User Agent**：Qv2ray 在进行网络请求时声明的客户端信息。 如果你不了解何为 UA，请不要变更本项设置。
+- **Qv2ray 代理**：Qv2ray 在进行网络请求时使用的代理设置，而非 V2Ray 核心的出口流量所使用的代理设置。
+
+:::tip Qv2ray 代理有什么意义？
+
+如果你想让 Qv2ray 通过代理来更新订阅或检测版本更新，请配置此项。
+
+如果你想让被 V2Ray 代理的流量通过另一个代理，或者你的网络需要通过一层代理才能连接到互联网，那么请使用前置代理功能，不要配置此项。
+
+:::
+
+## 高级行为
 
 Set the advanced behavior of Qv2ray. Please do note that abuse of these settings may have negative effects!
 
