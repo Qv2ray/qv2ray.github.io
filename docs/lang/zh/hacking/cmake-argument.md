@@ -9,7 +9,7 @@ title: CMake 参数参考
 - 说明：使用MinGW或gcc进行编译
 
 ## `QV2RAY_AUTO_DEPLOY`
-- 默认： `OFF`
+- 默认： `ON`
 - 说明：在编译成功后自动运行 `windeplaudqt` 和 `macdeplaudqt`
 
 ## `BUILD_TESTING`
@@ -35,7 +35,7 @@ title: CMake 参数参考
 
 ## `QV2RAY_HAS_BUILTIN_PLUGINS`
 - 默认： `ON`
-- Description: Build builtin plugins together with Qv2ray, for now, there are
+- 描述：与 Qv2ray 一起构建内置插件
   - `QvPlugin-BuiltinSubscriptionSupport`
   - `QvPlugin-BuiltinPluginSupport`
   - `QvPlugin-BuiltinUtils`
@@ -46,7 +46,7 @@ title: CMake 参数参考
 
 ## `QV2RAY_HAS_SINGLEAPPLICATION`
 - 高级
-- 默认： `OFF`
+- 默认： `ON`
 - 说明：使用单个应用程序处理单个应用程序实例。
 
 ## `QV2RAY_SINGLEAPPLICATION_PROVIDER` / `QV2RAY_QNODEEDITOR_PROVIDER`
