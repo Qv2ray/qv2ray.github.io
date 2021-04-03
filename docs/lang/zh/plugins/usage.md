@@ -1,17 +1,17 @@
 ---
-title: Using Plugins
+title: 使用插件
 ---
 
-# Using Plugins
+# 使用插件
 
-- This page explains about the usage of Qv2ray plugin system
-- **To use a plugin, you need at least `Qv2ray v2.5.0-pre1 BuildVersion: 5264`**
+- 此页面解释了Qv2ray 插件系统的使用情况
+- **要使用插件，您至少需要 `Qv2ray v2.5.0-pre1 版本：5264`**
 
-## What is a plugin
+## 什么是插件
 
-> Technically said, a Qv2ray Plugin is a shared library that implements `QvPlugin` interface, which in order to extent the functionality of Qv2ray.
+> 从技术上讲，Qv2ray 插件是一个为了扩展Qv2ray的功能而实现了 `QvPlugn` 接口的共享库。
 
-Qv2ray Plugin extends Qv2ray's functionality, which allows you use more features. **By leveraging plugins, Qv2ray can even run without using V2Ray core at all.**
+Qv2ray 插件扩展了 Qv2ray 的功能，允许您使用更多功能特性。 **通过调用插件，Qv2ray 甚至可以在不依赖 V2Ray 核心的情况下运行。**
 
 
 
