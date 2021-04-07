@@ -36,10 +36,16 @@ sidebarDepth: 3
 
 默认情况下，UWP 应用程序被禁止访问本地回环地址(127.0.0.1)，所以系统代理设置可能会导致您的 UWP 应用程序停止正常工作。
 
-根据 [微软的一篇文章](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback) ，您可以在具有管理员权限的命令提示符（例如 Cmd,PowerShell）中运行以下命令来解决回环问题：
+根据 [微软的一篇文章](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback) ，您可以在具有管理员权限的命令提示符（Cmd/PowerShell）中运行以下的命令来解决回环问题：
+
+CMD对应的命令：
 
 ```shell
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
+```
+Powershell对应的命令：
+```powershell
+Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings\" -name | ForEach-Object {CheckNetIsolation.exe LoopbackExempt -a -p="$_"}
 ```
 
 或者，您只需轻松地使用一些第三方工具。 我们在这里给您介绍来自 [Fiddler 项目](https://www.telerik.com/fiddler) 的这个 [程序](/EnableLoopback.zip)。

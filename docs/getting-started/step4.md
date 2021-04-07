@@ -36,10 +36,18 @@ However, KDE users may have a difficult time, since KDE Proxy Settings is more l
 
 By default, UWP applications are prohibited from using a proxy with a loopback address (127.0.0.1), so the system proxy settings will probably cause your UWP applications cease to work normally.
 
-According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt with admin privileges:
+According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/loopback), you can resolve the problem by running the following command in a Command Prompt(or Powershell) with admin privileges:
+
+for cmd:
 
 ```shell
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
+```
+
+for Powershell:
+
+```powershell
+Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings\" -name | ForEach-Object {CheckNetIsolation.exe LoopbackExempt -a -p="$_"}
 ```
 
 Or, You can just simply use some third-party tools. We here present you [this program](/EnableLoopback.zip) from [Fiddler](https://www.telerik.com/fiddler) project.
