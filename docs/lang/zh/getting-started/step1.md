@@ -242,7 +242,7 @@ TODO：如何选择分支
 
 :::tip
 
-您必须先登录 GitHub 才能访问 GitHub Actions。
+你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts。
 
 :::
 
