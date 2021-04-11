@@ -96,7 +96,7 @@ title: 常见问题
 ### 没有托盘图标 / 托盘图标偶尔在GNOME中消失。
 
 - **原因**: 这是个上游 Bug
-- **解决办法**: Gnome 不支持托盘图标。 托盘图标是第三方开发者或部分 Linux 发行版的拓展组件 您可以使用以下命令作为临时解决方案：
+- **解决办法**: Gnome 不支持托盘图标。 所有托盘图标都是第三方开发者或部分 Linux 发行版的拓展组件。 您可以使用以下命令作为临时解决方案：
 
     ```shell
     $ nohup gnome-shell --replace &
@@ -106,13 +106,13 @@ title: 常见问题
 
 :::tip 给 Gnome 用户的提示
 
-原生的 Gnome 桌面不会显示托盘图标。所以 Qv2ray 托盘图标也不会显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。
+原生的 Gnome 桌面无法显示托盘图标。所以 Qv2ray 托盘图标也无法显示。 如果您想要显示托盘图标， 您可以安装一个叫做 [`gnome-shell-extension-appindicator`](https://github.com/ubuntu/gnome-shell-extension-appindicator) (也叫 `ubuntu-appindicator`) 安装扩展后，您应该注销，再次登录 然后在 `Tweaks` 中启用拓展 (ie `gnome-modins`), 然后你会看到托盘图标。
 
 :::
 
-### macOS 想要将 Qv2ray 和/或其插件移动到回收站中
+### macOS 频繁要求将 Qv2ray / Qv2ray 插件“移到废纸篓”
 
-- **原因**: 为了保护开发者的隐私，我们不会使用个人苹果开发者帐户签署 Qv2ray。 此外，我们还没有让苹果的 “公证” 过我们的应用程序。 在这种情况下询问 Qv2ray 开发者是不公平的，我们从未使用过 macOS，或为苹果开发者账户交钱，或在应用程序上签名， 此外，等待苹果公司的所谓 [“公证”](https://krita.org/en/item/first-notarized-macos-build-of-krita/)简直太浪费时间了。
+- **原因**: 为开发组隐私着想，我们并无兴趣使用个人苹果开发者帐户签名 Qv2ray。 我们的应用程序也没有通过苹果公司的所谓“审核”。 在这种情况下询问 Qv2ray 开发者是不公平的，我们从未使用过 macOS，或为苹果开发者账户交钱，或在应用程序上签名， 此外，等待苹果公司的所谓 [“公证”](https://krita.org/en/item/first-notarized-macos-build-of-krita/)简直太浪费时间了。
 - **解决方案**: 使用 `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` 跳过阴间验证。
 
 
