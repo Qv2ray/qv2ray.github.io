@@ -50,7 +50,7 @@ for PowerShell:
 Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings\" -name | ForEach-Object {CheckNetIsolation.exe LoopbackExempt -a -p="$_"}
 ```
 
-或者，您只需轻松地使用一些第三方工具。 我们在这里给您介绍来自 [Fiddler 项目](https://www.telerik.com/fiddler) 的这个 [程序](/EnableLoopback.zip)。
+或者，您只需轻松地使用一些第三方工具。 例如来自 [Fiddler 项目](https://www.telerik.com/fiddler) 的这个 [程序](/EnableLoopback.zip)。
 
 :::
 
@@ -91,7 +91,7 @@ Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Mic
 
 :::danger 有问题的 Minecraft
 
-Minecraft的较新版本(`>=1.5.2`) 不会使用JVM 代理设置。 这不是Qv2ray的问题。 如果你真的想要通过代理玩Minecraft， 考虑为该服务器设置一个 Dokodemo-door 入站，并直接连接到 `localhost`。
+Minecraft的较新版本(`>=1.5.2`) 不会使用JVM 代理设置。 这不是Qv2ray的问题。 如果你真的想要通过代理玩 Minecraft，请 考虑为该服务器设置一个 Dokodemo-door 入站，并直接连接到 `localhost`。
 
 :::
 
