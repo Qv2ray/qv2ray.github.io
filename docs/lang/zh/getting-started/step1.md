@@ -38,13 +38,13 @@ sidebarDepth: 3
 sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 ```
 
-然后就完事了
+然后就完事了。
 
-:::warning 对偷 Arch Linux CN 包的 Manjaro 用户的警告
+:::warning 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
 
-Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 若是上游出现了 ABI 意外变动，**_Arch Linux_ CN** 只会优先考虑 ** Arch 用户** 的使用体验，而不是 Manjaro。 **偷 Arch Linux CN 包的 **Manjaro 用户应该清楚**这所可能带来的严重后果**，并包括处理 `symbol lookup error` 一类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
+Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI 破坏性更新时，Arch Linux CN 会 ** 优先保证 _Arch_ Linux 用户的体验。** Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。 若您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。 对于那些不想麻烦的人，请使用其他版本。
 
-本章节将会在出现 “Manjaro CN” 之类组织并且承担了 **Qv2ray 的打包和分发压力后** 后被立即删除。
+本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式**承担 Qv2ray 的打包和分发压力**之后被立即删除。
 
 :::
 
@@ -60,7 +60,7 @@ Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 若是上游出现了
 
 :::warning 适用版本
 
-因为 Qt 版本的限制，我们可能无法支持上面所有任在支持期的发行版，支持的发行版列表请参见下面的 OBS 链接。
+因为 Qt 版本的限制，我们可能无法支持上面所有仍在支持期的发行版，支持的发行版列表请参见下面的 OBS 链接。
 
 :::
 
@@ -242,7 +242,7 @@ TODO：如何选择分支
 
 :::tip
 
-您必须先登录 GitHub 才能访问 GitHub Actions。
+你必须先登录 GitHub 账号才能白嫖 GitHub Actions 中的 Artifacts。
 
 :::
 
