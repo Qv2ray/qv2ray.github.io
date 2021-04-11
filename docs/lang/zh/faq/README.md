@@ -12,7 +12,7 @@ title: 常见问题
 
 ## 启动问题
 
-### `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+### `报错 <code>Only one usage of each socket address (protocol/network address/port) is normally permitted.`</code>
 
 - **根本原因**: 出现了端口冲突
 - **原因 1**: 上一个 V2Ray 进程没有正常退出，占用了相关的端口。
@@ -112,8 +112,8 @@ title: 常见问题
 
 ### macOS 频繁要求将 Qv2ray / Qv2ray 插件“移到废纸篓”
 
-- **原因**: 为开发组隐私着想，我们并无兴趣使用个人苹果开发者帐户签名 Qv2ray。 我们的应用程序也没有通过苹果公司的所谓“审核”。 在这种情况下询问 Qv2ray 开发者是不公平的，我们从未使用过 macOS，或为苹果开发者账户交钱，或在应用程序上签名， 此外，等待苹果公司的所谓 [“公证”](https://krita.org/en/item/first-notarized-macos-build-of-krita/)简直太浪费时间了。
-- **解决方案**: 使用 `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` 跳过阴间验证。
+- **原因**: 为开发组隐私着想，我们并无兴趣使用个人苹果开发者帐户为 Qv2ray 签名。 我们的应用程序也没有通过苹果公司的所谓“审核”。 而我们实际上根本没有任何 macOS 设备。因而在这种情况下，请原谅我们不搞什么超级浪费时间的所谓“ [公证](https://krita.org/en/item/first-notarized-macos-build-of-krita/)”之类的东西。
+- **解决方案**: 执行 `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` 以跳过那个阴间的验证。
 
 
 
