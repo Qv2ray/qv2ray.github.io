@@ -38,9 +38,9 @@ sidebarDepth: 3
 sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 ```
 
-然后就完事了
+然后就完事了。
 
-:::warning 对偷 Arch Linux CN 包的 Manjaro 用户的警告
+:::warning 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
 
 Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 若是上游出现了 ABI 意外变动，**_Arch Linux_ CN** 只会优先考虑 ** Arch 用户** 的使用体验，而不是 Manjaro。 **偷 Arch Linux CN 包的 **Manjaro 用户应该清楚**这所可能带来的严重后果**，并包括处理 `symbol lookup error` 一类错误的能力。 如果您坚持要使用它， 请 **不要以任何方式提交 Issue 到 Qv2ray 或 Arch Linux CN**。 对于那些不想麻烦的人，请使用其他版本。
 
