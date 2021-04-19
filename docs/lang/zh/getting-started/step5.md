@@ -8,9 +8,9 @@ title: 更多步骤
 
 ## 加入 Qv2ray 用户群组
 
-我们建议您加入我们在[ Telegram ](https://telegram.org/)的[ Qv2ray 用户组](https://t.me/qv2ray)。 在这里，您可以直接和 Qv2ray 开发者和 Qv2ray 的优秀用户聊天。 在群组中讨论使用问题总是比在 GitHub 上打开一个 issue 更有效。
+We suggest you join our [Qv2ray User Group](https://t.me/Qv2ray_chat) at [Telegram](https://telegram.org/). 在这里，您可以直接和 Qv2ray 开发者和 Qv2ray 的优秀用户聊天。 在群组中讨论使用问题总是比在 GitHub 上打开一个 issue 更有效。
 
-另外，如果您不想说太多话，也可以在 Telegram 上订阅 [Qv2ray Outpost](https://t.me/qv2ray_outpost) 频道。 我们会推送 Qv2ray 的更新消息，甚至发送可能决定 Qv2ray 命运的投票！ 请确保您不要错过它。
+Also, optionally, you may subscribe [Qv2ray Outpost](https://t.me/Qv2ray) channel at Telegram, if you don't like to talk too much or even show up. 我们会推送 Qv2ray 的更新消息，甚至发送可能决定 Qv2ray 命运的投票！ 请确保您不要错过它。
 
 ## 调整界面 & 语言
 
