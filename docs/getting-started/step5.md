@@ -8,9 +8,9 @@ If you are lucky enough, you may now be able to surf the Internet freely. Here a
 
 ## Join Qv2ray User Group
 
-We suggest you join our [Qv2ray User Group](https://t.me/qv2ray) at [Telegram](https://telegram.org/). Here you can chat directly with Qv2ray developers, and also the great Qv2ray users. For usage problems, it is always more efficient to discuss them in the group, than opening up one issue on GitHub.
+We suggest you join our [Qv2ray User Group](https://t.me/Qv2ray_chat) at [Telegram](https://telegram.org/). Here you can chat directly with Qv2ray developers, and also the great Qv2ray users. For usage problems, it is always more efficient to discuss them in the group, than opening up one issue on GitHub.
 
-Also, optionally, you may subscribe [Qv2ray Outpost](https://t.me/qv2ray_outpost) channel at Telegram, if you don't like to talk too much or even show up. We will push news updates of Qv2ray, and even send polls that maybe decides Qv2ray's fate! Make sure you don't miss it.
+Also, optionally, you may subscribe [Qv2ray Outpost](https://t.me/Qv2ray) channel at Telegram, if you don't like to talk too much or even show up. We will push news updates of Qv2ray, and even send polls that maybe decides Qv2ray's fate! Make sure you don't miss it.
 
 ## Tweaking UI & Languages
 
