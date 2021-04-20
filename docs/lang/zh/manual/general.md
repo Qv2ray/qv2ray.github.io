@@ -58,7 +58,7 @@ title: 常规设置
 
 :::warning Re-emphasis:
 
-Misuse of the above settings may cause negative effects and even lead to security issues! If you do not understand the actual use of these options, please do not open them!
+不使用上述设置可能会导致不好的影响甚至安全问题！！！ 如果你不明白这些选项的准确作用，请勿打开他们！！！
 
 :::
 
