@@ -42,7 +42,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 :::warning 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
 
-Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI 破坏性更新时，Arch Linux CN 会 ** 优先保证 _Arch_ Linux 用户的体验。** Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。 若您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。 对于那些不想麻烦的人，请使用其他版本。
+Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI 破坏性更新时，Arch Linux CN 会 **优先保证 _Arch Linux_ 用户的体验** 。 Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。 若您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。 对于那些不想麻烦的人，请使用其他版本。
 
 本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式**承担 Qv2ray 的打包和分发压力**之后被立即删除。
 
