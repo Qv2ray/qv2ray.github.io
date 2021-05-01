@@ -1,5 +1,5 @@
 ---
-title: A few notes about Wayland
+title: 关于Wayland的一些注释
 ---
 
 # 关于Wayland的一些注释
