@@ -2,8 +2,8 @@
 title: Hacking
 ---
 
-# Hacking
+# 折腾
 
-1. [Manually Build Qv2ray](manuallybuild.md)
-2. [CMake Argument Reference](cmake-argument.md)
-3. [Distributing Qv2ray](distribute.md)
+1. [手动构建 Qv2ray 项目](manuallybuild.md)
+2. [CMake 参数参考](cmake-argument.md)
+3. [分发 Qv2ray](distribute.md)
