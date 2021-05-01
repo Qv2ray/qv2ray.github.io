@@ -1,8 +1,7 @@
 # Qv2ray 官方文档
 
 ## 翻译平台
-- [translate.qv2ray.net/qv2ray-website](https://translate.qv2ray.net/qv2ray-website) 或
-- [qv2ray.crowdin.com/qv2ray-website](https://qv2ray.crowdin.com/qv2ray-website)
+- https://gitlocalize.com/repo/6051
 
 ## 文档发布状态
 
@@ -10,4 +9,4 @@
 
 ## 翻译进度
 
-![Translation Status](https://badges.awesome-crowdin.com/translation-200008350-8.png)
+[![gitlocalized ](https://gitlocalize.com/repo/6051/zh/badge.svg)](https://gitlocalize.com/repo/6051/zh?utm_source=badge)
