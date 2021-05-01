@@ -21,7 +21,6 @@ sidebarDepth: 3
 
 2. 请跟随 [我们的 Debian 仓库](https://qv2ray.net/debian) 中的步骤进行操作。
 
-
 3. 安装 Qv2ray
 
     ```bash
@@ -30,9 +29,11 @@ sidebarDepth: 3
 
 ### Linux: Arch Linux 或基于 Arch 的发行版
 
-**直接从 `arclinuxcn 安装`**
+**直接从 `archlinuxcn` 安装**
 
 我们已经进入 `archlinuxcn` 仓库。 如果您已在使用它，只需在终端中输入：
+
+（Arch Linux CN 仓库: [https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)）
 
 ```shell
 sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
@@ -40,19 +41,21 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 然后就完事了。
 
-:::warning 想蹭 Arch Linux CN 仓库的 Manjaro 用户注意
-
-Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI 破坏性更新时，Arch Linux CN 会 **优先保证 _Arch Linux_ 用户的体验** 。 Manjaro 用户应 **知晓并自行承担一切因其官方源更新滞后所造成的后果**，主要涉及各种库的符号丢失（如 `symbol lookup error`）等问题。 若您执意使用，**因此产生的一切问题，请勿当作 Bug 以任何形式提交给 Qv2ray 项目或 CN 源**。 对于那些不想麻烦的人，请使用其他版本。
-
-本提示将在 “Manjaro CN” 仓库（或其他任何同类替代品）成立并正式**承担 Qv2ray 的打包和分发压力**之后被立即删除。
-
-:::
-
 **使用 AUR 助手从 AUR 下载**
 
 您可以从 AUR (Arch 用户仓库) 获取官方维护的`PKGBUILD`文件。[AUR (en) - Home](https://aur.archlinux.org/), 它将指导 Qv2ray 的构建过程。
 
 目前所有 Qv2ray 插件都在 AUR。
+
+### Linux: Manjaro
+
+**直接从 `manjarocn` 安装**
+
+（Manjaro CN 仓库: [https://github.com/manjarocn/repo](https://github.com/manjarocn/repo)）
+
+```shell
+sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下
+```
 
 ### Linux: openSUSE / Fedora / CentOS
 
@@ -66,8 +69,8 @@ Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI �
 
 类似于AUR，有两个版本的 Qv2ray 可供使用。 您可以根据自己的爱好选择：
 
-- 稳定版 OBS： [Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
-- 预览版 OBS： [Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
+- OBS 稳定版：[Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
+- OBS 预览版：[Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
 
 或者您可以直接从下面的链接获取更详细的安装指南：
 
@@ -82,7 +85,7 @@ Manjaro 的官方源的更新 **滞后** 于 Arch Linux。 当上游出现 ABI �
 
 :::tip 插件
 
-以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 通过项目软件源安装 Qv2ray 之后（不是手动下载 & 安装那种）， 您可以直接使用包管理器安装插件（插件名字与插件项目名字相同，同时提供带有 `-preview` 后缀的预览版本插件）。
+以上 [OBS 项目](https://build.opensuse.org/project/show/home:zzndb:Qv2ray) 也提供 Qv2ray 家族的插件。 通过项目软件源安装 Qv2ray 之后（不是手动下载 &amp; 安装那种）， 您可以直接使用包管理器安装插件（插件名字与插件项目名字相同，同时提供带有 `-preview` 后缀的预览版本插件）。
 
 :::
 
@@ -113,35 +116,42 @@ brew install kidonng/malt/qv2ray-beta
 
 ### Windows: Scoop
 
-> [Scoop](https://scoop.sh) 是一个 **Windows 上的** 基于命令行的软件包管理器
+> [Scoop](https://scoop.sh) 是一个 **Windows** 上的基于命令行的软件包管理器。
 
 在 **PowerShell** 中运行以下命令：
 
 1. [安装 Scoop](https://scoop.sh/#installs-in-seconds):
-   ```powershell
-   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # Allow script execution
-   iwr -useb get.scoop.sh | iex
-   ```
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # Allow script execution
+    iwr -useb get.scoop.sh | iex
+    ```
+
 2. 添加 `extras` bucket：
-   ```powershell
-   scoop bucket add extras
-   ```
+
+    ```powershell
+    scoop bucket add extras
+    ```
+
 3. 安装 Qv2ray:
-   ```powershell
-   scoop install qv2ray
-   ```
+
+    ```powershell
+    scoop install qv2ray
+    ```
+
 4. 更新也很容易，仅需要将 `install` 替换成 `upgrade` 即可
 
-   ```powershell
-   scoop update qv2ray
-   ```
+    ```powershell
+    scoop update qv2ray
+    ```
 
 5. **(可选的)** 如果你想要安装 Qv2Ray 测试版, 添加  `sushi` 桶:
-   ```powershell
-   scoop bucket add sushi https://github.com/kidonng/sushi
-   # For all apps see https://github.com/kidonng/sushi#qv2ray
-   scoop install qv2ray-beta
-   ```
+
+    ```powershell
+    scoop bucket add sushi https://github.com/kidonng/sushi
+    # For all apps see https://github.com/kidonng/sushi#qv2ray
+    scoop install qv2ray-beta
+    ```
 
 :::tip
 
@@ -156,13 +166,13 @@ brew install kidonng/malt/qv2ray-beta
 **请在管理员权限下打开 Powershell** 并运行以下命令：
 
 1. [安装 Chocolatey](https://chocolatey.org/install)：
-   ```powershell
-   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-   ```
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ```
 2. 安装 Qv2ray:
-   ```powershell
-   choco install qv2ray
-   ```
+    ```powershell
+    choco install qv2ray
+    ```
 
 ## 从 AppStore
 
@@ -188,15 +198,12 @@ $ sudo snap refresh qv2ray
 
 1. 根据 [官方文档](https://flatpak.org/setup/) 设置Flatpak环境。
 2. 安装 Qv2ray：
-   ```shell
-   # To install the package:
-   $ flatpak install com.github.Qv2ray
-   # To update the package:
-   $ flatpak update
-   ```
-
-
-
+    ```shell
+    # 安装:
+    $ flatpak install com.github.Qv2ray
+    # 升级:
+    $ flatpak update
+    ```
 
 ## GitHub Release 二进制文件
 
@@ -209,14 +216,15 @@ $ sudo snap refresh qv2ray
 1. 在**浏览器**中打开 [Qv2ray GitHub Release](https://github.com/Qv2ray/Qv2ray/releases) 页面。
 2. 从 Release 中选择一个版本。 或者，您可以选择使用 [最新的**稳定版**发布](https://github.com/Qv2ray/Qv2ray/releases/latest)。
 3. 根据你的的平台，在 Release Assets 中选择并下载。 例如：
-   - 对于 Windows 用户：
-     - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
-     - Windows 2003/XP/2000/ME/98/...： ***你逗我呢？***
-   - 对于 Linux 64bit 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
-   - 对于 macOS 用户：
-     - macOS 10.14 及之后的用户：`Qv2ray.VERSION.macOS-x64.dmg`；
-     - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
-     - macOS 10.12及之前: ***请升级 macOS***。
+    - 对于 Windows 用户：
+        - Windows 7/8/8.1/10 x64: `Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
+        - Windows 7/8/8.1/10 x86：您可能得自己构建。
+        - Windows Vista/2003/XP/2000/ME/98/...: ***您在开玩笑吗？***
+    - 对于 64位 Linux 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
+    - 对于 macOS 用户：
+        - macOS 10.14 及之后的用户：`Qv2ray.VERSION.macOS-x64.dmg`；
+        - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
+        - macOS 10.12及之前: ***请升级 macOS***。
 
 :::tip Linux AppImage 用户的注意事项
 
@@ -232,7 +240,7 @@ Windows 10 on ARM 的 *building 21277* 中已经添加了 x86_64 应用的模拟
 
 ## GitHub Actions
 
-如果您已经厌烦了加入稳定版本的功能，并愿意尝试开发中的新功能， 您可以从 GitHub Actions 下载开发版本：
+如果您觉得稳定版本的功能不够看，并愿意尝试开发中的新功能，您可以从 GitHub Actions 下载开发版本：
 
 1. 在浏览器中打开 [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) 页面。
 2. 选择最近成功的 (显示为 ✔️) 构建并点击它。 你应该会看到 GitHub Build 的详细页面。 [这里的页面](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225) 就是一个例子。
@@ -248,4 +256,4 @@ TODO：如何选择分支
 
 ## 从源代码编译
 
-请参考页面 [手工构建 Qv2ray](../hacking/manuallybuild.md)。
+参见 [手动构建 Qv2ray](../hacking/manuallybuild.md) 页面。
