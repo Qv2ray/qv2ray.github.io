@@ -1,6 +1,6 @@
 ---
 title: 获取 Qv2ray
-sidebarDepth: '3'
+sidebarDepth: 3
 ---
 
 # 获取 Qv2ray
