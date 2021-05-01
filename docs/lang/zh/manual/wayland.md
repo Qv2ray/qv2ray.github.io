@@ -22,7 +22,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 它的工作如下：
 
-[](https://imgchr.com/i/BIuwb4)
+[![Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
 
 你可以把 `QT_QPA_PLATFORM=wayland` 添加到 Qv2ray 的 desktop 文件， 这样 Qv2ray 启动的时候就能使用 Wayland 显示协议了。
 
