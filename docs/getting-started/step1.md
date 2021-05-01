@@ -19,7 +19,7 @@ To get started with Qv2ray, you should first obtain it (Why not?).
 	# apt install gnupg ca-certificates curl
 	```
 
-2. Follow the steps at [our debian repo](https://qv2ray.net/debian)
+2. Follow the steps at [our debian repo](https://qv2ray.net/debian) or [debian dev repo](https://qv2ray.net/debian-dev)
 
 
 3. Install Qv2ray
@@ -28,11 +28,13 @@ To get started with Qv2ray, you should first obtain it (Why not?).
 	# apt update; sudo apt install qv2ray
 	```
 
-### Linux: Arch Linux-based distros
+### Linux: Arch Linux and distros using Arch Linux's repo directly
 
 **Install directly from `archlinuxcn`**
 
 We have made ourselves into `archlinuxcn` repository. If you are already using it, simply type in your terminal:
+
+Arch Linux CN Repo: <https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/>
 
 ```shell
 sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
@@ -40,19 +42,21 @@ sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
 
 And that shall be done.
 
-:::warning Attention to Manjaro Hitchhikers on Arch Linux CN
-
-Manjaro will **delay Arch Linux's package changes**. When there is a breaking ABI change in upstream, **_Arch Linux_ CN** will **prioritize Arch users** instead of those of Manjaro. **Manjaro users of Arch Linux CN** should always **be aware of and bear all consequences caused by the delayed update of its official source**, including issues like `symbol lookup error` and etc. If you insist on using it, please **do not submit it to either Qv2ray or Arch Linux CN as a bug** in any way. For those who don't want trouble, please use other versions instead.
-
-This nag will be removed whenever something like "Manjaro CN" is founded and officially **takes the workload of packaging Qv2ray** for its users.
-
-:::
-
 **Download from AUR, using an AUR Helper**
 
 You may acquire officially maintained `PKGBUILD` file from AUR (Arch User Repository, [AUR (en) - Home](https://aur.archlinux.org/)), which will instruct the build process of Qv2ray.
 
 All Qv2ray plugins are currently in AUR.
+
+### Linux: Manjaro
+
+**Install directly from `manjarocn`**
+
+Manjaro CN Repo: <https://github.com/manjarocn/repo>
+
+```shell
+sudo pacman -Syy qv2ray # or qv2ray-dev-git, see below.
+```
 
 ### Linux: openSUSE / Fedora / CentOS
 
@@ -210,13 +214,14 @@ Do as the follows:
 2. Choose a version from the releases. Or, optionally, you may use the [Latest **Stable** Release](https://github.com/Qv2ray/Qv2ray/releases/latest).
 3. Choose in Assets according to your platform and download it! For example:
    - For Windows Users:
-     - Windows 7/8/8.1/10: `Qv2ray.VERSION.Windows-x64.7z` (Archive) or `Qv2ray.VERSION.win64.exe` (Installer).
-     - Windows 2003/XP/2000/ME/98/...: ***Are you kidding me bro?***
-   - For Linux 64bit Users: `Qv2ray.VERSION.linux-x64.AppImage`.
+     - Windows 7/8/8.1/10 x64: `Qv2ray.VERSION.Windows-x64.7z` (Archive) or `Qv2ray.VERSION.win64.exe` (Installer).
+     - Windows 7/8/8.1/10 x86: You may try to build Qv2ray yourself.
+     - Windows Vista/2003/XP/2000/ME/98/...: ***Are you kidding me bro?***
+   - For Linux x64 Users: `Qv2ray.VERSION.linux-x64.AppImage`.
    - For macOS Users:
      - macOS 10.14 and later: `Qv2ray.VERSION.macOS-x64.dmg`;
      - macOS 10.13: `qv2ray-legacy.dmg` (if any);
-     - macOS 10.12 and before: ***Try Upgrading Your macOS***.
+     - macOS 10.12 and before: ***Try Upgrading Your macOS*** or installing Linux on your Apple device(s).
 
 :::tip Notes for Linux AppImage users
 
