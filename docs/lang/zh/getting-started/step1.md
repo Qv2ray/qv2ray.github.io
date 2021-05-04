@@ -139,7 +139,7 @@ brew install kidonng/malt/qv2ray-beta
     scoop install qv2ray
     ```
 
-4. 更新也很容易，仅需要将 `install` 替换成 `upgrade` 即可
+4. 更新也很容易，仅需要将 `install` 替换成 `update` 即可
 
     ```powershell
     scoop update qv2ray
