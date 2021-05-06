@@ -44,7 +44,7 @@ title: 手动构建 Qv2ray 项目
 
 ### a. 预构建的二进制文件
 
-- The [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) repo is where we build and provide pre-built library dependencies for targeting Windows and Android.
+- [Qv2ray-deps](https://github.com/Qv2ray/Qv2ray-deps/) 是我们提供针对 Windows 和 Android 平台构建的预编译二进制依赖的仓库。
 - 对于安卓版本，我们使用了一个 [修改过的](https://github.com/Qv2ray/Qv2ray-deps/blob/master/0001_vcpkg_fix_curl_android_build.patch) vcpkg。
 
 #### a.1 下载 / 解压脚本
@@ -80,9 +80,9 @@ title: 手动构建 Qv2ray 项目
 - `mingw-w64-x86_64-pkg-config`
 - `mingw-w64-x86_64-re2`
 
-## 1. 获取源树
+## 1. 获取源码树
 
-There are various approaches to obtain the source code of Qv2ray. You can get it from:
+有多种方式获取 Qv2ray 的源码，你可以使用以下任意方式：
 
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
 - Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**)
@@ -121,7 +121,7 @@ Qv2ray contains nested submodules, always use `--recursive` when cloning.
 - 如果您已安装`Ninja` 或 `ninja-build` ，建议使用 `-GNinja`
 - 构建 Android 时可能需要`ANDROID_SDK_ROOT` 或 `ANDROID_NDK_ROOT`
 
-## 4. Start Compilation
+## 4. 开始编译
 
 开始编译！
 
