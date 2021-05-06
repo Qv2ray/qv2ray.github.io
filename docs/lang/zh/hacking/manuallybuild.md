@@ -85,17 +85,17 @@ title: 手动构建 Qv2ray 项目
 有多种方式获取 Qv2ray 的源码，你可以使用以下任意方式：
 
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
-- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**)
+- 通过 GitHub 直接下载仓库上某个分支的源码（**不建议这样做，因为它缺少 Git 子模块的元数据**）
 
-:::tip You can append options after `git clone`
+:::tip 你可以在 `git clone` 后面附加一些选项
 
-`--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
+`--branch <branch/tag>` 在克隆创建后检出到指定分支/标签。
 
 :::
 
 :::warning
 
-Qv2ray contains nested submodules, always use `--recursive` when cloning.
+Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `--recursive` 参数。
 
 :::
 
