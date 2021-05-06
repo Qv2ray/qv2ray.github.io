@@ -10,18 +10,18 @@ title: 手动构建 Qv2ray 项目
 
 请确保你的环境满足以下依赖的要求。
 
-- 对于桌面平台：仅支持 `x64` 架构。
+- 对于桌面平台：仅支持 `x64` 架构
 
-- 对于 Android 平台：`arm`、 `arm64`、 `x86` 或 `x86_64` 架构。
+- 对于 Android 平台：`arm`、 `arm64`、 `x86` 或 `x86_64` 架构
 
-- 桌面平台需要 Qt 版本 `>= 5.11` ，Android 平台需要 Qt 版本 `>= 6.0`。
+- 桌面平台需要 Qt 版本 `>= 5.11` ，Android 平台需要 Qt 版本 `>= 6.0`
 
-    - ~~将 Qv2ray 移植到更低或更高版本的 Qt 时，请无视该条件。~~
-    - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`。
+    - ~~将 Qv2ray 移植到更低或更高版本的 Qt 时请无视该条件~~
+    - 在这种情况下，您可能需要修改 `CMakeLists.txt` 中的 `QV_QT_MAJOR_VERSION` 和 `QV_QT_MINOR_VERSION`
 
 - 总是支持最新版本的 Qt ，推荐使用
 
-- 支持 `std=c++17` 的编译器：
+- 支持 `std=c+17` 的编译器：
 
     - `gcc7` 即可支持
     - 最低 14.2 版本的 MSVC
@@ -80,22 +80,22 @@ title: 手动构建 Qv2ray 项目
 - `mingw-w64-x86_64-pkg-config`
 - `mingw-w64-x86_64-re2`
 
-## 1. 获取源码
+## 1. 获取源树
 
-有多种方式获取 Qv2ray 的源码。你可以通过下面的任意方式获取：
+There are various approaches to obtain the source code of Qv2ray. You can get it from:
 
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
-- 通过 GitHub 直接下载仓库上某个分支的源码（**不建议这样做，因为它缺少 Git 子模块的元数据**）
+- Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**)
 
-:::tip 你可以在 `git clone` 后面附加一些选项
+:::tip You can append options after `git clone`
 
-`--branch <branch/tag>` 在克隆创建后检出到指定分支/标签。
+`--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
 
 :::
 
 :::warning
 
-Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `--recursive` 参数。
+Qv2ray contains nested submodules, always use `--recursive` when cloning.
 
 :::
 
@@ -121,7 +121,7 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 - 如果您已安装`Ninja` 或 `ninja-build` ，建议使用 `-GNinja`
 - 构建 Android 时可能需要`ANDROID_SDK_ROOT` 或 `ANDROID_NDK_ROOT`
 
-## 4. 编译
+## 4. Start Compilation
 
 开始编译！
 
