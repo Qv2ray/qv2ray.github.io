@@ -75,6 +75,7 @@ MSYS2 is suggested, packages:
 There are various approaches to obtain the source code of Qv2ray. You can get it from:
 - Git: `https://github.com/Qv2ray/Qv2ray.git`
 - Directly download the source code of a branch (**never do this due to the lack of git submodule metadata.**)
+
 :::tip You can append options after `git clone`
 
 `--branch <branch/tag>` To checkout the specific branch/tag after clone is created.
