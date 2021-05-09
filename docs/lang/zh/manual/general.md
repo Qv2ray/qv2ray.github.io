@@ -32,8 +32,8 @@ title: 常规设置
 设置 Qv2ray 本身访问网络的方式。
 
 - **延迟测试方案**：设置测试节点延迟的方法。
-  - **TCPing**： Qv2ray 默认的延迟测试方法。 测试结果更接近于实际使用体验，但无法测试基于 mKCP 协议的节点，因为 mKCP 协议基于 UDP 而非 TCP 。
-  - **ICMPing**：基于 ICMP / UDP 协议的延迟测试方法，是目前市面上公认的、主流的延迟测试方法，也是 Windows 和 Unix 系统中 `ping` 命令的测试原理。 测试结果远低于 TCPing，远优于实际使用体验。 可以用于测试基于 mKCP 协议的节点。
+    - **TCPing**： Qv2ray 默认的延迟测试方法。 测试结果更接近于实际使用体验，但无法测试基于 mKCP 协议的节点，因为 mKCP 协议基于 UDP 而非 TCP 。
+    - **ICMPing**：基于 ICMP / UDP 协议的延迟测试方法，是目前市面上公认的、主流的延迟测试方法，也是 Windows 和 Unix 系统中 `ping` 命令的测试原理。 测试结果远低于 TCPing，远优于实际使用体验。 可以用于测试基于 mKCP 协议的节点。
 - **User Agent**：Qv2ray 在进行网络请求时声明的客户端信息。 如果你不了解何为 UA，请不要变更本项设置。
 - **Qv2ray 代理**：Qv2ray 在进行网络请求时使用的代理设置，而非 V2Ray 核心的出口流量所使用的代理设置。
 
@@ -47,25 +47,25 @@ title: 常规设置
 
 ## 高级行为
 
-设置Qv2ray的高级选项 请注意，随意篡改这些设置可能会带来负面影响！！！
+设置 Qv2ray 的高级行为。请注意，滥用这些设置可能会造成负面影响！
 
-- **Set `AllowInsecure` by Default**: All new connections imported via **subscription** / **QR code** / **VMess protocol link** will be enabled by default to allow insecure certificates. Enabling this setting will cause the relevant nodes to lose TLS protection, and there is a risk of man in the middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
-- **Enable `SessionResumption` by Default**: New in Qv2ray v2.6.0. When enabled, new connections imported with TLS will enable **Session Resumption** to reduce RTT during handshake. You will also need to enable related functions on the server side, such as `0-RTT Connection Resumption` on Cloudflare and `ssl_early_data` on nginx. However, this will largely increase the risk of traffic being recognised.
-- **Test Latency on Connect**: When enabled, Qv2ray will test the latency of nodes on connect. Enabling this may make it easier for GFW to recognize your connection.
-- **Test Latency Periodically**: When enabled, Qv2ray will periodically test the latency of the currently connected node. Enabling this may make it easier for GFW to recognize your connection.
-- **Disable System Root Certificates**: When enabled, V2Ray core will only use built-in root certificates, which helps to circumvent root certificate hijacking attack. However, this can cause V2Ray core fail to recognise your valid TLS certificates, resulting in connectivity problem with your nodes.
-- (Removed) **Set `AllowInsecureCiphers` by Default**: All new connections imported through **subscription** / **QR code** / **VMess protocol link** will be enabled by default to `allow insecure TLS algorithm` option. Enabling this setting will cause related nodes to lose TLS protection, and there is a risk of man-in-the-middle attacks. Nodes added by manually filling in connection properties or editing JSON are not affected by this option. If you do not understand the actual use of this option, please do not open it!
+- **默认设置 `AllowInsecure`**：所有通过 **订阅** / **二维码** / **VMess 协议链接** 导入的新连接将默认开启允许不安全的证书选项。开启此项设置将会使相关节点失去 TLS 的保护，存在遭受中间人攻击的风险。通过手动填写连接属性或编辑 JSON 添加的节点不受此选项影响。如果你不了解该选项的实际用途，请切勿开启！
+- **默认启用 `SessionResumption`**：Qv2ray v2.6.0 新增。开启时，新导入的 TLS 链接会默认开启 **启用会话恢复** 以减少握手时的 RTT。但需要服务端各个环节开启相关功能的支持，例如 CloudFlare 需要开启 `0-RTT Connection Resumption` 、nginx 需要开启 `ssl_early_data`等。注意这会加大遭到重放攻击的可能性，会极大程度上提高流量被识别的风险。
+- **连接时测试延迟**：开启此选项后，Qv2ray 将在连接节点时测试当前所连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
+- **定时测试延迟**：开启此选项后，Qv2ray 将会定期测试当前已连接节点的延迟。开启该选项可能会使 GFW 更容易识别出你的连接。
+- **禁用系统根证书**：开启此选项后，V2Ray 核心将仅使用内置的根证书进行 TLS 证书校验，可用于防止根证书劫持攻击，但有可能会让核心认不出你的 TLS 证书，导致节点连接失败。
+- **默认设置 `AllowInsecure`**：所有通过 **订阅** / **二维码** / **VMess 协议链接** 导入的新连接将默认开启允许不安全的证书选项。开启此项设置将会使相关节点失去 TLS 的保护，存在遭受中间人攻击的风险。通过手动填写连接属性或编辑 JSON 添加的节点不受此选项影响。如果你不了解该选项的实际用途，请切勿开启！
 
-:::warning Re-emphasis:
+:::warning 再度强调：
 
-不使用上述设置可能会导致不好的影响甚至安全问题！！！ 如果你不明白这些选项的准确作用，请勿打开他们！！！
+滥用上述设置可能会造成负面影响，甚至导致安全问题！如果你不了解这些选项的实际用途，请切勿开启！
 
 :::
 
-:::tip (Outdated) Notes on V2ray Core versions before 4.23.1
+::: tip （已过时）有关 V2ray-Core 4.23.1 以下版本
 
-**Updated at 2021-01-25:** We believe that no one will use that old V2Ray core version. This notice is no longer effective and is only kept for historical reasons.
+**2021-01-25 更新：**我们相信已经没人会用这么老的核心了。本提示已过时，仅作历史保留。
 
-**Updated at 2020-05-30:** Due to implementation issues，V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**.
+**2020-05-30 更新：**由于实现缺陷，V2ray-Core 在禁用 `AllowInsecureCiphers` 选项时，会使用硬编码的 TLS 加密套件列表，这将导致 V2ray-Core 的 TLS 流量出现明显特征。在 Qv2ray 中启用 `AllowInsecureCiphers` 会暂时缓解此问题，开启此选项后需要 **重新导入所有受影响的连接**。
 
 :::
