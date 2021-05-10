@@ -12,15 +12,15 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 **查看 [V2Fly 安装指南](https://www.v2fly.org/guide/install.html) 了解更多详情。**
 
-:::tip 核心管理：手动还是自动？
+:::tip 手动管理 vs 自动管理
 
-如果您正在使用 V2Ray core 和 assets。最好通过软件包管理器安装，因为系统将处理 V2ray 核心的自动升级。对于 Arch Linux 用户，仅安装一个 `v2ray` 就足够了。关于其他发行版，请阅读如下：
+如果你正在使用的发行版拥有一个可以自动安装 V2Ray 核心文件的包管理系统，那通过包管理安装是最好的选择，因为系统可以自动处理 V2Ray 核心的更新。例如，对于 Arch Linux 用户而言，安装 v2ray 软件包就足够了。对于其他情形，请接着阅读下面的说明。
 
 :::
 
 :::tip 给 Windows 10 ARM64 用户的提示
 
-自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 (armv7) 架构。因此我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能。
+自 V2Ray Core 4.27 以来，Project V2Ray 团队开始提供 Windows 10 ARM32 （armv7）架构。因此我们推荐 Windows 10 ARM64 用户使用该版本的内核以获得更好的性能。
 
 :::
 
