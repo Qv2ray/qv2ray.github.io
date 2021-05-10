@@ -52,7 +52,7 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
 - [**Solution**](../getting-started/step5.md#tweaking-routing-schemes)
 
-### Transparent Proxy (tProxy) not working when under Linux
+### Transparent Proxy (TProxy) not working when under Linux
 
 - In this case, the log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`
 

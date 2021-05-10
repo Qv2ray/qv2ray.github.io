@@ -52,7 +52,7 @@ title: 常见问题
 
 - [**解决办法**](../getting-started/step5.md#tweaking-routing-schemes)
 
-### 当在 Linux 下运行时，透明代理（tProxy）不工作
+### 当在 Linux 下运行时，透明代理（TProxy）不工作
 
 - 在这种情况下，日志可能显示错误 `failed to set IP_TRANSPARENT > operation not permitted`
 
