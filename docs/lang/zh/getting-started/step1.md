@@ -192,12 +192,13 @@ $ sudo snap refresh qv2ray
 
 :::warning 已废弃(2020/09/18)
 
-从 Flahub 安装Qv2ray 是官方 **已废弃**的方法，因为维护者不再积极维护该包。如果你有兴趣接手这个包，请告诉我们。
+从 Flahub 安装 Qv2ray 是官方 **已废弃** 的方法，因为维护者不再积极维护该包。如果你有兴趣接手这个包，请告诉我们。
 
 :::
 
 1. 根据 [官方文档](https://flatpak.org/setup/) 设置Flatpak环境。
 2. 安装 Qv2ray：
+
     ```shell
     # 安装：
     $ flatpak install com.github.Qv2ray
@@ -217,14 +218,14 @@ $ sudo snap refresh qv2ray
 2. 从 Release 中选择一个版本。或者，您可以选择使用 [最新的**稳定版**发布](https://github.com/Qv2ray/Qv2ray/releases/latest)。
 3. 根据你的的平台，在 Release Assets 中选择并下载。例如：
     - 对于 Windows 用户：
-        - Windows 7/8/8.1/10 x64: `Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
+        - Windows 7/8/8.1/10 x64：`Qv2ray.VERSION.Windows-x64.7z`（绿色版压缩包）或 `Qv2ray.VERSION.win64.exe`（安装版安装程序）。
         - Windows 7/8/8.1/10 x86：您可能得自己构建。
-        - Windows Vista/2003/XP/2000/ME/98/...: ***您在开玩笑吗？***
+        - Windows Vista/2003/XP/2000/ME/98/...：***您在开玩笑吗？***
     - 对于 64位 Linux 用户：`Qv2ray.VERSION.linux-x64.AppImage`。
     - 对于 macOS 用户：
         - macOS 10.14 及之后的用户：`Qv2ray.VERSION.macOS-x64.dmg`；
         - macOS 10.13：`qv2ray-legacy.dmg`（如果有的话）；
-        - macOS 10.12及之前: ***请升级 macOS***。
+        - macOS 10.12及之前：***请升级 macOS***。
 
 :::tip Linux AppImage 用户的注意事项
 
