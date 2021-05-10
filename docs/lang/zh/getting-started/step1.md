@@ -43,7 +43,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 **使用 AUR 助手从 AUR 下载**
 
-您可以从 AUR (Arch 用户仓库) 获取官方维护的`PKGBUILD`文件。[AUR (en) - Home](https://aur.archlinux.org/)，它将指导 Qv2ray 的构建过程。
+您可以从 AUR (Arch 用户仓库) 获取官方维护的 `PKGBUILD` 文件。[AUR (en) - Home](https://aur.archlinux.org/)，它将指导 Qv2ray 的构建过程。
 
 目前所有 Qv2ray 插件都在 AUR。
 
