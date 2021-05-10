@@ -53,7 +53,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 你应该始终给予 `v2ray` 和 `v2ctl` **可执行权限**。这通常是需要对这些文件执行一次 `chmod +x` 。
 
-在 macOS上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。
+在 macOS 上，如果您使用 Homebrew 安装 v2ray-core，您可以忽略此提示。
 
 :::
 
