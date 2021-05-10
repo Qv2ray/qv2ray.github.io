@@ -59,7 +59,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 ## 在 Qv2ray 中配置 V2Ray Core
 
-打开 Qv2ray 并转到首选项窗口。在 **[内核设置](qv2ray://open/preference/kernel)**中，配置以下选项：
+打开 Qv2ray 并转到首选项窗口。在 **[内核设置](qv2ray://open/preference/kernel)** 中，配置以下选项：
 
 - **核心可执行文件路径**: 将此设置为您的 V2Ray 可执行文件存在的地方。这可能是您在 Windows 上的 `v2ray.exe` 的完整路径，或者 `v2ray` 在 Linux / macOS 上的可执行文件。
 - **V2Ray 资源目录**: 将此设定为 `geoip.dat` 和 `geosite.dat` 所在位置。
