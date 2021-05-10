@@ -15,7 +15,7 @@ title: 常见问题
 ### 报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
 - **根本原因**：出现了端口冲突
-- **原因 1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
+- **原因1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
 - **解决办法**：终止当前占用该端口的进程。
 - **原因2**：在 Qv2ray 中设置的相关端口已被其他软件占用。
 - **解决方案**：更改 Qv2ray 或其他软件的端口设置。
