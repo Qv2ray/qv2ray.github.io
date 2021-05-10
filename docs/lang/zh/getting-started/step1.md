@@ -188,9 +188,9 @@ $ sudo snap install qv2ray
 $ sudo snap refresh qv2ray
 ```
 
-### Linux: Flathub (快被扬了)
+### Linux: Flathub（快被扬了）
 
-:::warning 已废弃(2020/09/18)
+:::warning 已废弃（2020/09/18）
 
 从 Flahub 安装 Qv2ray 是官方 **已废弃** 的方法，因为维护者不再积极维护该包。如果你有兴趣接手这个包，请告诉我们。
 
@@ -244,7 +244,7 @@ Windows 10 on ARM 的 *building 21277* 中已经添加了 x86_64 应用的模拟
 如果您觉得稳定版本的功能不够看，并愿意尝试开发中的新功能，您可以从 GitHub Actions 下载开发版本：
 
 1. 在浏览器中打开 [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) 页面。
-2. 选择最近成功的 (显示为 ✔️) 构建并点击它。你应该会看到 GitHub Build 的详细页面。[这里的页面](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225) 就是一个例子。
+2. 选择最近成功的（显示为 ✔️）构建并点击它。你应该会看到 GitHub Build 的详细页面。[这里的页面](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225) 就是一个例子。
 3. 点击**Artifacts**下拉菜单来展开它，然后根据您的平台选择二进制文件。
 
 TODO：如何选择分支
