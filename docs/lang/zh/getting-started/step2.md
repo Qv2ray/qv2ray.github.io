@@ -68,6 +68,6 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 :::warning 严禁套娃！
 
-永远不要设置 **核心可执行路径** 到 **Qv2ray 的可执行程序路径** ！这不会造成进程爆炸，因为 Qv2ray 是一个单实例程序。注意可用的 V2Ray Core 可执行文件看起来就像 `v2ray` ，`v2ray.exe` 或 `wv2ray.xe`，而不是 `qv2ray` 或 `qv2ray.exe`，`v2rayN.exe`！
+永远不要设置 **核心可执行路径** 到 **Qv2ray 的可执行程序路径** ！这不会造成进程爆炸，因为 Qv2ray 是一个单实例程序。注意可用的 V2Ray Core 可执行文件看起来就像 `v2ray`、`v2ray.exe` 或 `wv2ray.xe`，而不是 `qv2ray`、`qv2ray.exe` 或 `v2rayN.exe`！
 
 :::
