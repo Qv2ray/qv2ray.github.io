@@ -51,7 +51,7 @@ title: 常见问题
 
 - [**解决办法**](../getting-started/step5.md#tweaking-routing-schemes)
 
-### 当在 Linux 下运行时，透明代理 (tProxy) 不工作
+### 当在 Linux 下运行时，透明代理（tProxy）不工作
 
 - 在这种情况下，日志可能显示错误 `failed to set IP_TRANSPARENT > operation not permitted`
 
@@ -59,13 +59,13 @@ title: 常见问题
 
 - **解决方案**：
 
-  - 对于所有 Linux 发行版，在终端中使用下面的命令 (使用 root/sudo)：
+  - 对于所有 Linux 发行版，在终端中使用下面的命令（使用 root/sudo）：
 
     ```bash
     setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
-    `/usr/bin/v2ray` 是大部分Linux 发行版安装V2Ray 的地方，如果不是，(例如) 您已经使用安装脚本安装了V2Ray，请替换 `/usr/bin/v2ray` 并使用您的 V2Ray 核心二进制路径。
+    `/usr/bin/v2ray` 是大部分Linux 发行版安装V2Ray 的地方，如果不是，（例如）您已经使用安装脚本安装了V2Ray，请替换 `/usr/bin/v2ray` 并使用您的 V2Ray 核心二进制路径。
 
   - 对于ArchLinux用户：  
     尝试 AUR 包 [Aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)（由 `@DuckSoft` 创建）的自动化步骤
