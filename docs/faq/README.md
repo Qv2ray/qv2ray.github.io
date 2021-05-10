@@ -61,8 +61,8 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
   - For all Linux distros, Use the command below in terminal (with root/sudo access):
 
-    ```
-    # /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
+    ```bash
+    setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
     Where `/usr/bin/v2ray` is where V2Ray is installed for most of the Linux distros, if is not (e.g. you have installed V2Ray using the installation script), replace `/usr/bin/v2ray` with the path to your V2Ray core binary.
