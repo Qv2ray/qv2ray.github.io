@@ -18,21 +18,21 @@ And [benefit from the robost routing engine](plugins/v2ray-integration.md) provi
 
 ### Routing Matrix
 
-Qv2ray’s built-in routing matrix will allow you configure your custom routing scheme, especially when you want to access some websites, which is not in the default routing rule, with proxy.
+Qv2ray's built-in routing matrix will allow you configure your custom routing scheme, especially when you want to access some websites, which is not in the default routing rule, with proxy.
 
-**Following V2ray’s Routing Syntax, but with Auto-Completing (Typo-free)**
+**Following V2ray's Routing Syntax, but with Auto-Completing (Typo-free)**
 
 ### The Full-featured V2ray Configuration GUI
 
 Our full-featured complex editor allows you create, edit your own connection configuration. Including Routing Table, Multiple inbounds / outbounds.
 
-**Just The Same As Writing V2ray’s JSON Configuration File Directly, But With Powerful GUI**
+**Just The Same As Writing V2ray's JSON Configuration File Directly, But With Powerful GUI**
 
 ### V2ray Log highlighter
 
 The log of V2ray is the most difficult thing to understand if things goes wrong.
 
-Qv2ray provides syntax highlighting for V2ray’s log output.
+Qv2ray provides syntax highlighting for V2ray's log output.
 
 **Saving your time when debugging the connection issue.**
 

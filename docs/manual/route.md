@@ -30,7 +30,7 @@ According to V2Ray's official documents, the meaning of the three domain name st
   - The resolved IP only works during routing, and the original domain name is still used in the forwarded data packets.
 - **`IPOnDemand`**: When any IP-based rules are encountered during matching, the domain name will be immediately resolved to IP for matching.
 
-In short, based on a developer’s statement:
+In short, based on a developer's statement:
 
 - **`AsIs`**: fast analysis, imprecise diversion;
 - **`IPIfNonMatch`**: parsing is slightly slower, and shunt is accurate

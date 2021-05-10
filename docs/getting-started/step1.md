@@ -155,7 +155,7 @@ You may also need to install [the latest Visual C++ Redistributable](https://sup
 
 ### Windows: Chocolatey
 
-> [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**。
+> [Chocolatey](https://chocolatey.org/) is another software packages manager for **Windows**.
 
 **Please open Powershell with administrator permission** and run the following commands:
 

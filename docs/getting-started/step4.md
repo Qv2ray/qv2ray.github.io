@@ -40,7 +40,7 @@ According to [an article by Microsoft](https://docs.microsoft.com/en-us/windows/
 
 for CMD:
 
-```shell
+```batch
 FOR /F "tokens=11 delims=\" %p IN ('REG QUERY "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings"') DO CheckNetIsolation.exe LoopbackExempt -a -p=%p
 ```
 

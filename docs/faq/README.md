@@ -40,29 +40,30 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
 - **Possible cause**: System time is out of sync. If VMess is your proxy protocol, it requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
 - **Solutions (Windows)**:
-  - **Approach 1**: Open Settings, select “Time & Language”, enable “Automatically set date and time”. If the option is already enabled, please click the "Sync now" button.
-  - **Approach 2**：Open control panel, switch to “Categories” view，choose “Time and Zone”，then click “Date and Time”, select "Internet time" in the open dialog, then click "change settings" button and check “Sync with Internet time server”.
+  - **Approach 1**: Open Settings, select "Time & Language", enable "Set time automatically". If the option is already enabled, please click the "Sync now" button.
+  - **Approach 2**：Open control panel, switch to "Category" view, choose "Clock and Region", then click "Date and Time", select "Internet Time" in the open dialog, then click "Change settings" button and check "Synchronize with an Internet time server".
 - **Solutions (Linux)**:
   - **Approach 1**: Use `systemd-timesyncd`, run `sudo systemctl enable systemd-timesyncd --now`.
   - **Approach 2**: Use [Chrony](https://www.chrony.tuxfamily.org) to sync time.
-- **Solution (macOS)**: Open system preference, click “Date & Time”, and enable “Automatically set date and time”.
+- **Solution (macOS)**: Open system preference, click "Date & Time", and enable "Automatically set date and time".
+<!-- TODO: need to check for button and option names in macOS -->
 
 ### I want to access China mainland websites using the proxy.
 
 - [**Solution**](../getting-started/step5.md#tweaking-routing-schemes)
 
-### Transparent Proxy (tProxy) not working when under Linux
+### Transparent Proxy (TProxy) not working when under Linux
 
 - In this case, the log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`
 
-- **Cause:** V2Ray does not have the permission to set socket options.
+- **Cause**: V2Ray does not have the permission to set socket options.
 
-- **Solutions:**
+- **Solutions**:
 
   - For all Linux distros, Use the command below in terminal (with root/sudo access):
 
-    ```
-    # /usr/bin/setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
+    ```bash
+    setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
     Where `/usr/bin/v2ray` is where V2Ray is installed for most of the Linux distros, if is not (e.g. you have installed V2Ray using the installation script), replace `/usr/bin/v2ray` with the path to your V2Ray core binary.
@@ -81,15 +82,14 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
   - A workaround is to rename the connection and make sure the new name only contains ASCII characters.
 
 ### Unable to configure system proxy automatically on macOS (Error: Command requires admin privileges)
-- **Cause:** Permission issue on macOS.
-- **Solution:**
+
+- **Cause**: Permission issue on macOS.
+- **Solution**:
 
     ```shell
     > # security authorizationdb write system.services.systemconfiguration.network allow
     YES (0)
     ```
-
-
 
 ## Behavior & Appearance Issues
 

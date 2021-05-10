@@ -14,7 +14,7 @@ Qv2ray itself **does not** include a distribution of V2Ray executable files, nam
 
 :::tip Core Management: Manual vs Automatic
 
-If you are using a distribution with V2Ray core and assets packages, it’ll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
+If you are using a distribution with V2Ray core and assets packages, it'll be the best to install through package manager since the system will handle the automatic upgrade of v2ray core. For Arch Linux users, installing only one package `v2ray` is enough. For other distributions, please read below.
 
 :::
 
@@ -33,9 +33,9 @@ To make it clear, `arm64` is completely different from `amd64`.
 
 ### Manual Download
 
-**Official Download Link：** <https://github.com/v2fly/v2ray-core/releases>
+**Official Download Link**: <https://github.com/v2fly/v2ray-core/releases>
 
-Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store it’s data.
+Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store its data.
 
 The directory `vcore` could be in one of these locations:
 
