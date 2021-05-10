@@ -37,7 +37,7 @@ Please view [FAQ](faq/README.md).
 
 There are many ways to help improve Qv2ray, even if you do not know how to code. Here are some of them:
 
-1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://translate.qv2ray.net/).
+1. 🌐 **Translations**. Help to translate Qv2ray to more languages, or, improve the quality of current translations: You may find us at [Crowdin](https://crowdin.com/project/qv2ray).
 2. 🐛 **Reporting Bugs**. Report bugs or incidents of Qv2ray, by posting an issue at [issues](https://github.com/Qv2ray/Qv2ray/issues).
 3. 💡 **Suggest New Features**. [GitHub - Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
 4. ⚙️ **Hacking Qv2ray**. Check out and hack the code of Qv2ray, followed by high-quality pull requests!
