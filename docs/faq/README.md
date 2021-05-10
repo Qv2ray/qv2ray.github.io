@@ -40,12 +40,12 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
 - **Possible cause**: System time is out of sync. If VMess is your proxy protocol, it requires client and server's system time difference less than 90 seconds, or it will refuse to connect.
 - **Solutions (Windows)**:
-  - **Approach 1**: Open Settings, select “Time & Language”, enable “Automatically set date and time”. If the option is already enabled, please click the "Sync now" button.
-  - **Approach 2**：Open control panel, switch to “Categories” view，choose “Time and Zone”，then click “Date and Time”, select "Internet time" in the open dialog, then click "change settings" button and check “Sync with Internet time server”.
+  - **Approach 1**: Open Settings, select "Time & Language", enable "Automatically set date and time". If the option is already enabled, please click the "Sync now" button.
+  - **Approach 2**：Open control panel, switch to "Categories" view，choose "Time and Zone"，then click "Date and Time", select "Internet time" in the open dialog, then click "change settings" button and check "Sync with Internet time server".
 - **Solutions (Linux)**:
   - **Approach 1**: Use `systemd-timesyncd`, run `sudo systemctl enable systemd-timesyncd --now`.
   - **Approach 2**: Use [Chrony](https://www.chrony.tuxfamily.org) to sync time.
-- **Solution (macOS)**: Open system preference, click “Date & Time”, and enable “Automatically set date and time”.
+- **Solution (macOS)**: Open system preference, click "Date & Time", and enable "Automatically set date and time".
 
 ### I want to access China mainland websites using the proxy.
 

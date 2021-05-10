@@ -52,7 +52,7 @@ Under a KDE Wayland session, if you log out and log back in, Qv2ray will not exi
 
 1. Use Gnome Wayland session
 
-2. Use KDE Plasma or other desktop‘s Xorg sessions 
+2. Use KDE Plasma or other desktop's Xorg sessions 
 
 3. Kill the Qv2ray process by yourself and then open it again.
 

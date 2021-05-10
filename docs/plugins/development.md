@@ -14,19 +14,19 @@ A plugin is, technically, a shared library that implements a specific interface,
 
 ### Compiler Version / Options
 
-- For Linux and macOS, there’s no compiler limitations.
+- For Linux and macOS, there's no compiler limitations.
 - MSVC is required when compiling a plugin.
-- `-fno-sized-deallocation` Should be used when compiling the plugin, especially when “**Building plugins using Github Action**”
+- `-fno-sized-deallocation` Should be used when compiling the plugin, especially when "**Building plugins using Github Action**"
 
 ### Qt Version Limitations
 
-- It’s a Qt limit that the version which a plugin was built against should not be greater than that of the loader application (Qv2ray in this case)
-- We suggest building plugins using `Qt 5.11.3` since it’s the oldest version Qv2ray supports.
+- It's a Qt limit that the version which a plugin was built against should not be greater than that of the loader application (Qv2ray in this case)
+- We suggest building plugins using `Qt 5.11.3` since it's the oldest version Qv2ray supports.
 
 ### Third-party link-time and/or run-time dependencies
 
 - These dependencies **should** be statically linked into the plugin library, otherwise:
-  - Tell the users to download/install all dependencies’ library from wherever they can.
+  - Tell the users to download/install all dependencies' library from wherever they can.
 - **Exception: OpenSSL _SHOULD NOT_ be statically linked.**
   - Qv2ray has its own OpenSSL dependency check and will make sure a compatible OpenSSL has been installed.
 
@@ -36,15 +36,15 @@ You have 2 choices when initiating a plugin.
 
 1. Creating plugin using provided `Template` project:
 
-   There’s a repository called [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template), which can be used to create your own plugin.
+   There's a repository called [QvPlugin-Template](https://github.com/Qv2ray/QvPlugin-Template), which can be used to create your own plugin.
 
 2. Creating plugin from from scratch.
 
 ### 1. Using the template project
 
-1. Click the “Use This Plugin” in the Github Repository page and follow the instructions.
+1. Click the "Use This Plugin" in the Github Repository page and follow the instructions.
 2. Clone your repository just created.
-3. Execute the command, since Github didn’t persist submodule data within the template repo.
+3. Execute the command, since Github didn't persist submodule data within the template repo.
 
    ```bash
    git submodule add --force https://github.com/Qv2ray/QvPlugin-Interface/ ./interface
