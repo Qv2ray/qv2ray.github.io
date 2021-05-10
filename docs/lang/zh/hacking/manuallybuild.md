@@ -51,14 +51,14 @@ title: 手动构建 Qv2ray 项目
 
 **额外依赖：bash 、 jq 、curl 、7zip** （对于 Windows 用户）
 
-我们提供了`./libs/setup-lib.sh` ，可以很容易地安装预构建的二进制文件，用法：
+我们提供了 `./libs/setup-lib.sh`，可以很容易地安装预构建的二进制文件，用法：
 
-- `cd`到`libs`目录
+- `cd` 到 `libs` 目录
 - `./setup-libs <PLATFORM> <ARCH>`
-    - 例如`./setup-libs.sh windows x64`或`./setup-libs.sh android arm`
-    - 可能的`<PLATFORM>`值： `windows` ， `linux` ， `android`
-    - 可能的`<ARCH>`值： `x86` ， `x64` ， `arm` ， `arm64`
-    - 在 Linux 上为 Android 交叉编译时将`<ARCH>`设置为 `tools` 以安装 Protobuf 生成器
+    - 例如`./setup-libs.sh windows x64` 或 `./setup-libs.sh android arm`
+    - 可能的`<PLATFORM>`值： `windows`、`linux`、`android`
+    - 可能的`<ARCH>`值： `x86`、`x64`、`arm`、`arm64`
+    - 在 Linux 上为 Android 交叉编译时将 `<ARCH>` 设置为 `tools` 以安装 Protobuf 生成器
 
 该脚本从 [此 release](https://github.com/Qv2ray/Qv2ray-deps/releases/tag/release) 下载压缩包，解压并移动到相应的 `./libs/ARCH-PLATFORM/` 目录。
 
@@ -66,7 +66,7 @@ title: 手动构建 Qv2ray 项目
 
 - 下载对应的 7z 压缩文件
 - 解压并移动 `{7Z_ROOT}/PLATFORM-ARCH/installed/ARCH-PLATFORM` 到 `./libs/` 目录。
-- `./libs/ARCH-PLATFORM` 下必须包含 `include` ， `lib`或`share`子目录。
+- `./libs/ARCH-PLATFORM` 下必须包含 `include`、`lib` 或 `share` 子目录。
     - 例如`./libs/x86-android/include` 或 `./libs/x64-windows/include/`
 
 ### MinGW 软件包：
@@ -103,7 +103,7 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 以下步骤需要正确的 `PATH` ，即可以在 `PATH` 下找到 `qmake` 。
 
-执行： `mkdir build; cd build;`
+执行：`mkdir build; cd build;`
 
 - 只是为了防止污染源码树。
 
@@ -111,7 +111,7 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 您**需要**查看 [CMake 参数参考](cmake-argument) 并添加自己的参数。
 
-执行： `cmake ..`
+执行：`cmake ..`
 
 ***构建 Android 时，使用 `qt-cmake ..` 而不是 `cmake ..`***
 
@@ -125,7 +125,7 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 开始编译！
 
-执行： `cmake --build .`
+执行：`cmake --build .`
 
 - 如果您拥有足够的算力并且想要执行并行编译，则推荐使用参数 `--parallel <并行数>`
 
@@ -133,13 +133,13 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 将编译的成品和资源复制到目标目录中。
 
-执行： `cmake --install .` 或 `sudo cmake --install .`
+执行：`cmake --install .` 或 `sudo cmake --install .`
 
 - 这将自动复制所有依赖到 `CMAKE_INSTALL_PREFIX` 。
 
 :::warning
 
-`macdeployqt` 中存在一个 bug ， `libabsl_debugging_internal` 被识别为调试库，这将阻止部署 QPlatformPlugin（即 QCocoaPlugin ），最终将导致运行时异常，提示“ No Platform Plugin is Found ”。
+`macdeployqt` 中存在一个 bug ，`libabsl_debugging_internal` 被识别为调试库，这将阻止部署 QPlatformPlugin（即 QCocoaPlugin ），最终将导致运行时异常，提示“ No Platform Plugin is Found ”。
 
 请改用 [Qv2ray 修改过的 `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched) 。同时支持 Qt5 和 Qt6
 
@@ -149,4 +149,4 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 你已经编译并部署了你自己的 Qv2ray！
 
-开始折腾， Qv2ray 欢迎您的贡献！
+开始折腾，Qv2ray 欢迎您的贡献！

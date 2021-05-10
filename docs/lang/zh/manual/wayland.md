@@ -8,13 +8,13 @@ title: 关于Wayland的一些注释
 
 ## 运行
 
-Qv2ray 是一个原生的 Qt5/C++ 程序，它完全支持Wayland 显示协议。 然而，要在 Wayland 协议下运行 Qv2ray ，您需要一个 Wayland 会话(例如Gnome 会话、KDE Wayland 会话、Sway 等)。 ，您也需要安装 Qt5 的 Wayland 支持 (通常是包名 `qt5-wayland` or `(qtwayland5`)。
+Qv2ray 是一个原生的 Qt5/C++ 程序，它完全支持 Wayland 显示协议。然而，要在 Wayland 协议下运行 Qv2ray ，您需要一个 Wayland 会话（例如Gnome 会话、KDE Wayland 会话、Sway 等），您也需要安装 Qt5 的 Wayland 支持 (通常是包名 `qt5-wayland` 或 `qtwayland5`）。
 
 如果一切都已就绪，您现在可以尝试在 Wayland 显示协议下运行 Qv2ray。
 
 ### Gnome 环境
 
-Gnome 环境下的 Qt5 程序默认使用 Xorg 协议，运行在Xwayland上 (Xorg 于Wayland下的后退模式）。 因此，若要在 Wayland 显示协议下运行 Qv2ray ，您需要运行以下命令。
+Gnome 环境下的 Qt5 程序默认使用 Xorg 协议，运行在Xwayland上 (Xorg 于Wayland下的后退模式）。因此，若要在 Wayland 显示协议下运行 Qv2ray ，您需要运行以下命令。
 
 ```bash
 env QT_QPA_PLATFORM=wayland qv2ray
@@ -24,11 +24,11 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 [![Qv2ray On Wayland in Gnome Session](https://s1.ax1x.com/2020/11/07/BIuwb4.png)](https://imgchr.com/i/BIuwb4)
 
-你可以把 `QT_QPA_PLATFORM=wayland` 添加到 Qv2ray 的 desktop 文件， 这样 Qv2ray 启动的时候就能使用 Wayland 显示协议了。
+你可以把 `QT_QPA_PLATFORM=wayland` 添加到 Qv2ray 的 desktop 文件，这样 Qv2ray 启动的时候就能使用 Wayland 显示协议了。
 
 ### KDE Plasma Wayland 会话
 
-从理论上讲，它默认了Wayland显示协议，但这尚未被验证。 指定Qv2ray 以与上面相同的方式遵循Wayland显示协议。
+从理论上讲，它默认了 Wayland 显示协议，但这尚未被验证。指定 Qv2ray 以与上面相同的方式遵循 Wayland 显示协议。
 
 ### Sway
 
@@ -46,7 +46,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 ### KDE Wayland会议下的问题
 
-在 KDE Wayland 会话下，如果您注销并重新登录，Qv2ray 将不会退出， 不会显示通知托盘图标，将使用大量的 CPU 。
+在 KDE Wayland 会话下，如果您注销并重新登录，Qv2ray 将不会退出，不会显示通知托盘图标，将使用大量的 CPU 。
 
 **解决方案是(以下三个选项任选一个)：**
 
@@ -60,7 +60,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 ### Gnome 下没有托盘图标
 
-Gnome 桌面本身不支持任务栏图标。 Ubuntu 制作了一个[扩展，](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)用来支持基于 DBus 通讯的 Gnome 托盘扩展。到目前为止的测试结果是，该扩展程序能在 Arch Linux 上的 Wayland 会话下显示 Qv2ray 的托盘，但在 Ubuntu Wayland 会话下可能不会显示它们。这是一个上游问题，该问题无法解决。
+Gnome 桌面本身不支持任务栏图标。Ubuntu 制作了一个[扩展，](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)用来支持基于 DBus 通讯的 Gnome 托盘扩展。到目前为止的测试结果是，该扩展程序能在 Arch Linux 上的 Wayland 会话下显示 Qv2ray 的托盘，但在 Ubuntu Wayland 会话下可能不会显示它们。这是一个上游问题，该问题无法解决。
 
 ### 应用程序窗口在哪里？
 
