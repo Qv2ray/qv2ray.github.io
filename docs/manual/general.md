@@ -66,6 +66,6 @@ Misuse of the above settings may cause negative effects and even lead to securit
 
 **Updated at 2021-01-25:** We believe that no one will use that old V2Ray core version. This notice is no longer effective and is only kept for historical reasons.
 
-**Updated at 2020-05-30:** Due to implementation issues，V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**.
+**Updated at 2020-05-30:** Due to implementation issues, V2Ray core will use hard-coded TLS cipher suites when `AllowInsecureCiphers` is disabled, which makes its TLS traffic highly distinguishable. Enabling `AllowInsecureCiphers` will ease the issue temporarily, but it will require **all influenced connections to be re-imported**.
 
 :::
