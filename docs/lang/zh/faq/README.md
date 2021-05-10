@@ -65,7 +65,7 @@ title: 常见问题
     setcap "cap_net_bind_service=+ep cap_net_admin=+ep" /usr/bin/v2ray
     ```
 
-    `/usr/bin/v2ray` 是大部分Linux 发行版安装V2Ray 的地方，如果不是，（例如）您已经使用安装脚本安装了V2Ray，请替换 `/usr/bin/v2ray` 并使用您的 V2Ray 核心二进制路径。
+    `/usr/bin/v2ray` 是大部分 Linux 发行版安装V2Ray 的地方，如果不是（例如您已经使用安装脚本安装了 V2Ray），请替换 `/usr/bin/v2ray` 并使用您的 V2Ray 核心二进制路径。
 
   - 对于ArchLinux用户：  
     尝试 AUR 包 [Aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)（由 `@DuckSoft` 创建）的自动化步骤
