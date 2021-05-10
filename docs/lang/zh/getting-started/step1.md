@@ -67,7 +67,7 @@ sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下
 
 :::
 
-类似于AUR，有两个版本的 Qv2ray 可供使用。您可以根据自己的爱好选择：
+类似于 AUR，有两个版本的 Qv2ray 可供使用。您可以根据自己的喜好选择：
 
 - OBS 稳定版：[Qv2ray](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray)
 - OBS 预览版：[Qv2ray-preview](https://build.opensuse.org/package/show/home:zzndb:Qv2ray/Qv2ray-preview)
