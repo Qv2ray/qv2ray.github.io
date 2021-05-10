@@ -12,7 +12,7 @@ title: 常见问题
 
 ## 启动问题
 
-### `报错 Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+### 报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
 - **根本原因**：出现了端口冲突
 - **原因 1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
