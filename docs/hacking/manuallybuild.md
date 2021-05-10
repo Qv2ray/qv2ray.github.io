@@ -133,6 +133,7 @@ Use [Qv2ray-patched `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched
 :::
 
 ## 6. Done
-You have your Qv2ray compiled and deployed! 
+
+You have your Qv2ray compiled and deployed!
 
 Start hacking and welcome to contribute Qv2ray!
