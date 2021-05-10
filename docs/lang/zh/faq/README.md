@@ -71,7 +71,7 @@ title: 常见问题
     尝试 AUR 包 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)（由 `@DuckSoft` 创建）的自动化步骤
 
   - 适用于 Fedora 32+ / RHEL 8+ 用户：  
-    如果您通过 dnf / yum 安装 V2Ray，那么 V2Ray 二进制路径应该是 `/usr/bin/v2ray`，您也可以安装RPM包 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)（由 `@sixg0000d` 打包）。
+    如果您通过 dnf / yum 安装 V2Ray，那么 V2Ray 二进制路径应该是 `/usr/bin/v2ray`。您也可以安装 RPM 包 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)（由 `@sixg0000d` 打包）。
 
 ### 配置 Windows 上拨号连接 / VPN 连接的代理
 
