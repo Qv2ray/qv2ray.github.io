@@ -14,24 +14,24 @@ title: 常见问题
 
 ### `报错 <code>Only one usage of each socket address (protocol/network address/port) is normally permitted.`</code>
 
-- **根本原因**: 出现了端口冲突
-- **原因 1**: 上一个 V2Ray 进程没有正常退出，占用了相关的端口。
-- **解决办法**: 终止当前占用该端口的进程。
-- **原因2**: 在 Qv2ray 中设置的相关端口已被其他软件占用。
-- **解决方案**: 更改 Qv2ray 或其他软件的端口设置。
+- **根本原因**：出现了端口冲突
+- **原因 1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
+- **解决办法**：终止当前占用该端口的进程。
+- **原因2**：在 Qv2ray 中设置的相关端口已被其他软件占用。
+- **解决方案**：更改 Qv2ray 或其他软件的端口设置。
 
 ### `An attempt was made to access a socket in a way forbidden by its access permissions.`
 
-- **原因**: 如果您正在使用 Windows，一个补丁可能会在 `1000-2000` 之间设置端口作为特权/保留端口。
+- **原因**：如果您正在使用 Windows，一个补丁可能会在 `1000-2000` 之间设置端口作为特权/保留端口。
 
-- **解决方案**: 使用超过 `2000` 的端口。
+- **解决方案**：使用超过 `2000` 的端口。
 
 ### 启用 TProxy 后启动 V2Ray 核心失败
 
-- **详情**: 开启 TProxy 后出现了 `Segmentation Fault`
+- **详情**：开启 TProxy 后出现了 `Segmentation Fault`
 
-- **原因**: 它是由某些 Linux 上的 `SUID` 限制所引起的。详细的错误分析请查看：[#59](https://github.com/Qv2ray/Qv2ray/issues/59)
-  - **解决方案**: `sudo sysctl fs.suid_dumpable=1`  
+- **原因**：它是由某些 Linux 上的 `SUID` 限制所引起的。详细的错误分析请查看 [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
+  - **解决方案**：`sudo sysctl fs.suid_dumpable=1`  
     这种方法将会在重启后失效，请查看 [这篇文章](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)
 
 ## 网络连接问题
