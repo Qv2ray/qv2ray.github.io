@@ -32,7 +32,7 @@ Qv2ray 本身并 **不包含** 名为 `v2ray-core` 的 V2Ray 可执行文件 ，
 
 ### 手动下载
 
-**官方下载链接：** <https://github.com/v2fly/v2ray-core/releases>
+**官方下载链接**：<https://github.com/v2fly/v2ray-core/releases>
 
 将 v2ray 核心文件提取到一个固定路径。建议将文件提取到 `$QV2RAY_CONFIG_PATH/vcore`，其中 `$QV2RAY_CONFIG_PATH` 是 Qv2ray 存储数据的目录。
 

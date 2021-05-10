@@ -48,7 +48,7 @@ env QT_QPA_PLATFORM=wayland qv2ray
 
 在 KDE Wayland 会话下，如果您注销并重新登录，Qv2ray 将不会退出，不会显示通知托盘图标，将使用大量的 CPU 。
 
-**解决方案是(以下三个选项任选一个)：**
+**解决方案是(以下三个选项任选一个)**：
 
 1. 使用 Gnome Wayland 会话
 

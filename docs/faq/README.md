@@ -56,9 +56,9 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
 - In this case, the log may suggest the error `failed to set IP_TRANSPARENT > operation not permitted`
 
-- **Cause:** V2Ray does not have the permission to set socket options.
+- **Cause**: V2Ray does not have the permission to set socket options.
 
-- **Solutions:**
+- **Solutions**:
 
   - For all Linux distros, Use the command below in terminal (with root/sudo access):
 
@@ -82,15 +82,14 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
   - A workaround is to rename the connection and make sure the new name only contains ASCII characters.
 
 ### Unable to configure system proxy automatically on macOS (Error: Command requires admin privileges)
-- **Cause:** Permission issue on macOS.
-- **Solution:**
+
+- **Cause**: Permission issue on macOS.
+- **Solution**:
 
     ```shell
     > # security authorizationdb write system.services.systemconfiguration.network allow
     YES (0)
     ```
-
-
 
 ## Behavior & Appearance Issues
 

@@ -33,7 +33,7 @@ To make it clear, `arm64` is completely different from `amd64`.
 
 ### Manual Download
 
-**Official Download Link：** <https://github.com/v2fly/v2ray-core/releases>
+**Official Download Link**: <https://github.com/v2fly/v2ray-core/releases>
 
 Extract the v2ray core files into a fixed path. It is suggested to extract the files into `$QV2RAY_CONFIG_PATH/vcore`, where `$QV2RAY_CONFIG_PATH` is the directory where Qv2ray store its data.
 
