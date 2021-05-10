@@ -139,7 +139,7 @@ Qv2ray 的源码包含嵌套的子模块，进行 Git Clone 时请记得添加 `
 
 :::warning
 
-`macdeployqt` 中存在一个 bug ，`libabsl_debugging_internal` 被识别为调试库，这将阻止部署 QPlatformPlugin（即 QCocoaPlugin ），最终将导致运行时异常，提示“ No Platform Plugin is Found ”。
+`macdeployqt` 中存在一个 bug，`libabsl_debugging_internal` 被识别为调试库，这将阻止部署 QPlatformPlugin（即 QCocoaPlugin），最终将导致运行时异常，提示“No Platform Plugin is Found”。
 
 请改用 [Qv2ray 修改过的 `macdeployqt`](https://github.com/Qv2ray/macdeployqt-patched) 。同时支持 Qt5 和 Qt6
 
