@@ -47,8 +47,6 @@ title: 常见问题
   - **方法 2**：使用 [Chrony](https://www.chrony.tuxfamily.org) 来同步时间。
 - **解决方案（macOS）**：打开系统首选项，单击“日期 & 时间”，并开启“自动设置日期和时间”。
 
-> 由于译者没有实机操作，**解决方案（macOS）** 中的选项和按键名称可能不正确，若有错误，敬请指正。
-
 ### 我想要使用代理访问中国大陆网站
 
 - [**解决办法**](../getting-started/step5.md#tweaking-routing-schemes)
