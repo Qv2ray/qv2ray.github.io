@@ -46,6 +46,7 @@ title: 常见问题
   - **方法 1**：使用 `system-timeyncd`，运行 `sudo systemctl enable systemd-timesyncd --now`
   - **方法 2**：使用 [Chrony](https://www.chrony.tuxfamily.org) 来同步时间。
 - **解决方案（macOS）**：打开系统首选项，单击“日期 & 时间”，并开启“自动设置日期和时间”。
+<!-- TODO：macOS 的按键和选项名称需要核实 -->
 
 ### 我想要使用代理访问中国大陆网站
 

@@ -46,6 +46,7 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
   - **Approach 1**: Use `systemd-timesyncd`, run `sudo systemctl enable systemd-timesyncd --now`.
   - **Approach 2**: Use [Chrony](https://www.chrony.tuxfamily.org) to sync time.
 - **Solution (macOS)**: Open system preference, click "Date & Time", and enable "Automatically set date and time".
+<!-- TODO: need to check for button and option names in macOS -->
 
 ### I want to access China mainland websites using the proxy.
 
