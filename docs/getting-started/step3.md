@@ -73,3 +73,9 @@ If you encounter connectivity problem with your subscription upstream (eg: DNS R
 ## Import an existing configuration
 
 If you are using v2ray-core, you can import an existing configuration file. **Advanced** -> **Select**, or **Open JSON Editor** and paste it.
+
+:::warning About Preferences Failure
+
+If you using complex config, Qv2ray will ingore settings in Preferences.
+
+:::
