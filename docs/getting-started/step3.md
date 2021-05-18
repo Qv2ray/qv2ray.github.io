@@ -76,6 +76,6 @@ If you are using v2ray-core, you can import an existing configuration file. **Ad
 
 :::warning About Preferences Failure
 
-If you using complex config, Qv2ray will ingore settings in Preferences.
+If you using complex config, Qv2ray will ingore settings in Preferences (such as routing).
 
 :::
