@@ -93,6 +93,12 @@ Some message can only be seen when the `loglevel` in **Kernel Settings** set to 
 
 ## Behavior & Appearance Issues
 
+### Awful font display on Windows while HiDPI is enabled
+
+Use `qv2ray.exe  -platform windows:fontengine=freetype` to enable FreeType, or change the Qv2ray shortcuts:
+
+![图片.png](https://i.loli.net/2021/06/06/5IEM3HT1Vplnz8f.png)
+
 ### No tray icon / The tray icon occasionally disappears in GNOME
 
 - **Cause**: This is confirmed as an upstream bug.
