@@ -12,7 +12,7 @@ title: 常见问题
 
 ## 启动问题
 
-### `报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.``
+### 报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
 
 - **根本原因**：出现了端口冲突
 - **原因1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
@@ -20,7 +20,7 @@ title: 常见问题
 - **原因2**：在 Qv2ray 中设置的相关端口已被其他软件占用。
 - **解决方案**：更改 Qv2ray 或其他软件的端口设置。
 
-### `报错 `An attempt was made to access a socket in a way forbidden by its access permissions.``
+### 报错 `An attempt was made to access a socket in a way forbidden by its access permissions.`
 
 - **原因**：如果您正在使用 Windows，一个补丁可能会在 `1000-2000` 之间设置端口作为特权/保留端口。
 
@@ -86,7 +86,7 @@ title: 常见问题
 
 - **原因**：macOS 上的权限问题。
 
-- 解决办法
+- **解决办法**
 
     ```shell
     > # security authorizationdb write system.services.systemconfiguration.network allow
