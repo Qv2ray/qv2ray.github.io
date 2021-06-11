@@ -41,7 +41,7 @@ title: CMake Argument Reference
   - `QvPlugin-BuiltinUtils`
 
 ## `QV2RAY_EMBED_TRANSLATIONS`
-- Default: `ON`
+- Default: `OFF`
 - Description: Embed translation resources (`*.qm`) into Qv2ray binary, instead of shared assets like `/usr/share/qv2ray/translations/`.
 
 ## `QV2RAY_HAS_SINGLEAPPLICATION`
