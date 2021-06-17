@@ -1,6 +1,6 @@
 ---
 title: 配置软件以使用 Qv2ray
-sidebarDepth: '3'
+sidebarDepth: 3
 ---
 
 # 第 4 步：配置浏览器/软件以使用 Qv2ray
