@@ -123,9 +123,11 @@ export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 `%21` | `%23` | `%24` | `%26` | `%27` | `%28` | `%29` | `%2A` | `%2B` | `%2C` | `%2F` | `%3A` | `%3B` | `%3D` | `%3F` | `%40` | `%5B` | `%5D`
 
-或者输入您想要编码的文本： <input v-model="input">
+或者输入您想要编码的文本： <input v-model="input" />
 
-<template v-if="input">   编码文本： <code>{{ escaped }}</code> </template>
+<template v-if="input">
+  编码文本： <code>{{ escaped }}</code>
+</template>
 
 对于在 `sudo` 中运行的程序，如果您不在 shell 中运行`sudo`则需要配置 `sudo` 来保存这些变量。用 root 调用`visudo`并添加以下行：
 
@@ -161,4 +163,15 @@ socks5  127.0.0.1  1088
 
 要注意的一件事是，`proxychains` 不能与静态链接的程序兼容，例如 Golang 程序。
 
-&lt;script&gt; export default {   data: () =&gt; ({     input: ''   }),   computed: {     escaped() {       return encodeURIComponent(this.input)     }   } } &lt;/script&gt; 
+<script>
+export default {
+  data: () => ({
+    input: ''
+  }),
+  computed: {
+    escaped() {
+      return encodeURIComponent(this.input)
+    }
+  }
+}
+</script>
