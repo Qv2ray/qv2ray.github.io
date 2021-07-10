@@ -1,6 +1,6 @@
 ---
 title: 获取 Qv2ray
-sidebarDepth: 3
+sidebarDepth: '3'
 ---
 
 # 获取 Qv2ray
@@ -11,21 +11,143 @@ sidebarDepth: 3
 
 ## 来自软件包管理器
 
-### Linux: Debian、Ubuntu 及其衍生发行版
+### Linux：Debian、Ubuntu 与它们的衍生版本
 
-1. 安装相关的工具
+#### 安装相关工具
 
-    ```bash
-    # apt install gnupg ca-certificates curl
-    ```
+```bash
+sudo apt install gnupg ca-certificates curl
+```
 
-2. 请跟随 [我们的 Debian 仓库](https://qv2ray.net/debian) 中的步骤进行操作。
+#### 为 Debian 安装 Qv2ray 稳定版本
 
-3. 安装 Qv2ray
+添加 Qv2ray 公钥到你的系统：
 
-    ```bash
-    # apt update; sudo apt install qv2ray
-    ```
+导入我们的 GPG 密钥，注意行尾的连字符。
+
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+```
+
+您还可以使用 FastGit 导入 GPG 公钥：
+
+```bash
+curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+##### 主存储库
+
+添加我们的官方 APT 存储库：
+
+Debian 稳定版：
+
+```bash
+echo "deb [arch=amd64] https://qv2ray.net/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+如果您使用的是 Debian 不稳定版本，那么您需要改用此命令：
+
+```bash
+echo "deb [arch=amd64] https://qv2ray.net/debian/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+更新 APT 索引：
+
+```bash
+sudo apt update
+```
+
+您现在可以从 APT 安装 Qv2ray：
+
+```bash
+sudo apt install qv2ray
+```
+
+##### FastGit 镜像（用于加速下载 规避 GitHub 被墙）
+
+添加我们的官方 APT 存储库：
+
+```bash
+echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
+
+如果您使用的是不稳定版本的 Debian，那么您需要改用此命令：
+
+```bash
+echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
+
+更新 APT 索引：
+
+```bash
+sudo apt update
+```
+
+您现在可以从 APT 安装 Qv2ray：
+
+```bash
+sudo apt install qv2ray
+```
+
+#### 适用于 Ubuntu 的 Qv2ray 稳定版
+
+**注意：**所有的命令都要在`bash`中运行，如果你使用的是其他 shell，如`zsh` ， `fish` ，那么你需要先运行 `bash`命令。
+
+将 Qv2ray 公钥添加到您的系统：
+
+导入我们的 GPG 密钥，注意行尾的连字符：
+
+```bash
+curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+```
+
+您还可以使用 FastGit 导入 GPG 公钥：
+
+```bash
+curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+
+##### 主存储库
+
+添加我们的官方 APT 存储库：
+
+```bash
+$ echo "deb [arch=amd64] https://qv2ray.net/debian/ `lsb_releases -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+
+更新 APT 索引：
+
+```bash
+sudo apt update
+```
+
+您现在可以从 APT 安装 Qv2ray：
+
+```bash
+sudo apt install qv2ray
+```
+
+##### FastGit 镜像（用于加速下载 规避 GitHub 被墙）
+
+添加我们的官方 APT 存储库：
+
+```bash
+$ echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ `lsb_release` main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
+
+更新 APT 索引：
+
+```bash
+sudo apt update
+```
+
+您现在可以从 APT 安装 Qv2ray：
+
+```bash
+sudo apt install qv2ray
+```
+
+**注意：** 如想要使用 Qv2ray 的开发版本，请阅读[https://qv2ray.org/debian-dev](https://qv2ray.org/debian-dev) ， `qv2ray-dev`额外提供 Debian 的 arm64 和 mips64el 版本。如果您想使用，您应该将`[arch=amd64]`更改为您的架构，例如`[arch=arm64]` 。
 
 ### Linux: Arch Linux 或基于 Arch 的发行版
 
@@ -36,7 +158,7 @@ sidebarDepth: 3
 （Arch Linux CN 仓库: [https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)）
 
 ```shell
-sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
+sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下
 ```
 
 然后就完事了。
@@ -54,7 +176,7 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 （Manjaro CN 仓库: [https://github.com/manjarocn/repo](https://github.com/manjarocn/repo)）
 
 ```shell
-sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下
+sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 ```
 
 ### Linux: openSUSE / Fedora / CentOS
@@ -74,8 +196,8 @@ sudo pacman -Syy qv2ray # 或 qv2ray-dev-git，见下
 
 或者您可以直接从下面的链接获取更详细的安装指南：
 
-- 下载稳定版：[Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
-- 下载预览版：[Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+- Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
 :::warning 对于 CentOS 用户
 
@@ -145,12 +267,12 @@ brew install kidonng/malt/qv2ray-beta
     scoop update qv2ray
     ```
 
-5. **(可选的)** 如果你想要安装 Qv2Ray 测试版，添加 `sushi` 桶：
+5. **(可选的)** 如果你想要安装 Qv2Ray 测试版，添加 `mochi` 仓库：
 
     ```powershell
-    scoop bucket add sushi https://github.com/kidonng/sushi
-    # For all apps see https://github.com/kidonng/sushi#qv2ray
+    scoop bucket add qv2ray https://github.com/qv2ray/mochi
     scoop install qv2ray-beta
+    另请参阅：<https://github.com/kidonng/sushi>
     ```
 
 :::tip
@@ -198,7 +320,6 @@ $ sudo snap refresh qv2ray
 
 1. 根据 [官方文档](https://flatpak.org/setup/) 设置Flatpak环境。
 2. 安装 Qv2ray：
-
     ```shell
     # 安装：
     $ flatpak install com.github.Qv2ray
@@ -244,7 +365,7 @@ Windows 10 on ARM 的 *building 21277* 中已经添加了 x86_64 应用的模拟
 如果您觉得稳定版本的功能不够看，并愿意尝试开发中的新功能，您可以从 GitHub Actions 下载开发版本：
 
 1. 在浏览器中打开 [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) 页面。
-2. 选择最近成功的（显示为 ✔️）构建并点击它。你应该会看到 GitHub Build 的详细页面。[这里的页面](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225) 就是一个例子。
+2. 选择最近成功的（显示为 ✔️）构建并单击它。您应该被带到该 GitHub Build 的详细信息页面。这是[一个例子](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225)。
 3. 点击**Artifacts**下拉菜单来展开它，然后根据您的平台选择二进制文件。
 
 TODO：如何选择分支
