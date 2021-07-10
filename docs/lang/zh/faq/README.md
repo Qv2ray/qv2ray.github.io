@@ -12,7 +12,7 @@ title: 常见问题
 
 ## 启动问题
 
-### 报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+### `报错 `Only one usage of each socket address (protocol/network address/port) is normally permitted.``
 
 - **根本原因**：出现了端口冲突
 - **原因1**：上一个 V2Ray 进程没有正常退出，占用了相关的端口。
@@ -20,11 +20,11 @@ title: 常见问题
 - **原因2**：在 Qv2ray 中设置的相关端口已被其他软件占用。
 - **解决方案**：更改 Qv2ray 或其他软件的端口设置。
 
-### 报错 `An attempt was made to access a socket in a way forbidden by its access permissions.`
+### `报错 `An attempt was made to access a socket in a way forbidden by its access permissions.``
 
 - **原因**：如果您正在使用 Windows，一个补丁可能会在 `1000-2000` 之间设置端口作为特权/保留端口。
 
-- **解决方案**：使用超过 `2000` 的端口。
+- **解决方案**：使用大于 `2000` 的端口。
 
 ### 启用 TProxy 后启动 V2Ray 核心失败
 
@@ -32,12 +32,11 @@ title: 常见问题
 
 - **原因**：它是由某些 Linux 上的 `SUID` 限制所引起的。详细的错误分析请查看 [#59](https://github.com/Qv2ray/Qv2ray/issues/59)
 
-    - **解决方案**：`sudo sysctl fs.suid_dumpable=1`
-         这种方法将会在重启后失效，请查看 [这篇文章](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)
+    - **解决方案**：`sudo sysctl fs.suid_dumpable=1` 这种方法将会在重启后失效，请查看 [这篇文章](http://ssdxiao.github.io/linux/2017/03/20/Sysctl-not-applay-on-boot.html)
 
 ## 网络连接问题
 
-### 连接配置是正确的，但运行时可以看到警告。
+### 你已经确认连接配置是正确的，但运行时还是能看到警告，且代理未能工作：
 
 - **可能的原因**：系统时间不匹配。如果VMess是您的代理协议，它需要客户端和服务器的系统时间差小于90秒，否则它将拒绝连接。
 - **解决方案（Windows）**：
@@ -72,8 +71,7 @@ title: 常见问题
 
     - 对于 Arch Linux 用户： 尝试 AUR 包 [aur/v2ray-cap-git](https://aur.archlinux.org/packages/v2ray-cap-git/)（由 `@DuckSoft` 创建）的自动化步骤
 
-    - 适用于 Fedora 32+ / RHEL 8+ 用户：
-         如果您通过 dnf / yum 安装 V2Ray，那么 V2Ray 二进制路径应该是 `/usr/bin/v2ray`。您也可以安装 RPM 包 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)（由 `@sixg0000d` 打包）。
+    - 适用于 Fedora 32+ / RHEL 8+ 用户： 如果您通过 dnf / yum 安装 V2Ray，那么 V2Ray 二进制路径应该是 `/usr/bin/v2ray`。您也可以安装 RPM 包 [v2ray-cap](https://copr.fedorainfracloud.org/coprs/sixg0000d/v2ray/)（由 `@sixg0000d` 打包）。
 
 ### 配置 Windows 上拨号连接 / VPN 连接的代理
 
@@ -86,7 +84,7 @@ title: 常见问题
 
 - **原因**：macOS 上的权限问题。
 
-- **解决办法**
+- 解决办法
 
     ```shell
     > # security authorizationdb write system.services.systemconfiguration.network allow
@@ -95,9 +93,9 @@ title: 常见问题
 
 ## 行为和外观问题
 
-### Windows 启用 HiDPI 后字体渲染糟糕
+### Windows 启用 HiDPI 后字体渲染不好看
 
-使用命令 `qv2ray.exe  -platform windows:fontengine=freetype` 来启用 FreeType 渲染， 可以将命令添加在 Qv2ray 快捷方式中：
+使用 `qv2ray.exe  -platform windows:fontengine=freetype` 来启用 FreeType 渲染， 可以将吃参数添加在 Qv2ray 的快捷方式中：
 
 ![图片.png](https://i.loli.net/2021/06/06/5IEM3HT1Vplnz8f.png)
 
@@ -121,14 +119,14 @@ title: 常见问题
 
 ### macOS 频繁要求将 Qv2ray / Qv2ray 插件“移到废纸篓”
 
-- **原因**：为开发组隐私着想，我们并无兴趣使用个人苹果开发者帐户为 Qv2ray 签名。我们的应用程序也没有通过苹果公司的所谓“审核”。而我们实际上根本没有任何 macOS 设备。因而在这种情况下，请原谅我们不搞什么超级浪费时间的所谓“ [公证](https://krita.org/en/item/first-notarized-macos-build-of-krita/)”之类的东西。
+- **原因**：为开发组隐私着想，我们不会使用个人苹果开发者帐户为 Qv2ray 签名，因此，我们的应用程序没有通过苹果公司的所谓“审核”。同时，由于开发组实际上根本没有 macOS 设备，因此在这种情况下，我们不会去浪费时间去做的所谓“ [公证](https://krita.org/en/item/first-notarized-macos-build-of-krita/)”。
 - **解决方案**：执行 `sudo xattr -rd com.apple.quarantine /Applications/qv2ray.app` 以跳过那个阴间的验证。
 
 ## 其他问题
 
 ### 为什么 Qv2ray 不自带插件和 V2Ray 核心，或者提供内置下载功能？
 
-我们希望我们的用户能够知道 Qv2ray / V2Ray 如何工作，并愿意自己解决潜在的问题和需求。
+我们希望我们的用户能够知道 Qv2ray / V2Ray 是如何工作的，并愿意自己解决潜在的问题和需求。
 
 如果 Qv2ray 不适合您，您可以自由选择其他软件。
 
@@ -136,4 +134,4 @@ title: 常见问题
 
 ### Qv2ray 是否会支持移动平台 (Android、iOS)？
 
-目前尚无计划。取决于开发者的个人需求，在将来**可能**会有对于移动平台的支持（在项目迁移到 QML 之后）
+目前尚无计划，取决于开发者的个人意愿，在项目迁移到 QML 之后**可能**会有对于移动平台的支持。
