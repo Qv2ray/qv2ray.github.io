@@ -20,90 +20,118 @@ sudo apt install gnupg ca-certificates curl
 
 #### Debian with Qv2ray stable release
 
-##### Add Qv2ray public keys to your system: 
+Add Qv2ray public keys to your system: 
+
+Import our GPG key. Notice the hyphen at the end of line.
 
 ```bash
-# Install some prerequisites needed by adding GPG public keys
-sudo apt-get install gnupg ca-certificates curl
-
-# Import our GPG key. Notice the hyphen at the end of line.
 curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
-
-# you can also import GPG public keys by using FastGit:
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
 ```
 
-##### Add the our official APT repository:
+You can also import GPG public keys by using FastGit:
+
+```bash
+curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+##### Main repository 
+Add the our official APT repository:
+
+Debian stable version:
 
 ```bash
 echo "deb [arch=amd64] https://qv2ray.net/debian/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
-# If you are using unstable version Debian, you should use this command instead: 
-# echo "deb [arch=amd64] https://qv2ray.net/debian/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+If you are using  Debian unstable version, you should use this command instead: 
 
-# To update the APT index:
+```bash
+echo "deb [arch=amd64] https://qv2ray.net/debian/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
+Update the APT index:
+```bash
 sudo apt update
-
-# You can install Qv2ray from APT now:
+```
+You can install Qv2ray from APT now:
+```bash
 sudo apt install qv2ray
 ```
 
 ##### FastGit Mirror (in case GitHub is blocked in China)
 
+Add the our official APT repository:
+
 ```bash
-
-# Add the our official APT repository:
 echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ stable main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
-# If you are using unstable version Debian, you should use this command instead: 
-# echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
+If you are using unstable version Debian, you should use this command instead: 
 
-# To update the APT index:
-$ sudo apt update
+```bash
+echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ unstable main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
+Update the APT index:
 
-# You can install Qv2ray from APT now:
-$ sudo apt install qv2ray
+```bash
+sudo apt update
+```
+You can install Qv2ray from APT now:
+
+```bash
+sudo apt install qv2ray
 ```
 
 #### Ubuntu with Qv2ray stable release
 
 **Notice：** All of commands should run on `bash`, if you are using other shells such as `zsh`, `fish`, run `bash` command at first.
 
-##### Add Qv2ray public keys to your system: 
+Add Qv2ray public keys to your system: 
+
+
+Import our GPG key. Notice the hyphen at the end of line:
 
 ```bash
-# Install some prerequisites needed by adding GPG public keys
-sudo apt install curl gnupg2 ca-certificates lsb-release
-
-# Import our GPG key. Notice the hyphen at the end of line.
 curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
-
-# you can also import GPG public keys by using FastGit:
-# curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
 ```
+You can also import GPG public keys by using FastGit:
 
-##### Add the our official APT repository:
+```bash
+curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+```
+##### Main repository 
+
+Add the our official APT repository:
 
 ```bash
 $ echo "deb [arch=amd64] https://qv2ray.net/debian/ `lsb_releases -cs` main" | sudo tee /etc/apt/sources.list.d/qv2ray.list
+```
 
-# To update the APT index:
-$ sudo apt update
+Update the APT index:
 
-# You can install Qv2ray from APT now:
-$ sudo apt install qv2ray
+```bash
+sudo apt update
+```
+You can install Qv2ray from APT now:
+
+```bash
+sudo apt install qv2ray
 ```
 
 ##### FastGit Mirror (in case GitHub is blocked in China)
 
+Add the our official APT repository:
+
 ```bash
-
-# Add the our official APT repository:
 $ echo "deb [arch=amd64] https://raw.fastgit.org/Qv2ray/debian/master/ `lsb_release` main" | sudo tee /etc/apt/sources.list.d/qv2ray-fastgit.list
+```
 
-# To update the APT index:
-$ sudo apt update
+Update the APT index:
 
-# You can install Qv2ray from APT now:
-$ sudo apt install qv2ray
+```bash
+sudo apt update
+```
+
+You can install Qv2ray from APT now:
+
+```bash
+sudo apt install qv2ray
 ```
 **Notice:** For development version of Qv2ray, you should read <https://qv2ray.org/debian-dev>, and `qv2ray-dev` has arm64 and mips64el version for Debian. If you wanna use you should change  ` [arch=amd64] ` to your architecture, such as ` [arch=arm64] `. 
 
