@@ -27,7 +27,7 @@ title: CMake Argument Reference
 ## `QV2RAY_BUILD_INFO` / `QV2RAY_BUILD_EXTRA_INFO`
 - Default: `Qv2ray from manual build` and the ***Version Number***
 - Description: These strings will be displayed in "About" dialog of Qv2ray.
-- Note: You may also want to use the environment variables with the same names.
+- Note: You may also want to use the environment variables `_QV2RAY_BUILD_INFO_` and `_QV2RAY_BUILD_EXTRA_INFO_`.
 
 ## `QV2RAY_HAS_BUILTIN_THEMES`
 - Default: `ON`
