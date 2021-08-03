@@ -25,13 +25,13 @@ Add Qv2ray public keys to your system:
 Import our GPG key. Notice the hyphen at the end of line.
 
 ```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+curl https://qv2ray.net/debian/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 
 You can also import GPG public keys by using FastGit:
 
 ```bash
-curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+curl https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 ##### Main repository 
 Add the our official APT repository:
@@ -88,12 +88,12 @@ Add Qv2ray public keys to your system:
 Import our GPG key. Notice the hyphen at the end of line:
 
 ```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+curl https://qv2ray.net/debian/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 You can also import GPG public keys by using FastGit:
 
 ```bash
-curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+curl https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 ##### Main repository 
 
