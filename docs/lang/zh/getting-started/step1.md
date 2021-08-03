@@ -26,13 +26,13 @@ sudo apt install gnupg ca-certificates curl
 导入我们的 GPG 密钥，注意行尾的连字符。
 
 ```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+curl https://qv2ray.net/debian/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 
 您还可以使用 FastGit 导入 GPG 公钥：
 
 ```bash
-curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+curl https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 
 ##### 主存储库
@@ -98,13 +98,13 @@ sudo apt install qv2ray
 导入我们的 GPG 密钥，注意行尾的连字符：
 
 ```bash
-curl -sSL https://qv2ray.net/debian/pubkey.gpg | sudo apt-key add -
+curl https://qv2ray.net/debian/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 
 您还可以使用 FastGit 导入 GPG 公钥：
 
 ```bash
-curl -sSL https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo apt-key add -
+curl https://raw.fastgit.org/Qv2ray/debian/master/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/qv2ray-stable-archive.gpg
 ```
 
 ##### 主存储库
@@ -196,8 +196,8 @@ sudo pacman -Syy qv2ray # 或者 qv2ray-dev-git
 
 或者您可以直接从下面的链接获取更详细的安装指南：
 
-- Download Stable: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
-- Download Preview: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
+- 下载稳定版: [Qv2ray](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray)
+- 下载预览版: [Qv2ray-preview](https://software.opensuse.org/download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray-preview)
 
 :::warning 对于 CentOS 用户
 
@@ -365,7 +365,7 @@ Windows 10 on ARM 的 *building 21277* 中已经添加了 x86_64 应用的模拟
 如果您觉得稳定版本的功能不够看，并愿意尝试开发中的新功能，您可以从 GitHub Actions 下载开发版本：
 
 1. 在浏览器中打开 [Qv2ray GitHub Actions Page](https://github.com/Qv2ray/Qv2ray/actions) 页面。
-2. 选择最近成功的（显示为 ✔️）构建并单击它。您应该被带到该 GitHub Build 的详细信息页面。这是[一个例子](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225)。
+2. 选择最近成功的（显示为 ✔️）构建，然后你应该看到 GitHub Build 的详细信息页面。这是[一个例子](https://github.com/Qv2ray/Qv2ray/commit/de88bfc69e50bf7c4ce034756720bf06df42612a/checks?check_suite_id=377218225)。
 3. 点击**Artifacts**下拉菜单来展开它，然后根据您的平台选择二进制文件。
 
 TODO：如何选择分支
