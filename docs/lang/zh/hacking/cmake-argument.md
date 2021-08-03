@@ -33,7 +33,7 @@ title: CMake 参数参考
 
 - 默认： `Qv2ray from manual build` 和 ***版本号***
 - 说明：这些字符串将在 Qv2ray的“关于”对话框中显示。
-- 注意：您可能也想使用具有相同名称的环境变量。
+- 注意：您也可以使用环境变量 `_QV2RAY_BUILD_INFO_` 和 `_QV2RAY_BUILD_EXTRA_INFO_`。
 
 ## `QV2RAY_HAS_BUILTIN_THEMES`
 
