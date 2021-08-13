@@ -32,7 +32,7 @@ sidebarDepth: 3
 
 :::
 
-:::warning Windows用户：UWP 应用回环问题
+:::warning Windows 用户：UWP 应用回环问题
 
 默认情况下，UWP 应用程序被禁止访问本地回环地址(127.0.0.1)，所以系统代理设置可能会导致您的 UWP 应用程序停止正常工作。
 
@@ -70,13 +70,13 @@ Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Mic
 
 :::tip 使用代理插件。
 
-为了避免在代理配置之间重新切换，您可能想要使用第三方插件(例如，SwitchyOmega) 来增强您的浏览器。这些插件可以帮助实现更复杂的配置，包括多个配置文件和更多的流量转移。
+为了避免在代理配置之间重新切换，您可能想要使用第三方插件（例如，SwitchyOmega） 来增强您的浏览器。这些插件可以帮助实现更复杂的配置，包括多个配置文件和更多的流量转移。
 
 :::
 
 #### Java 应用程序
 
-对于Java 应用程序，您可以使用 JVM 参数配置代理程序。
+对于 Java 应用程序，您可以使用 JVM 参数配置代理程序。
 
 以下是一些例子：
 
@@ -91,7 +91,7 @@ Get-ChildItem -Path Registry::"HKCU\Software\Classes\Local Settings\Software\Mic
 
 :::danger 有问题的 Minecraft
 
-Minecraft的较新版本（`>=1.5.2`）不会使用 JVM 代理设置。这不是 Qv2ray 的问题。如果你真的想要通过代理玩 Minecraft，请考虑为该服务器设置一个 Dokodemo-door 入站，并直接连接到 `localhost`。
+Minecraft 的较新版本（`>=1.5.2`）不会使用 JVM 代理设置。这不是 Qv2ray 的问题。如果你真的想要通过代理玩 Minecraft，请考虑为该服务器设置一个 Dokodemo-door 入站，并直接连接到 `localhost`。
 
 :::
 
@@ -99,7 +99,7 @@ Minecraft的较新版本（`>=1.5.2`）不会使用 JVM 代理设置。这不是
 
 ### 使用环境变量
 
-许多CLI 程序（例如，`curl` 和 `wget`）将使用由 `<PROTOCOL><PROTOCOL>_PROXY` 环境变量。
+许多 CLI 程序（例如，`curl` 和 `wget`）将使用 `<PROTOCOL><PROTOCOL>_PROXY` 环境变量。
 
 下面是一个配置示例：
 
@@ -129,7 +129,7 @@ export HTTPS_PROXY="http://user:pass@127.0.0.1:8000"
   编码文本： <code>{{ escaped }}</code>
 </template>
 
-对于在 `sudo` 中运行的程序，如果您不在 shell 中运行`sudo`则需要配置 `sudo` 来保存这些变量。用 root 调用`visudo`并添加以下行：
+对于在 `sudo` 中运行的程序，如果您不在 shell 中运行 `sudo` 则需要配置 `sudo` 来保存这些变量。用 root 调用 `visudo` 并添加以下行：
 
 ```shell
 Defaults env_keep += "HTTP_PROXY HTTPS_PROXY"
@@ -147,19 +147,19 @@ export RSYNC_PROXY=user:pass@127.0.0.1:8000
 
 如果上述任何方法都不起作用，您可以尝试使用 `proxychains`，它劫持了程序的功能/库来将网络连接重定向到您的代理服务器。
 
-首先，您应该安装`proxychains-ng`。每个操作系统的安装方法各不相同。
+首先，您应该安装 `proxychains-ng`。每个操作系统的安装方法各不相同。
 
 - [Linux/macOS](https://github.com/rofl0r/proxychains-ng)
 - [Windows](https://github.com/shunf4/proxychains-windows)
 
-编辑`/etc/proxychains.conf`(用于全局代理链) 或`$HOME/.proxychains/proxychains.conf`(用户)，编辑`[ProxyList]`部分，并在 Qv2ray 中将代理更改为 SOCKS5 代理：
+编辑 `/etc/proxychains.conf`(用于全局代理链) 或 `$HOME/.proxychains/proxychains.conf`(用户)，编辑 `[ProxyList]` 部分，并在 Qv2ray 中将代理更改为 SOCKS5 代理：
 
 ```ini
 [ProxyList]
 socks5  127.0.0.1  1088
 ```
 
-配置 `proxychains` 之后，您可以在终端中使用 `proxychains <program>` 来让 `proxychains` 劫持程序的网络流量到指定的代理程序。如果你觉得控制台输出很多很烦，你可以在 `proxychains` 之后追加`-q`选项。
+配置 `proxychains` 之后，您可以在终端中使用 `proxychains <program>` 来让 `proxychains` 劫持程序的网络流量到指定的代理程序。如果你觉得控制台输出很多很烦，你可以在 `proxychains` 之后追加 `-q` 选项。
 
 要注意的一件事是，`proxychains` 不能与静态链接的程序兼容，例如 Golang 程序。
 
