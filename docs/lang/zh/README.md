@@ -20,7 +20,7 @@ footer: 采用 CC-BY-SA | © 2020-2021 Qv2ray 版权所有
 
 **Qv2ray** 是一个使用 Qt 编写的跨平台的 v2ray 图形前端。
 
-本项目现已不再维护，见 [deprecation notice](./Deprecation-Notice/)。
+本项目现已不再维护，见 [deprecation notice](/Deprecation-Notice)。
 
 ## 🚀 起步
 
